@@ -1,0 +1,1362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">食药协作平台</string>
+    <string name="app_splash_title">FE企業雲工作台</string>
+    <string name="about_copyright">版權聲明：</string>
+    <string name="about_copyright_content">此版本適用于安卓2.2版本以上操作系統手機，對于在其他操作系統平台使用本軟件出現的任何問題，本公司不承擔責任。本計算機程序受著作權和國際公約的保護。未經授權擅自複制或轉播本程序的部分或全部，可能受到嚴厲的民事及刑事制裁，並將在法律許可的範圍內受到最大可能的起訴。</string>
+    <string name="imagesee_soft_name">圖片浏覽器</string>
+    <string name="viewpager_button">開啟7.0</string>
+    <string name="share_title">FE飛企互聯企業雲工作台</string>
+    <string name="share_content">新壹代的互聯企業雲工作台，以“移動”爲紐帶，連接人、鏈接端、聯通內外，實現企業內外實時聯通壹切，爲企業互聯網轉型提供從後台到前端的壹體化解決方案，全面引領傳統企業向移動互聯網轉型。http://zhushou.360.cn/detail/index/soft_id/3255864</string>
+    <string name="work_communication">工作溝通</string>
+    <string name="collaboration_help">協同辦公</string>
+    <string name="corporate_culture_help">企業文化</string>
+    <string name="knowledge_management">知識管理</string>
+    <string name="help_lxr">聯系人，壹鍵查找快速聯系</string>
+    <string name="help_dd">多人語音，讓溝通變得暢通無阻</string>
+    <string name="help_jstx">即時通訊，最便捷的工作方式</string>
+    <string name="help_xx">消息，隨時掌握重要工作消息</string>
+    <string name="help_sp">審批，企業重要信息不錯過</string>
+    <string name="help_rc">日程，清晰了解工作安排</string>
+    <string name="help_jh">計劃，讓工作計劃更便捷</string>
+    <string name="help_qd">簽到，上班打卡簡單便捷</string>
+    <string name="help_crm">CRM，更好的統計客戶與銷售資源</string>
+    <string name="help_gg">公告，更早的了解公司的通知</string>
+    <string name="help_xw">新聞，隨時隨地了解身邊的時事</string>
+    <string name="help_hd">活動，工作之余的最佳解壓去處</string>
+    <string name="help_tsq">同事圈，和身邊的小夥伴更親近</string>
+    <string name="help_wd">文檔，工作的知識小金庫</string>
+    <string name="help_wj">問卷，了解員工喜好的最佳方式</string>
+    <string name="help_wdfx">文檔分享，好文檔大家壹起看</string>
+    <string name="help_znss">智能搜索，壹鍵搜索所需文檔</string>
+    <string name="help_ksfw">快速訪問，再也不用擔心找不到文檔啦</string>
+
+    <string name="collaboration_recorder_ok">確定</string>
+    <string name="collaboration_recorder_cancel">取消</string>
+    <string name="flow_person">人員</string>
+    <string name="flow_position">崗位</string>
+    <string name="collaboration_attachment">附件</string>
+    <string name="reply">回複</string>
+    <string name="submit">發送</string>
+    <string name="dialog_default_title">溫馨提示</string>
+    <string name="dialog_button_yes">是</string>
+    <string name="dialog_button_no">否</string>
+    <string name="dialog_button_ok">確定</string>
+    <string name="dialog_default_cancel_button_text">取消</string>
+    <string name="common_language">常用語</string>
+    <string name="message_operation_alert">操作成功</string>
+    <string name="message_operation_fail">操作失敗，請重試!</string>
+    <string name="fe_from_android_mobile"> (來自 Android)</string>
+    <string name="fe_load_fail_try">加載失敗，點擊屏幕刷新</string>
+    <string name="rename_fail">重名名失敗！</string>
+    <string name="datepicker_button_ok">確定</string>
+    <string name="datepicker_button_reset">清空</string>
+
+    <string name="login_username">用戶名</string>
+    <string name="login_pwd">密碼</string>
+    <string name="setting_service_new">服務器</string>
+    <string name="setting_http_setting">鏈接設置</string>
+    <string name="setting_login_setting">登錄設置</string>
+    <string name="setting_title">設置服務器</string>
+    <string name="setting_port">端口號</string>
+    <string name="setting_https_port">加密端口</string>
+    <string name="setting_ok">完成</string>
+    <string name="setting_cancel">取消</string>
+    <string name="setting_adress_empty">請輸入登錄地址</string>
+    <string name="setting_adress_checked">請檢查登錄地址是否正確</string>
+    <string name="setting_port_empty">請輸入端口號</string>
+    <string name="login_tips_rememberpassword">記住密碼</string>
+    <string name="login_tips_autologin">自動登錄</string>
+    <string name="login_btn_text_submit">登　錄</string>
+    <string name="login_btn_text_cancal">取　消</string>
+    <string name="login_btn_setting">設　置</string>
+    <string name="login_username_empty">請輸入用戶名</string>
+    <string name="login_password_empty">請輸入密碼</string>
+    <string name="login_address_empty">請設置服務器地址</string>
+    <string name="login_three_point">連接人 · 鏈接端 · 聯通內外</string>
+
+    <string name="detail_title">詳情</string>
+    <string name="collaboration_detail_title">協同詳情</string>
+    <string name="form_detail_title">表單詳情</string>
+    <string name="supplement_count_tip">正文補充(%1$d)</string>
+    <string name="modification_count_tip">正文修改(%1$d)</string>
+    <string name="attachment_count_tip">附件(%1$d)</string>
+    <string name="reply_count_tip">他人意見(%1$d)</string>
+    <string name="reply_empty_msg">請您輸入回複的內容</string>
+    <string name="reply_succ">回複成功</string>
+    <string name="reply_failure">回複失敗，請重試！</string>
+    <string name="deal">辦理</string>
+    <string name="add">加簽</string>
+    <string name="back">退回</string>
+    <string name="trace">跟蹤</string>
+    <string name="cancel_trace">取消跟蹤</string>
+    <string name="associate_collaboration_title">關聯事項</string>
+    <string name="read">已閱</string>
+    <string name="hide_views">隱藏意見</string>
+    <string name="other_reply">他人回複</string>
+    <string name="start_using">開始使用</string>
+    <string name="check_attachment_no_format">暫不支持查看此文件類型</string>
+    <string name="attachmentcontrolview_prompt_install_soft">無法打開，建議安裝查看此類型文件的軟件</string>
+    <string name="search_empty_searchkey">搜索</string>
+    <string name="choose_attachment_title">附件列表</string>
+    <string name="choose_attachment_choosefile">文檔</string>
+    <string name="choose_attachment_record">錄音</string>
+    <string name="choose_attachment_photo">照片</string>
+    <string name="choose_attachment_camera">拍照</string>
+    <string name="choose_attachment_no_attachment">無附件</string>
+    <string name="delete_file_success">附件刪除成功!</string>
+    <string name="delete_file_fail">附件刪除失敗，請重新刪除!</string>
+    <string name="file_name">文件名</string>
+    <string name="collaboration_choose_file_title">選擇附件</string>
+    <string name="collaboration_no_such_contact">暫無此人聯系方式</string>
+    <string name="collaboration_search_contact">獲取聯系方式...</string>
+    <string name="collaboration_dispose_edittext">請輸入您的意見</string>
+    <string name="collaboration_title">請輸入標題</string>
+    <string name="collaboration_content">請輸入內容</string>
+    <string name="collaboration_send">發送協同</string>
+    <string name="collaboration_send_do">送辦</string>
+    <string name="collaboration_attachment_0">附件</string>
+    <string name="collaboration_add_person_not">加簽（未加）</string>
+    <string name="collaboration_add_person_yes">加簽（已加）</string>
+    <string name="collaboration_flow_yes">辦理人（已選）</string>
+    <string name="collaboration_flow_not">辦理人</string>
+    <string name="collaboration_copy">份</string>
+    <string name="collaboration_has_attachment">附件%d份</string>
+    <string name="collaboration_touch">點擊</string>
+    <string name="collaboration_back">協同退回</string>
+    <string name="collaboration_add">協同加簽</string>
+    <string name="collaboration_deal">協同處理</string>
+    <string name="collaboration_add_message">您還沒加簽，需要加簽嗎？</string>
+    <string name="collaboration_really_deal">確定要處理協同嗎？</string>
+    <string name="collaboration_really_back">確定回退上壹個節點嗎？</string>
+    <string name="collaboration_hint_input_view">請輸入您的意見</string>
+    <string name="collaboration_back_tips">退出提示</string>
+    <string name="collaboration_isrecording">正在錄音，是否保存此錄音？</string>
+    <string name="collaboration_record_context">語音錄入成功，確定發送？</string>
+    <string name="collaboration_select_picture_fail">選擇圖片失敗，請重新選擇！</string>
+    <string name="collaboration_not_such_folder">此文件夾不存在或您沒有安裝sdcard</string>
+    <string name="collaboration_too_much_file">選擇的附件不能多于20個</string>
+    <string name="collaboration_input_title">請輸入協同標題</string>
+    <string name="collaboration_toolong_title">協同標題過長，請簡短！</string>
+    <string name="collaboration_add_flow">流程不能爲空，請添加流程</string>
+    <string name="collaboration_no_recording">還沒錄音，若要退出請點擊取消</string>
+    <string name="collaboration_attachment_document">此附件是正文文檔，不可刪除！</string>
+    <string name="collaboration_out_of_memory">手機內存不足</string>
+    <string name="collaboration_associate_collaboration">關聯事項</string>
+    <string name="collaboration_general">平件</string>
+    <string name="words_can_input">還能輸入%d個字</string>
+    <string name="workplan_add_receiver">主送人不能爲空，請添加</string>
+
+    <string name="settings_change_user">注銷賬戶</string>
+    <string name="settings_clear">清除緩存</string>
+    <string name="settings_version_upgrade">檢查更新</string>
+    <string name="settings_notice">推送設置</string>
+    <string name="settings_auto_sync_schedule">自動同步至本地日程</string>
+    <string name="settings_about">關于我們</string>
+    <string name="cancellation_dialog_context">確定注銷當前用戶?</string>
+
+    <string name="more_filemanager">附件管理</string>
+    <string name="more_setting_title">設置</string>
+    <string name="more_finish_downlaod">已完成</string>
+
+    <string name="form_input_idea_edittext_hint">請輸入您的意見</string>
+    <string name="form_input_idea_istrace">是否跟蹤</string>
+    <string name="form_input_idea_iswait">是否等待</string>
+    <string name="form_input_idea_isReturnCurrentNode">重新提交後直接返回本節點</string>
+    <string name="form_input_idea_title">處理意見</string>
+    <string name="form_submit">發送</string>
+    <string name="form_dispose_no_node">請選擇送辦人員</string>
+    <string name="form_dispose_sendtodo">送辦</string>
+    <string name="form_dispose_returnback">退回</string>
+    <string name="form_senddo_next">下壹環節：</string>
+    <string name="form_senddo_sendmore">送多人</string>
+    <string name="form_list_title">流程中心</string>
+    <string name="form_need_input">表單中存在必錄項，請輸入數據！</string>
+    <string name="form_choose_node_person">人員選擇</string>
+    <string name="form_choose_node_position">崗位選擇</string>
+    <string name="form_choose_node_department">部門選擇</string>
+    <string name="form_new_form_meetingboard_title">會議看板</string>
+    <string name="form_exit_edit_tig">表單還沒發送，退出將不會保存，確定退出嗎？</string>
+    <string name="form_null_checked_exit_data">數據已存在</string>
+    <string name="form_null_checked_non_formid">此表單無ID！</string>
+    <string name="form_null_addsign">請選擇加簽人員</string>
+
+    <string name="UMFeedbackConversationTitle">意見反饋</string>
+    <string name="UMFeedbackSummit">提交</string>
+
+    <string name="UMNewReplyAlertTitle">您的反饋收到了回複</string>
+    <string name="UMFeedbackGoBack">返回</string>
+    <string name="UMFeedbackContent">請輸入您的反饋意見</string>
+    <string name="UMViewThread">查看反饋</string>
+    <string name="UMDeleteThread">刪除反饋</string>
+    <string name="UMViewFeedback">查看反饋</string>
+    <string name="UMDeleteFeedback">刪除反饋</string>
+    <string name="UMResendFeedback">重發反饋</string>
+    <string name="UMDeleteMsg">刪除信息</string>
+    <string name="UMNewReplyFlick">有新的回複</string>
+    <string name="UMNewReplyTitle">有新的回複</string>
+    <string name="UMNewReplyHint">點擊查看</string>
+    <string name="UMBreak_Network">未聯網</string>
+    <string name="UMUpdateTitle">應用程序有新版本更新</string>
+    <string name="UMNewVersion">最新版本: </string>
+    <string name="UMGprsCondition">（提示：非WIFI環境）</string>
+    <string name="UMUpdateNow">立即更新</string>
+    <string name="UMAppUpdate">應用更新</string>
+    <string name="UMNotNow">以後再說</string>
+    <string name="UMToast_IsUpdating">正在更新中....</string>
+    <string name="UMDialog_InstallAPK">最新版本已下載，是否安裝？</string>
+    <string name="UMEmptyFbNotAllowed">請輸入妳的反饋內容</string>
+    <string name="UMContentTooLong">超過140字了，再簡短壹些吧</string>
+    <string name="UMFbList_ListItem_State_ReSend">失敗，輕觸以重發</string>
+    <string name="UMFbList_ListItem_State_Sending">發送中…</string>
+    <string name="UMFbList_ListItem_State_Fail">發送失敗</string>
+    <string name="UMFb_Atom_State_Fail">發送失敗</string>
+    <string name="UMFb_Atom_State_Sending">發送中…</string>
+    <string name="UMFb_Atom_State_Resend">發送失敗，輕觸以重發</string>
+    <string name="UMFbList_ListItem_State_Resending">重發</string>
+    <string name="UMFeedbackUmengTitle">意見反饋</string>
+    <string name="UMFeedbackListTitle">我的反饋</string>
+    <string name="UMFeedbackTitle">每條建議都將幫助我們做得更好。</string>
+    <string name="UMFeedbackGotIt">知道了</string>
+    <string name="UMFeedbackSeeDetail">去看看</string>
+    <string name="addressbook_detail_name">姓名</string>
+    <string name="addressbook_detail_department">部門</string>
+
+    <string name="addressbook_detail_post">崗位</string>
+    <string name="address_detail_location">聯系地址</string>
+    <string name="addressbook_detail_office_Phone">辦公電話</string>
+    <string name="addressbook_detail_mobile_Phone">私人電話</string>
+    <string name="addressbook_detail_email">郵箱</string>
+    <string name="address_detail_import_system_phone_tv">打電話</string>
+    <string name="addressbook_detail_info_saved">信息已經保存，是否重複保存</string>
+    <string name="flow">流程</string>
+    <string name="flow_titleadd">添加節點</string>
+
+    <!-- 流程圖，表單加簽 -->
+    <string name="flow_titleaddsign">協同加簽</string>
+    <string name="flow_titlenew">新建協同</string>
+    <string name="flow_titleshow">查看流程</string>
+    <string name="flow_titletranspond">轉發協同</string>
+    <string name="flow_nocontent">此機構下沒有人員</string>
+    <string name="flow_nodeunmodify">只能在本人節點後加簽。</string>
+    <string name="form_personadded">已加簽此人</string>
+    <string name="flow_loading">加載中</string>
+    <string name="flow_btnback">上級目錄</string>
+    <string name="flow_root">根目錄</string>
+    <string name="flow_reload">重新加載</string>
+    <string name="form_titleadd">表單加簽</string>
+    <string name="form_return">表單退回</string>
+    <string name="form_dispose">表單處理</string>
+    <string name="flow_alreadyadded">已添加此節點</string>
+    <string name="meeting_attend">參加</string>
+    <string name="meeting_attend_long">參    加:  </string>
+
+    <!-- 常用語資源 -->
+    <string name="meeting_not_attend">不參加</string>
+
+    <!-- 會議模塊資源 -->
+    <string name="meeting_not_attend_long">不參加:  </string>
+    <string name="meeting_unknown">待定</string>
+    <string name="meeting_unknown_long">待    定:  </string>
+    <string name="meeting_signIn_long">簽    到:  </string>
+    <string name="meeting_signIn">簽到</string>
+    <string name="meeting_moderator">主持人:</string>
+    <string name="meeting_untreated_show">未處理</string>
+    <string name="meeting_untreated">未處理:  </string>
+    <string name="meeting_attend_info">參會情況：</string>
+    <string name="meeting_manager">會議管理</string>
+    <string name="meeting_detail">會議詳情</string>
+    <string name="meeting_detail_title">詳情</string>
+    <string name="meeting_search_title">搜索會議</string>
+    <string name="report_list_title">報表列表</string>
+    <string name="report_button_query">查詢</string>
+    <string name="report_button_reports">報表</string>
+
+
+    <string name="workplan_list">工作計劃動態</string>
+    <string name="workplan_detail">計劃詳情</string>
+    <string name="new_workplan">周計劃</string>
+
+    <!-- 工作計劃資源 -->
+    <string name="workplan_end_hint">請填寫工作計劃</string>
+    <string name="workplan_start_date">開始時間</string>
+    <string name="workplan_end_date">結束時間</string>
+    <string name="workplan_enddate_max_startdate">結束時間必須大于開始時間！</string>
+    <string name="workplan_startdate_min">開始時間不能小于當前時間！</string>
+    <string name="workplan_receiveUsers">主送人</string>
+    <string name="workplan_receiveUsers_yes">主送人(已選)</string>
+    <string name="workplan_CCUsers">抄送人</string>
+    <string name="workplan_CCUsers_yes">抄送人(已選)</string>
+    <string name="workplan_noticeUsers">告知人</string>
+    <string name="workplan_noticeUsers_yes">告知人(已選)</string>
+    <string name="workplan_enddate_max_nowdate">結束時間必須大于當前時間！</string>
+    <string name="util_download_failed">下載失敗</string>
+    <string name="util_finish_download">下載完成</string>
+    <string name="util_year">年</string>
+
+    <!-- 工具類模塊資源 -->
+    <string name="util_month">月</string>
+    <string name="util_hour">時</string>
+    <string name="util_minute">分</string>
+    <string name="util_item">項</string>
+    <string name="util_folder">文件夾</string>
+    <string name="util_unknow_type">未知類型</string>
+    <string name="news_detail_news_title">新聞詳情</string>
+    <string name="news_detail_notice_title">公告詳情</string>
+    <string name="approval_title_string">審批</string>
+
+    <!-- 其他 -->
+    <string name="approval_todo">待辦</string>
+    <string name="approval_done">已辦</string>
+    <string name="approval_sended">已發</string>
+    <string name="button_delete">刪除</string>
+    <string name="list_exit">再點擊壹次返回鍵退出程序</string>
+    <string name="login_exit">確定退出程序?</string>
+    <string name="onsite_sign_title">現場簽到</string>
+    <string name="onsite_edit_hint">請輸入簽到描述</string>
+    <string name="onsite_sign_nophoto_toast">請拍壹張現場照片</string>
+
+    <!-- 現場簽到 -->
+    <string name="onsite_no_description">無描述</string>
+    <string name="onsite_hint_sign_title">請輸入簽到地點</string>
+    <string name="scan_text">將二維碼放入框內，即可自動掃描</string>
+    <string name="zxing_setting_tv">掃描二維碼</string>
+    <string name="zxing_title_text">掃壹掃</string>
+
+    <!-- 二維碼掃描 -->
+    <string name="zxing_right_select">相冊</string>
+    <string name="location_history_text">簽到記錄</string>
+    <string name="location_locus">外勤軌迹</string>
+    <string name="location_setting">設置</string>
+
+    <!-- 外勤通 -->
+    <string name="location_report">簽到</string>
+    <string name="location_auto_report">外勤人員自動位置上報</string>
+    <string name="location_custom_sign_address">自定義考勤點</string>
+    <string name="location_auto_report_des">\t自動上報功能只會在工作時間收集妳的數據，不會在其他時間收集</string>
+    <string name="location_null">當前考勤記錄爲空</string>
+    <string name="location_person">人員</string>
+    <string name="location_date">日期</string>
+    <string name="location_time_over">已錯過打卡時間</string>
+    <string name="location_time_overs">當前不在考勤時間內</string>
+    <string name="location_current_time">當前時間: </string>
+    <string name="location_worktime">考勤時間: </string>
+    <string name="location_worktime_title">附近地點</string>
+    <string name="location_need_photo">妳需要拍攝現場照簽到，是否現在拍照?</string>
+    <string name="location_no_range">(超範圍)</string>
+    <string name="location_no_sign_start">超出考勤點約%s，請選擇附近地點</string>
+    <string name="location_exceed_range">超出考勤範圍</string>
+    <string name="location_defult_title">考勤點</string>
+    <string name="location_custom_title">自定義考勤點</string>
+    <string name="location_search_title">搜索地點</string>
+    <string name="location_custiom_hint">搜索考勤點時，請輸入詳細的考勤點名稱</string>
+    <string name="location_custiom_search_error">請調整關鍵字後，再搜索</string>
+    <string name="location_sign_success">打卡成功</string>
+    <string name="location_sign_null">不能爲空</string>
+    <string name="location_phone_detaile">拍照詳情</string>
+    <string name="location_picture">圖片</string>
+    <string name="location_min_now">小于1</string>
+    <string name="location_km">公裏</string>
+    <string name="location_m">米</string>
+    <string name="location_sign">簽到</string>
+    <string name="location_error_hint">定位如有偏差，請打開WiFi並確保網絡暢通!</string>
+    <string name="location_mock_finish">請關閉模擬定位！</string>
+    <string name="handwrite_keepshort">已經寫滿， 請簡短!</string>
+    <string name="handwrite_deleteword">刪除</string>
+    <string name="handwrite_title">手寫簽批</string>
+    <!-- 手寫 -->
+    <string name="downlowned_or_see">文件已存在或已下載完畢，是否現在查看?</string>
+    <string name="reside_menu_item_downloadmanager">下載管理</string>
+    <string name="reside_menu_item_about">關于我們</string>
+    <!-- 企業號 -->
+    <string name="reside_menu_item_help">幫助手冊</string>
+
+    <!-- 側滑菜單 -->
+    <string name="reside_menu_item_share">分享應用</string>
+    <string name="reside_menu_item_collection">我的收藏</string>
+    <string name="all_contact">全部聯系人</string>
+    <string name="my_attention">我的關注</string>
+    <string name="top_contact">聯系人</string>
+
+    <string name="the_contact_detail_no_tel">用戶未添加聯系電話!</string>
+    <string name="frequent_contacts">常用聯系人</string>
+    <string name="organizational_structure">組織架構</string>
+    <string name="organizational_mine_department">我的部門</string>
+    <string name="organizational_part_time_department">兼職部門</string>
+    <string name="list_item_left_button">閱讀全文</string>
+    <string name="top_message">消息</string>
+    <string name="message_misson_title">任務消息</string>
+    <string name="message_nofity_title">待閱消息</string>
+    <string name="top_associate">同事圈</string>
+    <string name="message_cyrcle_item">圈子消息</string>
+    <string name="message_system_title">系統消息</string>
+    <string name="phone_does_not_support_message">暫不支持該類型消息</string>
+    <string name="thecontact_search">找人</string>
+    <string name="top_application">應用</string>
+    <string name="online_chat">聊天</string>
+    <string name="concerted">協同</string>
+
+    <!-- 工作 -->
+    <string name="sign_in">簽到</string>
+    <string name="workplan">計劃</string>
+    <string name="gestrue_password_title">手勢密碼設置</string>
+    <string name="open_gestrue_password">開啓手勢密碼</string>
+    <string name="off_gestrue_password">關閉手勢密碼</string>
+
+    <!-- 手勢密碼 -->
+    <string name="reset_password">重置手勢密碼</string>
+    <string name="lockscreen_access_pattern_start">開始繪制圖案</string>
+    <string name="lockscreen_access_pattern_cleared">圖案已清除</string>
+    <string name="lockscreen_access_pattern_cell_added">已添加單元格</string>
+    <string name="lockscreen_access_pattern_detected">圖案繪制完成</string>
+    <string name="lockpattern_retry_button_text">重試</string>
+    <string name="lockpattern_continue_button_text">繼續</string>
+    <string name="lockpattern_confirm_button_text">確認</string>
+    <string name="lockpattern_setting_button_text">去設置</string>
+    <string name="lockpattern_recording_intro_header">繪制解鎖圖案</string>
+    <string name="lockpattern_settings_help_how_to_record">如何繪制解鎖圖案</string>
+    <string name="lockpattern_recording_incorrect_too_short">至少連接2個點，請重試</string>
+    <string name="lockpattern_recording_incorrect_min">輸入長度不夠，請重試</string>
+    <string name="lockpattern_pattern_entered_header">圖案已記錄</string>
+    <string name="lockpattern_confirm">請繪制手勢密碼</string>
+    <string name="lockpattern_need_to_confirm">請再次繪制解鎖圖案</string>
+    <string name="lockpattern_need_to_unlock_wrong">與上次輸入不壹致，請重新繪制</string>
+    <string name="lockpattern_need_to_five">5次失敗後，需要等待30秒</string>
+    <string name="lockpattern_need_off_password">密碼錯誤，還可以再輸入</string>
+    <string name="lockpattern_need_reset"> 秒後重試</string>
+    <string name="lockpattern_pattern_confirmed_header">確認保存新解鎖圖案</string>
+    <string name="lockpattern_recording_inprogress">完成後松開手指</string>
+    <string name="forget_gestures_password">忘記密碼</string>
+    <string name="alertdialog_chat">發起聊天</string>
+    <string name="alertdialog_collaboration">發起協同</string>
+    <string name="alertdialog_process">發起流程</string>
+    <!-- 下拉列表 -->
+    <string name="alertdialog_location">簽到</string>
+    <string name="alertdialog_workplan">寫計劃</string>
+    <string name="alertdialog_schedule">寫日程</string>
+    <string name="alertdialog_robot">小飛助手</string>
+    <string name="alertdialog_email">寫郵件</string>
+    <string name="search_person">找人</string>
+    <string name="address_detail_import_system_im_tv">在線消息</string>
+    <string name="submit_ok">完成</string>
+    <string name="about_welcome_title">歡迎頁</string>
+    <string name="about_new_title">新功能介紹</string>
+    <string name="about_copyright_title">版權信息</string>
+
+    <string name="checkedtextview">Copyright&#169;2010-2019 Flyrise.All Rights Reserved</string>
+    <string name="approval_new">發起協同</string>
+    <string name="approval_from">發起流程</string>
+    <string name="wrokplan_input_content">請輸入計劃內容</string>
+    <!--審批-->
+    <string name="help_yggh">員工關懷，傳達溫暖</string>
+    <string name="approval_search">搜索</string>
+
+    <string name="login_version_error">經檢查服務端版本(%1$d)與APP不兼容，請與管理員聯系！</string>
+    <!-- 應用資源 -->
+    <string name="top_mine">我的</string>
+    <string name="result_not_found">暫時沒有您查找的數據</string>
+    <string name="admin">系統管理員</string>
+    <string name="delete_group_chat">刪除</string>
+
+    <!-- 我的 -->
+    <string name="cancel_group_chat">取消</string>
+    <string name="select_im_user">已選%1$s</string>
+    <string name="record_prohibit">錄音權限已禁止，請進入系統設置開啓權限</string>
+    <string name="location_sign_in_success">簽到成功</string>
+    <string name="location_sign_in_error">簽到失敗，請重新簽到！</string>
+    <string name="approval_pingjian">平件</string>
+    <string name="approval_jijian">急件</string>
+
+    <string name="approval_yuejian">閱件</string>
+    <string name="lbl_retry_operator">操作失敗，請重試</string>
+    <string name="lbl_retry_network_connection">網絡連接出錯，請檢查</string>
+    <string name="lbl_text_edit">編輯</string>
+    <string name="lbl_text_pic_not_exist">圖片不存在了，可能刪除了</string>
+
+    <string name="lbl_text_check_not_modify">請確保沒有修改過圖片後再提交</string>
+    <string name="lbl_text_no_more">沒有更多了</string>
+    <string name="lbl_text_open_gps">簽到和自動上報位置需要打開GPS</string>
+    <string name="lbl_text_send_address_gps">發送位置需要打開GPS</string>
+    <string name="lbl_text_open_setting_gps">自動上報位置需要打開GPS</string>
+    <string name="lbl_text_download_wait">下載中請稍等</string>
+    <string name="lbl_text_contact_download_error">下載聯系人失敗，請重新登錄</string>
+    <string name="lbl_text_contact_update_error">聯系人更新失敗，部分功能無法正常使用</string>
+    <string name="lbl_text_logo_download_error">下載失敗</string>
+    <string name="lbl_text_common_not_empty">常用語不能爲空</string>
+    <string name="lbl_text_common_length">常用語需小于 120 個字符</string>
+    <string name="lbl_text_vpn_check_host">請檢查 VPN 地址是否正確</string>
+    <string name="lbl_text_vpn_check_account">請輸入 VPN 賬號</string>
+    <string name="lbl_text_vpn_check_password">請輸入 VPN 密碼</string>
+    <string name="lbl_text_scan_failed">二維碼解析失敗</string>
+    <string name="lbl_text_copy_success">複制成功</string>
+    <string name="lbl_text_attach_delete_failed">附件刪除失敗，請稍後再試</string>
+    <string name="lbl_text_mail_send_success">您的郵件已成功發送</string>
+    <string name="lbl_text_long_press_edit">長按編輯原文</string>
+    <string name="lbl_text_get_mail_detail_error">獲取原始郵件信息失敗，請稍後再試</string>
+    <string name="lbl_text_mail_address_error">收件人地址存在格式錯誤</string>
+    <string name="lbl_text_mail_recipient_not_exist">收件人不存在</string>
+    <string name="lbl_text_mail_copy_address_error">抄送人地址存在格式錯誤</string>
+    <string name="lbl_text_mail_copy_not_exist">抄送人不存在</string>
+    <string name="lbl_text_mail_blind_address_error">密送人地址存在格式錯誤</string>
+    <string name="lbl_text_mail_blind_not_exist">密送人不存在</string>
+    <string name="lbl_text_mail_theme_not_empty">郵件主題不能爲空</string>
+    <string name="lbl_text_mail_server_not_open">郵箱服務器沒有開啓或者服務器沒有開啓外網</string>
+    <string name="lbl_text_">未開啓手勢密碼</string>
+    <string name="lbl_text_not_install_app">您的手機沒有安裝相應的客戶端</string>
+    <string name="lbl_message_not_save_after_exist">退出後將不進行保存，確定退出？</string>
+    <string name="lbl_message_mail_not_exist">郵件不存在或已經被刪除</string>
+    <string name="lbl_message_confirm_delete_mail">確定要刪除這些郵件嗎</string>
+    <string name="lbl_message_mail_has_delete">該郵件已經被刪除</string>
+
+    <string name="lbl_message_attchment_upload_failed">附件上傳失敗，請重試</string>
+    <string name="lbl_message_save_darft">是否保存爲草稿？</string>
+    <string name="lbl_message_will_lost_format">編輯原文可能會丟掉部分格式，是否繼續？</string>
+    <string name="lbl_message_will_spend_most_time">獲取最新的外部郵件需要壹定的時間，是否繼續？</string>
+    <string name="lbl_message_continue_recode">繼續錄音</string>
+    <string name="lbl_message_title_chat">發起聊天</string>
+    <string name="lbl_message_title_mail_choose">郵件選人</string>
+    <string name="lbl_message_title_plan_choose">計劃選人</string>
+    <string name="lbl_message_title_mail_attachment">郵件附件</string>
+
+    <string name="lbl_message_title_mail_home">郵箱</string>
+    <string name="lbl_message_title_mail_canyuren">郵件參與人</string>
+    <string name="lbl_message_title_new_mail">寫郵件</string>
+    <string name="lbl_message_title_send_again">再次發送</string>
+    <string name="lbl_message_title_reply_mail">回複郵件</string>
+    <string name="lbl_message_title_copyto_mail">轉發郵件</string>
+    <string name="lbl_message_title_edit_mail">編輯草稿</string>
+    <string name="lbl_message_title_mail_detail">郵件詳情</string>
+    <string name="lbl_message_title_yaoqing_tonshi">邀請同事</string>
+    <string name="lbl_message_title_file_decrypt">文件解密處理</string>
+    <string name="lbl_text_add">添加</string>
+    <string name="lbl_text_delete">刪除(</string>
+    <string name="lbl_text_write_mail">寫郵件</string>
+    <string name="lbl_text_send">發送</string>
+
+    <string name="lbl_text_zhuanfa">轉發</string>
+    <string name="lbl_text_completed">已完成</string>
+    <string name="lbl_text_download">下載中</string>
+    <string name="lbl_text_confirm_restore_mail">確定要恢複這封郵件嗎？</string>
+    <string name="lbl_text_confirm_delete_mail_per">確定要永久刪除這封郵件嗎？</string>
+    <string name="lbl_text_confirm_delete_mail">確定要刪除這封郵件嗎？</string>
+    <string name="lbl_text_confirm_delete_draft">確定要刪除這份草稿嗎？</string>
+
+    <string name="lbl_text_resore_mail">恢複郵件</string>
+    <string name="lbl_text_delete_pre">永久刪除</string>
+    <string name="lbl_text_reply_all">全部回複</string>
+    <string name="lbl_text_mail_receiver_empty">收件人不能爲空</string>
+    <string name="lbl_text_mail_unread">未讀郵件：</string>
+    <string name="lbl_text_mail_unread_title">未讀郵件</string>
+    <string name="lbl_text_hello">您好，</string>
+    <string name="lbl_text_mail_box">收件箱</string>
+    <string name="lbl_text_mail_draft">草稿箱</string>
+    <string name="lbl_text_mail_send">已發送</string>
+    <string name="lbl_text_mail_trash">垃圾箱</string>
+    <string name="lbl_text_mail_sender">發送人</string>
+    <string name="lbl_text_mail_sender_1">發件人</string>
+    <string name="lbl_text_mail_receiver">收件人</string>
+    <string name="lbl_text_mail_copy_to">抄送人</string>
+    <string name="lbl_text_mail_receiver_lbl">抄送人/密送人; 發件人：</string>
+    <string name="lbl_text_mail_send_failed">發送郵件失敗</string>
+    <string name="lbl_text_vpn_server">服務器</string>
+    <string name="lbl_text_vpn_port">端口號</string>
+    <string name="lbl_text_vpn_username">賬號</string>
+    <string name="lbl_text_vpn_password">密碼</string>
+
+    <string name="lbl_text_vpn_init_failed">初始化VPN設置失敗，請稍後重試</string>
+    <string name="lbl_text_vpn_account_error">登錄VPN失敗，請檢查VPN賬號密碼是否正確</string>
+    <string name="lbl_text_related_news">相關閱讀</string>
+    <string name="know_document">文檔</string>
+    <string name="know_infinite">不限</string>
+    <string name="know_chose_receiver">選擇接收人員</string>
+    <string name="know_person_folder">個人文件夾</string>
+
+
+    <!--知識中心-->
+    <string name="know_input_folder_name">請輸入文件名</string>
+    <string name="know_upload_file">上傳文件</string>
+    <string name="know_upload_success">上傳成功</string>
+    <string name="know_upload_error">上傳失敗</string>
+    <string name="one_day">壹天</string>
+    <string name="two_day">兩天</string>
+    <string name="one_week">壹星期</string>
+    <string name="two_week">兩星期</string>
+    <string name="one_month">壹個月</string>
+    <string name="know_no_add_file">沒有添加上傳文件</string>
+    <string name="know_delete_file_or_folder">是否刪除文件或文件夾</string>
+    <string name="know_can_not_move">無法把文件移動到主目錄下</string>
+    <string name="know_add_to_downList">添加到下載目錄</string>
+    <string name="know_has_been_downloaded">文件已下載</string>
+    <string name="know_open_fail">打開失敗</string>
+    <string name="know_published">已發布文件</string>
+    <string name="know_receive">接收文件</string>
+    <string name="know_select_folder">選擇移動位置</string>
+    <string name="delete_success">刪除成功</string>
+    <string name="delete_fail">刪除失敗</string>
+    <string name="know_file_detail">文件詳情</string>
+    <string name="know_input_file_name">請輸入文件名</string>
+    <string name="know_rename">重命名</string>
+    <string name="know_rename_success">重命名成功</string>
+    <string name="know_rename_error">重命名失敗</string>
+    <string name="know_folder_exist">存在同名文件夾</string>
+    <string name="know_create_folder">新建文件夾</string>
+    <string name="know_create_folder_success">新建文件夾成功</string>
+    <string name="know_create_folder_error">新建文件夾失敗</string>
+    <string name="know_publish_success">發布成功</string>
+    <string name="know_publish_error">發布失敗</string>
+    <string name="know_select_receiver">選擇接受人員</string>
+    <string name="know_down_error">下載失敗</string>
+    <string name="know_decode_open">正在解密打開</string>
+    <string name="know_search_file">搜索文件…</string>
+    <string name="know_move_success">移動成功</string>
+    <string name="know_move_error">移動失敗</string>
+    <string name="know_cancel_publish">是否取消發布該文件</string>
+    <string name="know_cancel_publish_success">取消發布成功</string>
+    <string name="know_cancel_publish_error">取消發布失敗</string>
+    <string name="lbl_message_title_publish_choose">發布選人</string>
+    <string name="know_please_add_receiver">請添加接收人員</string>
+    <string name="know_openfile_after_downlaod">下載完成是否打開該文件</string>
+    <string name="know_opening">正在打開</string>
+    <string name="know_selectAll">全選</string>
+    <string name="know_unSelectAll">反選</string>
+    <string name="know_getDetail_fail">文件已刪除或已失效</string>
+    <string name="know_downloading">正在下載</string>
+    <string name="know_from_doc">從文檔中選擇</string>
+    <string name="know_from_pic">從相冊中選擇</string>
+    <string name="know_from_camera">拍照</string>
+    <string name="know_has_notpic">含有非圖片內容，無法移動到該目錄下</string>
+    <string name="know_has_notdoc">含有非文檔內容，無法移動到該目錄下</string>
+    <string name="cancel">取消</string>
+    <string name="know_unit_folder">單位文件夾</string>
+    <string name="know_group_folder">集團文件夾</string>
+    <string name="know_open">打開</string>
+    <string name="know_collect">收藏</string>
+    <string name="know_more_control">更多</string>
+    <string name="know_cancel_public">取消發布</string>
+    <string name="know_button_move">移動</string>
+    <string name="know_button_rename">重命名</string>
+    <string name="know_button_public">發布</string>
+    <string name="know_button_down">下載</string>
+    <string name="know_uploading">正在上傳</string>
+    <string name="dispose_content_size">內容必須小于3800個字符</string>
+    <string name="know_enddate_max_startdate_forUpload">失效時間必須大于生效時間！</string>
+    <string name="know_startdate_mix">生效時間不能小于當前時間！</string>
+    <string name="know_public_file">發布文件</string>
+    <string name="schedule_new_title">新增日程</string>
+    <string name="schedule_update_title">修改日程</string>
+    <string name="schedule_lbl_startTime">開始時間</string>
+    <string name="schedule_lbl_endTime">結束時間</string>
+
+    <string name="schedule_lbl_promptTime">提醒時間</string>
+    <string name="schedule_lbl_repeatTime">重複時間</string>
+    <string name="schedule_lbl_sharePerson">分享他人</string>
+    <string name="schedule_detail_title">日程詳情</string>
+    <string name="schedule_detail_title_right">更多</string>
+    <string name="schedule_detail_lbl_shared">分享他人：</string>
+    <string name="schedule_detail_lbl_endTime">結束日期：</string>
+
+    <string name="schedule_detail_lbl_promptTime">提醒時間：</string>
+    <string name="schedule_detail_lbl_repeatTime">重複周期：</string>
+    <string name="schedule_detail_lbl_share_none">無</string>
+    <string name="schedule_detail_lbl_never">永不</string>
+    <string name="schedule_main_right">今天</string>
+    <string name="schedule_main_calendar_sun">日</string>
+    <string name="schedule_main_calendar_mon">壹</string>
+    <string name="schedule_main_calendar_tue">二</string>
+
+    <string name="schedule_main_calendar_wed">三</string>
+    <string name="schedule_main_calendar_thu">四</string>
+    <string name="schedule_main_calendar_fir">五</string>
+    <string name="schedule_main_calendar_sta">六</string>
+    <string name="schedule_lbl_no_agenda">暫無日程安排！</string>
+    <string name="schedule_lbl_get_schedule_detail_failed">獲取日程詳情失敗！</string>
+    <string name="schedule_lbl_delete_schedule_failed">刪除日程失敗！</string>
+    <string name="schedule_lbl_delete_schedule_success">刪除日程成功！</string>
+    <string name="schedule_lbl_confirm_delete_schedule">確定刪除此日程？</string>
+    <string name="schedule_title_share_other">分享他人</string>
+    <string name="schedule_lbl_share_to">分享該日程給：</string>
+    <string name="schedule_lbl_share_success">日程分享成功</string>
+    <string name="schedule_lbl_share_failed">日程分享失敗</string>
+    <string name="schedule_lbl_sync_success">已同步到本地日程</string>
+    <string name="schedule_lbl_sync_failed">日程同步失敗，檢測到手機沒有設置賬戶，請手動點開日曆創建賬戶後繼續使用此功能！</string>
+
+    <string name="schedule_more_share_other">分享日程</string>
+    <string name="schedule_more_update_schedule">修改日程</string>
+    <string name="schedule_more_delete_schedule">刪除日程</string>
+    <string name="schedule_more_sync_calendar">同步日程</string>
+
+    <string name="schedule_more_to_collaboration">轉協同</string>
+    <string name="schedule_get_prompt_failed">獲取提醒時間失敗，請重試！</string>
+    <string name="schedule_get_repeat_failed">獲取重複周期失敗，請重試！</string>
+    <string name="schedule_new_title_null">日程標題不能爲空</string>
+    <string name="schedule_new_content_null">日程內容不能爲空</string>
+    <string name="schedule_new_time_out">日程開始時間大于日程結束時間</string>
+    <string name="schedule_new_save_failed">日程創建失敗</string>
+
+    <string name="schedule_update_save_failed">日程修改失敗</string>
+    <string name="schedule_new_save_success">日程創建成功</string>
+    <string name="schedule_update_save_success">日程修改成功</string>
+    <string name="login_ing">登錄中...</string>
+    <string name="contact_loading">正在加載聯系人...</string>
+    <string name="contact_company_tel">公司電話</string>
+    <string name="contact_mobile_phone">移動電話</string>
+    <string name="salary_verify_dialog_title">工資查看</string>
+
+    <string name="salary_pwd_verify_failed">密碼錯誤，請重新輸入</string>
+    <string name="salary_get_detail_failed">暫無該月數據</string>
+    <string name="salary_lbl_month">月份</string>
+    <string name="salary_lbl_year">&#160;年</string>
+    <string name="contact_download_failed_retry">聯系人加載失敗，請點擊屏幕重試</string>
+    <string name="send_location">發送位置</string>
+    <string name="location_message">位置信息</string>
+    <string name="action_more">更多</string>
+    <string name="action_revocation">撤銷</string>
+    <string name="action_transmit">轉發</string>
+    <string name="action_circulate">傳閱</string>
+
+    <string name="action_supplement">補充正文</string>
+    <string name="action_view_flow">查看流程</string>
+    <string name="auth_mac_check_failed">設備標識驗證失敗，請與管理員聯系變更爲:</string>
+    <string name="password_used_hind">請注意區分大小寫</string>
+    <string name="password_used_error">原密碼錯誤，請重新輸入</string>
+    <string name="password_modify_hind">只允許使用數字和字母、下劃線</string>
+    <string name="password_modify_error">不能與原密碼相同</string>
+    <string name="modify_email_error">郵箱地址包含字母、數字、下劃線、@、英文字符“點”、横杆</string>
+    <string name="modify_info_success">修改成功</string>
+    <string name="modify_info_error">修改失敗</string>
+    <string name="modify_password">修改密碼</string>
+    <string name="modify_password_title">修改密碼</string>
+    <string name="login_password">登錄密碼</string>
+
+    <string name="input_password">請輸入密碼</string>
+    <string name="modify_hand_password">手勢密碼</string>
+    <string name="modify_text_hind">輸入</string>
+    <string name="input_success_phone">請輸入正確的手機號碼</string>
+    <string name="input_success_email">請輸入正確的郵箱</string>
+    <string name="phone_repeat_modify_error">不能與舊號碼相同</string>
+    <string name="reside_menu_item_security">賬戶安全</string>
+    <string name="gesture_password_off">未開啓</string>
+    <string name="gesture_password_open">已啓用</string>
+    <string name="user_info_title">個人資料</string>
+    <string name="userinfo_word_number">個字</string>
+    <string name="modify_login_password">原密碼</string>
+    <string name="modify_new_password">新密碼</string>
+    <string name="modify_confirm_password">確認密碼</string>
+    <string name="modify_confirm_hind">請輸入6-16個字符的確認密碼</string>
+    <string name="modify_password_error">請輸入6-16個字符的密碼</string>
+
+    <string name="modify_confirm_error">2次輸入的新密碼不壹致，請重新輸入</string>
+    <string name="app_version_no_updata">已是最新版本</string>
+    <string name="app_version_updata">檢測到新的版本，點擊更新</string>
+    <string name="fp_txt_use_fingerprint_login">請使用指紋進行登錄</string>
+    <string name="fp_txt_use_fingerprint_clicked">點擊進行指紋解鎖</string>
+    <string name="fp_txt_use_fingerprint_unlock">請使用指紋進行驗證</string>
+
+    <string name="fp_txt_use_pwd_login">使用密碼驗證</string>
+    <string name="fp_txt_retry_more_use_pwd_login">嘗試次數過多，使用密碼登錄</string>
+    <string name="fp_txt_fingerprint_not_match">無匹配</string>
+    <string name="fp_txt_unable_use_pwd_login">指紋識別不可用</string>
+    <string name="picture_selected">從相冊選擇</string>
+    <string name="photograph">拍照</string>
+    <string name="photograph_icon">用戶頭像</string>
+    <string name="photograph_selected">選擇</string>
+    <string name="photograph_crop">裁剪圖片</string>
+
+    <string name="photograph_submit">確定</string>
+    <string name="notifiy_content">妳收到了%1$d條新消息</string>
+    <string name="__picker_title">圖片</string>
+    <string name="collaboration_select_import">緊急程度不能爲空，請選擇緊急程度</string>
+    <string name="add_body">補充正文</string>
+    <string name="collaboration_matters">關聯事項</string>
+    <string name="collaboration_has_matters">關聯事項%d份</string>
+    <string name="select_matter">已選事項</string>
+
+    <string name="all_department">全部部門</string>
+    <string name="all_position">全部崗位</string>
+    <string name="unknown">未知</string>
+    <string name="unknown_company">未知公司</string>
+    <string name="unknown_department1">未知部門1</string>
+    <string name="unknown_position">未知崗位</string>
+    <string name="copy_device_id">複制設備ID</string>
+    <string name="revocation_collaboration">是否撤銷協同</string>
+    <string name="revocation_flow">是否撤銷流程表單</string>
+    <string name="revocation_success">撤銷成功</string>
+    <string name="revocation_error">撤銷失敗</string>
+    <string name="add_common_language">新增常用語</string>
+    <string name="edit_common_language">編輯常用語</string>
+    <string name="set_pw_success">密碼設置成功</string>
+    <string name="input_link">請填寫超鏈接</string>
+    <string name="crop_error">剪切失敗</string>
+    <string name="can_not_crop">無法剪切選擇圖片</string>
+    <string name="modify_error">修改失敗</string>
+    <string name="unSupport_module">當前版本暫不支持該模塊</string>
+    <string name="all">全部</string>
+    <string name="not_open_Interface">/** 無法開啓界面 **/</string>
+    <string name="circulate">傳閱</string>
+    <string name="circulate_select_person">傳閱選人</string>
+    <string name="circulate_person">傳閱人</string>
+    <string name="circulate_person_has_select">已選傳閱人%d</string>
+    <string name="circulate_select_person_hint">請選擇傳閱人</string>
+    <string name="circulate_send_success">發送傳閱成功</string>
+    <string name="circulate_send_error">發送傳閱失敗</string>
+    <string name="meeting">會議</string>
+    <string name="knowledge">知識</string>
+    <string name="schedule">日程</string>
+    <string formatted="false" name="select_confim">確定 (%d/%d)</string>
+    <string name="selected_submit_title">已選</string>
+    <string formatted="false" name="selected_confim">已選 %d</string>
+    <string name="all_phone_album">全部相冊</string>
+    <string name="max_select">最多選擇%s張圖片</string>
+
+    <string name="select_one_image">請選擇壹張照片</string>
+    <string name="permissions_error">獲取權限失敗</string>
+    <string name="load_image_error">獲取圖片失敗</string>
+    <string name="loading_data">"加載數據.."</string>
+    <string name="lbl_content_hint">編輯正文</string>
+    <string name="input_reply">請輸入回複意見</string>
+    <string name="external_contact">客戶聯系人</string>
+    <string name="external_group_chat">群聊</string>
+    <string name="lbl_default_port">默認端口：</string>
+    <string name="association">關聯事項</string>
+
+    <string name="association_has">關聯事項%d份</string>
+    <string name="title_hint">標題:</string>
+    <string name="transmit">轉發</string>
+    <string name="addboy_input_content">請輸入補充正文內容</string>
+
+    <string name="knowledge_extends_permission">是否繼承父目錄權限</string>
+    <string name="originalreply_count_tip">原文回複意見(%d)</string>
+
+    <string name="lbl_txt_parse_vpn_failed">解析VPN服務器域名失敗</string>
+    <string name="device_no_mailbox">您的設備未安裝郵箱</string>
+    <string name="weehours">淩晨</string>
+    <string name="noon">上午</string>
+    <string name="nooning">中午</string>
+    <string name="date_available">有效日期:</string>
+    <string name="receiver">接收者:</string>
+    <string name="publisher">發布人:</string>
+    <string name="voice_by_IFLYTEK">語音技術由科大訊飛提供</string>
+    <string name="fingerprint_unlocking">指紋解鎖</string>
+    <string name="face_unlocking">人臉識別</string>
+    <string name="save_to_addressbooks">保存到通訊錄</string>
+    <string name="new_msg_alerts">接收新消息通知</string>
+    <string name="notification_center">通知顯示詳情</string>
+    <string name="sound">聲音</string>
+    <string name="vibrate">振動</string>
+    <string name="do_not_disturb">勿擾模式</string>
+    <string name="do_not_disturb_hint">開啓後，在設定時間段內收到新消息時，不會響鈴或振動</string>
+    <string name="do_not_disturb_start">開始時間</string>
+    <string name="do_not_disturb_end">結束時間</string>
+    <string name="search_contact">搜索聯系人…</string>
+    <string name="openssl">啓用SSL</string>
+    <string name="openvpn">啓用VPN</string>
+    <string name="open_push">啓動消息推送</string>
+    <string name="sound_setting">聲音設置</string>
+    <string name="vibrate_setting">振動設置</string>
+    <string name="committed">待發</string>
+    <string name="transactor">辦理人</string>
+    <string name="matter">關聯事項</string>
+    <string name="emergency_level">緊急程度</string>
+    <string name="modify_the_body">修改正文</string>
+    <string name="save">暫存</string>
+    <string name="no_select_item">沒有選中項</string>
+    <string name="whether_delete">是否刪除選中項</string>
+    <string name="collaboration_no_save_hint">沒有輸入任何內容，無法進行暫存操作</string>
+    <string name="action_fail_again">操作失敗，請重試</string>
+    <string name="richedit_over_hint">當前輸入內容超過 2000字 ，請重新編輯！</string>
+    <string name="richedit_fontsize_large">大號</string>
+    <string name="richedit_fontsize_default">默認</string>
+    <string name="richedit_fontsize_small">小號</string>
+    <string name="email_receiver">收件人：</string>
+    <string name="email_addreceiver">添加收件人</string>
+    <string name="email_add_copy">添加抄送人</string>
+    <string name="email_copy">抄送人：</string>
+    <string name="email_add_bc">添加密送人</string>
+    <string name="email_bc">密送人：</string>
+    <string name="email_theme">輸入主題</string>
+    <string name="email_body">郵件正文</string>
+    <string name="konw_reminder_time">提醒時間</string>
+    <string name="know_time_in_force">生效時間</string>
+    <string name="know_dead_time">失效時間</string>
+    <string name="salary_unlock">解鎖</string>
+    <string name="share_wechat">微信</string>
+    <string name="share_sms">短信</string>
+    <string name="share_email">郵箱</string>
+    <string name="share_copy">複制</string>
+    <string name="share_Initiate_invitation">發起邀請</string>
+    <string name="location_record_count">%1$s %2$s月考勤次數 : %3$d</string>
+    <string name="workflow_done">已辦</string>
+    <string name="workflow_received">已收在辦</string>
+    <string name="workflow_unreceived">未收未辦</string>
+    <string name="workflow_stop">終止</string>
+    <string name="workflow_freeze">凍結</string>
+    <string name="workflow_return">退回</string>
+    <string name="please_input">請輸入%s…</string>
+    <string name="please_input_todo">請輸入待辦…</string>
+    <string name="please_input_done">請輸入已辦…</string>
+    <string name="please_input_sent">請輸入已發…</string>
+    <string name="addressbook_no_post">未分配崗位</string>
+    <string name="afternoon">下午</string>
+    <string name="evening">晚上</string>
+    <string name="collaboration_restored_status">已恢複上次編輯狀態</string>
+    <string name="other">其它</string>
+    <string name="userinfo_change">修改</string>
+    <string name="userinfo_chat_check">修改%1$s不能超過%2$d個字</string>
+    <string name="taskmessage_originating_task">發起任務</string>
+    <string name="task">任務</string>
+    <string name="knowledge_person_select">已選擇%d個人</string>
+    <string name="salary_total_pay">應發：%s元</string>
+    <string name="salary_net_pay">實發：%s元</string>
+    <string name="collaboration_forward_reply">轉發意見</string>
+    <string name="metting_text_nums">意見不能超過%1$d個字</string>
+    <string name="form_phone_remind">手機提醒</string>
+    <string name="tip_select_picture">請選擇圖片</string>
+    <string name="schedule_create_failed_share_more">分享人數過多，日程創建失敗</string>
+    <string name="schedule_update_failed_share_more">分享人數過多，日程修改失敗</string>
+    <string name="location_history_error">簽到記錄異常</string>
+    <string name="location_custom_add">保存考勤點</string>
+    <string name="location_custom_default">設爲默認</string>
+    <string name="location_custom_list_title">自定義考勤點管理</string>
+    <string name="location_custom_success">完成</string>
+
+    <string name="location_custom_error">該考勤點已存在</string>
+    <string name="location_sign_error">簽到數據異常</string>
+    <string name="location_search_poiitem_error">搜索不到附近地點</string>
+    <string name="location_sign_submit">提交</string>
+    <string name="location_take_photo_detail">現場簽到詳情</string>
+    <string name="location_setting_notification_time">設置提醒時間</string>
+
+    <string name="update_version_cancel">不再提醒</string>
+    <string name="update_version_allow">立即升級</string>
+    <string name="update_version_title">FE企業雲工作台%1$s版本</string>
+
+    <string name="update_version_head">發現新版本</string>
+    <string name="update_version_progress">下載中... %1$d</string>
+
+    <string name="schedule_remind_success">設置提醒成功</string>
+    <string name="schedule_remind_error">設置提醒失敗</string>
+    <string name="schedule_remind_time_hint">提醒時間必須在當前時間5分鍾後</string>
+    <string name="collaboration_return_to_startnode">退回到發起人</string>
+    <string name="collaboration_return_to_thisNode">重新提交後直接返回本節點</string>
+
+    <string name="collaboration_sure_return_to_startnode">確定退回到開始節點嗎？</string>
+    <string name="mobilekey_init_hint">手機盾尚未激活，請前往安全設置中心激活！</string>
+    <string name="not_support_action">未支持的操作！</string>
+
+
+    <string name="qrcode_content">已識別到二維碼內容</string>
+    <string name="qrcode_content_warm">掃碼內容非企業雲工作台提供，請謹慎使用！</string>
+    <string name="mokey_active">激活</string>
+
+    <string name="mokey_active_success">激活成功</string>
+    <string name="mokey_active_error">激活失敗</string>
+    <string name="mokey_modify_pwd">修改密碼</string>
+    <string name="mokey_modify_pwd_success">修改密碼成功</string>
+
+    <string name="mokey_modify_pwd_error">修改密碼失敗</string>
+    <string name="mokey_reset">重置</string>
+    <string name="mokey_reset_success">重置成功</string>
+    <string name="mokey_reset_fail">重置失敗</string>
+    <string name="mokey_setting">設置</string>
+    <string name="mokey_set_safe_pwd">設置安全碼</string>
+    <string name="mokey_modify_safe_pwd">修改安全碼</string>
+    <string name="mokey_input_safepwd">請輸入安全密碼</string>
+    <string name="mokey_must_input_hint">請輸入此內容</string>
+    <string name="mokey_logout">注銷</string>
+    <string name="mokey_logout_success">注銷成功</string>
+    <string name="mokey_logout_error">注銷失敗</string>
+    <string name="mokey_verify_error">校驗手機盾失敗</string>
+    <string name="mokey_hint_must_active">當前模式必須激活手機盾</string>
+    <string name="mokey_error_no_active_for_login">未激活手機盾，無法登錄</string>
+    <string name="mokey_signet_success">簽章成功</string>
+    <string name="mokey_signet_fail">簽章失敗</string>
+    <string name="qrcode_login_success">掃碼登錄成功</string>
+    <string name="qrcode_login_error">掃碼登錄失敗</string>
+    <string name="meeting_titile">主題：</string>
+    <string name="meeting_time">時間：</string>
+    <string name="meeting_place">地點：</string>
+
+    <string name="meeting_master">主持：</string>
+    <string name="meeting_sign_back_time">簽退：</string>
+
+    <string name="meeting_sign_time">簽到：</string>
+    <string name="schedule_get_reply_fail">獲取回複列表失敗</string>
+    <string name="schedule_del_reply_success">刪除回複成功</string>
+    <string name="schedule_del_reply_failed">刪除回複失敗</string>
+    <string name="schedule_update_reply_success">更新回複成功</string>
+    <string name="schedule_update_reply_failed">更新回複失敗</string>
+
+    <string name="schedule_reply_success">回複成功</string>
+    <string name="schedule_reply_failed">回複失敗</string>
+    <string name="schedule_del_reply_hint">是否刪除該回複</string>
+    <string name="schedule_reply_no_permission">沒有權限進行此操作，請聯系共享人</string>
+    <string name="collaboration_higher_task_hint">您還有更高等級待辦未辦理！請先辦理</string>
+    <string name="meeting_sign_error">不支持該操作!</string>
+    <string name="location_month_calendar_title">考勤月曆</string>
+    <string name="location_calendar_summary">今日打卡%1$s次，共識共計%2$s小時</string>
+    <string name="location_month_summary_title">月彙總</string>
+
+    <string name="location_month_statis_title">考勤統計</string>
+
+    <string name="location_month_summary_day">%s天</string>
+
+    <!--考勤新增-->
+    <string name="location_month_summary_second">%s次</string>
+    <string name="location_leadar_kanban">統計</string>
+    <string name="location_leader_month_summary_second">%1$d人 %2$d次</string>
+    <string name="location_leader_month_late">遲到</string>
+    <string name="location_leader_month_early">早退</string>
+    <string name="location_leader_month_absence_duty">缺卡</string>
+    <string name="location_leader_month_absenteeism">曠工</string>
+    <string name="location_leader_month_all_user">考勤人數%1$d人，異常%2$d人次</string>
+
+    <string name="location_leader_month_more">查看更多</string>
+    <string name="location_leader_sign_in_title">考勤明細</string>
+    <string name="location_leader_sign_no">未簽到</string>
+    <string name="location_leader_sign_already">已簽到</string>
+
+    <string name="location_leader_sign_no_empty">大家都很棒哦～給個表揚吧</string>
+    <string name="location_custom_sign_save">保存</string>
+    <string name="location_leader_statis_day">日統計</string>
+    <string name="location_leader_statis_month">月統計</string>
+    <string name="location_leader_field_personnel">外勤人員</string>
+    <string name="location_leader_day_statis_progress_title">簽到人數/總人數</string>
+    <string name="location_leader_day_statis_show">查看明細</string>
+    <string name="location_calendar_personnle">人員</string>
+    <string name="location_custom_setting_title">新增考勤點</string>
+    <string name="location_calendar_list_title">簽到詳情</string>
+    <string name="location_calendar_list_track">查看軌迹</string>
+    <string name="location_calendar_sign_in_track">考勤軌迹</string>
+    <string name="location_sign_in_custom_null">沒有設置自定義考勤點</string>
+    <string name="location_sign_in_custom_setting">去設置</string>
+    <string name="location_sign_in_addendance">考勤點</string>
+    <string name="location_sign_in_nearby_addendance">附近地點</string>
+    <string name="location_sign_in_custiom_addendance">自定義考勤點</string>
+    <string name="location_sign_in_custiom_custom">新增成功</string>
+    <string name="login_zxing_title">掃碼登錄</string>
+    <string name="login_zxing_confirm">登錄</string>
+    <string name="login_zxing_cancel">取消登錄</string>
+    <string name="login_zxing_hint">妳的帳號申請在電腦端登錄</string>
+    <string name="knowledge_search">請輸入關鍵字</string>
+
+    <string name="upload_take_photo">拍照上傳</string>
+    <string name="upload_select_picter">上傳圖片</string>
+    <string name="upload_select_file">上傳文件</string>
+    <string name="file">文件</string>
+
+    <!--考勤新增end-->
+    <!--knowledge 頁面-->
+    <string name="the_expiry_date">有效期</string>
+    <string name="share_file">發布</string>
+    <string name="upload">上傳</string>
+    <string name="term_of_validity">有效期規則</string>
+    <string name="plan_work_title">工作計劃</string>
+    <string name="plan_tab_list_title">計劃</string>
+    <string name="plan_main_create_title">新增計劃</string>
+    <string name="plan_statistics_title">計劃統計</string>
+    <string name="plan_classify_head_title">日計劃</string>
+    <!--knowledge 頁面-->
+
+    <!--工作計劃7.0-->
+    <string name="plan_classify_head_unsubmitted">未提交</string>
+    <string name="plan_classify_head_late_delivery">遲交</string>
+    <string name="plan_classify_head_submission_on_time">按時提交</string>
+    <string name="plan_classify_error_hint">大家都還沒有提交呢</string>
+    <string name="plan_classify_error_delivery_hint">大家都沒有遲交</string>
+    <string name="plan_classify_error_unsubmitted_hint">大家都提交了</string>
+    <string name="plan_classify_remind_hint">提醒壹下</string>
+    <string name="plan_remind_error">提醒失敗</string>
+    <string name="plan_rule_input_title_hint">請輸入標題</string>
+    <string name="plan_rule_selected_personal_hint">請選擇人員</string>
+    <string name="plan_rule_input_unsubmit_hint">計劃未提交</string>
+    <string name="plan_rule_submit_hint">提交成功</string>
+    <string name="plan_rule_submit_error">提交失敗</string>
+    <string name="plan_rule_save">保存</string>
+    <string name="plan_rule_create">新增</string>
+    <string name="plan_rule_create_title">新建規則</string>
+    <string name="plan_rule_frequency_month">每月%1$s開始寫當月計劃，%2$s前提交爲正常提交，之後提交爲遲交。若當月沒有此日期(如31日)，則取當月最後壹天。</string>
+    <string name="plan_rule_frequency_week">每%1$s開始寫本周日志，%2$s前提交爲正常提交，之後提交爲遲交。</string>
+    <string name="plan_rule_frequency_day">每天%1$s開始寫當天的日志，%2$s前提交爲正常提交嗎，之後提交爲遲交。</string>
+    <string name="plan_rule_remind_hour">%1$s提醒員工填寫日志(已提交的員工不提醒)。</string>
+    <string name="plan_rule_remind_front">結束時間前%1$s小時</string>
+    <string name="plan_rule_remind_title">提醒時間</string>
+    <string name="plan_rule_redmind_title">提醒提交</string>
+    <string name="plan_rule_selected_user">選擇提交人</string>
+    <string name="plan_rule_selected_hint">請選擇</string>
+    <string name="plan_rule_selected_user_hint">請選擇人員</string>
+    <string name="plan_rule_frequency">統計頻率</string>
+
+    <string name="plan_rule_selected_time">選擇時間</string>
+    <string name="plan_rule_selected_frequency">選擇頻率</string>
+    <string name="plan_rule_selected_type">類型選擇</string>
+    <string name="plan_rule_remind_hint">妳的計劃還未提交，別忘記按時完成哦~</string>
+    <string name="plan_rule_remind_success">提醒成功</string>
+
+    <string name="plan_rule_setting">設置</string>
+    <string name="plan_rule_delect">刪除規則</string>
+    <string name="plan_rule_delete_success">刪除成功</string>
+    <string name="plan_rule_delete_hint">刪除後無法統計日計劃提</string>
+    <string name="plan_rule_next_day">次日</string>
+    <string name="plan_rule_every_day">每天</string>
+    <string name="plan_rule_next_hour">%1$d小時</string>
+    <string name="plan_rule_next_month">次月</string>
+    <string name="plan_rule_day">日</string>
+    <string name="plan_rule_next">下</string>
+    <string name="plan_rule_reciver_user">接收人</string>
+    <string name="plan_create_work">寫計劃</string>
+    <string name="plan_create_input_content_hint">請輸入計劃內容</string>
+    <string name="plan_create_recevier_user">主送人</string>
+    <string name="plan_create_cc_user">抄送人</string>
+    <string name="plan_create_notifier">告知人</string>
+    <string name="plan_create_attachment">附件</string>
+    <string name="plan_create_start_time_none">請填寫開始時間</string>
+    <string name="plan_create_end_time_none">請填寫結束時間</string>
+    <string name="plan_create_time_error">結束時間必須大于等于開始時間</string>
+    <string name="plan_create_title_none">請填寫計劃標題</string>
+    <string name="plan_create_context_none">請填寫計劃內容</string>
+    <string name="plan_create_recevier_user_none">請填寫計劃主送人</string>
+    <string name="plan_create_send">發送</string>
+    <string name="plan_create_save">暫存</string>
+    <string name="plan_create_input_title_hint">請輸入計劃標題</string>
+    <string name="plan_create_input_rule_hint">請輸入規則標題</string>
+    <string name="plan_create_start_time">開始時間</string>
+    <string name="plan_create_end_time">結束時間</string>
+    <string name="plan_create_date_title">計劃日期</string>
+    <string name="plan_create_type_title">計劃類型</string>
+    <string name="plan_create_date_type">yyyy年MM月dd日</string>
+    <string name="plan_create_month_type">yyyy年MM月</string>
+    <string name="plan_create_week_type">MM月dd日</string>
+    <string name="plan_detail_task">收藏</string>
+    <string name="plan_detail_task_cancel">取消收藏</string>
+    <string name="plan_detail_title">計劃詳情</string>
+    <string name="plan_list_filter">篩選</string>
+    <string name="plan_create_rule_btn">創建統計規則</string>
+    <string name="plan_list_empty_hint">這裏什麽都沒有</string>
+    <string name="plan_submission_future_data_hint">不能查看未來數據</string>
+    <string name="plan_detail_send_user">發送人：</string>
+    <string name="plan_detail_receiver_user">主送人：</string>
+    <string name="plan_detail_cc_user">抄送人：</string>
+    <string name="plan_detail_notifier_user">告知人：</string>
+    <string name="plan_detail_start_time">開始時間：</string>
+    <string name="plan_detail_end_time">結束時間：</string>
+    <string name="plan_detail_reply_empty">暫無回複</string>
+    <string name="plan_detail_reply_others">他人回複</string>
+    <string name="plan_filter_title">篩選</string>
+    <string name="plan_filter_type">選擇類型</string>
+    <string name="plan_filter_users">選人</string>
+    <string name="plan_filter_reset">重置</string>
+    <string name="plan_filter_confirm">確定</string>
+    <string name="plan_loader_detail_error">獲取計劃詳情失敗</string>
+    <string name="plan_to_schedule">轉日程</string>
+    <string name="plan_to_collaboration">轉協同</string>
+    <string name="plan_reply">回複</string>
+    <string name="plan_negative">取消</string>
+    <string name="plan_positive">確定</string>
+    <string name="plan_user_received">我收到的</string>
+    <string name="plan_user_send">我發出的</string>
+    <string name="plan_save_success">保存成功</string>
+    <string name="plan_statistics_type">[%s]%s</string>
+    <string name="plan_statistics_submit">提交人員：%s</string>
+    <string name="plan_statistics_no_submit">未提交人員：%d人</string>
+    <string name="plan_statistics_submit_time">提交時間：%s至%s</string>
+    <string name="plan_statistics_submit_personal">人</string>
+
+    <string name="plan_statistics_submit_etc">等</string>
+    <string name="plan_wait_commit_title">待發計劃</string>
+    <string name="plan_wait_save_or_not">"是否暫存爲待發計劃？"</string>
+    <string name="plan_filter_end_no_min_start">結束時間不能早于開始時間！</string>
+    <string name="plan_month_title">月計劃</string>
+    <string name="plan_more_title">其他計劃</string>
+
+    <string name="plan_collection_success">添加成功</string>
+    <string name="plan_collection_failure">添加收藏失敗，請稍後重試！</string>
+    <string name="plan_cancel_collection_success">取消成功</string>
+
+    <string name="plan_cancel_collection_failure">取消收藏失敗，請稍後重試！</string>
+    <string name="location_dialog_history_text">查看詳情</string>
+
+    <string name="location_dialog_history_success">簽到成功</string>
+    <string name="location_custom_metting_title">自定義考勤點管理</string>
+    <string name="location_custom_selected_title">選擇考勤點</string>
+    <string name="location_custom_toolbar_right_but">編輯</string>
+    <!--工作計劃7.0END-->
+
+    <!--簽到-->
+    <string name="location_custom_default_hint">[默認]</string>
+    <string name="location_custom_create">新增考勤點</string>
+    <string name="location_clear_history">清空搜索曆史</string>
+    <string name="location_distance_error">當前位置距離簽到地址過遠</string>
+    <string name="location_request_data_error">簽到數據上傳失敗</string>
+    <string name="location_history_data_error">考勤記錄數據異常</string>
+    <string name="location_manual_check_in_error">手動簽到</string>
+    <string name="location_check_sign_in">點擊簽到</string>
+    <string name="location_check_cancle">關閉</string>
+    <string name="location_sign_in_error_title">簽到失敗</string>
+    <string name="location_sign_in_success_title">簽到成功</string>
+    <string name="location_error_no_custom">未設置自定義考勤點</string>
+    <string name="location_error_super_range">超出考勤範圍，請選擇附近地點簽到</string>
+    <string name="location_error_super_range_no_place">不在簽到範圍內</string>
+    <string name="location_error_no_time">非考勤時間不允許簽到</string>
+    <string name="location_error_work_super_range">不在簽到範圍內</string>
+    <string name="location_error_net_work">網絡連接失敗，請重試</string>
+    <string name="location_sign_dismiss">我知道了</string>
+    <string name="location_meeting_sign_dismiss">我知道了(%s)</string>
+    <string name="location_dialog_but_setting">去設置</string>
+    <string name="location_dialog_but_nearby">附近地點</string>
+    <string name="location_dialog_but_wait_minute">稍後重試</string>
+    <string name="location_dialog_but_restart">重試</string>
+    <string name="location_dialog_but_calendar">查看詳情</string>
+    <string name="location_dialog_hint_sign_many">多次簽到，請手動簽到</string>
+    <string name="company_name">廣東飛企互聯科技股份有限公司</string>
+    <string name="silence_start_end_error">勿打擾的開始和結束時間不能相同</string>
+    <string name="action_collection">收藏</string>
+    <string name="action_collection_cancel">取消收藏</string>
+    <string name="common_empty_title">這裏什麽都沒有</string>
+    <!--簽到END-->
+
+    <!--我的-->
+    <string name="selected_user_title">選擇人員</string>
+    <string name="selected_but_all">全選</string>
+    <!--我的-->
+
+    <string name="selected_but_sure">確定</string>
+    <string name="plan_out_of_date">計劃時間已超出有效範圍，將切換爲當前時間</string>
+    <string name="contacts_all">所有人</string>
+    <string name="contacts_group_chat">群聊</string>
+    <string name="contacts_subordinates">下屬</string>
+    <string name="contacts_follow">關注人</string>
+    <string name="contacts_extent_part_time_department">展開</string>
+
+    <!--聯系人-->
+    <string name="contacts_retract_part_time_department">收起</string>
+    <string name="contacts_detail_no_add_email">用戶未添加郵箱</string>
+    <string name="contacts_detail_no_open_phone">不能撥打當前手機號碼</string>
+    <string name="mail_internal">內部郵件</string>
+    <string name="mail_external">外部郵件</string>
+    <string name="login_reset_password">重新輸入</string>
+    <string name="login_input_error">名稱或者密碼錯誤</string>
+    <string name="login_setting_no_exit">我再想想</string>
+    <!--聯系人-->
+
+    <!--郵件-->
+    <string name="login_setting_exit">返回</string>
+    <string name="login_setting_edit">編輯</string>
+    <!--郵件-->
+
+    <!--登錄-->
+    <string name="login_setting_service_ip">請填寫服務器地址</string>
+    <string name="login_setting_service_ip_error">服務器或端口輸入錯誤</string>
+    <string name="login_setting_title">登錄設置</string>
+    <string name="login_setting_open">已開啓</string>
+    <string name="login_setting_off">已關閉</string>
+    <string name="login_setting_save">保存</string>
+    <string name="login_setting_save_success">保存成功</string>
+    <string name="login_setting_reset_ip">重新輸入</string>
+    <string name="login_setting_zxing_input">掃碼輸入</string>
+    <string name="login_error_contact_manager">該用戶無應用權限，請聯系管理員</string>
+    <string name="personal_title">我的</string>
+    <string name="module_setting_modify_title">我的應用編輯</string>
+    <string name="module_setting_modify_cancle">取消</string>
+    <string name="module_setting_modify_success">完成</string>
+    <string name="module_setting_modify_load_failed">應用數據獲取失敗，請稍後重試</string>
+    <!--登錄-->
+
+    <string name="module_setting_modify_no_show">不顯示的應用</string>
+
+    <string name="module_setting_modify_no_hide_hind">暫無不顯示應用</string>
+    <string name="module_setting_modify_no_hide_un_hind">暫無顯示應用</string>
+    <string name="module_setting_modify_quick">快捷入口最多可添加4個</string>
+    <string name="privacy_title">隱私權政策</string>
+
+    <string name="confirm">確定</string>
+    <string name="privacy_content">已閱讀並同意<u>隱私政策</u></string>
+    <string name="retrieval_repository_approval">審批</string>
+
+    <string name="retrieval_repository_file">文件</string>
+
+    <!--隐私权政策-->
+    <string name="retrieval_repository_schedule">日程</string>
+    <string name="retrieval_repository_plan">計劃</string>
+    <string name="retrieval_repository_new">新聞</string>
+    <!--隐私权政策-->
+
+    <string name="retrieval_repository_notice">公告</string>
+    <string name="retrieval_repository_meeting">會議</string>
+    <string name="retrieval_repository_more">更多</string>
+    <string name="help_title_contact">通訊錄</string>
+    <string name="help_title_approval">審批管理</string>
+    <string name="help_title_plan">計劃管理</string>
+    <string name="help_title_schedule">日程管理</string>
+    <string name="help_title_location">考勤管理</string>
+
+
+    <string name="help_title_news">新聞管理</string>
+    <string name="help_title_news_activity_manager">活動管理</string>
+    <string name="help_title_news_notice">公告管理</string>
+    <string name="help_title_file">文档管理</string>
+    <string name="help_title_questionnaire">問卷調查</string>
+    <string name="help_title_file_share">文檔分享</string>
+    <string name="help_title_intelligent_search">智能搜索</string>
+    <string name="send_loader_hint">正在發送，請稍等！</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="study_on_line">在线学习</string>
+    <string name="exam_on_line">在线考试</string>
+    <string-array name="UMageList">
+        <item>年齡</item>
+        <item>18歲以下</item>
+        <item>18–24歲</item>
+        <item>25–30歲</item>
+        <item>31–35歲</item>
+        <item>36–40歲</item>
+        <item>41–50歲</item>
+        <item>51–59歲</item>
+        <item>60歲及以上</item>
+    </string-array>
+
+    <string-array name="UMgenderList">
+        <item>性別</item>
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="words">
+        <item>已閱</item>
+        <item>同意</item>
+        <item>不同意</item>
+        <item>同意，按規定辦理</item>
+        <item>請按流程辦理</item>
+        <item>交相關部門處理</item>
+        <item>按單位相關規章制度辦理</item>
+        <item>保留意見</item>
+    </string-array>
+
+    <!--在线学习-->
+    <string-array name="extend_modules">
+        <item>公告</item>
+        <item>新聞</item>
+        <item>會議</item>
+        <item>報表</item>
+        <item>計劃</item>
+        <item>簽到</item>
+        <item>文檔</item>
+        <item>問卷</item>
+        <item>日程</item>
+        <item>活動</item>
+        <item>頭條</item>
+        <item>CRM</item>
+        <item>審批</item>
+        <item>都都</item>
+        <item>郵箱</item>
+        <item>薪資</item>
+    </string-array>
+    <!--在线考试-->
+    <string-array name="userinfo_detail_list">
+        <item>頭像</item>
+        <item>所屬部門</item>
+        <item>移動電話</item>
+        <item>辦公電話</item>
+        <item>郵箱地址</item>
+        <item>聯系地址</item>
+    </string-array>
+</resources>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color">
+
+        <FrameLayout
+            android:id="@+id/personal_introduction_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_218">
+
+            <ImageView
+                android:id="@+id/ivBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="@drawable/personalbg"
+                android:scaleType="fitXY"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_218"
+                android:layout_alignParentTop="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivUserIcon"
+                    android:layout_width="@dimen/mdp_65"
+                    android:layout_height="@dimen/mdp_65"
+                    android:layout_marginTop="@dimen/mdp_65"
+                    android:layout_marginBottom="@dimen/mdp_10"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_6"
+                    android:layout_below="@+id/ivUserIcon"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/addressbook_detail_name"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/msp_17"/>
+
+                <TextView
+                    android:id="@+id/tvPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_3"
+                    android:layout_below="@+id/tvUserName"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/addressbook_detail_post"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/msp_15"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/layoutContentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/address_bottom_layout"
+            android:layout_below="@+id/personal_introduction_layout">
+
+            <cn.flyrise.feep.core.base.views.ListenableScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/all_background_color"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/mdp_12"
+                        android:paddingTop="@dimen/mdp_1"
+                        android:paddingBottom="@dimen/mdp_7"
+                        android:minHeight="@dimen/mdp_60">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/mdp_2"
+                            android:layout_marginBottom="@dimen/mdp_2"
+                            android:layout_alignParentBottom="true"
+                            android:layout_below="@+id/tvUserPhone"
+                            android:text="联系方式"
+                            android:textColor="@color/text_light_color"
+                            android:textSize="@dimen/msp_12"/>
+
+                        <TextView
+                            android:id="@+id/tvUserPhone"
+                            style="@style/address_detail_style"
+                            android:layout_marginTop="@dimen/mdp_8"
+                            android:layout_toLeftOf="@+id/ivMobileCall"
+                            android:layout_alignParentLeft="true"/>
+
+                        <ImageView
+                            android:id="@+id/ivMobileCall"
+                            android:layout_width="@dimen/mdp_38"
+                            android:layout_height="@dimen/mdp_38"
+                            android:layout_marginRight="@dimen/mdp_15"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/blue_tel_fe_mobile"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/mdp_12"
+                        android:paddingTop="@dimen/mdp_1"
+                        android:paddingBottom="@dimen/mdp_7"
+                        android:minHeight="@dimen/mdp_60">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="公司"
+                            android:textColor="@color/text_light_color"
+                            android:textSize="@dimen/msp_12"/>
+
+                        <TextView
+                            android:id="@+id/tvExternalCompany"
+                            style="@style/address_detail_style"
+                            android:layout_marginTop="@dimen/mdp_8"
+                            android:layout_marginRight="@dimen/mdp_16"
+                            android:layout_alignParentLeft="true"/>
+                    </RelativeLayout>
+                    <View
+                        style="@style/detail_line"
+                        android:layout_marginLeft="@dimen/mdp_12"
+                        android:layout_marginRight="@dimen/mdp_12"/>
+
+                    <View
+                        style="@style/detail_line"
+                        android:layout_marginLeft="@dimen/mdp_12"
+                        android:layout_marginRight="@dimen/mdp_12"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/mdp_12"
+                        android:paddingTop="@dimen/mdp_1"
+                        android:paddingBottom="@dimen/mdp_7"
+                        android:minHeight="@dimen/mdp_60">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_below="@+id/tvDepartment"
+                            android:text="@string/addressbook_detail_department"
+                            android:textColor="@color/text_light_color"
+                            android:textSize="@dimen/msp_12"/>
+
+                        <TextView
+                            android:id="@+id/tvDepartment"
+                            style="@style/address_detail_style"
+                            android:layout_marginTop="@dimen/mdp_8"
+                            android:layout_marginRight="@dimen/mdp_60"
+                            android:layout_alignParentLeft="true"/>
+                    </RelativeLayout>
+
+                    <View
+                        style="@style/detail_line"
+                        android:layout_marginLeft="@dimen/mdp_12"
+                        android:layout_marginRight="@dimen/mdp_12"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/mdp_12"
+                        android:paddingTop="@dimen/mdp_1"
+                        android:paddingBottom="@dimen/mdp_7"
+                        android:minHeight="@dimen/mdp_60">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/mdp_2"
+                            android:layout_marginBottom="@dimen/mdp_2"
+                            android:layout_alignParentBottom="true"
+                            android:layout_below="@+id/tvEmail"
+                            android:text="关联客户"
+                            android:textColor="@color/text_light_color"
+                            android:textSize="@dimen/msp_12"/>
+
+                        <TextView
+                            android:id="@+id/tvConnectContact"
+                            style="@style/address_detail_style"
+                            android:layout_marginTop="@dimen/mdp_8"
+                            android:layout_marginRight="@dimen/mdp_60"
+                            android:layout_alignParentLeft="true"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        style="@style/detail_line"
+                        android:layout_marginLeft="@dimen/mdp_12"
+                        android:layout_marginRight="@dimen/mdp_12"/>
+                </LinearLayout>
+            </cn.flyrise.feep.core.base.views.ListenableScrollView>
+        </FrameLayout>
+    </RelativeLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

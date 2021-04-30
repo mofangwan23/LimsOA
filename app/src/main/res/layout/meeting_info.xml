@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:padding="@dimen/mdp_10"
+      android:background="#ffffffff"
+      android:orientation="vertical">
+        <!--主持人  -->
+        <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/meeting_moderator"
+              android:textColor="@color/userinfo_detail_title"
+              android:textSize="@dimen/msp_15" />
+            <TextView
+              android:id="@+id/Moderator"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/mdp_5"
+              android:textColor="@color/userinfo_detail_content"
+              android:textSize="@dimen/msp_15" />
+        </LinearLayout>
+        <!-- 分隔线 -->
+        <View
+          android:layout_width="fill_parent"
+          android:layout_height="1px"
+          android:layout_marginTop="@dimen/mdp_5"
+          android:layout_marginBottom="@dimen/mdp_5"
+          android:background="@color/detail_line" />
+        <!-- 参加人数情况 -->
+        <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:orientation="horizontal">
+                <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/meeting_attend_long"
+                  android:textColor="@color/userinfo_detail_title"
+                  android:textSize="@dimen/msp_15" />
+                <TextView
+                  android:id="@+id/Participate_no"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="@dimen/mdp_5"
+                  android:textColor="@color/userinfo_detail_content"
+                  android:textSize="@dimen/msp_15" />
+            </LinearLayout>
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:orientation="horizontal">
+                <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/meeting_not_attend_long"
+                  android:textColor="@color/userinfo_detail_title"
+                  android:textSize="@dimen/msp_15" />
+                <TextView
+                  android:id="@+id/not_Participate_no"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="@dimen/mdp_5"
+                  android:textColor="@color/userinfo_detail_content"
+                  android:textSize="@dimen/msp_15" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:orientation="horizontal">
+                <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/meeting_unknown_long"
+                  android:textColor="@color/userinfo_detail_title"
+                  android:textSize="@dimen/msp_15" />
+                <TextView
+                  android:id="@+id/unkown"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="@dimen/mdp_5"
+                  android:textColor="@color/userinfo_detail_content"
+                  android:textSize="@dimen/msp_15" />
+            </LinearLayout>
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:orientation="horizontal">
+                <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/meeting_untreated"
+                  android:textColor="@color/userinfo_detail_title"
+                  android:textSize="@dimen/msp_15" />
+                <TextView
+                  android:id="@+id/untreated"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="@dimen/mdp_5"
+                  android:textColor="@color/userinfo_detail_content"
+                  android:textSize="@dimen/msp_15" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+            <LinearLayout
+              android:id="@+id/lySignInNumber"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:orientation="horizontal">
+                <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/meeting_signIn_long"
+                  android:textColor="@color/userinfo_detail_title"
+                  android:textSize="@dimen/msp_15" />
+                <TextView
+                  android:id="@+id/tvSignInNumber"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="@dimen/mdp_5"
+                  android:textColor="@color/userinfo_detail_content"
+                  android:textSize="@dimen/msp_15" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 分隔线 -->
+        <View
+          android:layout_width="@dimen/mdp_210"
+          android:layout_height="1px"
+          android:layout_marginTop="@dimen/mdp_5"
+          android:layout_marginBottom="@dimen/mdp_5"
+          android:background="@color/detail_line" />
+        <TextView
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/mdp_5"
+          android:text="@string/meeting_attend_info"
+          android:textColor="@color/userinfo_detail_title"
+          android:textSize="@dimen/mdp_16" />
+        <LinearLayout
+          android:id="@+id/content_layout"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical" />
+    </LinearLayout>
+</ScrollView>

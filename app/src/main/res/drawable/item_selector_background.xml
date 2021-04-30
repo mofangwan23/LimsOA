@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape>
+            <gradient android:angle="270" android:endColor="@color/list_item_on_bg" android:startColor="@color/list_item_on_bg" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <gradient android:angle="270" android:endColor="@color/list_item_on_bg" android:startColor="@color/list_item_on_bg" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:angle="270" android:endColor="@color/popwindow_list_item_selected" android:startColor="@color/popwindow_list_item_selected" />
+        </shape>
+    </item>
+</selector>

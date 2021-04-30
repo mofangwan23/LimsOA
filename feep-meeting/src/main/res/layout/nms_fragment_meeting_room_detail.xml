@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_48"
+        android:layout_marginBottom="@dimen/mdp_10">
+        <TextView
+            style="@style/NMSMeetingItemTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_centerInParent="true"
+            android:text="会议室详情"/>
+
+        <ImageView
+            android:id="@+id/nmsIvX"
+
+            android:layout_width="@dimen/mdp_54"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="@dimen/mdp_16"
+            android:paddingBottom="@dimen/mdp_16"
+            android:paddingLeft="@dimen/mdp_16"
+            android:paddingRight="@dimen/mdp_24"
+            android:src="@mipmap/nms_ic_x"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/mdp_16"
+        android:paddingRight="@dimen/mdp_16">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                style="@style/NMSMeetingRoomDetailLabelStyle"
+                android:text="会议室名称"/>
+
+            <TextView
+                android:id="@+id/nmsTvName"
+                style="@style/NMSMeetingRoomDetailTextStyle"/>
+
+            <TextView
+                style="@style/NMSMeetingRoomDetailLabelStyle"
+                android:text="会议室配置"/>
+
+            <TextView
+                android:id="@+id/nmsTvSettings"
+                style="@style/NMSMeetingRoomDetailTextStyle"/>
+
+            <TextView
+                style="@style/NMSMeetingRoomDetailLabelStyle"
+                android:text="地址"/>
+
+            <TextView
+                android:id="@+id/nmsTvLocation"
+                style="@style/NMSMeetingRoomDetailTextStyle"/>
+
+            <TextView
+                style="@style/NMSMeetingRoomDetailLabelStyle"
+                android:text="座位数量"/>
+
+            <TextView
+                android:id="@+id/nmsTvSeats"
+                style="@style/NMSMeetingRoomDetailTextStyle"/>
+
+            <TextView
+                style="@style/NMSMeetingRoomDetailLabelStyle"
+                android:text="管理员"/>
+
+            <TextView
+                android:id="@+id/nmsTvAdmin"
+                style="@style/NMSMeetingRoomDetailTextStyle"/>
+
+            <TextView
+                style="@style/NMSMeetingRoomDetailLabelStyle"
+                android:text="备注"/>
+
+            <TextView
+                android:id="@+id/nmsTvRemark"
+                style="@style/NMSMeetingRoomDetailTextStyle"
+                android:layout_marginBottom="@dimen/mdp_12"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/nmsIvState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:layout_gravity="right"
+            android:src="@mipmap/nms_ic_state_unable"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+</LinearLayout>

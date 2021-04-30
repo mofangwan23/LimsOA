@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/msProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/msPhotoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/msGifView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#1AD8D8D8"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/icon_titlebar_back"
+            android:drawablePadding="5dp"
+            android:textSize="15sp"
+            android:textColor="@color/standard_text_g_100"
+            android:text="返回"
+            android:layout_centerVertical="true"/>
+        <RelativeLayout
+            android:layout_width="@dimen/dim_30_dp"
+            android:layout_height="@dimen/dim_30_dp"
+            android:layout_marginLeft="@dimen/mdp_15"
+            android:layout_marginRight="@dimen/mdp_5"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+            <cn.flyrise.feep.core.component.LargeTouchCheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@drawable/checkbox_blue_selected"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

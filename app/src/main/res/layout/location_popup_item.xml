@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/location_popup_item_bg"
+                android:orientation="vertical">
+    <TextView
+        android:id="@+id/location_popup_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_40"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="@string/location_setting"
+        android:textColor="@color/list_item_title_color"
+        android:textSize="@dimen/msp_15"/>
+    <View
+        android:id="@+id/popupwindow_line"
+        style="@style/detail_line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/mdp_0_5"/>
+</RelativeLayout>

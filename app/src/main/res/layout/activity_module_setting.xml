@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_background_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/mdp_90"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_30"
+                android:paddingLeft="@dimen/mdp_12"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的应用"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_6"
+                    android:text="(长按拖动调整应用顺序)"
+                    android:textColor="@android:color/darker_gray"/>
+            </LinearLayout>
+
+
+            <com.drag.framework.DragGridView
+                android:id="@+id/dragGridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/mdp_8"
+                android:paddingRight="@dimen/mdp_8"
+                android:background="@color/all_background_color"
+                android:cacheColorHint="@android:color/transparent"
+                android:gravity="center"
+                android:horizontalSpacing="@dimen/mdp_8"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/mdp_8"/>
+        </LinearLayout>
+
+        <View
+            style="@style/CoreHorizontalTranslucentLine"
+            android:layout_marginTop="@dimen/mdp_6"
+            android:layout_marginBottom="@dimen/mdp_4"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_0"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/mdp_8"
+                android:paddingLeft="@dimen/mdp_12"
+                android:text="全部应用"
+                android:textColor="@android:color/black"/>
+
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/mdp_4"
+                android:paddingLeft="@dimen/mdp_8"
+                android:paddingRight="@dimen/mdp_8"
+                android:background="@color/all_background_color"
+                android:cacheColorHint="@android:color/transparent"
+                android:gravity="center"
+                android:horizontalSpacing="@dimen/mdp_8"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/mdp_8"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff0f0f0"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <cn.flyrise.feep.workplan7.view.PlanItemLayout
+                android:id="@+id/lyType"
+                style="@style/PlanItemLayout"
+                android:layout_marginTop="@dimen/mdp_10"
+                app:PlanItemAttrTitle="@string/plan_create_type_title"
+                app:planItemRightIcon="@drawable/plan_down"
+                />
+
+            <View style="@style/detail_line"/>
+
+            <RelativeLayout
+                android:id="@+id/lyTypeContent"
+                style="@style/PlanPartItemLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/btDatePrev"
+                    android:text="@string/plan_create_date_title"
+                    android:textColor="#ff191919"
+                    android:textSize="@dimen/msp_15"
+                    />
+
+                <TextView
+                    android:id="@+id/btDatePrev"
+                    android:layout_width="@dimen/mdp_50"
+                    android:layout_height="@dimen/mdp_30"
+                    android:layout_marginRight="@dimen/mdp_15"
+                    android:layout_toLeftOf="@+id/btDateNow"
+                    android:gravity="center"
+                    android:textSize="@dimen/msp_13"
+                    />
+
+                <TextView
+                    android:id="@+id/btDateNow"
+                    android:layout_width="@dimen/mdp_50"
+                    android:layout_height="@dimen/mdp_30"
+                    android:layout_marginRight="@dimen/mdp_15"
+                    android:layout_toLeftOf="@+id/btDateNet"
+                    android:gravity="center"
+                    android:textSize="@dimen/msp_13"
+                    />
+
+                <TextView
+                    android:id="@+id/btDateNet"
+                    android:layout_width="@dimen/mdp_50"
+                    android:layout_height="@dimen/mdp_30"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:textSize="@dimen/msp_13"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_10"
+                    android:layout_alignRight="@+id/btDateNet"
+                    android:layout_below="@+id/btDateNet"
+                    android:textColor="#8B8C8C"
+                    android:textSize="@dimen/msp_13"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lyOtherDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <cn.flyrise.feep.workplan7.view.PlanItemLayout
+                    android:id="@+id/lyStatTime"
+                    style="@style/PlanItemLayout"
+                    app:PlanItemAttrContentHint="@string/plan_rule_selected_hint"
+                    app:PlanItemAttrTitle="@string/plan_create_start_time"
+                    app:planItemRightIcon="@drawable/plan_down"
+                    />
+
+                <View style="@style/detail_line"/>
+
+                <cn.flyrise.feep.workplan7.view.PlanItemLayout
+                    android:id="@+id/lyEndTime"
+                    style="@style/PlanItemLayout"
+                    app:PlanItemAttrContentHint="@string/plan_rule_selected_hint"
+                    app:PlanItemAttrTitle="@string/plan_create_end_time"
+                    app:planItemRightIcon="@drawable/plan_down"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                style="@style/PlanItemLayout"
+                android:layout_marginTop="@dimen/mdp_10">
+
+                <EditText
+                    android:id="@+id/etTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/mdp_5"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvNum"
+                    android:background="@null"
+                    android:hint="@string/plan_create_input_title_hint"
+                    android:textColor="#04121A"
+                    android:textColorHint="#ff9b9b9b"
+                    android:textSize="@dimen/msp_15"/>
+
+                <TextView
+                    android:id="@+id/tvNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="0/19"
+                    android:textColor="#8B8C8C"
+                    android:textSize="@dimen/msp_12"/>
+            </RelativeLayout>
+
+            <View style="@style/detail_line"/>
+
+            <FrameLayout
+                android:id="@+id/lyContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/mdp_10"
+                android:paddingBottom="@dimen/mdp_10"
+                android:background="@color/bdp_white"
+                android:minHeight="@dimen/mdp_145"
+                >
+
+                <EditText
+                    android:id="@+id/etContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_15"
+                    android:layout_marginRight="@dimen/mdp_15"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="@string/plan_create_input_content_hint"
+                    android:minHeight="@dimen/mdp_145"
+                    android:textColor="#04121A"
+                    android:textColorHint="#ff9b9b9b"
+                    android:textSize="@dimen/msp_15"
+                    android:visibility="gone"/>
+
+                <WebView
+                    android:id="@+id/planWebView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_7"
+                    android:layout_marginRight="@dimen/mdp_7"
+                    android:visibility="visible">
+                </WebView>
+
+                <TextView
+                    android:id="@+id/contentHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_15"
+                    android:layout_marginRight="@dimen/mdp_15"
+                    android:hint="@string/plan_create_input_content_hint"
+                    android:minHeight="@dimen/mdp_145"
+                    android:textColor="#04121A"
+                    android:textColorHint="#ff9b9b9b"
+                    android:textSize="@dimen/msp_15"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+            <cn.flyrise.feep.workplan7.view.PlanItemLayout
+                android:id="@+id/lyReceiverTitle"
+                style="@style/PlanItemLayout"
+                android:layout_marginTop="@dimen/mdp_10"
+                app:PlanItemAttrTitle="@string/plan_create_recevier_user"
+                app:planItemRightIcon="@drawable/plan_add"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/receiverListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_0_2"
+                    android:background="@color/bdp_white"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+
+            <cn.flyrise.feep.workplan7.view.PlanItemLayout
+                android:id="@+id/lyCCTitle"
+                style="@style/PlanItemLayout"
+                android:layout_marginTop="@dimen/mdp_10"
+                app:PlanItemAttrTitle="@string/plan_create_cc_user"
+                app:planItemRightIcon="@drawable/plan_add"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/ccListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_0_2"
+                    android:background="@color/bdp_white"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+
+            <cn.flyrise.feep.workplan7.view.PlanItemLayout
+                android:id="@+id/lyNotificationTitle"
+                style="@style/PlanItemLayout"
+                android:layout_marginTop="@dimen/mdp_10"
+                app:PlanItemAttrTitle="@string/plan_create_notifier"
+                app:planItemRightIcon="@drawable/plan_add"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/notificationListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_0_2"
+                    android:background="@color/bdp_white"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+
+            <cn.flyrise.feep.workplan7.view.PlanItemLayout
+                android:id="@+id/lyAttachmentTitle"
+                style="@style/PlanItemLayout"
+                android:layout_marginTop="@dimen/mdp_10"
+                app:PlanItemAttrTitle="@string/plan_create_attachment"
+                app:planItemRightIcon="@drawable/plan_add"/>
+
+            <FrameLayout
+                android:id="@+id/lyAttachmentContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_0_2"
+                android:layout_marginBottom="@dimen/mdp_20"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_50"
+        android:orientation="vertical">
+        <View
+            style="@style/detail_line"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_50"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btSave"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:background="@color/bdp_white"
+                android:gravity="center"
+                android:text="@string/plan_create_save"
+                android:textColor="#ff4a4a4a"
+                android:textSize="@dimen/msp_16"/>
+
+            <TextView
+                android:id="@+id/btSend"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="7.5"
+                android:background="#ff28b9ff"
+                android:gravity="center"
+                android:text="@string/plan_create_send"
+                android:textColor="@color/bdp_white"
+                android:textSize="@dimen/msp_16"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

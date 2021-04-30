@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#E4E6E7">
+
+    <TextView
+        android:id="@+id/layout_knowledge_moremenu_tv_move"
+        android:text="@string/know_button_move"
+        style="@style/PopWindowShowMoreMenuTextStyle"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E4E6E7"/>
+
+    <TextView
+        android:id="@+id/layout_knowledge_moremenu_tv_rename"
+        android:text="@string/know_button_rename"
+        style="@style/PopWindowShowMoreMenuTextStyle"/>
+
+    <TextView
+        android:id="@+id/layout_knowledge_moremenu_tv_cancel"
+        android:text="@string/cancel"
+        style="@style/PopWindowShowMoreMenuTextStyle"
+        android:layout_marginTop="10dp"/>
+
+
+</LinearLayout>

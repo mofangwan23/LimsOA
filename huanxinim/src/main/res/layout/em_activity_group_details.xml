@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:switch="http://schemas.android.com/tools"
+  android:id="@id/swipeBackLayout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+        <cn.flyrise.feep.core.base.views.FEToolbar
+          android:id="@id/toolBar"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingTop="@dimen/status_bar_height"
+          android:background="@color/colorPrimary"
+          android:minHeight="@dimen/action_bar_size"/>
+
+        <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="#f2f0eb">
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#fafafa"
+              android:orientation="vertical">
+
+                <cn.flyrise.feep.core.base.views.LoadMoreRecyclerView
+                  android:id="@+id/gridview"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:paddingBottom="@dimen/mdp_10"
+                  android:background="#f5f5f5"
+                  android:gravity="center_vertical"
+                  android:listSelector="@android:color/transparent"
+                  android:numColumns="5"
+                  android:verticalSpacing="@dimen/mdp_8" />
+
+                <TextView
+                  android:id="@+id/tv_showAll"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:paddingBottom="@dimen/mdp_10"
+                  android:background="#F5F5F5"
+                  android:gravity="center"
+                  android:text="@string/all_members"
+                  android:textSize="@dimen/text_middle_size" />
+
+                <View style="@style/detail_line" />
+
+                <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/mdp_48"
+                  android:paddingLeft="@dimen/mdp_16"
+                  android:background="?android:attr/selectableItemBackground">
+
+                    <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:text="@string/member_count"
+                      android:textColor="@color/text_dark_color"
+                      android:textSize="@dimen/text_middle_size" />
+
+                    <TextView
+                      android:id="@+id/usercount"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginRight="@dimen/mdp_16"
+                      android:layout_alignParentEnd="true"
+                      android:layout_alignParentRight="true"
+                      android:layout_centerVertical="true"
+                      android:textColor="@color/text_dark_color"
+                      android:textSize="@dimen/text_middle_size" />
+
+                    <View
+                      style="@style/detail_line"
+                      android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                  android:id="@+id/rl_change_group_name"
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/mdp_48"
+                  android:paddingLeft="@dimen/mdp_16"
+                  android:background="?android:attr/selectableItemBackground">
+
+                    <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:text="@string/Change_the_group_name"
+                      android:textColor="@color/text_dark_color"
+                      android:textSize="@dimen/text_middle_size" />
+
+                    <View
+                      style="@style/detail_line"
+                      android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                  android:id="@+id/rl_switch_block_groupmsg"
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/mdp_48"
+                  android:paddingLeft="@dimen/mdp_16"
+                  android:background="?android:attr/selectableItemBackground">
+
+                    <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:text="@string/mute_notification"
+                      android:textColor="@color/text_dark_color"
+                      android:textSize="@dimen/text_middle_size" />
+
+                    <cn.flyrise.feep.core.base.views.UISwitchButton xmlns:switch="http://schemas.android.com/apk/res-auto"
+                      android:id="@+id/switch_btn"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginRight="@dimen/mdp_10"
+                      android:layout_alignParentRight="true"
+                      android:layout_centerVertical="true"
+                      android:checked="false"
+                      switch:bmHeight="@dimen/mdp_3000"
+                      switch:bmWidth="@dimen/row_min_height" />
+
+                    <View
+                      style="@style/detail_line"
+                      android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/mdp_48"
+                  android:paddingLeft="@dimen/mdp_16"
+                  android:background="?android:attr/selectableItemBackground">
+
+                    <TextView
+                      android:id="@+id/tvTop"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:text="@string/em_txt_conversation_setTop"
+                      android:textColor="@color/text_dark_color"
+                      android:textSize="@dimen/text_middle_size" />
+
+                    <cn.flyrise.feep.core.base.views.UISwitchButton xmlns:switch="http://schemas.android.com/apk/res-auto"
+                      android:id="@+id/btTop"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginRight="@dimen/mdp_10"
+                      android:layout_alignParentRight="true"
+                      android:layout_centerVertical="true"
+                      android:checked="false"
+                      switch:bmHeight="@dimen/mdp_3000"
+                      switch:bmWidth="@dimen/row_min_height" />
+
+                    <View
+                      style="@style/detail_line"
+                      android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                  android:id="@+id/lyAllowInvite"
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/mdp_48"
+                  android:paddingLeft="@dimen/mdp_16"
+                  android:background="?android:attr/selectableItemBackground"
+                  android:visibility="gone">
+
+                    <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:text="允许成员邀请"
+                      android:textColor="@color/text_dark_color"
+                      android:textSize="@dimen/text_middle_size" />
+
+                    <cn.flyrise.feep.core.base.views.UISwitchButton xmlns:switch="http://schemas.android.com/apk/res-auto"
+                      android:id="@+id/btAllowInvite"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginRight="@dimen/mdp_10"
+                      android:layout_alignParentRight="true"
+                      android:layout_centerVertical="true"
+                      android:checked="false"
+                      switch:bmHeight="@dimen/mdp_3000"
+                      switch:bmWidth="@dimen/row_min_height" />
+
+                    <View
+                      style="@style/detail_line"
+                      android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                  android:id="@+id/clear_all_history"
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/mdp_48"
+                  android:paddingLeft="@dimen/mdp_16"
+                  android:background="?android:attr/selectableItemBackground">
+
+                    <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:text="@string/Empty_the_chat_record"
+                      android:textColor="@color/text_dark_color"
+                      android:textSize="@dimen/text_middle_size" />
+
+                    <View
+                      style="@style/detail_line"
+                      android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                  android:id="@+id/rl_search"
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/mdp_48"
+                  android:paddingLeft="@dimen/mdp_16"
+                  android:background="?android:attr/selectableItemBackground">
+
+                    <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:text="@string/search_chat_record"
+                      android:textColor="@color/text_dark_color"
+                      android:textSize="@dimen/text_middle_size" />
+
+                    <View
+                      style="@style/detail_line"
+                      android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                  android:id="@+id/rl_changeowner"
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/mdp_48"
+                  android:paddingLeft="@dimen/mdp_16"
+                  android:background="?android:attr/selectableItemBackground">
+
+                    <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:text="@string/change_owner"
+                      android:textColor="@color/text_dark_color"
+                      android:textSize="@dimen/text_middle_size" />
+
+                    <View
+                      style="@style/detail_line"
+                      android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+                <Button
+                  android:id="@+id/btn_exit_grp"
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/mdp_36"
+                  android:layout_marginTop="@dimen/mdp_8"
+                  android:layout_marginBottom="@dimen/mdp_8"
+                  android:layout_marginLeft="@dimen/msp_16"
+                  android:layout_marginRight="@dimen/msp_16"
+                  android:background="@drawable/em_btn_style_alert_dialog_special"
+                  android:stateListAnimator="@null"
+                  android:text="@string/Exit_the_group_chat"
+                  android:textColor="@android:color/white"
+                  android:textSize="@dimen/msp_16" />
+
+                <Button
+                  android:id="@+id/btn_exitdel_grp"
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/mdp_36"
+                  android:layout_marginTop="@dimen/mdp_8"
+                  android:layout_marginBottom="@dimen/mdp_8"
+                  android:layout_marginLeft="@dimen/msp_16"
+                  android:layout_marginRight="@dimen/msp_16"
+                  android:background="@drawable/em_btn_style_alert_dialog_special"
+                  android:stateListAnimator="@null"
+                  android:text="@string/dismiss_group"
+                  android:textColor="@android:color/white"
+                  android:textSize="@dimen/msp_16"
+                  android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

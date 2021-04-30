@@ -1,0 +1,265 @@
+body,input,select,textarea,button,.ui-btn {
+	font-size: 1em;
+}
+
+.ui-title { /*单输入框*/
+	font-size: 10em;
+	min-height: 1.1em;
+	text-align: center;
+	display: block;
+	margin: 0;
+	padding: .7em 0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	outline: 0 !important;
+	border: 0px;
+}
+
+.ui-input-text { /*输入框去外框及掉阴影效果*/
+	margin: .3em 0;
+	border: none!important;
+	background-color: #F9F9F9;
+}
+
+.ui-input-search { /*搜索框增加外框去掉阴影效果*/
+	margin: .3em 0;
+	border-width: 1px;
+	background-color: #F9F9F9;
+}
+
+.ui-table th,.ui-table td {
+	line-height: normal;
+	text-align: left;
+	padding: .4em .5em;
+	vertical-align: top;
+	text-shadow: none;
+}
+
+.div-bottom-line { /*分割线*/
+	border-bottom: 1px solid #dfdfdf;
+	width: 100%;
+}
+.div-bottom-line > table{border-collapse:collapse;}
+.div-bottom-line > table td{padding:2px 10px 2px; vertical-align:middle;}
+.div-bottom-line > table td > div > div{background-color:#fff!important;}
+.div-bottom-line > table td:first-child{white-space:nowrap;}
+.div-bottom-line > table td > svg{vertical-align:middle;}
+.div-bottom-line > table td > span{vertical-align:middle;}
+.div-bottom-line > table td > div > input{margin-bottom:-2px;}
+
+.div-bottom-fenge{height:20px; width:100%; border-bottom:1px #dfdfdf solid; background:#f1f2ed;}
+
+.subbox-bg{background:#ffffff!important;}
+.defi-title { /*自定义标题*/
+	font-size:1em !important;
+	background-color:#768696!important;
+    color:#fff!important;
+	border:0px!important;
+}
+.defi-wtbox{margin-bottom:0!important; border-bottom:1px #e5e5e5 solid!important;}
+.defi-subli{margin-top:-1px;}
+.defi-sbutab{border-collapse:collapse;}
+.defi-lia{font-size:0.9em!important; font-weight:100!important;}
+
+.defi-green-button { /*自定义绿按钮*/
+	width: 9em;
+	height: 2.5em;
+	font-size: .9em !important;
+	background-color: #059d39 !important;
+	-webkit-border-radius: 0.5em;
+	border-radius: 0.5em;
+	color: #FFF !important;
+	text-align: center;
+	-webkit-box-sizing: none;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	border: none !important;
+}
+
+.defi-orange-button { /*自定义橙按钮*/
+	width: 9em;
+	height: 2.5em;
+	font-size: .9em !important;
+	background-color: #ff8000 !important;
+	-webkit-border-radius: 0.5em;
+	border-radius: 0.5em;
+	color: #FFF !important;
+	text-align: center;
+	-webkit-box-sizing: none;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	border: none !important;
+}
+
+.defi-red-button { /*自定义红按钮*/
+    width: 9em;
+    height: 2.5em;
+    font-size: .9em !important;
+    background-color: #dd5f49 !important;
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    color: #FFF !important;
+    text-align: center;
+    -webkit-box-sizing: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    border: none !important;
+}
+
+.ui-last-child { /*排列行往上移1个像素，解决重叠线的问题*/
+	margin-top: -1px !important;
+}
+
+#radioGroup .ui-last-child { /*排列行往上移1个像素，解决重叠线的问题*/
+	margin-top: 0px !important;
+}
+
+.ui-li-has-thumb { /*排列行往上移1个像素，解决重叠线的问题*/
+	margin-top: -1px !important;
+}
+
+.round_photo { /*修正头像上方间距*/
+	margin: 12px auto auto 20px !important;
+	border:1px #eee solid;
+}
+
+.defi-gradFont { /*自定义时间描述字体*/
+	font-size: 0.8em !important;
+	text-shadow: none !important;
+	color: #aaa;
+	overflow: hidden !important;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	white-space: nowrap !important;
+	font-weight: normal !important;
+	margin:0!important;
+	padding:0!important;
+}
+
+.defi-gradTitleFont { /*自定义标题描述字体*/
+	font-size: .95em !important;
+	overflow: hidden !important;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	white-space: nowrap !important;
+	font-weight:100!important;
+	margin:6px 0 4px 0!important;
+    padding:0!important;
+}
+
+.ui-collapsible-heading-toggle { /*选项自定义标题*/
+	font-size:.9em;
+	font-weight:100!important;
+	background-color:#768696!important;
+	border:none;
+	color: #fff!important;
+	padding-top:9px;
+	padding-bottom:9px;
+}
+
+.ui-collapsible-content { /*选项内容去掉边框*/
+	border: none !important;
+	padding: .2em .5em;
+}
+/* 影响按钮点击后颜色
+.ui-btn-active {
+	background-color: #5d9cec !important;
+	border-color: #5d9cec !important;
+	color: #fff !important;
+}
+*/
+.nav-btn-class {
+	font-size: 0.9em;
+	background-color: #AAAAAA !important;
+	border-color: #333333;
+}
+
+.moreBtn {
+	border: none !important;
+	background: #6895c9 !important;
+	color: #fff !important;
+	margin: .5em 1em !important;
+	font-weight: 100 !important;
+}
+
+.defi-blue-button { /*自定义蓝色按钮*/	
+	padding-top: 0.6em;
+	background-color: #5B8CC4!important;
+	-webkit-border-radius: 0.5em;
+	border-radius: 0.5em;
+	font-size: 1em !important;
+	font-family: Microsoft Yahei;
+	color: #FFF !important;
+	text-shadow: none !important;
+	text-align: center;
+	-webkit-box-sizing: none;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-shadow:none!important;
+	-moz-box-shadow:none!important;
+	box-shadow:none!important;
+	border:none!important;
+	margin-top:.3em;
+	margin-bottom:.3em;
+}
+.ui-input-clear {margin-top: -13px !important;}/*微调搜索清除按钮位置*/
+
+
+
+.selectMenu {
+    position:absolute;
+    top: 22%;
+    left: 86%;
+    width: 40px;
+    height: 16px;
+    padding: 7px 0px 7px 0px;
+    border:none;
+    background-color:rgb(250, 250, 250)!important;
+    background: url(../css/images/BtnDropDown.png) 12px 0px no-repeat;
+    background-size: 25px 25px;
+    opacity: .7;
+    z-index: 1999;
+}
+
+
+
+
+.seting-top{width:64%!important; margin:0 18%!important;}
+
+
+.slidemenu {
+    position: absolute;
+    right: 0%;
+    background: rgba(250,250,250,0.7);
+    padding: 0;
+    text-align: center;
+    width: 150px;
+    height: 153px;
+    display: none;
+    z-index: 2002;
+}
+.slidemenu ul{
+    height: 100%;
+    padding: 0 ;
+    margin: 0;
+}
+.slidemenu li{
+    list-style: none;
+    padding: 15px;
+    border-bottom: 1px solid;
+    border-bottom-color:#dfdfdf;
+    
+}
+.slidemenu a{ color: rgba(0,0,0,0.7);}
+.slidemenu a:link{ text-decoration: none;}
+.slidemenu a:visited{text-decoration: none;}
+.showDiv{display: block !important;}
+

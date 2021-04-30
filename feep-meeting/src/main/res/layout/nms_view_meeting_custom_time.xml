@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/NMSNewMeetingLayoutBaseStyle">
+        <TextView
+            style="@style/NMSNewMeetingLabelTextStyle"
+            android:text="@string/meeting7_create_time"/>
+
+        <RadioGroup
+            android:id="@+id/nmsTimeType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/nmsTimeTypeSameDay"
+                style="@style/NMSNewMeetingTimeTypeStyle"
+                android:layout_marginRight="@dimen/mdp_8"
+                android:checked="true"
+                android:text="@string/meeting7_create_cur_date"/>
+
+            <RadioButton
+                android:id="@+id/nmsTimeTypeAcrossDay"
+                style="@style/NMSNewMeetingTimeTypeStyle"
+                android:text="@string/meeting7_create_left_date"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <View style="@style/CoreSplitLine"/>
+
+    <!-- 开始时间 -->
+    <LinearLayout
+        android:id="@+id/nmsLayoutStartDate"
+        style="@style/NMSNewMeetingLayoutBaseStyle"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/NMSNewMeetingLabelTextStyle"
+            android:text="@string/meeting7_create_start_date"/>
+
+        <TextView
+            android:id="@+id/nmsTvStartDate"
+            style="@style/NMSNewMeetingSelectableTextStyle"
+            android:text="@string/meeting7_create_selected_title"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nmsLayoutStartTime"
+        style="@style/NMSNewMeetingLayoutBaseStyle"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/NMSNewMeetingLabelTextStyle"
+            android:text="@string/meeting7_create_start_date"/>
+
+        <TextView
+            android:id="@+id/nmsTvStartTime"
+            style="@style/NMSNewMeetingSelectableTextStyle"
+            android:text="@string/meeting7_create_selected_title"/>
+    </LinearLayout>
+
+    <View style="@style/CoreSplitLine"/>
+
+    <!-- 结束时间 -->
+    <LinearLayout
+        android:id="@+id/nmsLayoutEndDate"
+        style="@style/NMSNewMeetingLayoutBaseStyle"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/NMSNewMeetingLabelTextStyle"
+            android:text="@string/meeting7_create_end_date"/>
+
+        <TextView
+            android:id="@+id/nmsTvEndDate"
+            style="@style/NMSNewMeetingSelectableTextStyle"
+            android:text="@string/meeting7_create_selected_title"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nmsLayoutEndTime"
+        style="@style/NMSNewMeetingLayoutBaseStyle"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/NMSNewMeetingLabelTextStyle"
+            android:text="@string/meeting7_create_end_date"/>
+
+        <TextView
+            android:id="@+id/nmsTvEndTime"
+            style="@style/NMSNewMeetingSelectableTextStyle"
+            android:text="@string/meeting7_create_selected_title"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/nmsTvDurationTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/mdp_6"
+        android:paddingRight="@dimen/mdp_16"
+        android:gravity="right"
+        android:textColor="#9DA3A6"
+        android:textSize="@dimen/msp_12"
+        android:visibility="gone"/>
+
+</LinearLayout>

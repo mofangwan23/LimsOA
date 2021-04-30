@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/msIvThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true">
+        <cn.flyrise.feep.core.component.LargeTouchCheckBox
+            android:id="@+id/msCheckBox"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/dim_30_dp"
+            android:button="@drawable/checkbox_blue_selected"
+            android:clickable="true"
+            android:focusable="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

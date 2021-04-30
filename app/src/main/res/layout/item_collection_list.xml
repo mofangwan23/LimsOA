@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/mdp_8"
+    android:paddingLeft="@dimen/mdp_15"
+    android:paddingRight="@dimen/mdp_15"
+    android:paddingTop="@dimen/mdp_16">
+
+    <RelativeLayout
+        android:id="@+id/layoutContentView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="@dimen/mdp_12">
+
+        <ImageView
+            android:id="@+id/ivCollectionAvatar"
+            android:layout_width="@dimen/mdp_45"
+            android:layout_height="@dimen/mdp_45"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@+id/tvCollectionTime"
+            android:layout_marginLeft="@dimen/mdp_16"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvCollectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/mdp_16"
+            android:layout_toRightOf="@id/ivCollectionAvatar"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#dd000000"
+            android:textSize="@dimen/text_middle_size" />
+
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCollectionTitle"
+            android:layout_marginBottom="@dimen/mdp_8"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:layout_marginTop="@dimen/row_minimum_height"
+            android:layout_toRightOf="@id/ivCollectionAvatar"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="chenmian"
+            android:textColor="#8B8C8C"
+            android:textSize="@dimen/text_min_size" />
+
+        <TextView
+            android:id="@+id/tvCollectionTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tvCollectionTitle"
+            android:layout_marginBottom="@dimen/mdp_8"
+            android:layout_marginRight="@dimen/mdp_16"
+            android:layout_marginTop="@dimen/row_minimum_height"
+            android:layout_toRightOf="@id/tvUserName"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="chenmian"
+            android:textColor="#8B8C8C"
+            android:textSize="@dimen/text_min_size" />
+
+
+        <LinearLayout
+            android:id="@+id/layoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/buttom_height"
+            android:layout_below="@+id/tvCollectionTime"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_0_2"
+                android:background="#e5e5e5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view_line"
+                android:layout_centerVertical="true"
+                android:drawableRight="@mipmap/core_right_icon"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/mdp_16"
+                android:paddingRight="@dimen/mdp_16"
+                android:text="查看详情"
+                android:textColor="#8B8C8C"
+                android:textSize="@dimen/text_little_size"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <cn.flyrise.feep.core.component.LargeTouchCheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_centerInParent="true"
+        android:button="@drawable/checkbox_blue_selected"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- seekbar的滑块样式 -->
+    <item android:state_focused="false" android:state_pressed="false">
+        <shape android:shape="oval" >
+            <gradient android:angle="270" android:endColor="#00b4ff" android:startColor="#9000b4ff" />
+            <size android:width="@dimen/mdp_16" android:height="@dimen/mdp_16" />
+            <stroke android:width="@dimen/mdp_8" android:color="#8089ddff" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <gradient android:angle="270" android:endColor="#00b4ff" android:startColor="#9000b4ff" />
+            <size android:width="@dimen/mdp_16" android:height="@dimen/mdp_16" />
+            <stroke android:width="@dimen/mdp_8" android:color="#8089ddff" />
+        </shape>
+    </item>
+</selector>

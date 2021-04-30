@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/core_bg_color">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/core_bg_color"
+        android:orientation="vertical"
+        >
+        <include layout="@layout/core_view_toolbar"/>
+        <include layout="@layout/view_date_time_new"/>
+        <TextView
+            android:id="@+id/imagetextbuton_receiver"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/item_selector_background"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/text_paading"
+            android:paddingRight="@dimen/text_paading"
+            android:textColor="@color/knowledge_edt_text_color"
+            android:textSize="15sp"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/submit_layout"
+            android:layout_below="@id/toolBar"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include layout="@layout/view_datetime">
+                    </include>
+
+                    <View
+                        android:layout_width="@dimen/mdp_1"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="#ebebeb"/>
+                </RelativeLayout>
+                <!-- 计划内容 -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mdp_0_8"
+                    android:background="@color/detail_line"/>
+                <!-- 计划内容 -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mdp_0_8"
+                    android:layout_marginTop="@dimen/row_minimum_height"
+                    android:background="@color/detail_line"/>
+
+                <TextView
+                    android:id="@+id/imagetextbuton_receiver0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_min_height"
+                    android:background="@drawable/item_selector_background"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/text_paading"
+                    android:paddingRight="@dimen/text_paading"
+                    android:textColor="@color/workplan_textcolor_title"
+                    android:textSize="@dimen/text_middle_size"/>
+                <!-- 主送人 -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mdp_0_8"
+                    android:background="@color/detail_line"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mdp_0_8"
+                    android:layout_marginTop="@dimen/row_minimum_height"
+                    android:background="@color/detail_line"/>
+                <!-- 抄送人 -->
+                <!-- 知会人 -->
+            </LinearLayout>
+        </ScrollView>
+        <!-- 送办 -->
+        <RelativeLayout
+            android:id="@+id/submit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_52"
+            android:layout_alignParentBottom="true"
+            android:background="@color/all_background_color"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_0_8"
+                android:background="@color/detail_line"/>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_36"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/mdp_20"
+                android:layout_marginRight="@dimen/mdp_20"
+                android:background="@drawable/download_bottm"
+                android:stateListAnimator="@null"
+                android:text="发布"
+                android:textColor="@color/text_dark_white_color"
+                android:textSize="@dimen/msp_18"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

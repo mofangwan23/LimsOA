@@ -1,0 +1,68 @@
+ buildscript {
+    ext.kotlin_version = '1.3.31'
+    repositories {
+        mavenCentral()
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath'net.sf.proguard:proguard-gradle:6.0.3'
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+        maven { url 'https://maven.google.com' }
+        maven { url "https://jitpack.io" }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        google()
+
+        maven{url'http://developer.huawei.com/repo/'}
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+def supportLibVersion = "28.0.0-alpha3"
+def dbflowVersion = "4.1.2"
+
+ext {
+    // compiler env
+    versionBuildTools = "28.0.3"
+    versionCompileSdk = 28
+    versionMinSdk = 19
+    versionTargetSdk = 28
+    versionJava = JavaVersion.VERSION_1_8
+
+    // support library
+    libSupportV7 = "com.android.support:appcompat-v7:${supportLibVersion}"
+    libSupportDesign = "com.android.support:design:${supportLibVersion}"
+    libSupportRecyclerView = "com.android.support:recyclerview-v7:${supportLibVersion}"
+    libSupportCardView = "com.android.support:cardview-v7:${supportLibVersion}"
+    libSupportMultiDex = "com.android.support:multidex:1.0.2"
+
+    // network library
+    libOkHttp = "com.squareup.okhttp3:okhttp:3.9.1"
+    libStetho = "com.facebook.stetho:stetho:1.5.0"
+    libStethoOkHttp = "com.facebook.stetho:stetho-okhttp3:1.5.0"
+
+    // database and image
+    libDBFlowProcessor = "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflowVersion}"
+    libDBFlowCore = "com.github.Raizlabs.DBFlow:dbflow-core:${dbflowVersion}"
+    libDBFlow = "com.github.Raizlabs.DBFlow:dbflow:${dbflowVersion}"
+    libImage = "com.github.bumptech.glide:glide:4.8.0"
+    libGlideCompiler="com.github.bumptech.glide:compiler:4.8.0"
+//    libImageHttpsModule = 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+    libImageHttpsModule = "com.github.bumptech.glide:okhttp3-integration:4.8.0"
+
+    // RxJava and RxAndroid and Other ...
+    libRxJava = "io.reactivex:rxjava:1.3.4"
+    libRxAndroid = "io.reactivex:rxandroid:1.2.1"
+}

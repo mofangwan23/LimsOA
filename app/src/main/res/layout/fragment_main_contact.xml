@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.flyrise.feep.core.base.views.FEToolbar
+        android:id="@id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="@dimen/action_bar_size">
+    </cn.flyrise.feep.core.base.views.FEToolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/common_search_layout"/>
+
+            <FrameLayout
+                android:id="@+id/layoutContentView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backgroud_grey">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/all_background_color"
+                    android:visibility="gone">
+                </android.support.v7.widget.RecyclerView>
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/all_background_color"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivFailed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/nms_ic_server_error"
+                android:visibility="gone"/>
+
+            <com.github.rahatarmanahmed.cpv.CircularProgressView
+                android:id="@+id/progress_view"
+                android:layout_width="@dimen/mdp_36"
+                android:layout_height="@dimen/mdp_36"
+                android:visibility="gone"
+                app:cpv_animAutostart="true"
+                app:cpv_color="#28B9FF"
+                app:cpv_indeterminate="true"/>
+
+            <TextView
+                android:id="@+id/tvContactLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_16"
+                android:clickable="true"
+                android:text="@string/contact_loading"
+                android:textColor="#FF28B9FF"
+                android:textSize="@dimen/msp_16"/>
+
+            <Button
+                android:id="@+id/btnRetry"
+                android:layout_width="@dimen/mdp_130"
+                android:layout_height="@dimen/mdp_36"
+                android:layout_marginTop="@dimen/mdp_10"
+                android:layout_marginLeft="@dimen/mdp_20"
+                android:layout_marginRight="@dimen/mdp_20"
+                android:layout_centerInParent="true"
+                android:background="@drawable/nms_bg_blue_btn_round_enable"
+                android:stateListAnimator="@null"
+                android:text="点击重试"
+                android:textColor="@android:color/white"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

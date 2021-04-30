@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/mdp_20"
+    android:paddingBottom="@dimen/mdp_20"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/msTvMenuView"
+        style="@style/MSAttachmentMenuItem"
+        android:text="查看"/>
+
+    <TextView
+        android:id="@+id/msTvMenuDownload"
+        style="@style/MSAttachmentMenuItem"
+        android:text="下载"/>
+
+    <TextView
+        android:id="@+id/msTvMenuPlay"
+        style="@style/MSAttachmentMenuItem"
+        android:text="播放"/>
+
+    <TextView
+        android:id="@+id/msTvMenuDelete"
+        style="@style/MSAttachmentMenuItem"
+        android:text="删除"/>
+</LinearLayout>

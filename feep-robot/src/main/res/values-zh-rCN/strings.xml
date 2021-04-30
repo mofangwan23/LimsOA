@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--讯飞appid-->
+    <string name="app_id">56e2682f</string>
+
+    <!--语音助手-->
+    <string name="error_no_sdcard">没有SD卡，无法存储录音数据</string>
+    <string name="error_state_record">正在录音中，请先停止录音</string>
+    <string name="error_unknown">无法识别的错误</string>
+
+    <string name="grammar_error">我不明白您说的话</string>
+    <string name="robot_error_open_collaboration">你可以说：打开协同已办</string>
+    <string name="robot_error_search_collaboration">你可以说：搜索“小飞”的协同已办</string>
+    <string name="robot_error_search_from">你可以说：搜索“小飞”的待办</string>
+    <string name="robot_error_search_new">你可以说：搜索“小飞”的新闻</string>
+    <string name="robot_error_search_announcement">你可以说：搜索“小飞”的公告</string>
+    <string name="robot_error_search_workplan">你可以说：搜索“小飞”的计划</string>
+    <string name="robot_error_search_metting">你可以说：搜索“小飞”的会议</string>
+
+    <string name="robot_search_null">未找到你要的内容</string>
+    <string name="robot_search_error">数据搜索异常</string>
+
+    <string name="robot_create_schedule">新建日程</string>
+    <string name="robot_create_schedule_hint">你可以说：“提醒我明天下午8点出差”</string>
+    <string name="robot_create_schedule_share_hint">你可以分享给“小飞”</string>
+    <string name="robot_create_schedule_send_hint">，是否创建?</string>
+    <string name="robot_hint">助手提示</string>
+    <string name="robot_create">语音助手创建</string>
+    <string name="robot_create_success">创建成功</string>
+    <string name="robot_create_schedule_success_left">已经为你创建</string>
+    <string name="robot_create_schedule_success_right">的日程，您可以点击查看日程。</string>
+    <string name="robot_create_error">创建失败</string>
+
+    <string name="robot_grammar_hint_title">你可以这样说</string>
+
+    <string name="robot_grammar_address_error">联系人数据异常</string>
+
+    <string name="robot_grammar_error">抱歉，没听懂！</string>
+    <string name="robot_message_list_send">发送于</string>
+
+    <string name="robot_tel_hint">你可以说:给“小飞”打电话</string>
+    <string name="robot_sms_hint">你可以说:给“小飞”发短信</string>
+    <string name="robot_address_detail">你可以说：打开“小飞”的详情</string>
+    <string name="robot_send_im_message">你可以说：给“小飞”发消息</string>
+
+    <!--语音助手END-->
+
+    <string name="more_setting_title">设置</string>
+
+    <!--语音助手新增-->
+    <string name="robot_hint_operation_up">长按说话</string>
+    <string name="robot_hint_operation_down">松开完成</string>
+    <string name="robot_hint_say_title">我正在听，你继续说…</string>
+    <string name="robot_hint_say_short">录音时间太短</string>
+    <string name="robot_hint_no_say">你好像没有说话</string>
+    <string name="robot_hint_say_hint">长按按钮说话，松开即可完成</string>
+    <string name="robot_hint_say_correct">贴近手机话筒说话，保证声音清晰</string>
+    <string name="robot_hint_schedule_context">小飞助手提醒</string>
+    <string name="robot_click_riddle">点击获取答案</string>
+    <string name="robot_more_hint">你可以这样说：</string>
+    <string name="robot_playing_note_more">更多</string>
+    <!--语音助手新增END-->
+
+    <string name="lbl_text_mail_box">收件箱</string>
+    <string name="lbl_retry_network_connection">网络连接出错，请检查</string>
+    <string name="know_person_folder">个人文件夹</string>
+    <string name="know_unit_folder">单位文件夹</string>
+    <string name="know_group_folder">集团文件夹</string>
+
+    <string name="dialog_default_cancel_button_text">取消</string>
+    <string name="dialog_button_ok">确定</string>
+
+    <string name="robot_no_opneration">无法使用小飞</string>
+    <string name="robot_network_error">网络连接异常</string>
+</resources>

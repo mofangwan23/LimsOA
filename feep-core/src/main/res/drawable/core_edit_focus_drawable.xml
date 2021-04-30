@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <size
+        android:width="@dimen/mdp_3"/>
+    <solid
+        android:color="@color/core_default_accent_color"/>
+    <padding
+        android:bottom="@dimen/mdp_2"
+        android:left="@dimen/mdp_2"
+        android:right="@dimen/mdp_2"
+        android:top="@dimen/mdp_2"/>
+</shape>

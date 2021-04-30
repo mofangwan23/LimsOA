@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwitchButton">
+        <attr name="bmWidth" format="dimension" />
+        <attr name="bmHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="LargeTouchableAreaView">
+        <attr name="addition" format="dimension" />
+        <attr name="additionBottom" format="dimension" />
+        <attr name="additionLeft" format="dimension" />
+        <attr name="additionRight" format="dimension" />
+        <attr name="additionTop" format="dimension" />
+    </declare-styleable>
+</resources>

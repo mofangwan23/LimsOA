@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="schedule_weeks">
+        <item>星期日</item>
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+    </string-array>
+
+    <!--计划7.0-->
+    <string-array name="plan_types">
+        <item>日计划</item>
+        <item>周计划</item>
+        <item>月计划</item>
+        <item>其他计划</item>
+    </string-array>
+
+    <string-array name="plan_days">
+        <item>昨天</item>
+        <item>今天</item>
+        <item>明天</item>
+    </string-array>
+
+    <string-array name="plan_weeks">
+        <item>上周</item>
+        <item>本周</item>
+        <item>下周</item>
+    </string-array>
+
+    <string-array name="plan_months">
+        <item>上月</item>
+        <item>本月</item>
+        <item>下月</item>
+    </string-array>
+
+    <string-array name="plan_list_tabs">
+        <item>我收到的</item>
+        <item>我发出的</item>
+    </string-array>
+
+    <string-array name="plan_list_frequencys">
+        <item>每日</item>
+        <item>每周</item>
+        <item>每月</item>
+    </string-array>
+
+    <string-array name="plan_rule_weeks">
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+        <item>周日</item>
+    </string-array>
+    <!--计划END-->
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/row_height"
+    android:background="?attr/selectableItemBackground"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/ivUserIcon"
+        android:layout_width="@dimen/mdp_30"
+        android:layout_height="@dimen/mdp_30"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/text_paading"
+        android:layout_marginRight="@dimen/text_paading"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/row_height"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/ivUserIcon"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="@dimen/text_middle_size"/>
+
+        <TextView
+            android:id="@+id/tvPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/mdp_2"
+            android:textColor="@color/text_bright_color"
+            android:textSize="@dimen/text_min_size"/>
+    </LinearLayout>
+
+    <View
+        style="@style/detail_line"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/ivUserIcon"
+        android:visibility="visible"/>
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:switch="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5F6F6"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <LinearLayout
+        style="@style/SBLinearLayout"
+        android:layout_marginTop="@dimen/mdp_12"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="打开VPN"
+            android:textAppearance="?android:attr/textAppearanceSmallInverse"
+            android:textColor="@color/text_dark_color"
+            android:textSize="@dimen/msp_15"/>
+
+        <cn.flyrise.feep.core.base.views.UISwitchButton
+            android:id="@+id/isVpnOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            switch:bmHeight="@dimen/mdp_28"
+            switch:bmWidth="@dimen/row_min_height"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutVpnSetting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_16"
+            android:paddingLeft="@dimen/mdp_16"
+            android:paddingRight="@dimen/mdp_16"
+            android:text="服务器地址/端口"
+            android:textColor="#FF8B8C8C"
+            android:textSize="@dimen/msp_12"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_6"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/SBLinearLayout">
+
+                <EditText
+                    android:id="@+id/etVpnServer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:digits="0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm.-_"
+                    android:hint="如：oa.example.com"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:textColor="#FF17191A"
+                    android:textColorHint="#FFCFD0D1"
+                    android:textSize="@dimen/msp_14"/>
+
+                <ImageView
+                    android:id="@+id/ivVpnServerDel"
+                    style="@style/SBDelStyle"/>
+
+            </LinearLayout>
+
+            <View style="@style/CoreSplitLine"/>
+
+            <LinearLayout style="@style/SBLinearLayout">
+
+                <EditText
+                    android:id="@+id/etVpnServerPort"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="0123456789"
+                    android:hint="如：8090"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="#FF17191A"
+                    android:textColorHint="#FFCFD0D1"
+                    android:textSize="@dimen/msp_14"/>
+
+                <ImageView
+                    android:id="@+id/ivVpnServerPortDel"
+                    style="@style/SBDelStyle"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_20"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="@dimen/mdp_16"
+            android:paddingRight="@dimen/mdp_16"
+            android:text="账号/密码"
+            android:textColor="#FF8B8C8C"
+            android:textSize="@dimen/msp_12"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_6"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/SBLinearLayout">
+
+                <EditText
+                    android:id="@+id/etVpnAccount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入账号"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:textColor="#FF17191A"
+                    android:textColorHint="#FFCFD0D1"
+                    android:textSize="@dimen/msp_14"/>
+
+                <ImageView
+                    android:id="@+id/ivVpnAccountDel"
+                    style="@style/SBDelStyle"/>
+
+            </LinearLayout>
+
+            <View style="@style/CoreSplitLine"/>
+
+            <LinearLayout style="@style/SBLinearLayout">
+
+                <EditText
+                    android:id="@+id/etVpnPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:background="@null"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="#FF17191A"
+                    android:textColorHint="#FFCFD0D1"
+                    android:textSize="@dimen/msp_14"/>
+
+                <ImageView
+                    android:id="@+id/ivVpnPasswordDel"
+                    style="@style/SBDelStyle"/>
+
+                <CheckBox
+                    android:id="@+id/cbxPasswordVisibility"
+                    android:layout_width="@dimen/mdp_24"
+                    android:layout_height="@dimen/mdp_16"
+                    android:layout_marginLeft="@dimen/mdp_6"
+                    android:button="@drawable/bg_cbx_sb_pwd"
+                    android:visibility="visible"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

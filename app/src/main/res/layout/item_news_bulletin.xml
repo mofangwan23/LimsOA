@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/row_minimum_height"
+            android:paddingBottom="@dimen/mdp_6"
+            android:paddingLeft="@dimen/mdp_8"
+            android:paddingRight="@dimen/mdp_10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="@dimen/mdp_58"
+                android:layout_height="@dimen/mdp_20"
+                android:layout_marginRight="@dimen/mdp_5"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_min_size"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/text_middle_size"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_layout"
+            android:paddingLeft="@dimen/mdp_10"
+            android:paddingRight="@dimen/mdp_10"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/text_bright_color"
+            android:textSize="@dimen/text_little_size"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fe_list_item_content"
+            android:paddingTop="@dimen/mdp_4"
+            android:paddingBottom="@dimen/mdp_4"
+            android:paddingLeft="@dimen/mdp_8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/mdp_18"
+                    android:layout_height="@dimen/mdp_18"
+                    android:src="@drawable/item_username_icon"/>
+
+                <TextView
+                    android:id="@+id/tvSendUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_5"
+                    android:textColor="@color/text_light_color"
+                    android:textSize="@dimen/text_min_size"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutSendTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/mdp_18"
+                    android:layout_height="@dimen/mdp_18"
+                    android:src="@drawable/item_time_icon"/>
+
+                <TextView
+                    android:id="@+id/tvSendTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_10"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/text_light_color"
+                    android:textSize="@dimen/text_min_size"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutViewCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/mdp_16"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/mdp_18"
+                    android:layout_height="@dimen/mdp_18"
+                    android:src="@drawable/item_nums_icon"/>
+
+                <TextView
+                    android:id="@+id/tvViewCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_5"
+                    android:layout_toRightOf="@id/fe_list_item_name"
+                    android:text="131"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/text_light_color"
+                    android:textSize="@dimen/text_min_size"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/detail_line"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivMessageState"
+        android:layout_width="@dimen/mdp_38"
+        android:layout_height="@dimen/mdp_38"
+        android:layout_gravity="right"
+        android:src="@drawable/my_new"
+        android:visibility="gone"/>
+</FrameLayout>

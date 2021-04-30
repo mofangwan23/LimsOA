@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color_one"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolBar">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:dividerHeight="@dimen/mdp_0_2">
+            </ListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

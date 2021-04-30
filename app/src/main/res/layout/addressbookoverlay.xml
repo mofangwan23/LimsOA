@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/overlaytext"
+        android:layout_width="@dimen/mdp_50"
+        android:layout_height="@dimen/mdp_60"
+        android:background="@drawable/all_thecontact_title_background"
+        android:gravity="center"
+        android:maxWidth="@dimen/mdp_50"
+        android:minWidth="@dimen/mdp_50"
+        android:padding="@dimen/mdp_4"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/msp_30"
+        />
+
+    <View
+        android:layout_width="@dimen/mdp_50"
+        android:layout_height="1px"
+        android:background="@color/all_background_color"/>
+
+    <ListView
+        android:id="@+id/overlaylist"
+        android:layout_width="@dimen/mdp_50"
+        android:layout_height="wrap_content"
+        android:background="@color/loading_icon_background"
+        android:cacheColorHint="@null"
+        android:divider="@null"
+        android:gravity="center"
+        android:maxHeight="@dimen/mdp_200"
+        android:scrollbars="none"
+        android:textSize="@dimen/msp_30"
+        />
+</LinearLayout>

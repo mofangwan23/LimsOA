@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="165dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_marginTop="@dimen/mdp_40"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:id="@+id/mLayoutMore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true">
+
+        <cn.flyrise.feep.robot.widget.WaveViews
+            android:id="@+id/mWaveView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#00000000"/>
+
+        <ImageView
+            android:id="@+id/mSayButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="@dimen/mdp_40"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/alertdialog_listview_item_voice"/>
+
+        <ImageView
+            android:id="@+id/mRobotFinish"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginBottom="@dimen/mdp_40"
+            android:layout_marginLeft="26dp"
+            android:layout_alignParentBottom="true"
+            android:padding="3dp"
+            android:src="@drawable/robot_understander_finish"/>
+
+        <ImageView
+            android:id="@+id/mRobotSetting"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginBottom="@dimen/mdp_40"
+            android:layout_marginRight="26dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="3dp"
+            android:src="@drawable/robot_understander_setting"/>
+
+        <TextView
+            android:id="@+id/mRobotLoadingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mdp_12"
+            android:layout_above="@+id/mSayButton"
+            android:layout_centerHorizontal="true"
+            android:text="@string/robot_hint_operation_up"
+            android:textColor="#28B9FF"
+            android:textSize="11sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

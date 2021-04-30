@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color_one"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_0"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlClearCache"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_min_height"
+                android:layout_marginTop="@dimen/text_paading"
+                android:background="@color/all_background_color"
+                android:clickable="true">
+
+                <View
+                    style="@style/detail_line_thecontact"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mdp_6"
+                    android:layout_toRightOf="@id/the_content_item_icon"
+                    android:padding="@dimen/mdp_10"
+                    android:text="@string/settings_clear"
+                    android:textColor="@color/text_dark_color"
+                    android:textSize="@dimen/text_middle_size"/>
+
+                <TextView
+                    android:id="@+id/tvCacheSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/mdp_10"
+                    android:text="清除缓存"
+                    android:textSize="@dimen/text_little_size"/>
+
+                <View
+                    style="@style/detail_line_thecontact"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAutoSyncSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_min_height"
+                android:background="@color/all_background_color"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mdp_6"
+                    android:layout_toRightOf="@id/the_content_item_icon"
+                    android:layout_weight="1"
+                    android:padding="@dimen/mdp_10"
+                    android:text="@string/settings_auto_sync_schedule"
+                    android:textColor="@color/text_dark_color"
+                    android:textSize="@dimen/text_middle_size"/>
+
+                <cn.flyrise.feep.core.base.views.UISwitchButton
+                    xmlns:switch="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/chkAutoSyncSchedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/text_paading"
+                    android:checked="false"
+                    switch:bmHeight="@dimen/mdp_3000"
+                    switch:bmWidth="@dimen/row_min_height"/>
+
+                <View
+                    style="@style/detail_line_thecontact"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_notification"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_min_height"
+                android:layout_marginBottom="@dimen/mdp_16"
+                android:layout_marginTop="@dimen/mdp_16"
+                android:background="@color/all_background_color"
+                android:clickable="true">
+
+                <View
+                    style="@style/detail_line_thecontact"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mdp_6"
+                    android:layout_toRightOf="@id/the_content_item_icon"
+                    android:padding="@dimen/mdp_10"
+                    android:text="@string/settings_notice"
+                    android:textColor="@color/text_dark_color"
+                    android:textSize="@dimen/text_middle_size"/>
+
+                <TextView
+                    android:layout_width="@dimen/mdp_18"
+                    android:layout_height="@dimen/mdp_20"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/text_paading"
+                    android:background="@drawable/arrow"
+                    android:textSize="@dimen/text_little_size"/>
+
+                <View
+                    style="@style/detail_line_thecontact"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_im"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_min_height"
+                android:layout_marginBottom="@dimen/mdp_16"
+                android:background="@color/all_background_color"
+                android:clickable="true">
+
+                <View
+                    style="@style/detail_line_thecontact"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mdp_6"
+                    android:layout_toRightOf="@id/the_content_item_icon"
+                    android:padding="@dimen/mdp_10"
+                    android:text="@string/settings_chat"
+                    android:textColor="@color/text_dark_color"
+                    android:textSize="@dimen/text_middle_size"/>
+
+                <TextView
+                    android:layout_width="@dimen/mdp_18"
+                    android:layout_height="@dimen/mdp_20"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/text_paading"
+                    android:background="@drawable/arrow"
+                    android:textSize="@dimen/text_little_size"/>
+
+                <View
+                    style="@style/detail_line_thecontact"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/buttom_height"
+            android:layout_marginBottom="@dimen/mdp_16"
+            android:layout_marginLeft="@dimen/mdp_16"
+            android:layout_marginRight="@dimen/mdp_16"
+            android:layout_marginTop="@dimen/mdp_24"
+            android:background="@drawable/nms_bg_blue_btn_round_enable"
+            android:stateListAnimator="@null"
+            android:text="@string/settings_change_user"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/msp_16"/>
+    </LinearLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

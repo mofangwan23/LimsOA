@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/mdp_5"
+    android:background="@drawable/robot_content_title_selector"
+    android:padding="@dimen/mdp_10"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/holiday_icon"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_76"
+        android:background="@drawable/robot_holiday_head_icon" />
+
+    <TextView
+        android:id="@+id/holiday_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/holiday_icon"
+        android:layout_marginBottom="@dimen/mdp_4"
+        android:layout_marginLeft="@dimen/mdp_8"
+        android:layout_marginRight="@dimen/mdp_6"
+        android:layout_marginTop="@dimen/mdp_8"
+        android:minHeight="@dimen/mdp_36"
+        android:textColor="@color/text_bright_color"
+        android:textSize="@dimen/msp_12" />
+
+    <View
+        android:id="@+id/holiday_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_0_2"
+        android:layout_below="@+id/holiday_text"
+        android:layout_marginTop="@dimen/mdp_4"
+        android:background="@color/text_bright_color" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/holiday_line"
+        android:layout_marginBottom="@dimen/mdp_4" />
+
+</RelativeLayout>

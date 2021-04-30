@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/buttonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_40"
+        android:layout_below="@id/toolBar"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dateselect"
+            android:layout_width="@dimen/mdp_0"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/location_date"
+            android:textSize="@dimen/msp_14"/>
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/detail_line" />
+
+        <TextView
+            android:id="@+id/personselect"
+            android:layout_width="@dimen/mdp_0"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/location_person"
+            android:textSize="@dimen/msp_14"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/show_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/buttonlayout">
+
+        <fragment
+            android:id="@+id/texture_map_fragment"
+            class="com.amap.api.maps.TextureMapFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</RelativeLayout>

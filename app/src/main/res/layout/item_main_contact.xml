@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_main_contact_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/item_main_contact_layoutItemView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/ivMainContactIcon"
+            android:layout_width="@dimen/mdp_30"
+            android:layout_height="@dimen/mdp_30"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/mdp_16"
+            android:layout_marginRight="@dimen/mdp_16" />
+
+        <LinearLayout
+            android:id="@+id/layoutContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ivMainArrow"
+            android:layout_toRightOf="@id/ivMainContactIcon"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/mdp_56"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMainName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_text_main"
+                android:textSize="@dimen/msp_15" />
+
+            <TextView
+                android:id="@+id/tvMainSubName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvMainName"
+                android:layout_marginTop="@dimen/mdp_2"
+                android:textColor="@color/gray_text_main" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivMainArrow"
+            android:layout_width="@dimen/mdp_12"
+            android:layout_height="@dimen/mdp_12"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/mdp_10"
+            android:src="@drawable/frequent_contects_iocn_right" />
+
+        <View
+            android:id="@+id/viewSplitLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_0_2"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/ivMainContactIcon"
+            android:visibility="gone"
+            android:background="#CCCCCC" />
+
+        <View
+            android:id="@+id/viewSplitLine_long"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_0_2"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:background="#CCCCCC" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/item_main_contact_ll_extent_part_time_department"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/item_main_contact_layoutItemView">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/backgroud_grey"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/item_main_contact_tv_extent_part_time_department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contacts_extent_part_time_department"
+                android:textColor="@color/gray_text_main"
+                android:textSize="12sp"/>
+            <ImageView
+                android:id="@+id/item_main_contact_part_time_department_iv_down_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_arrow_down"
+                android:layout_marginLeft="6dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewSplitLine16"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_10"
+        android:layout_below="@+id/item_main_contact_ll_extent_part_time_department"
+        android:background="@color/backgroud_grey"
+        android:visibility="gone" />
+</LinearLayout>

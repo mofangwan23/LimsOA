@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/all_background_color">
+
+    <RelativeLayout
+        android:id="@+id/fe_list_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/mdp_76"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/attend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mdp_6"
+            android:layout_marginRight="@dimen/mdp_2"
+            android:gravity="center"
+            android:minWidth="@dimen/mdp_50"
+            android:paddingBottom="@dimen/mdp_3"
+            android:paddingLeft="@dimen/mdp_5"
+            android:paddingRight="@dimen/mdp_5"
+            android:paddingTop="@dimen/mdp_3"
+            android:text="@string/meeting_not_attend"
+            android:textColor="@color/all_background_color"
+            android:textSize="@dimen/msp_12"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/fe_list_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mdp_3"
+            android:layout_marginLeft="@dimen/mdp_15"
+            android:layout_toRightOf="@+id/attend"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/list_item_title_color"
+            android:textSize="@dimen/msp_16"/>
+
+        <LinearLayout
+            android:id="@+id/left_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fe_list_item_title"
+            android:layout_marginLeft="@dimen/mdp_14"
+            android:layout_marginTop="@dimen/mdp_5"
+            android:minWidth="@dimen/mdp_120"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/mdp_18"
+                android:layout_height="@dimen/mdp_18"
+                android:src="@drawable/item_username_icon"/>
+
+            <TextView
+                android:id="@+id/fe_list_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mdp_5"
+                android:textColor="@color/list_item_name_color"
+                android:textSize="@dimen/msp_13"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fe_list_item_title"
+            android:layout_marginLeft="@dimen/mdp_16"
+            android:layout_marginTop="@dimen/mdp_5"
+            android:layout_toRightOf="@id/left_name"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/mdp_18"
+                android:layout_height="@dimen/mdp_18"
+                android:src="@drawable/item_time_icon"/>
+
+            <TextView
+                android:id="@+id/fe_list_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mdp_5"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/list_item_time_color"
+                android:textSize="@dimen/msp_13"
+                ></TextView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/fe_list_item_icon_attachment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/mdp_5"
+        android:layout_toRightOf="@id/fe_list_layout"
+        android:src="@drawable/atta"
+        android:visibility="gone"></ImageView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/fe_list_item_icon_attachment"
+        android:layout_alignTop="@id/fe_list_item_icon_attachment"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/mdp_5"
+        android:layout_toRightOf="@id/fe_list_item_icon_attachment"></ImageView>
+
+    <ImageView
+        android:id="@+id/fe_list_item_icon_arrow"
+        android:layout_width="@dimen/mdp_20"
+        android:layout_height="@dimen/mdp_20"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/mdp_10"
+        android:src="@drawable/list_direction_fe"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/read_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/meeting_untreated_show"/>
+
+    <View
+        android:id="@+id/meeting_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/detail_line"/>
+</RelativeLayout>

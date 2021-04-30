@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_front"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mdp_45"
+    android:background="#ffffffff"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/mdp_15"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/delete_icon"
+            android:paddingTop="@dimen/mdp_5"
+            android:paddingBottom="@dimen/mdp_5"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/mdp_50"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/myItemView_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/standard_text_g_100"
+                android:textSize="@dimen/msp_16"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="@dimen/mdp_50"
+            android:layout_height="@dimen/mdp_50"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/mdp_14"
+            android:src="@drawable/action_delete_fe"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View style="@style/detail_line"/>
+</LinearLayout>

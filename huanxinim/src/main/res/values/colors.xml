@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="common_bg">#fcfcfc</color>
+    <color name="divider_list">#d4d4d4</color>
+    <color name="btn_gray_normal">#c0c0c0</color>
+    <color name="btn_gray_pressed_status">#b5b5b6</color>
+    <color name="btn_blue_normal">#1e90ff</color>
+    <color name="btn_blue_pressed">#0066FF</color>
+    <color name="list_itease_secondary_color">#888888</color>
+    <color name="list_itease_primary_color">#000</color>
+    <color name="emojicon_tab_selected">#FFFFFF</color>
+    <color name="emojicon_tab_nomal">#ffffff</color>
+
+
+    <!-- IM合并后新加的字段，不过这些字段在app模块里面应该是有的，到时候再抽取 -->
+    <color name="text_bright_color">#89000000</color>
+    <color name="all_background_color_one">#f2f2f2</color>
+    <color name="detail_line">#E3E5E6</color>
+    <color name="all_background_color">#ffffff</color>
+    <color name="text_dark_color">#dd000000</color>
+    <color name="text_menu_text_color">#65000000</color>
+    <color name="text_light_color">#42000000</color>
+    <color name="detail_line_thecontact">#CCCCCC</color>
+    <color name="app_icon_bg">#2AB9FF</color>
+
+    <color name="btn_login_normal">#00acff</color>
+    <color name="btn_login_pressed">#46678d</color>
+    <color name="btn_logout_normal">#d33f3f</color>
+    <color name="btn_logout_pressed">#DA5A4D</color>
+    <color name="top_bar_normal_bg">#00acff</color>
+    <color name="btn_green_noraml">#68C270</color>
+    <color name="btn_green_pressed">#6FCD78</color>
+    <color name="gray_pressed">#b5b5b6</color>
+    <color name="gray_normal">#666667</color>
+    <color name="black_deep">#FF000000</color>
+    <color name="btn_answer_normal">#2dafa3</color>
+    <color name="holo_red_light">#ffff4444</color>
+    <color name="list_item_on_bg">#dbe7f1</color>
+    <color name="popwindow_list_item_selected">#ffffff</color>
+    <color name="login_edittext_line">#80acacac</color>
+    <color name="im_text_dark_color">#dd000000</color>
+    <color name="login_edittext_highlight">#78c0fe</color>
+    <color name="em_ab_filter_split_color">#EDEDED</color>
+</resources>

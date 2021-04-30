@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_260"
+            android:background="@android:color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <include
+                android:id="@+id/layoutQuickView"
+                layout="@layout/view_v7_toolbar_open"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/main_v7_image_margin_top"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_44"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin">
+                <include
+                    android:id="@+id/layoutTBOpenStateView"
+                    layout="@layout/view_v7_toolbar_open_state"/>
+
+                <include
+                    android:id="@+id/layoutTBCloseStateView"
+                    layout="@layout/view_v7_toolbar_close_state"/>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/mdp_12"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/layoutEmptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_128"
+            android:src="@drawable/plan_empty"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_18"
+            android:layout_marginBottom="@dimen/mdp_12"
+            android:text="这里没有应用"
+            android:textColor="#FF7AD1FB"
+            android:textSize="@dimen/msp_14"/>
+
+
+        <TextView
+            android:id="@+id/tvModuleSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/mdp_8"
+            android:paddingBottom="@dimen/mdp_8"
+            android:paddingLeft="@dimen/mdp_24"
+            android:paddingRight="@dimen/mdp_24"
+            android:background="@drawable/nms_bg_blue_btn_round_enable"
+            android:text="立即设置"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/msp_14"
+            />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

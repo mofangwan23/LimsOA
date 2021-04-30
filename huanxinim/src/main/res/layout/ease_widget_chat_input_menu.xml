@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_menu_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/primary_menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <FrameLayout
+        android:id="@+id/extend_menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="#fff"
+        android:visibility="gone">
+
+        <com.hyphenate.easeui.widget.NiuBiChatExtendMenu
+            android:id="@+id/chatExtendMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.hyphenate.easeui.widget.NiuBiChatExtendMenu>
+
+        <FrameLayout
+            android:id="@+id/emojicon_menu_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout>

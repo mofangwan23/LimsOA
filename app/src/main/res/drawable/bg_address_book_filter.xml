@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <padding
+                android:bottom="@dimen/mdp_12"
+                android:top="@dimen/mdp_12"/>
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <solid android:color="@color/ab_filter_split_color"/>
+        </shape>
+    </item>
+
+    <item android:right="@dimen/mdp_1">
+        <shape>
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+</layer-list>

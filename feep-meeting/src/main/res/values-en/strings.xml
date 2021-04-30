@@ -1,0 +1,153 @@
+<resources>
+
+    <string name="app_name">feep-meeting</string>
+    <string name="nms_data_load_failure"> data loading failed, please try again</string>
+    <string name="nms_select_start_time_first">Please select the start time </string>
+    <string name="meeting7_new_custom_title">temporary meeting </string>
+    <string name="meeting7_modify_title">Modify meeting</string>
+    <string name="meeting7_create_title">Create a meeting</string>
+    <string name="meeting7_create_confirm">OK</string>
+    <string name="meeting7_create_confirm_modify_hint">Exit this edit</string>
+    <string name="meeting7_create_no_open_attachment">Unable to view the attachment </string>
+    <string name="meeting7_create_no_open_attachment_hint"> can not be opened, it is recommended to install software to view this type of file </string>
+    <string name="meeting7_create_error_reset"> operation failed, please try again </string>
+    <string name="meeting7_create_success">release success </string>
+    <string name="meeting7_create_file">meeting file </string>
+    <string name="meeting7_create_attend_person">Participants </string>
+
+    <string name="meeting7_create_location"> meeting place </string>
+    <string name="meeting7_create_location_hint">Please enter the meeting place </string>
+    <string name="meeting7_create_style"> meeting type </string>
+    <string name="meeting7_create_no_choice_style">There is no optional conference type</string>
+    <string name="meeting7_create_selected_title">Please select </string>
+    <string name="meeting7_create_remind_time"> meeting reminder time </string>
+    <string name="meeting7_create_remind_hint">no </string>
+    <string name="meeting7_create_input_title">Please enter the conference subject, no more than 50 words </string>
+    <string name="meeting7_create_input_content">Please enter the meeting content </string>
+    <string name="meeting7_create_compere_person">Host </string>
+    <string name="meeting7_create_recorder_person">recorder </string>
+    <string name="meeting7_create_clike_delete">Click on the avatar to delete</string>
+    <string name="meeting7_create_file_title">meeting file </string>
+
+    <string name="meeting7_create_time"> meeting time </string>
+        
+    <string name="meeting7_create_cur_date">the day </string>
+        
+    <string name="meeting7_create_left_date">cross the sky</string>
+        
+    <string name="meeting7_create_start_date"> start time </string>
+        
+    <string name="meeting7_create_end_date">end time </string>
+        
+    <string name="meeting7_create_start_end_date"> start and end time </string>
+
+        
+    <string name="meeting7_room_forward_day">the day before </string>
+        
+    <string name="meeting7_room_next_day">After the day </string>
+        
+    <string name="meeting7_room_open_detail">View details</string>
+        
+    <string name="meeting7_room_reserve">schedule </string>
+        
+    <string name="meeting7_room_reserve_full"> has been booked </string>
+
+        
+    <string name="meeting7_detail_title"> meeting details </string>
+        
+    <string name="meeting7_detail_not_handled"> not processed </string>
+        
+    <string name="meeting7_detail_no_attend">Do not participate </string>
+        
+    <string name="meeting7_detail_attend">Participate </string>
+        
+    <string name="meeting7_detail_app_not_install">Application not installed</string>
+        
+    <string name="meeting7_detail_id_no_exit">The conference ID does not exist </string>
+        
+    <string name="meeting7_detail_zxing_title">QR code </string>
+        
+    <string name="meeting7_detail_zxing_get_failed">QR code generation failed</string>
+        
+    <string name="meeting7_detail_reply_title">Others reply</string>
+        
+    <string name="meeting7_detail_reply_success">Reply success</string>
+        
+    <string name="meeting7_detail_remind_success">Reminder success </string>
+        
+    <string name="meeting7_detail_cancel_success">Conference cancellation success </string>
+        
+    <string name="meeting7_detail_load_failed">The meeting failed to load, please try again</string>
+        
+    <string name="meeting7_detail_reply">Reply </string>
+        
+    <string name="meeting7_detail_reply_attend_time">On time to participate </string>
+        
+    <string name="meeting7_detail_reply_attend"> attend the meeting </string>
+        
+    <string name="meeting7_detail_reply_no_attend_time">Temporary things, can not participate </string>
+        
+    <string name="meeting7_detail_reply_no_attend">Do not attend the meeting</string>
+        
+    <string name="meeting7_detail_cancel_hint">temporary changes, meeting cancellation </string>
+        
+    <string name="meeting7_detail_cancel"> cancel meeting </string>
+        
+    <string name="meeting7_detail_no">I think about it again</string>
+        
+    <string name="meeting7_detail_hint_text_error">Delete the content of this word can not exceed 10 words </string>
+        
+    <string name="meeting7_detail_input_reply_text">Please enter the content of the reply </string>
+        
+    <string name="meeting7_detail_brief_introduction">Introduction to the conference</string>
+
+    <string name="meeting7_detail_theme">Meeting theme </string>
+        
+    <string name="meeting7_detail_send_person">Initiator </string>
+        
+    <string name="meeting7_detail_time"> meeting time </string>
+        
+    <string name="meeting7_detail_location"> meeting place </string>
+        
+    <string name="meeting7_detail_address">Meeting address </string>
+        
+    <string name="meeting7_detail_style">Meeting type </string>
+        
+    <string name="meeting7_detail_compere_person">Host </string>
+        
+    <string name="meeting7_detail_recorder_person">record personnel </string>
+        
+    <string name="meeting7_detail_content"> meeting content </string>
+        
+    <string name="meeting7_detail_statistics">Participation statistics </string>
+        
+    <string name="meeting7_detail_person_nums">The number is </string>
+        
+    <string name="meeting7_detail_remind">Remind </string>
+        
+    <string name="meeting7_detail_no_reply">No reply </string>
+        
+    <string name="meeting7_detail_modify">Modify meeting</string>
+
+        
+    <string name="meeting7_mine_all">all </string>
+        
+    <string name="meeting7_mine_cur_user">I am involved </string>
+        
+    <string name="meeting7_mine_cur_user_send">I initiated </string>
+        
+    <string name="meeting7_mine_list_load_error">Data failed to load, please try again</string>
+
+        
+    <string name="meeting7_main_manager_title">Conference Management</string>
+        
+    <string name="meeting7_main_room"> meeting room </string>
+        
+    <string name="meeting7_main_custom"> temporary meeting room </string>
+        
+    <string name="meeting7_main_my">my </string>
+
+        
+    <string name="fe_from_android_mobile"> (from Android) </string>
+
+</resources>

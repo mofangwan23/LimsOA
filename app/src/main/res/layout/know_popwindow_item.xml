@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <View
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_18"
+        android:background="@color/all_background_color_one">
+    </View>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_46"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingBottom="@dimen/mdp_9"
+        android:paddingTop="@dimen/mdp_9"
+        android:text="123"
+        android:textSize="@dimen/mdp_18"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_1"
+        android:background="@color/all_background_color_one">
+    </View>
+</LinearLayout>

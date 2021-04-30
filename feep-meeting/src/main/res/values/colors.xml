@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="nms_meeting_text_on">#28B9FF</color>
+    <color name="nms_meeting_text_off">#9DA3A6</color>
+
+</resources>

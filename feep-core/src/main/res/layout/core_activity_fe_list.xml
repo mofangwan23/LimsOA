@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <include
+            android:id="@+id/fe_list_searchBar"
+            layout="@layout/common_search_layout"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/core_group_list_selected_view"/>
+
+                <cn.flyrise.feep.core.base.views.PullAndLoadMoreRecyclerView
+                    android:id="@+id/fe_list_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </cn.flyrise.feep.core.base.views.PullAndLoadMoreRecyclerView>
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/fe_list_empty"
+                layout="@layout/core_view_empty_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+    </LinearLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

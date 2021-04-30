@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_16"
+            android:layout_marginBottom="@dimen/mdp_16"
+            android:padding="@dimen/mdp_12"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="@dimen/mdp_56"
+                android:layout_height="@dimen/mdp_56"/>
+
+            <ImageView
+                android:id="@+id/ivAddUser"
+                android:layout_width="@dimen/mdp_56"
+                android:layout_height="@dimen/mdp_56"
+                android:layout_marginLeft="@dimen/mdp_16"
+                android:src="@drawable/em_smiley_add_btn"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_switch_block_groupmsg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_48"
+            android:paddingLeft="@dimen/mdp_16"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/mute_notification"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/text_middle_size"/>
+
+            <cn.flyrise.feep.core.base.views.UISwitchButton xmlns:switch="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/switchSilence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mdp_10"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:checked="false"
+                switch:bmHeight="@dimen/mdp_3000"
+                switch:bmWidth="@dimen/row_min_height"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/detail_line"
+            android:layout_marginLeft="@dimen/mdp_16"
+            android:layout_marginRight="@dimen/mdp_16"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_48"
+            android:layout_marginBottom="@dimen/mdp_12"
+            android:paddingLeft="@dimen/mdp_16"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tvTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/em_txt_conversation_setTop"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/text_middle_size"/>
+
+            <cn.flyrise.feep.core.base.views.UISwitchButton xmlns:switch="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/btTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mdp_10"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:checked="false"
+                switch:bmHeight="@dimen/mdp_3000"
+                switch:bmWidth="@dimen/row_min_height"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvClearChatRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/mdp_12"
+            android:paddingBottom="@dimen/mdp_12"
+            android:paddingLeft="@dimen/mdp_16"
+            android:paddingRight="@dimen/mdp_16"
+            android:background="@android:color/white"
+            android:text="@string/Empty_the_chat_record"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/msp_16"/>
+
+        <View
+            style="@style/detail_line"
+            android:layout_marginLeft="@dimen/mdp_16"
+            android:layout_marginRight="@dimen/mdp_16"/>
+
+        <TextView
+            android:id="@+id/tvSearchChatRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mdp_12"
+            android:paddingTop="@dimen/mdp_12"
+            android:paddingBottom="@dimen/mdp_12"
+            android:paddingLeft="@dimen/mdp_16"
+            android:paddingRight="@dimen/mdp_16"
+            android:background="@android:color/white"
+            android:text="@string/search_chat_record"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/msp_16"/>
+
+        <TextView
+            android:id="@+id/tvAddBlackList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/mdp_12"
+            android:paddingBottom="@dimen/mdp_12"
+            android:paddingLeft="@dimen/mdp_16"
+            android:paddingRight="@dimen/mdp_16"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/msp_16"/>
+
+
+        <TextView
+            android:id="@+id/tvBlackListPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/mdp_16"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="@string/black_tip"/>
+
+    </LinearLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

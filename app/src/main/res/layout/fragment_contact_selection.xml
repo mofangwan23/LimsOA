@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <include layout="@layout/common_search_layout"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/layoutSelectionConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_45"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/viewSplitLine"
+                    style="@style/CoreSplitLine"/>
+
+                <CheckBox
+                    android:id="@+id/cbxCheckAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_12"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/mdp_12"
+                    android:button="@drawable/bg_contact_selection_all"
+                    android:text="全选"
+                    android:textColor="#04121A"
+                    android:textSize="@dimen/msp_14"/>
+
+                <TextView
+                    android:id="@+id/tvSelectionConfirm"
+                    android:layout_width="@dimen/mdp_120"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/viewSplitLine"
+                    android:background="@color/core_default_accent_color"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/msp_14"/>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/layoutContactContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/layoutSelectionConfirm">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="@dimen/mdp_20"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:paddingTop="@dimen/mdp_24"
+                    android:paddingBottom="@dimen/mdp_24"
+                    android:orientation="vertical">
+
+                    <cn.flyrise.feep.core.base.views.FELetterListView
+                        android:id="@+id/letterListView"
+                        android:layout_width="@dimen/mdp_20"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/msp_30"/>
+                </LinearLayout>
+            </FrameLayout>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/ivEmptyView"
+            layout="@layout/common_empty_layout"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/userinfo_item_background"
+    android:minHeight="@dimen/mdp_56">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/mdp_16"
+        android:textColor="@color/text_dark_color"
+        android:textSize="@dimen/msp_15"
+        android:typeface="monospace" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/mdp_20"
+        android:layout_toRightOf="@+id/title"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/mdp_16"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:layout_marginTop="@dimen/mdp_16"
+            android:layout_toLeftOf="@+id/right_icon"
+            android:textColor="@color/userinfo_item_content"
+            android:textSize="@dimen/msp_13" />
+
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="@dimen/mdp_48"
+            android:layout_height="@dimen/mdp_48"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/mdp_10"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:layout_marginTop="@dimen/mdp_10"
+            android:layout_toLeftOf="@+id/right_icon"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/right_icon"
+            android:layout_width="@dimen/mdp_6"
+            android:layout_height="@dimen/mdp_12"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:src="@drawable/user_info_right_icon" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_0_2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/mdp_16"
+        android:background="#CCCCCC" />
+</RelativeLayout>

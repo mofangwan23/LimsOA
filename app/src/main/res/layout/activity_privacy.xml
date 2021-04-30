@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".more.PrivacyActivity">
+
+    <include layout="@layout/core_view_toolbar"/>
+    <ProgressBar
+        android:id="@+id/progressh"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_1"
+        android:layout_margin="0px"
+        android:background="#ffffff"
+        android:padding="0px"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_style"/>
+
+    <WebView
+        android:id="@+id/webviewPrivacy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </WebView>
+
+
+</LinearLayout>

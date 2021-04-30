@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/lyDay"
+        style="@style/PlanItemLayout"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/mdp_30"
+            android:layout_height="@dimen/mdp_30"
+            android:layout_gravity="center"
+            android:src="@drawable/plan_type_day"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/mdp_10"
+            android:layout_gravity="center"
+            android:text="@string/plan_classify_head_title"
+            android:textColor="@color/standard_text_g_100"
+            android:textSize="@dimen/msp_15"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/mdp_15"
+            android:layout_height="@dimen/mdp_15"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/right_arrow_icon"/>
+
+    </LinearLayout>
+
+    <View style="@style/detail_line"/>
+
+    <LinearLayout
+        android:id="@+id/lyWeek"
+        style="@style/PlanItemLayout">
+
+        <ImageView
+            android:layout_width="@dimen/mdp_30"
+            android:layout_height="@dimen/mdp_30"
+            android:layout_gravity="center"
+            android:src="@drawable/plan_type_week"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/mdp_10"
+            android:layout_gravity="center"
+            android:text="@string/new_workplan"
+            android:textColor="@color/standard_text_g_100"
+            android:textSize="@dimen/msp_15"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/mdp_15"
+            android:layout_height="@dimen/mdp_15"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/right_arrow_icon"/>
+
+    </LinearLayout>
+
+    <View style="@style/detail_line"/>
+
+    <LinearLayout
+        android:id="@+id/lyMonth"
+        style="@style/PlanItemLayout">
+
+        <ImageView
+            android:layout_width="@dimen/mdp_30"
+            android:layout_height="@dimen/mdp_30"
+            android:layout_gravity="center"
+            android:src="@drawable/plan_type_month"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/mdp_10"
+            android:layout_gravity="center"
+            android:text="@string/plan_month_title"
+            android:textColor="@color/standard_text_g_100"
+            android:textSize="@dimen/msp_15"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/mdp_15"
+            android:layout_height="@dimen/mdp_15"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/right_arrow_icon"/>
+
+    </LinearLayout>
+
+    <View style="@style/detail_line"/>
+
+    <LinearLayout
+        android:id="@+id/lyOther"
+        style="@style/PlanItemLayout">
+
+        <ImageView
+            android:layout_width="@dimen/mdp_30"
+            android:layout_height="@dimen/mdp_30"
+            android:layout_gravity="center"
+            android:src="@drawable/plan_type_other"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/mdp_10"
+            android:layout_gravity="center"
+            android:text="@string/plan_more_title"
+            android:textColor="@color/standard_text_g_100"
+            android:textSize="@dimen/msp_15"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/mdp_15"
+            android:layout_height="@dimen/mdp_15"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/right_arrow_icon"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyWaitSend"
+        style="@style/PlanItemLayout"
+        android:layout_marginTop="@dimen/mdp_10">
+
+        <ImageView
+            android:layout_width="@dimen/mdp_30"
+            android:layout_height="@dimen/mdp_30"
+            android:layout_gravity="center"
+            android:src="@drawable/plan_waitsend"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/mdp_10"
+            android:layout_gravity="center"
+            android:text="@string/plan_wait_commit_title"
+            android:textColor="@color/standard_text_g_100"
+            android:textSize="@dimen/msp_15"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/mdp_15"
+            android:layout_height="@dimen/mdp_15"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/right_arrow_icon"/>
+
+    </LinearLayout>
+</LinearLayout>

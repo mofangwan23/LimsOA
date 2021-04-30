@@ -1,0 +1,3 @@
+include ':app', ':feep-core', ':huanxinim', ':feep-media', ':feep-meeting', ':feep-study',
+        ':push', ':feep-robot', ':feep-fingerprint'//, ':YCVideoPlayerLib'//, ':feep-videoplayer'//, ':WebViewLib'//, ':feep-knowledge'////,'feep-eyeface'//,
+// ':data-retrieval'

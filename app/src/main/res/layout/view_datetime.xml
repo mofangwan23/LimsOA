@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/all_background_color"
+        android:orientation="horizontal"
+        android:padding="@dimen/mdp_8">
+        <!-- 开始时间 -->
+        <RelativeLayout
+            android:id="@+id/start_time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/start_date_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/start_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/mdp_10"
+                android:background="@drawable/workplan_time_btn"
+                android:paddingBottom="@dimen/mdp_5"
+                android:paddingLeft="@dimen/mdp_15"
+                android:paddingRight="@dimen/mdp_15"
+                android:paddingTop="@dimen/mdp_5"
+                android:text="@string/know_time_in_force"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/text_little_size"/>
+
+            <LinearLayout
+                android:id="@+id/start_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/workplan_data_bg"
+                android:gravity="center"
+                android:minWidth="@dimen/mdp_100"
+                android:orientation="vertical"
+                android:padding="@dimen/mdp_12">
+
+                <TextView
+                    android:id="@+id/workplan_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#fc8c73"
+                    android:textSize="@dimen/text_little_size"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/workplan_start_time_yyyy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/mdp_5"
+                    android:gravity="center"
+                    android:textColor="@color/text_bright_color"
+                    android:textSize="@dimen/text_little_size"/>
+
+                <TextView
+                    android:id="@+id/start_time_hm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/mdp_5"
+                    android:gravity="center"
+                    android:textColor="@color/text_bright_color"
+                    android:textSize="@dimen/text_little_size"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/mdp_1"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="#ebebeb"/>
+        <!-- 结束时间 -->
+        <RelativeLayout
+            android:id="@+id/end_time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/end_date_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/end_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/mdp_10"
+                android:background="@drawable/workplan_time_btn"
+                android:paddingBottom="@dimen/mdp_5"
+                android:paddingLeft="@dimen/mdp_15"
+                android:paddingRight="@dimen/mdp_15"
+                android:paddingTop="@dimen/mdp_5"
+                android:text="@string/know_dead_time"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/text_little_size"/>
+
+            <LinearLayout
+                android:id="@+id/end_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/workplan_data_bg"
+                android:gravity="center"
+                android:minWidth="@dimen/mdp_100"
+                android:orientation="vertical"
+                android:padding="@dimen/mdp_12">
+
+                <TextView
+                    android:id="@+id/workplan_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#fc8c73"
+                    android:textSize="@dimen/text_little_size"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/workplan_end_time_yyyy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/mdp_5"
+                    android:gravity="center"
+                    android:textColor="@color/text_bright_color"
+                    android:textSize="@dimen/text_little_size"/>
+
+                <TextView
+                    android:id="@+id/end_time_hm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/mdp_5"
+                    android:gravity="center"
+                    android:textColor="@color/text_bright_color"
+                    android:textSize="@dimen/text_little_size"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>

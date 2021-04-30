@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">feep-core</string>
+    <string name="permission_title">權限申請</string>
+    <string name="permission_title_confirm">溫馨提示</string>
+    <string name="permission_msg_base_info">企業雲工作台需要獲取【存儲空間】和【設備信息】的使用權限，以保證應用程序的正常使用。</string>
+    <string name="permission_rationale_record">企業雲工作台使用【錄音】權限，僅用於正常使用語音、錄音功能，如需正常使用錄音功能，請授予應用使用【錄音】的權限。</string>
+    <string name="permission_rationale_camera">企業雲工作台使用【相機】權限，僅用於正常拍照和掃一掃等功能，如需正常使用相機功能，請授予應用使用【相機】的權限。</string>
+    <string name="permission_rationale_location">企業雲工作台使用【位置】權限，僅用於簽到和位置上報功能，如需正常使用簽到功能，請授予應用使用【位置】的權限。</string>
+    <string name="permission_rationale_calendar">企業雲工作台使用【日曆】權限，僅用於日曆的同步和添加，如需正常使用日程等功能，請授予應用使用【日曆】的權限。</string>
+    <string name="permission_rationale_contact">企業雲工作台使用【通訊錄】權限，僅用於顯示聯繫人和查找功能，我們保證不執行任何涉及用戶隱私的操作，如需正常使用相關功能，請授予應用使用【通訊錄】的權限。</string>
+    <string name="permission_rationale_videoCall">企業雲工作台使用【錄音】【相機】權限，用於视频聊天功能，我們保證不執行任何涉及用戶隱私的操作，如需正常使用相關功能，請授予應用使用【錄音】【相機】的權限。</string>
+
+    <string name="permission_msg_request_failed">所需權限申請失敗，該功能無法正常使用，如需正常使用，請在【設置-應用-企業雲工作台-權限】中開啟相關權限。</string>
+    <string name="permission_msg_request_failed_base">請在【設置-應用-企業雲工作台-權限】中開啟存儲空間和電話權限，以保證應用程序的正常使用。</string>
+    <string name="permission_msg_request_failed_storage">請在【設置-應用-企業雲工作台-權限】中開啟存儲空間權限，以正常使用企業雲工作台。</string>
+    <string name="permission_msg_request_failed_phone">在企業雲工作台使用【電話】權限僅限於確定本機設備ID，以保證賬號的安全性，並不會撥打其它號碼或中止通話。請在【設置-應用-企業雲工作台-權限】中開啟電話權限，以正常登陸應用程序。</string>
+    <string name="permission_msg_request_failed_camera">請在【設置-應用-企業雲工作台-權限】中開啟相機權限，以正常使用拍照、掃描二維碼等功能。</string>
+    <string name="permission_msg_request_failed_record">請在【設置-應用-企業雲工作台-權限】中開啟錄音權限，以正常使用語音、錄音等功能。</string>
+    <string name="permission_msg_request_failed_location">請在【設置-應用-企業雲工作台-權限】中開啟位置權限，以正常使用簽到、位置上報等功能。</string>
+    <string name="permission_msg_request_failed_contact">請在【設置-應用-企業雲工作台-權限】中開啟通訊錄權限，以正常使用嘟嘟、CRM、顯示聯繫人等功能。</string>
+    <string name="permission_msg_request_failed_sms">請在【設置-應用-企業雲工作台-權限】中開啟短信權限，以正常使用應用程序。</string>
+    <string name="permission_msg_request_failed_calendar">請在【設置-應用-企業雲工作台-權限】中開啟日曆權限，以正常使用日程等相關功能。</string>
+
+
+    <string name="permission_text_i_know">知道了</string>
+    <string name="permission_text_confirm">確定</string>
+    <string name="permission_text_go_setting">去設置</string>
+
+    <string name="core_unknow_size">未知大小</string>
+    <string name="core_unknow_type">未知類型</string>
+    <string name="core_prompt_title">溫馨提示</string>
+    <string name="core_btn_positive">確定</string>
+    <string name="core_btn_negative">取消</string>
+
+    <string name="core_http_success_exception">服務器返回的數據不正確</string>
+    <string name="core_network_error_retry">網絡堵車，請重試</string>
+    <string name="core_http_failure">網絡出錯，請檢查網絡</string>
+    <string name="core_http_timeout">網絡超時，請檢查網絡</string>
+    <string name="core_http_network_exception">網絡異常</string>
+
+    <string name="core_attachment_handle_error">附件上傳處理出錯</string>
+    <string name="core_all_attachment_size">附件總大小：</string>
+    <string name="core_all_attachment_size_overflow">總附件大於%1$sM,暫不支持上傳</string>
+    <string name="core_single_attachment_size_overflow">單個附件大於%1$sM,暫不支持上傳</string>
+
+    <string name="core_loading">正在加載…</string>
+    <string name="core_loading_wait">請稍候…</string>
+    <string name="core_downloading">已完成</string>
+    <string name="contact_fetch_error">數據獲取失敗…</string>
+    <string name="core_activity_not_found">無法開啟當前界面</string>
+    <string name="core_data_deleted">數據已刪除</string>
+    <string name="core_read_all">閱讀全部</string>
+    <string name="core_data_get_error">數據獲取失敗…</string>
+    <string name="core_read_detial">查看詳情</string>
+
+    <string name="exit_edit_tig">退出此次编辑?</string>
+
+    <string name="message_please_login_again">會話失效！請重新登錄!</string>
+    <string name="core_lbl_txt_search">搜索</string>
+
+    <string name="util_date_mm">MM月</string>
+    <string name="util_date_week">第%1$d周</string>
+    <string name="util_date_interval">MM月dd日</string>
+    <string name="util_date_yyyy_mm_dd">yyyy年MM月dd日</string>
+
+    <string name="util_time_right_now">剛剛</string>
+    <string name="util_time_minutes_ago">%1$s分鍾前</string>
+    <string name="util_time_hour">%1$s小時前</string>
+    <string name="util_date_day">%1$s天前</string>
+    <string name="location_history_day_time">yyyy年MM月</string>
+
+    <string name="util_week_sun">周日</string>
+    <string name="util_week_mon">周一</string>
+    <string name="util_week_tues">周二</string>
+    <string name="util_week_wed">周三</string>
+    <string name="util_week_thur">周四</string>
+    <string name="util_week_fri">周五</string>
+    <string name="util_week_sat">周六</string>
+
+    <string name="time_format_Hm">HH:mm</string>
+    <string name="time_format_Hms">HH:mm:ss</string>
+    <string name="time_format_today">今天</string>
+    <string name="time_format_yesterday">昨天</string>
+    <string name="time_format_Md">MM月dd日</string>
+    <string name="time_format_yMd">yyyy年MM月dd日</string>
+    <string name="time_format_Mdhm">MM月dd日 HH:mm</string>
+    <string name="time_format_yMdhm">yyyy年MM月dd日 HH:mm</string>
+
+    <!--常用的-->
+    <string name="cancel">取消</string>
+
+
+    <!--知识模块-->
+    <string name="know_button_move">移动</string>
+    <string name="know_button_rename">重命名</string>
+    <string name="know_button_public">发布</string>
+    <string name="know_button_down">下载</string>
+    <string name="know_uploading">正在上传</string>
+    <string name="common_search_title">搜索</string>
+
+    <string name="common_empty_file_hint">該文件夾下沒有內容</string>
+    <string name="common_empty_list_hint">這裏什麽都沒有</string>
+</resources>

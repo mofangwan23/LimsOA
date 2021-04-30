@@ -1,0 +1,59 @@
+<resources>
+
+    <style name="MSAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#F9F9F9</item>
+        <item name="colorPrimaryDark">#484848</item>
+        <item name="colorAccent">@color/core_default_accent_color</item>
+    </style>
+
+    <style name="ImagePickerActivity" parent="MSAppTheme">
+        <item name="android:listDivider">@drawable/ms_divider_image_selection_item</item>
+    </style>
+
+    <style name="ImagePreviewActivity" parent="MSAppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="BigImageBrowserActivity" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="MSImageCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="colorControlActivated">@color/core_default_accent_color</item>
+    </style>
+
+    <style name="MSAttachmentContainer">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="MSAttachmentImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MSAttachmentText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/mdp_4</item>
+    </style>
+
+    <style name="MSAttachmentMenuItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/mdp_24</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">?android:attr/listPreferredItemHeightSmall</item>
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">@dimen/msp_16</item>
+    </style>
+
+</resources>

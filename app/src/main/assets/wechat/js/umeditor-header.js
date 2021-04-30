@@ -1,0 +1,13 @@
+document.writeln(unescape('%3Clink rel="stylesheet" href="//ueditor.baidu.com/umeditor/themes/default/css/umeditor.min.css"/%3E'));
+document.writeln(unescape('%3Cscript type="text/javascript" src="//ueditor.baidu.com/umeditor/umeditor.config.js"%3E%3C/script%3E'));
+document.writeln(unescape('%3Cscript type="text/javascript"%3E'));
+document.writeln('if (typeof window.UMEDITOR_CONFIG == "undefined") {document.writeln(unescape(\'%3Cscript type="text/javascript" src="../../umeditor/umeditor.config.js"%3E%3C/script%3E\'));document.write(\'<link rel="stylesheet" href="../../umeditor/themes/default/css/umeditor.min.css" />\');}');
+document.writeln(unescape('%3C/script%3E'));
+document.writeln(unescape('%3Cscript type="text/javascript"%3E'));
+document.writeln('window.UMEDITOR_CONFIG.UMEDITOR_HOME_URL = "../../umeditor/";');
+document.writeln('window.UMEDITOR_CONFIG.imageUrl = "/ueditor/jsp/feImageUp.jsp";');
+document.writeln('window.UMEDITOR_CONFIG.imagePath = "/ueditor/jsp/download_json.jsp?saveName=";');
+document.writeln('window.UMEDITOR_CONFIG.initialFrameWidth = "95%";');
+document.writeln('window.UMEDITOR_CONFIG.initialFrameHeight ="200";');
+document.writeln(unescape('%3C/script%3E'));
+document.writeln(unescape('%3Cscript type="text/javascript" src="../../umeditor/umeditor.min.js"%3E%3C/script%3E'));

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFefefef"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+
+    <RelativeLayout
+        android:id="@+id/submit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/all_background_color">
+
+        <View style="@style/detail_line"/>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_36"
+            android:layout_marginTop="@dimen/mdp_8"
+            android:layout_marginBottom="@dimen/mdp_8"
+            android:layout_marginLeft="@dimen/mdp_16"
+            android:layout_marginRight="@dimen/mdp_16"
+            android:layout_centerInParent="true"
+            android:background="@drawable/nms_bg_blue_btn_round_enable"
+            android:stateListAnimator="@null"
+            android:text="@string/submit"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/msp_16"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/mdp_10"
+        android:layout_above="@+id/submit_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/toolBar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View style="@style/detail_line"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/mdp_5"
+                android:background="@color/all_background_color"
+                android:minHeight="@dimen/mdp_140">
+
+                <cn.flyrise.feep.form.widget.handWritting.FEWrittingCombo
+                    android:id="@+id/feWritingCombo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/content_voice_input_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:paddingTop="@dimen/mdp_12"
+                    android:paddingBottom="@dimen/mdp_24"
+                    android:paddingLeft="@dimen/mdp_12"
+                    android:background="@color/all_background_color"
+                    android:gravity="top"
+                    android:minHeight="@dimen/mdp_160"
+                    android:textSize="@dimen/msp_16"/>
+
+                <Button
+                    android:id="@+id/form_dispose_word"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/mdp_25"
+                    android:layout_marginBottom="@dimen/mdp_6"
+                    android:layout_marginRight="@dimen/mdp_10"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/voice_input_mic_bnt"
+                    android:background="@drawable/workplan_time_btn"
+                    android:text="@string/common_language"
+                    android:textColor="#90626262"
+                    android:textSize="@dimen/msp_14"/>
+
+                <Button
+                    android:id="@+id/voice_input_mic_bnt"
+                    android:layout_width="@dimen/mdp_24"
+                    android:layout_height="@dimen/mdp_24"
+                    android:layout_marginBottom="@dimen/mdp_6"
+                    android:layout_marginRight="@dimen/mdp_12"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/recording_icon"/>
+            </RelativeLayout>
+
+            <View style="@style/detail_line"/>
+
+            <View
+                style="@style/detail_line"
+                android:layout_marginTop="@dimen/mdp_10"/>
+
+            <RelativeLayout
+                android:id="@+id/form_writting_switch_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_42"
+                android:background="@color/all_background_color"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_12"
+                    android:layout_centerVertical="true"
+                    android:text="@string/handwrite_title"
+                    android:textColor="@color/detail_text_color"
+                    android:textSize="@dimen/msp_15"/>
+
+                <cn.flyrise.feep.core.base.views.UISwitchButton
+                    xmlns:switch="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/form_idea_isWrittingCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/mdp_12"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    switch:bmHeight="@dimen/mdp_3000"
+                    switch:bmWidth="@dimen/mdp_50"/>
+            </RelativeLayout>
+
+            <View style="@style/detail_line"/>
+
+            <View
+                style="@style/detail_line"
+                android:layout_marginTop="@dimen/mdp_10"/>
+
+            <RelativeLayout
+                android:id="@+id/form_idea_action_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_42"
+                android:background="@color/all_background_color"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/form_input_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_12"
+                    android:layout_centerVertical="true"
+                    android:text="@string/form_input_idea_iswait"
+                    android:textColor="@color/detail_text_color"
+                    android:textSize="@dimen/msp_15"/>
+
+                <cn.flyrise.feep.core.base.views.UISwitchButton
+                    xmlns:switch="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/form_idea_input_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/mdp_12"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    switch:bmHeight="@dimen/mdp_3000"
+                    switch:bmWidth="@dimen/mdp_50"/>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/attachemnt_line"
+                style="@style/detail_line"
+                android:layout_marginTop="@dimen/mdp_10"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/imagetextbuton_attac"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_42"
+                android:paddingLeft="@dimen/text_paading"
+                android:paddingRight="@dimen/text_paading"
+                android:background="@color/text_dark_white_color"
+                android:drawableRight="@drawable/accessory_icon"
+                android:gravity="center|left"
+                android:text="@string/collaboration_attachment"
+                android:textColor="@color/detail_text_color"
+                android:textSize="@dimen/text_middle_size"
+                android:visibility="gone"/>
+
+            <View style="@style/detail_line"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

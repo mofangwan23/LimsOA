@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View style="@style/detail_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eff1f5"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/mdp_6"
+        android:paddingLeft="@dimen/mdp_12"
+        android:paddingRight="@dimen/mdp_12">
+
+        <EditText
+            android:id="@+id/etReplyContent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_92"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/mdp_15"
+            android:background="@drawable/login_editview_bg"
+            android:gravity="top"
+            android:hint="@string/input_reply"
+            android:paddingBottom="@dimen/mdp_5"
+            android:paddingLeft="@dimen/mdp_8"
+            android:paddingRight="@dimen/mdp_5"
+            android:paddingTop="@dimen/mdp_8"
+            android:textSize="@dimen/msp_14"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+        <TextView
+            android:id="@+id/text_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_marginRight="@dimen/mdp_3"
+            android:textColor="@color/badge_num_bg"
+            android:textSize="@dimen/msp_12"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_30"
+            android:layout_marginRight="@dimen/mdp_5"
+            android:layout_marginTop="@dimen/mdp_8">
+
+            <ImageView
+                android:id="@+id/btnVoiceInput"
+                android:layout_width="@dimen/mdp_32"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/mdp_12"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/mdp_3"
+                android:src="@drawable/reply_input_record" />
+
+            <RelativeLayout
+                android:id="@+id/layoutAttachmentBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/btnVoiceInput"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/attachemnt_icon"
+                    android:layout_width="@dimen/mdp_32"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/mdp_3"
+                    android:src="@drawable/reply_input_attachment" />
+
+                <cn.flyrise.feep.core.base.views.BadgeView
+                    android:id="@+id/tvAttachmentSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-8dp"
+                    android:layout_toRightOf="@+id/attachemnt_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvReplySubmit"
+                android:layout_width="@dimen/mdp_48"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/work_plan_send_bg"
+                android:gravity="center"
+                android:paddingLeft="@dimen/mdp_3"
+                android:paddingRight="@dimen/mdp_3"
+                android:stateListAnimator="@null"
+                android:text="@string/submit"
+                android:textColor="#FFF"
+                android:textSize="@dimen/msp_13" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

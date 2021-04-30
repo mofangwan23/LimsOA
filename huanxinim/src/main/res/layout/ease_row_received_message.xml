@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingTop="@dimen/mdp_13"
+  android:orientation="vertical">
+
+  <TextView
+    android:id="@+id/timestamp"
+    style="@style/chat_text_date_style"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:visibility="gone"/>
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_chat_activity"
+    android:paddingBottom="@dimen/mdp_5">
+
+    <ImageView
+      android:id="@+id/iv_userhead"
+      style="@style/message_item_left_user_icon" />
+
+    <TextView
+      android:id="@+id/tv_userid"
+      style="@style/chat_message_item_left_name"
+      android:layout_toRightOf="@id/iv_userhead" />
+
+    <RelativeLayout
+      android:id="@+id/bubble"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/mdp_2"
+      android:layout_marginLeft="@dimen/margin_chat_activity"
+      android:layout_marginRight="@dimen/mdp_42"
+      android:layout_below="@+id/tv_userid"
+      android:layout_toRightOf="@id/iv_userhead"
+      android:background="@drawable/ease_chatfrom_bg">
+
+      <TextView
+        android:id="@+id/tv_chatcontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingTop="@dimen/mdp_5"
+        android:paddingBottom="@dimen/mdp_5"
+        android:paddingLeft="@dimen/mdp_6"
+        android:paddingRight="@dimen/mdp_4"
+        android:autoLink="web"
+        android:gravity="center|left"
+        android:lineSpacingExtra="@dimen/mdp_2"
+        android:maxWidth="@dimen/mdp_240"
+        android:textColor="#000000"
+        android:textSize="@dimen/msp_16" />
+    </RelativeLayout>
+  </RelativeLayout>
+
+</LinearLayout>

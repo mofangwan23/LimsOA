@@ -1,0 +1,52 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bdp_white"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvNegative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/mdp_15"
+            android:text="@string/plan_negative"
+            android:textColor="#FF28B9FF"
+            android:textSize="@dimen/msp_14"
+            />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/mdp_15"
+            android:textColor="#FF191919"
+            android:textSize="@dimen/msp_14"
+            />
+
+        <TextView
+            android:id="@+id/tvPositive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/mdp_15"
+            android:text="@string/plan_positive"
+            android:textColor="#FF28B9FF"
+            android:textSize="@dimen/msp_14"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lyContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"/>
+
+</LinearLayout>

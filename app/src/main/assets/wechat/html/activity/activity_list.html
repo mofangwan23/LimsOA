@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,maximum-scale=3.0, minimum-scale=1.0, user-scalable=yes">
+    <title>活动</title>
+    <link rel="stylesheet" href="../../css/jmobile/global-j.css">
+    <link rel="stylesheet" href="../../css/activity.css">
+    <script type="text/javascript" src="../../js/header.js"></script>
+    <script type="text/javascript" src="../../umeditor/umeditor.config.js"></script>
+    <script type="text/javascript" src="../../umeditor/umeditor.min.js"></script>
+    <script type="text/javascript" src="../../js/cordova.js"></script>
+    <script type="text/javascript" src="../../js/cn.flyrise.appinit.js"></script>
+    <style>
+        .ui-footer-fixed {
+        bottom: 1px;
+        padding-bottom: 1px;
+        }
+        .discuss_bar {
+        display:none;
+        background-color: rgb(238, 238, 238);
+        transition: none 0.5s ease;
+        transition-property: all;
+        -webkit-transition: none 0.5s ease;
+        -webkit-transition-property: all;
+        z-index: 10;
+        }
+        .silde_up {
+        display:block;important;
+        }
+    </style>
+</head>
+<body ng-app="angularActivityApp" ng-controller="activityController">
+<div data-role="page" data-control-title="Home" id="main">
+    <div data-role="content">
+        <ul data-role="listview" repeat-directive data-inset="true" data-filter="true"
+            data-filter-placeholder="搜索活动" id="activityListview">
+            <li ng-repeat-start="x in activitylist" data-icon="false" data-role="list-divider"></li>
+            <li ng-repeat-end data-icon="false">
+                <a href="#editActivity" ng-click="_showdetail(x.activeid)"> <img
+                        class="activity_img" style="height: 55%"
+                        ng-src="{{feurl}}{{x.activephotourl}}"/>
+
+                    <h2>{{x.activename}}</h2>
+
+                    <p class="adress_name">
+                        地 点：{{x.address}}
+                    </p>
+
+                    <p class="time_name">
+                        时 间：{{timeDebug(x.starttime) | date:"yyyy-MM-dd HH:mm"}}
+                    </p>
+
+                    <h3 class="ui-li-count status"
+                        style="font-size: 15px; width: 55px; color:{{statusForColor(x.activestatus)}}">
+                        {{x.activestatus}}</h3> <span
+                            class="ui-li-count totalPerson">{{x.appnum}}</span>
+                </a>
+            </li>
+            <div class="pubut-more" ng-if="activitylist.length>9">
+                <a href="#" id="nextBtn" data-theme="c" data-role="button" data-icon="false"
+                   ng-click='_next()'>更多</a>
+            </div>
+        </ul>
+    </div>
+</div>
+<div data-role="page" id="editActivity">
+    <div data-theme="a" data-role="header" data-position="fixed">
+        <a data-role="button" data-rel="back" href="#main" data-icon="back" data-iconpos="notext"
+           ng-show="isDetail()"></a>
+
+        <h3>查看活动</h3>
+    </div>
+    <div data-role="content" ng-click="showIntput(1)">
+        <div data-controltype="image">
+            <img style="width: 100%; height: 200px"
+                 ng-src="{{feurl}}/AttachmentServlet39?actionType=showphoto&guid={{detail.activephotourl}}">
+        </div>
+        <ul data-role="listview" data-inset="true">
+            <li data-role="list-divider" role="heading">活动相关</li>
+            <li>
+                <h2>{{detail.activename}}</h2>
+
+                <p class="class_name">
+                    类 型：{{detail.activetype}}
+                </p>
+
+                <p class="time_name">
+                    时 间：{{detail.starttimeLong | date:"yyyy-MM-dd HH:mm"}}
+                </p>
+
+                <p class="person_name">
+                    发起人：{{detail.ceator}}
+                </p>
+
+                <p class="adress_name">
+                    地 点：{{detail.address}}
+                </p>
+            </li>
+        </ul>
+        <ul data-role="listview" data-inset="true">
+            <li data-role="list-divider">活动介绍</li>
+            <div data-role="content">
+                <input type="hidden" load-editor value="{{detail.activedesc}}" id="_activitycontent_" />
+                <div class="activity_margin" id="activitycontent">{{detail.activedesc}}</div>
+            </div>
+            </li>
+        </ul>
+        <ul data-role="listview" data-inset="true">
+            <li data-role="list-divider">活动成员<span class="ui-li-count">{{detail.appnum}}</span>
+            </li>
+            <li data-icon="false">
+                <div class="tx-more2" ng-repeat="y in detail.users">
+                    <img class="supply_photo" ng-src="{{feurl}}{{y.userphoto}}"></img>
+                    <span>{{y.attentuserName}}</span>
+                </div>
+            </li>
+        </ul>
+        <ul data-role="listview" data-inset="true" ng-hide="">
+            <li data-role="list-divider" role="heading">活动评论<span class="ui-li-count">{{detail.comments.length}}</span></li>
+            <li ng-repeat="z in detail.comments | orderBy:'-commenttimeLong'" data-icon="false"
+                style="padding: .2em 1em">
+                <p>
+                    <strong>{{z.commentUserName}}</strong>&nbsp;&nbsp;{{z.commenttimeLong |
+                    date:"yy-MM-dd HH:mm:ss"}}
+                </p>
+                <p style="white-space:pre-wrap;">{{z.commentdesc}}</p>
+            </li>
+        </ul>
+    </div>
+    <div data-role="footer" data-position="fixed" data-tap-toggle="false" style="background: #eee;">
+        <table id="discuss_bar" class="discuss_bar" style="width: 100%;">
+            <tr style="width: 100%;">
+                <td style="width: 90% ">
+                    <input type="text" id="discussmsg" ng-model="discussmsg"
+                           style="width: 90%; margin: .15em 0;" placeholder="说几句吧" speech
+                           x-webkit-speech/>
+                </td>
+                <td style="width: 90% ">
+                    <a data-role="button" data-inline="false" ng-click="_addcomment(detail.activeid)"
+                       class="defi-blue-button" style="width: 100%; ">发表</a>
+                </td>
+            </tr>
+        </table>
+        <ul class="ui-grid-a foot_bar">
+            <li class="ui-block-a">
+                <a data-role="button" href="#"
+                   ng-class="detail.activestatus=='已结束'?'ui-state-disabled':''"
+                   style="width: 90%;margin:0px;" class="ui-btn-active defi-blue-button"
+                   ng-click="statusForBottonAction(detail.activestatus,detail.activeid);">{{statusForBotton(detail.activestatus)}}</a>
+
+            </li>
+            <li class="ui-block-b">
+                <a data-role="button" data-inline="false"
+                   ng-class="detail.activestatus=='已结束'?'ui-state-disabled':''"
+                   ng-click="showIntput()" class="defi-blue-button" style="width: 90%; margin:0px;">评论</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="../../js/angular/angularActivityPhonegap.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/mdp_12"
+    android:background="#F6F6F6"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/nmsTvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/core_default_accent_color"
+        android:textSize="@dimen/msp_14"/>
+
+    <TextView
+        android:id="@+id/nmsTvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_8"
+        android:textColor="#7F7F7F"
+        android:textSize="@dimen/msp_14"/>
+
+    <cn.flyrise.feep.meeting7.ui.component.AttachmentLayout
+        android:id="@+id/nmsAttachmentsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_8">
+    </cn.flyrise.feep.meeting7.ui.component.AttachmentLayout>
+
+    <TextView
+        android:id="@+id/nmsTvTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_8"
+        android:textColor="#7F7F7F"
+        android:textSize="@dimen/msp_12"/>
+</LinearLayout>

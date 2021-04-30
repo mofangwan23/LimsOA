@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="@dimen/row_minimum_height">
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="@dimen/mdp_32"
+        android:layout_height="@dimen/mdp_32"
+        android:layout_marginTop="@dimen/row_minimum_height"
+        android:layout_marginLeft="@dimen/row_minimum_height"
+        android:layout_marginRight="@dimen/row_minimum_height"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center"
+        android:contentDescription="@drawable/icon_header_new_fe"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/row_minimum_height"
+        android:layout_marginBottom="@dimen/row_minimum_height"
+        android:layout_toRightOf="@id/ivAvatar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/other_reply"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/text_dark_color"
+            android:textSize="@dimen/msp_16"/>
+
+        <LinearLayout
+            android:id="@+id/layoutTimeAndReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/mdp_3"
+            android:paddingBottom="@dimen/mdp_3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvReplyTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvUserName"
+                android:textColor="#A9B7B7"
+                android:textSize="@dimen/text_min_size"/>
+
+            <LinearLayout
+                android:id="@+id/layoutReply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_5"
+                    android:text="·"
+                    android:textColor="#A9B7B7"
+                    android:textSize="@dimen/msp_20"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_3"
+                    android:layout_marginRight="@dimen/mdp_3"
+                    android:text="@string/reply"
+                    android:textColor="#A9B7B7"
+                    android:textSize="@dimen/msp_12"/>
+
+                <ImageView
+                    android:layout_width="@dimen/mdp_12"
+                    android:layout_height="@dimen/mdp_12"
+                    android:src="@drawable/detail_right_icon"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etReplyContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/text_paading"
+            android:background="#00000000"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:editable="false"
+            android:focusable="true"
+            android:inputType="none"
+            android:textColor="@color/text_dark_color"
+            android:textSize="@dimen/text_little_size"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/ivHandWritting"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/mdp_120"
+            android:scaleType="centerInside"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/subReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mdp_1"
+            android:layout_alignBottom="@id/layoutTimeAndReply"
+            android:layout_toRightOf="@id/layoutTimeAndReply"
+            android:src="@drawable/replay"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/layoutReplyItemBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/mdp_3"
+            android:paddingBottom="@dimen/mdp_5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvReplyTips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mdp_8"
+                android:textColor="#ff0000"
+                android:textSize="@dimen/msp_14"/>
+
+            <TextView
+                android:id="@+id/tvReplyAttachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/attachment_count_tip"
+                android:textColor="@color/wrokplan_detail_head_btn_defulit"
+                android:textSize="@dimen/msp_14"/>
+        </LinearLayout>
+        <!-- 子回复列表 -->
+        <ViewStub
+            android:id="@+id/viewStubSubReply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/mdp_4"
+            android:layout="@layout/view_stub_particular_common"/>
+    </LinearLayout>
+</RelativeLayout>

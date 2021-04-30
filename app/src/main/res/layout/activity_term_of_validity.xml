@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<cn.flyrise.feep.core.base.views.SwipeBackLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bdp_white">
+        <include layout="@layout/core_view_toolbar" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolBar"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bdp_white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/mdp_30"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="@dimen/dim_30_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="一、生效时间"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_text_main"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="生效时间是文件上传后，开始允许查看、操作的时间；"
+                    android:textColor="@color/black_text_main"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_30_dp"
+                    android:textStyle="bold"
+                    android:text="二、失效时间"
+                    android:textColor="@color/black_text_main"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="失效时间是上传文件不再允许查看、操作的时间；"
+                    android:textColor="@color/black_text_main"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_30_dp"
+                    android:textStyle="bold"
+                    android:text="三、提醒时间"
+                    android:textColor="@color/black_text_main"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="文档失效前一天/三天/一星期/两星期/一个月/发送消息推送通知上传人文档即将失效；"
+                    android:textColor="@color/black_text_main"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_30_dp"
+                    android:textStyle="bold"
+                    android:text="四、举例"
+                    android:textColor="@color/black_text_main"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="如2018年6月6日12点00分上传文件，生效时间为6月10日12:00分，失效时间为6月15日00:00分，6月6日12点00分上传后该文件无法查看、操作，到6月10日12:00分后该文件允许查看、操作，到6月15日00:00分后该文件不允许允许查看、操作。"
+                    android:textColor="@color/black_text_main"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

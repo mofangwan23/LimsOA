@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/msRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+        </android.support.v7.widget.RecyclerView>
+
+        <View
+            android:id="@+id/msTranslucence"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#55000000"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@drawable/core_shadow_horizontal_down"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/msLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#272d32"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_alignParentTop="true"
+            android:background="#CCCCCC"/>
+        <TextView
+            android:id="@+id/msTvCurrentFolder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="16dp"
+            android:paddingRight="4dp"
+            android:gravity="center_vertical"
+            android:text="全部文件"
+            android:textColor="#EDEDED"/>
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/msTvCurrentFolder"
+            android:paddingTop="8dp"
+            android:src="@mipmap/ms_icon_image_picker_mark"/>
+
+        <TextView
+            android:id="@+id/msTvPreview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center_vertical"
+            android:text="预览"
+            android:textColor="#EDEDED"/>
+
+    </RelativeLayout>
+</LinearLayout>

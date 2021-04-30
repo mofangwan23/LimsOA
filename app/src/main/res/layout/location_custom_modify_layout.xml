@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/standard_bg_g_30"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/customAddLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fe_w_selected_btn_bg"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/line"
+            style="@style/detail_line"/>
+
+        <TextView
+            android:id="@+id/customAdd"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="@string/location_custom_create"
+            android:textColor="#28B9FF"
+            android:textSize="@dimen/msp_16"/>
+    </LinearLayout>
+
+</LinearLayout>

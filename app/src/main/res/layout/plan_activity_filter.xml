@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff0f0f0"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <cn.flyrise.feep.workplan7.view.PlanItemLayout
+            android:id="@+id/lyUserTitle"
+            style="@style/PlanItemLayout"
+            android:layout_marginTop="@dimen/mdp_10"
+            app:PlanItemAttrTitle="@string/plan_filter_users"
+            app:planItemRightIcon="@drawable/plan_add"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/userListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_0_2"
+            android:background="@color/bdp_white"
+            android:visibility="visible"/>
+
+        <cn.flyrise.feep.workplan7.view.PlanItemLayout
+            android:id="@+id/lyType"
+            style="@style/PlanItemLayout"
+            android:layout_marginTop="@dimen/mdp_10"
+            app:PlanItemAttrContentHint="@string/plan_rule_selected_hint"
+            app:PlanItemAttrTitle="@string/plan_filter_type"
+            app:planItemRightIcon="@drawable/plan_down"
+            />
+
+        <cn.flyrise.feep.workplan7.view.PlanItemLayout
+            android:id="@+id/lyStatTime"
+            style="@style/PlanItemLayout"
+            android:layout_marginTop="@dimen/mdp_10"
+            app:PlanItemAttrContentHint="@string/plan_rule_selected_hint"
+            app:PlanItemAttrTitle="@string/plan_create_start_time"
+            app:planItemRightIcon="@drawable/plan_down"
+            />
+
+        <View style="@style/detail_line"/>
+
+        <cn.flyrise.feep.workplan7.view.PlanItemLayout
+            android:id="@+id/lyEndTime"
+            style="@style/PlanItemLayout"
+            app:PlanItemAttrContentHint="@string/plan_rule_selected_hint"
+            app:PlanItemAttrTitle="@string/plan_create_end_time"
+            app:planItemRightIcon="@drawable/plan_down"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btReset"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_45"
+            android:layout_weight="1"
+            android:background="#FF9DDFFF"
+            android:text="@string/plan_filter_reset"
+            android:textColor="@color/bdp_white"
+            android:textSize="@dimen/msp_14"/>
+
+        <Button
+            android:id="@+id/btConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_45"
+            android:layout_weight="1"
+            android:background="#FF28B9FF"
+            android:text="@string/plan_filter_confirm"
+            android:textColor="@color/bdp_white"
+            android:textSize="@dimen/msp_14"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

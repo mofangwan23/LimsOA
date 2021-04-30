@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mdp_55"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/knowledge_list_item_ll_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/checkBoxLayout"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/file_icon"
+                android:layout_width="@dimen/mdp_30"
+                android:layout_height="@dimen/mdp_30"
+                android:layout_marginLeft="@dimen/mdp_15" />
+
+            <LinearLayout
+                android:id="@+id/text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/mdp_10"
+                android:layout_toEndOf="@+id/file_icon"
+                android:layout_toRightOf="@+id/file_icon"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/file_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxEms="16"
+                    android:singleLine="true"
+                    android:textColor="@color/black_text_main"
+                    android:textSize="@dimen/msp_14" />
+
+                <LinearLayout
+                    android:id="@+id/ll_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_light_color"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/receiver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/mdp_10"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/text_light_color"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/checkBoxLayout"
+            android:layout_width="@dimen/dim_30_dp"
+            android:layout_height="@dimen/dim_30_dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/mdp_15"
+            android:layout_marginRight="@dimen/mdp_5">
+            <cn.flyrise.feep.core.component.LargeTouchCheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@drawable/checkbox_blue_selected"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="8dp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        style="@style/detail_line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/mdp_12" />
+</RelativeLayout>

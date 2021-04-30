@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/mdp_16"
+    android:paddingBottom="@dimen/mdp_8"
+    android:paddingLeft="@dimen/mdp_15"
+    android:paddingRight="@dimen/mdp_15"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/mdp_16"
+        android:layout_weight="1"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/ivFileType"
+            android:layout_width="@dimen/mdp_40"
+            android:layout_height="@dimen/mdp_40"/>
+
+
+        <TextView
+            android:id="@+id/tvFileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mdp_12"
+            android:layout_toRightOf="@id/ivFileType"
+            android:textColor="#17191A"
+            android:textSize="@dimen/text_middle_size"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_4"
+            android:layout_marginLeft="@dimen/mdp_12"
+            android:layout_below="@+id/tvFileName"
+            android:layout_toRightOf="@id/ivFileType"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvFileTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8B8C8C"
+                android:textSize="@dimen/msp_12"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/mdp_3"
+                android:layout_marginBottom="@dimen/mdp_3"
+                android:layout_marginLeft="@dimen/mdp_12"
+                android:layout_marginRight="@dimen/mdp_12"
+                android:background="#E3E5E6"/>
+
+            <TextView
+                android:id="@+id/tvFileSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:textColor="#8B8C8C"
+                android:textSize="@dimen/msp_12"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <cn.flyrise.feep.core.component.LargeTouchCheckBox
+        android:id="@+id/fileCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:button="@drawable/checkbox_blue_selected"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fitsSystemWindows="true"
+  android:orientation="vertical">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/action_bar_size"
+    android:background="?attr/colorPrimary">
+
+    <TextView
+      android:id="@+id/tvSearchCancel"
+      android:textStyle="bold"
+      android:layout_width="@dimen/mdp_55"
+      android:layout_height="@dimen/mdp_45"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:gravity="center"
+      android:text="@string/collaboration_recorder_cancel"
+      android:textColor="@color/dialog_btn_bg"
+      android:textSize="@dimen/msp_16" />
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_toLeftOf="@id/tvSearchCancel">
+
+      <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_40"
+        android:layout_marginLeft="@dimen/mdp_10"
+        android:paddingLeft="@dimen/mdp_8"
+        android:background="@drawable/core_search_edittext"
+        android:drawableLeft="@mipmap/core_icon_search"
+        android:drawablePadding="@dimen/mdp_8"
+        android:hint="@string/search_empty_searchkey"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"
+        android:textSize="@dimen/msp_13" />
+
+      <ImageView
+        android:id="@+id/ivDeleteIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:paddingRight="@dimen/mdp_15"
+        android:src="@mipmap/core_icon_delete"
+        android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+      style="@style/detail_line"
+      android:layout_alignParentBottom="true" />
+  </RelativeLayout>
+
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_background_color_one">
+
+    <cn.flyrise.feep.core.base.views.LoadMoreRecyclerView
+      android:id="@+id/recyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/all_background_color"
+      android:cacheColorHint="@android:color/transparent"/>
+
+    <include
+        android:id="@+id/ivErrorView"
+        layout="@layout/core_view_empty_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+  </FrameLayout>
+</LinearLayout>

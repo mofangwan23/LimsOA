@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/standard_bg_g_30">
+
+    <LinearLayout
+        android:id="@+id/lyEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/plan_statistics_empty"/>
+
+        <TextView
+            android:id="@+id/btCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_20"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/mdp_10"
+            android:paddingBottom="@dimen/mdp_10"
+            android:paddingLeft="@dimen/mdp_15"
+            android:paddingRight="@dimen/mdp_15"
+            android:background="@drawable/plan_pressed_button"
+            android:text="@string/plan_create_rule_btn"
+            android:textColor="#ffffffff"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/listLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <cn.flyrise.feep.core.base.views.PullAndLoadMoreRecyclerView
+            android:id="@+id/statisticsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+</FrameLayout>

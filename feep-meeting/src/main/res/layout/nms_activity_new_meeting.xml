@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/mdp_16"
+            android:background="#F0F0F0"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/NMSNewMeetingContainerStyle">
+
+                <LinearLayout
+                    android:id="@+id/nmsLayoutLocation"
+                    style="@style/NMSNewMeetingLayoutBaseStyle"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/NMSNewMeetingLabelTextStyle"
+                        android:layout_marginRight="@dimen/mdp_16"
+                        android:text="@string/meeting7_create_location"
+                        android:visibility="visible"/>
+
+                    <TextView
+                        android:id="@+id/nmsTvLocation"
+                        style="@style/NMSNewMeetingSelectableTextStyle"
+                        android:drawableRight="@null"
+                        android:visibility="visible"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/nmsEtCustomRoom"
+                    style="@style/NMSNewMeetingLayoutBaseStyle"
+                    android:background="@null"
+                    android:hint="@string/meeting7_create_location_hint"
+                    android:maxLength="50"
+                    android:textColorHint="#9DA3A6"
+                    android:textSize="@dimen/msp_15"
+                    android:visibility="gone"/>
+
+                <View style="@style/CoreSplitLine"/>
+
+                <LinearLayout
+                    style="@style/NMSNewMeetingLayoutBaseStyle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/NMSNewMeetingLabelTextStyle"
+                        android:text="@string/meeting7_create_style"/>
+
+                    <TextView
+                        android:id="@+id/nmsTvMeetingType"
+                        style="@style/NMSNewMeetingSelectableTextStyle"
+                        android:text="@string/meeting7_create_selected_title"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 会议时间 -->
+            <cn.flyrise.feep.meeting7.ui.component.MeetingTimeView
+                android:id="@+id/nmsTimeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_12"
+                android:visibility="visible">
+            </cn.flyrise.feep.meeting7.ui.component.MeetingTimeView>
+
+            <cn.flyrise.feep.meeting7.ui.component.MeetingCustomTimeView
+                android:id="@+id/nmsCustomTimeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_12"
+                android:visibility="gone">
+            </cn.flyrise.feep.meeting7.ui.component.MeetingCustomTimeView>
+
+            <!-- 提醒时间 -->
+            <LinearLayout style="@style/NMSNewMeetingContainerStyle">
+                <LinearLayout
+                    style="@style/NMSNewMeetingLayoutBaseStyle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/NMSNewMeetingLabelTextStyle"
+                        android:text="@string/meeting7_create_remind_time"/>
+
+                    <TextView
+                        android:id="@+id/nmsTvPromptTimes"
+                        style="@style/NMSNewMeetingSelectableTextStyle"
+                        android:text="@string/meeting7_create_remind_hint"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/NMSNewMeetingContainerStyle"
+                android:layout_marginTop="@dimen/mdp_10">
+
+                <EditText
+                    android:id="@+id/nmsEtTitle"
+                    style="@style/NMSNewMeetingLayoutBaseStyle"
+                    android:background="@null"
+                    android:hint="@string/meeting7_create_input_title"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:textColorHint="#9DA3A6"
+                    android:textSize="@dimen/msp_15"/>
+
+                <View style="@style/CoreSplitLine"/>
+
+                <FrameLayout
+                    style="@style/NMSNewMeetingLayoutBaseStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/nmsEtContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="left|top"
+                        android:hint="@string/meeting7_create_input_content"
+                        android:maxLength="70"
+                        android:minLines="5"
+                        android:textColorHint="#9DA3A6"
+                        android:textSize="@dimen/msp_15"/>
+
+                    <TextView
+                        android:id="@+id/nmsTvContentCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:text="0/70"
+                        android:textColor="#9DA3A6"
+                        android:textSize="@dimen/msp_12"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- 主持人 -->
+            <LinearLayout style="@style/NMSNewMeetingContainerStyle">
+                <LinearLayout
+                    style="@style/NMSNewMeetingLayoutBaseStyle"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/NMSNewMeetingLabelTextStyle"
+                        android:text="@string/meeting7_create_compere_person"/>
+
+                    <TextView
+                        android:id="@+id/nmsTvCompere"
+                        style="@style/NMSNewMeetingSelectableTextStyle"
+                        android:text="@string/meeting7_create_selected_title"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 记录人 -->
+            <LinearLayout style="@style/NMSNewMeetingContainerStyle">
+                <LinearLayout
+                    style="@style/NMSNewMeetingLayoutBaseStyle"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/NMSNewMeetingLabelTextStyle"
+                        android:text="@string/meeting7_create_recorder_person"/>
+
+                    <TextView
+                        android:id="@+id/nmsTvRecorder"
+                        style="@style/NMSNewMeetingSelectableTextStyle"
+                        android:text="@string/meeting7_create_selected_title"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 参会人员 -->
+            <LinearLayout style="@style/NMSNewMeetingContainerStyle">
+                <LinearLayout
+                    style="@style/NMSNewMeetingLayoutBaseStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nmsTvAttendUserCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/meeting7_create_attend_person"
+                        android:textColor="#04121A"
+                        android:textSize="@dimen/msp_15"/>
+
+                    <TextView
+                        android:id="@+id/nmsTvAttendeeDelTip"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/mdp_16"
+                        android:text="@string/meeting7_create_clike_delete"
+                        android:textColor="#9DA3A6"
+                        android:textSize="@dimen/mdp_12"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/nmsIvAddAttendUsers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/nms_ic_little_add"/>
+                </LinearLayout>
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/nmsRVAttendUsers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+            </android.support.v7.widget.RecyclerView>
+
+            <!-- 会议附件 -->
+            <LinearLayout style="@style/NMSNewMeetingContainerStyle">
+                <LinearLayout
+                    style="@style/NMSNewMeetingLayoutBaseStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/nmsTvAttachmentCount"
+                        style="@style/NMSNewMeetingLabelTextStyle"
+                        android:text="@string/meeting7_create_file_title"/>
+
+                    <ImageView
+                        android:id="@+id/nmsIvAddAttachments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/nms_ic_little_add"/>
+                </LinearLayout>
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/nmsRVAttachments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

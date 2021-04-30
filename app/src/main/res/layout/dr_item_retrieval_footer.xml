@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/drLayoutSearchMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/mdp_12"
+        android:paddingBottom="@dimen/mdp_12"
+        android:paddingLeft="@dimen/mdp_20"
+        android:paddingRight="@dimen/mdp_16"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/mdp_16"
+            android:layout_height="@dimen/mdp_16"
+            android:src="@drawable/dr_ic_search"/>
+
+        <TextView
+            android:id="@+id/drTvSearchMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mdp_8"
+            android:textColor="#628199"
+            android:textSize="@dimen/msp_16"/>
+
+    </LinearLayout>
+</FrameLayout>

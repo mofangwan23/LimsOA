@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/bdp_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_above="@+id/layout_popwindow_upload_file_iv_cancel">
+
+        <RelativeLayout
+            android:id="@+id/layout_popwindow_upload_file_rl_take_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_take_photo"
+                android:drawableTop="@drawable/icon_upload_take_photo"
+                android:drawablePadding="14dp"
+                android:gravity="center_horizontal"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_popwindow_upload_file_rl_select_picter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_select_picter"
+                android:drawableTop="@drawable/icon_upload_select_picter"
+                android:drawablePadding="14dp"
+                android:gravity="center_horizontal"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_popwindow_upload_file_rl_select_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_select_file"
+                android:drawableTop="@drawable/icon_upload_select_folder"
+                android:drawablePadding="14dp"
+                android:gravity="center_horizontal"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/layout_popwindow_upload_file_iv_cancel"
+        android:layout_width="@dimen/dim_30_dp"
+        android:layout_height="@dimen/dim_30_dp"
+        android:layout_above="@+id/layout_popwindow_upload_file_view"
+        android:src="@drawable/icon_close_upload"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:id="@+id/layout_popwindow_upload_file_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_80"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ScrollView
+            android:id="@+id/nmsScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/mdp_16"
+                android:background="#F5F6F6"
+                android:orientation="vertical">
+
+                <!-- 会议简介 -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            style="@style/NMSDetailTitleLayoutStyle">
+
+                            <TextView
+                                style="@style/NMSDetailTitleStyle"
+                                android:text="@string/meeting7_detail_brief_introduction"/>
+
+                            <View
+                                style="@style/CoreSplitLine"
+                                android:layout_alignParentBottom="true"/>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/mdp_12"
+                            android:paddingBottom="@dimen/mdp_12"
+                            android:paddingLeft="@dimen/mdp_16"
+                            android:paddingRight="@dimen/mdp_16"
+                            android:background="@android:color/white"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                style="@style/NMSDetailIntroLayoutStyle"
+                                android:layout_marginTop="0dp">
+
+                                <TextView
+                                    style="@style/NMSDetailIntroLabelStyle"
+                                    android:text="@string/meeting7_detail_theme"/>
+
+                                <TextView
+                                    android:id="@+id/nmsTvMeetingTitle"
+                                    style="@style/NMSDetailIntroTextStyle"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/nmsLayoutMeetingInitiator"
+                                style="@style/NMSDetailIntroLayoutStyle">
+
+                                <TextView
+                                    style="@style/NMSDetailIntroLabelStyle"
+                                    android:text="@string/meeting7_detail_send_person"/>
+
+                                <TextView
+                                    android:id="@+id/nmsTvMeetingInitiator"
+                                    style="@style/NMSDetailIntroTextStyle"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                style="@style/NMSDetailIntroLayoutStyle">
+
+                                <TextView
+                                    style="@style/NMSDetailIntroLabelStyle"
+                                    android:text="@string/meeting7_detail_time"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/nmsTvMeetingStartTime"
+                                            style="@style/NMSDetailIntroTextStyle"/>
+
+                                        <TextView
+                                            android:id="@+id/nmsTvStartTimeSupplement"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/mdp_6"
+                                            android:textColor="#9DA3A6"
+                                            android:textSize="@dimen/msp_10"
+                                            android:visibility="gone"/>
+
+                                    </LinearLayout>
+                                    <TextView
+                                        android:id="@+id/nmsTvMeetingEndTime"
+                                        style="@style/NMSDetailIntroTextStyle"
+                                        android:layout_marginTop="@dimen/mdp_4"
+                                        android:visibility="gone"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                style="@style/NMSDetailIntroLayoutStyle">
+
+                                <TextView
+                                    style="@style/NMSDetailIntroLabelStyle"
+                                    android:text="@string/meeting7_detail_location"/>
+
+                                <TextView
+                                    android:id="@+id/nmsTvMeetingRoom"
+                                    style="@style/NMSDetailIntroTextStyle"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/nmsLayoutMeetingLocation"
+                                style="@style/NMSDetailIntroLayoutStyle">
+
+                                <TextView
+                                    style="@style/NMSDetailIntroLabelStyle"
+                                    android:text="@string/meeting7_detail_address"/>
+
+                                <TextView
+                                    android:id="@+id/nmsTvMeetingLocation"
+                                    style="@style/NMSDetailIntroTextStyle"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/nmsLayoutMeetingType"
+                                style="@style/NMSDetailIntroLayoutStyle">
+
+                                <TextView
+                                    style="@style/NMSDetailIntroLabelStyle"
+                                    android:text="@string/meeting7_detail_style"/>
+
+                                <TextView
+                                    android:id="@+id/nmsTvMeetingType"
+                                    style="@style/NMSDetailIntroTextStyle"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/nmsLayoutMeetingCompere"
+                                style="@style/NMSDetailIntroLayoutStyle">
+
+                                <TextView
+                                    style="@style/NMSDetailIntroLabelStyle"
+                                    android:text="@string/meeting7_detail_compere_person"/>
+
+                                <TextView
+                                    android:id="@+id/nmsTvMeetingCompere"
+                                    style="@style/NMSDetailIntroTextStyle"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/nmsLayoutMeetingRecord"
+                                style="@style/NMSDetailIntroLayoutStyle">
+
+                                <TextView
+                                    style="@style/NMSDetailIntroLabelStyle"
+                                    android:text="@string/meeting7_detail_recorder_person"/>
+
+                                <TextView
+                                    android:id="@+id/nmsTvMeetingRecord"
+                                    style="@style/NMSDetailIntroTextStyle"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="@dimen/mdp_80"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/mdp_8"
+                        android:layout_gravity="right">
+
+                        <ImageView
+                            android:id="@+id/nmsIvMeetingAttendState"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/mdp_16"
+                            android:layout_gravity="right"
+                            android:src="@mipmap/nms_ic_state_attend"
+                            android:visibility="invisible"/>
+
+                        <TextView
+                            android:id="@+id/nmsTvMeetingProcessState"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/mdp_4"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/nms_meeting_state_no_processed"
+                            android:drawablePadding="@dimen/msp_8"
+                            android:text="@string/meeting7_detail_not_handled"
+                            android:textColor="#FF3B2F"
+                            android:textSize="@dimen/msp_12"
+                            android:visibility="gone"/>
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <!-- 会议内容 -->
+                <RelativeLayout
+                    style="@style/NMSDetailTitleLayoutStyle">
+
+                    <TextView
+                        style="@style/NMSDetailTitleStyle"
+                        android:text="@string/meeting7_detail_content"/>
+
+                    <View
+                        style="@style/CoreSplitLine"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/nmsTvMeetingContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/mdp_12"
+                    android:paddingBottom="@dimen/mdp_12"
+                    android:paddingLeft="@dimen/mdp_16"
+                    android:paddingRight="@dimen/mdp_16"
+                    android:background="@android:color/white"
+                    android:textColor="#04121A"
+                    android:textSize="@dimen/msp_14"/>
+
+                <!-- 会议文件 -->
+                <LinearLayout
+                    android:id="@+id/nmsLayoutAttachmentsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        style="@style/NMSDetailTitleLayoutStyle">
+
+                        <TextView
+                            android:id="@+id/nmsTvMeetingAttachmentSize"
+                            style="@style/NMSDetailTitleStyle"
+                            android:text="@string/meeting7_create_file"/>
+
+                        <View
+                            style="@style/CoreSplitLine"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+
+                    <FrameLayout
+                        android:id="@+id/nmsLayoutAttachments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white">
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!-- 参会统计 -->
+                <RelativeLayout
+                    style="@style/NMSDetailTitleLayoutStyle">
+
+                    <TextView
+                        style="@style/NMSDetailTitleStyle"
+                        android:text="@string/meeting7_detail_statistics"/>
+
+                    <TextView
+                        android:id="@+id/nmsTvMeetingStatistics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/mdp_12"
+                        android:paddingRight="@dimen/mdp_12"
+                        android:drawablePadding="@dimen/mdp_8"
+                        android:drawableRight="@mipmap/nms_ic_little_arrow_down"
+                        android:text="@string/meeting7_detail_not_handled"
+                        android:textColor="#9DA3A6"
+                        android:textSize="@dimen/msp_14"/>
+
+                    <View
+                        style="@style/CoreSplitLine"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="blocksDescendants">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/nmsAttendeeRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/white"/>
+                    </RelativeLayout>
+
+                    <View style="@style/CoreSplitLine"/>
+
+                    <LinearLayout
+                        android:id="@+id/nmsLayoutMeetingPrompt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/mdp_8"
+                        android:paddingBottom="@dimen/mdp_8"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/nmsIvMeetingPrompt"
+                            android:layout_width="@dimen/mdp_15"
+                            android:layout_height="@dimen/mdp_17"
+                            android:layout_marginRight="@dimen/mdp_8"
+                            android:src="@mipmap/nms_ic_unprocess_prompt"/>
+
+                        <TextView
+                            android:id="@+id/nmsTvMeetingPrompt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/meeting7_detail_remind"
+                            android:textColor="@color/core_default_accent_color"
+                            android:textSize="@dimen/msp_12"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- 他人回复 -->
+                <RelativeLayout
+                    style="@style/NMSDetailTitleLayoutStyle">
+
+                    <TextView
+                        android:id="@+id/nmsTvReplySubTitle"
+                        style="@style/NMSDetailTitleStyle"
+                        android:text="@string/meeting7_detail_reply_title"/>
+
+                    <View
+                        style="@style/CoreSplitLine"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:minHeight="@dimen/mdp_220">
+
+                    <LinearLayout
+                        android:id="@+id/nmsLayoutEmptyReply"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/mdp_220"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/nms_ic_empty_reply"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/mdp_16"
+                            android:text="@string/meeting7_detail_no_reply"
+                            android:textColor="@color/core_default_accent_color"
+                            android:textSize="@dimen/msp_16"/>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/nmsReplyRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <cn.flyrise.feep.meeting7.ui.component.StatusView
+            android:id="@+id/nmsStatusView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        </cn.flyrise.feep.meeting7.ui.component.StatusView>
+
+        <Button
+            android:id="@+id/bt_haoshitong"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="100dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="#f00"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <View style="@style/CoreSplitLine"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nmsTvMeetingCancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/mdp_48"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textSize="@dimen/msp_16"
+                android:text="@string/meeting7_detail_cancel"
+                android:textColor="#04121A"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/nmsTvMeetingModify"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/mdp_48"
+                android:layout_weight="3"
+                android:background="@color/core_default_accent_color"
+                android:gravity="center"
+                android:textSize="@dimen/msp_16"
+                android:text="@string/meeting7_detail_modify"
+                android:textColor="@android:color/white"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/nmsTvMeetingReply"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/mdp_48"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textSize="@dimen/msp_16"
+                android:text="@string/meeting7_detail_reply"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/nmsTvMeetingNotAttend"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/mdp_48"
+                android:layout_weight="3"
+                android:background="#9DDFFF"
+                android:gravity="center"
+                android:textSize="@dimen/msp_16"
+                android:text="@string/meeting7_detail_no_attend"
+                android:textColor="@android:color/white"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/nmsTvMeetingAttend"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/mdp_48"
+                android:layout_weight="3"
+                android:background="@color/core_default_accent_color"
+                android:gravity="center"
+                android:textSize="@dimen/msp_16"
+                android:text="@string/meeting7_detail_attend"
+                android:textColor="@android:color/white"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

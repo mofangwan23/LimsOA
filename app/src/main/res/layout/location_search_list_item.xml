@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.commonality.view.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right">
+
+        <Button
+            android:id="@+id/id_location"
+            android:layout_width="@dimen/mdp_60"
+            android:layout_height="@dimen/mdp_60"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_sign"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_front"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/mdp_10"
+        android:background="#ffffffff"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/mdp_60">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/no_sign_range"
+                android:paddingTop="@dimen/mdp_5"
+                android:paddingBottom="@dimen/mdp_5"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/mdp_50"
+                android:layout_marginRight="@dimen/mdp_6"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/myItemView_subject"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_sign_in_title"
+                    android:textSize="@dimen/msp_15"/>
+
+                <TextView
+                    android:id="@+id/myItemView_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_3"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/text_sign_in_content"
+                    android:textSize="@dimen/msp_12"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/no_sign_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/mdp_6"
+                android:text="@string/location_no_range"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/detail_line"
+        android:layout_gravity="bottom"/>
+</cn.flyrise.feep.commonality.view.SwipeLayout>

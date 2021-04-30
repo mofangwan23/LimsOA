@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/mdp_12">
+
+    <ImageView
+        android:id="@+id/ivUserIcon"
+        android:layout_width="@dimen/mdp_36"
+        android:layout_height="@dimen/mdp_36"/>
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="@dimen/mdp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mdp_12"
+        android:layout_weight="1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/msp_14"/>
+
+    <ImageView
+        android:id="@+id/ivDeleteIcon"
+        android:layout_width="@dimen/mdp_36"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/mdp_4"
+        android:padding="@dimen/mdp_6"
+        android:src="@drawable/action_delete_fe"/>
+
+</LinearLayout>

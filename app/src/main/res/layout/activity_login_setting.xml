@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:switch="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_pressed"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutServerSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_8"
+                    android:layout_marginBottom="@dimen/mdp_6"
+                    android:paddingLeft="@dimen/mdp_16"
+                    android:paddingRight="@dimen/mdp_16"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="服务器地址/端口"
+                        android:textColor="#FF8B8C8C"
+                        android:textSize="@dimen/msp_12"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/SBLinearLayout">
+
+                        <EditText
+                            android:id="@+id/etServer"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:digits="0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm.-_"
+                            android:gravity="center_vertical"
+                            android:hint="请输入服务器地址"
+                            android:maxLength="50"
+                            android:singleLine="true"
+                            android:textColor="#FF17191A"
+                            android:textColorHint="#FFCFD0D1"
+                            android:textSize="@dimen/msp_14"/>
+
+                        <ImageView
+                            android:id="@+id/ivServerDel"
+                            style="@style/SBDelStyle"/>
+
+                        <ImageView
+                            android:id="@+id/ivQrCodeSwipe"
+                            android:layout_width="@dimen/mdp_22"
+                            android:layout_height="@dimen/mdp_22"
+                            android:layout_marginLeft="@dimen/mdp_6"
+                            android:src="@mipmap/core_icon_zxing"/>
+
+                    </LinearLayout>
+
+                    <View style="@style/CoreSplitLine"/>
+
+                    <LinearLayout style="@style/SBLinearLayout">
+
+                        <EditText
+                            android:id="@+id/etServerPort"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:digits="0123456789"
+                            android:gravity="center_vertical"
+                            android:hint="请输入服务器端口"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:textColor="#FF17191A"
+                            android:textColorHint="#FFCFD0D1"
+                            android:textSize="@dimen/msp_14"/>
+
+                        <ImageView
+                            android:id="@+id/ivServerPortDel"
+                            style="@style/SBDelStyle"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SBLinearLayout"
+                android:layout_marginTop="@dimen/mdp_12"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SSL"
+                    android:textAppearance="?android:attr/textAppearanceSmallInverse"
+                    android:textColor="@color/text_dark_color"
+                    android:textSize="@dimen/msp_14"/>
+
+                <cn.flyrise.feep.core.base.views.UISwitchButton
+                    android:id="@+id/isSSLOpen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    switch:bmHeight="@dimen/mdp_28"
+                    switch:bmWidth="@dimen/row_min_height"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vpnSettingLayout"
+                style="@style/SBLinearLayout"
+                android:layout_marginTop="@dimen/mdp_12"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="VPN"
+                    android:textAppearance="?android:attr/textAppearanceSmallInverse"
+                    android:textColor="@color/text_dark_color"
+                    android:textSize="@dimen/msp_14"/>
+
+                <TextView
+                    android:id="@+id/tvVpnStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/mdp_8"
+                    android:drawableRight="@drawable/right_arrow_icon"
+                    android:text="已关闭"
+                    android:textColor="#FF8B8C8C"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivTransparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:clickable="true"/>
+    </FrameLayout>
+</LinearLayout>
+
+
+

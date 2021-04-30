@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/relativeLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:minHeight="@dimen/mdp_50">
+    <TextView
+        android:id="@+id/addressbooklistview_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/addressbooklistview_item_add_icon"
+        android:paddingLeft="@dimen/mdp_5"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/list_item_title_color"
+        android:textSize="@dimen/msp_15"/>
+    <ImageView
+        android:id="@+id/addressbooklistview_item_add_icon"
+        android:layout_width="@dimen/mdp_20"
+        android:layout_height="@dimen/mdp_20"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/mdp_10"
+        android:src="@drawable/add_btn_gray_fe"
+        android:visibility="gone"/>
+    <View
+        style="@style/detail_line"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

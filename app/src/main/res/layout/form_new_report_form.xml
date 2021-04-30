@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/all_background_color">
+
+    <include layout="@layout/core_view_transparent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar" />
+
+        <include
+            layout="@layout/requet_fail_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolBar" />
+
+        <WebView
+            android:id="@+id/new_form_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolBar"
+            android:focusable="true"
+            android:gravity="center"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

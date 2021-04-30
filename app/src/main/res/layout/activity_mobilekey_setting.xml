@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<cn.flyrise.feep.core.base.views.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@id/swipeBackLayout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/all_background_color"
+      android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar" />
+
+        <RelativeLayout
+          android:id="@+id/rlMoidfyFePw"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/row_min_height"
+          android:background="@color/all_background_color">
+
+            <View
+              style="@style/detail_line"
+              android:layout_alignParentBottom="true" />
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/mdp_16"
+              android:layout_centerVertical="true"
+              android:text="@string/mokey_modify_safe_pwd"
+              android:textColor="@color/text_dark_color"
+              android:textSize="@dimen/msp_15" />
+
+            <ImageView
+              android:layout_width="@dimen/mdp_8"
+              android:layout_height="@dimen/mdp_16"
+              android:layout_marginRight="@dimen/text_paading"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:src="@drawable/frequent_contects_iocn_right"
+              android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+          android:id="@+id/rlActive"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/row_min_height"
+          android:layout_below="@+id/hand_password_layout"
+          android:background="@color/all_background_color">
+
+            <View
+              style="@style/detail_line"
+              android:layout_alignParentBottom="true" />
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/mdp_16"
+              android:layout_centerVertical="true"
+              android:text="@string/mokey_active"
+              android:textColor="@color/text_dark_color"
+              android:textSize="@dimen/msp_15" />
+
+            <ImageView
+              android:layout_width="@dimen/mdp_8"
+              android:layout_height="@dimen/mdp_16"
+              android:layout_marginRight="@dimen/text_paading"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:src="@drawable/frequent_contects_iocn_right"
+              android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+          android:id="@+id/rlReset"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/row_min_height"
+          android:layout_below="@+id/hand_password_layout"
+          android:background="@color/all_background_color">
+
+            <View
+              style="@style/detail_line"
+              android:layout_alignParentBottom="true" />
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/mdp_16"
+              android:layout_centerVertical="true"
+              android:text="@string/mokey_reset"
+              android:textColor="@color/text_dark_color"
+              android:textSize="@dimen/msp_15" />
+
+            <ImageView
+              android:layout_width="@dimen/mdp_8"
+              android:layout_height="@dimen/mdp_16"
+              android:layout_marginRight="@dimen/text_paading"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:src="@drawable/frequent_contects_iocn_right"
+              android:visibility="visible" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+          android:id="@+id/rlChangePw"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/row_min_height"
+          android:layout_below="@+id/hand_password_layout"
+          android:background="@color/all_background_color">
+
+            <View
+              style="@style/detail_line"
+              android:layout_alignParentBottom="true" />
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/mdp_16"
+              android:layout_centerVertical="true"
+              android:text="@string/mokey_modify_pwd"
+              android:textColor="@color/text_dark_color"
+              android:textSize="@dimen/msp_15" />
+
+            <ImageView
+              android:layout_width="@dimen/mdp_8"
+              android:layout_height="@dimen/mdp_16"
+              android:layout_marginRight="@dimen/text_paading"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:src="@drawable/frequent_contects_iocn_right"
+              android:visibility="visible" />
+        </RelativeLayout>
+
+
+        <Button
+          android:id="@+id/btLogout"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/mdp_42"
+          android:layout_marginTop="@dimen/mdp_24"
+          android:layout_marginBottom="@dimen/mdp_16"
+          android:layout_marginLeft="@dimen/mdp_16"
+          android:layout_marginRight="@dimen/mdp_16"
+          android:background="@drawable/nms_bg_blue_btn_round_enable"
+          android:stateListAnimator="@null"
+          android:text="@string/mokey_logout"
+          android:textColor="@android:color/white"
+          android:textSize="@dimen/msp_16" />
+    </LinearLayout>
+
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

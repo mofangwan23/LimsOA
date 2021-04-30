@@ -1,0 +1,49 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bdp_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            style="@style/TabLayoutIndicatorStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_layout_size"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/defaultColorAccent"
+            app:tabTextAppearance="@style/MineCustomTabText"
+            app:tabTextColor="#878787"/>
+
+        <include layout="@layout/view_line"/>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btCreate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_55"
+        android:background="#FF28B9FF"
+        android:text="新增"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/msp_16"/>
+
+</LinearLayout>

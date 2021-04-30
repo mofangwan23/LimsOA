@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">feep-fingerprint</string>
+    <string name="unable_user_fingerprint">無法使用指紋識別</string>
+    <string name="unable_checked_fingerprint_title">指紋驗證</string>
+    <string name="unable_checked_fingerprint">請驗證指紋</string>
+    <string name="unable_cancel_fingerprint">取消</string>
+    <string name="unable_password_check">密碼驗證</string>
+    <string name="fp_txt_fingerprint_not_match">無匹配</string>
+    <string name="fp_txt_fingerprint_error">操作過于頻繁，請稍後重試</string>
+</resources>

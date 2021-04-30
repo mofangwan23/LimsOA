@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/tvApprovalItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:padding="@dimen/mdp_12"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_dark_color"
+        android:textSize="@dimen/text_middle_size"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/rlApprovalItemContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvApprovalItemTitle"
+        android:paddingLeft="@dimen/mdp_12"
+        android:paddingRight="@dimen/mdp_12">
+
+        <TextView
+            android:id="@+id/tvApprovalItemAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@drawable/item_username_icon"
+            android:drawablePadding="@dimen/mdp_10"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_light_color"
+            android:textSize="@dimen/text_min_size"/>
+
+        <TextView
+            android:id="@+id/tvApprovalItemDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/mdp_10"
+            android:drawableLeft="@drawable/item_time_icon"
+            android:drawablePadding="@dimen/mdp_10"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_light_color"
+            android:textSize="@dimen/text_min_size"/>
+    </RelativeLayout>
+
+    <View
+        style="@style/detail_line"
+        android:layout_below="@+id/rlApprovalItemContent"
+        android:layout_marginTop="@dimen/mdp_8"/>
+</RelativeLayout>

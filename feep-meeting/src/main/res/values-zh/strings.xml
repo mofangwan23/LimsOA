@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">feep-meeting</string>
+    <string name="nms_data_load_failure">数据加载失败，请重试</string>
+    <string name="meeting_create_address">请输入会议地点</string>
+    <string name="meeting_create_type">请选择会议类型</string>
+    <string name="meeting_create_start_time">请选择开始时间</string>
+    <string name="meeting_create_end_time">请选择结束时间</string>
+    <string name="meeting_create_title">请输入会议主题</string>
+    <string name="meeting_create_content">请输入会议内容</string>
+    <string name="meeting_create_attend_contact">请添加参会人员</string>
+    <string name="meeting_create_compere">请选择会议主持人</string>
+    <string name="meeting_create_start_time_stale">开始时间必须大于等于当前时间</string>
+    <string name="meeting_create_time_validate">会议结束时间必须大于开始时间</string>
+    <string name="meeting7_create_no_choice_style">没有可选的会议类型</string>
+
+
+    <string name="meeting_create_won_t_support">暂不支持查看此文件类型</string>
+    <string name="meeting_create_dont_open">无法打开，建议安装查看此类型文件的软件</string>
+
+    <string name="meeting_create_attend_contact_title">选择参会人员</string>
+    <string name="meeting_create_record_contact_title">选择记录人</string>
+    <string name="meeting_create_host_contact_title">选择主持人</string>
+    <string name="meeting_create_selected">请选择</string>
+    <string name="meeting_create_submit_error">会议发布失败，请重试</string>
+    <string name="meeting_create_occupy">该会议时间已被占用，请选择其他时间</string>
+    <string name="meeting_create_default_send_user">发起人默认参加会议</string>
+    <string name="meeting_create_cannot_delete_attended_user">原参会人员不能删除</string>
+    <string name="meeting_create_yes">确定</string>
+    <string name="fe_from_android_mobile"> (來自 Android)</string>
+</resources>

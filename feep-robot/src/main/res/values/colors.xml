@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--google规划清晰好看文字的颜色Material Design-->
+    <color name="text_dark_color">#dd000000</color>
+    <color name="text_bright_color">#89000000</color>
+    <color name="text_menu_text_color">#65000000</color>
+    <color name="text_light_color">#42000000</color>
+    <color name="text_sign_in_title">#191919</color>
+    <color name="text_sign_in_content">#9B9B9B</color>
+
+    <color name="text_dark_white_color">#ddffffff</color>
+    <color name="text_dark_blue_color">#dd03a9f4</color>
+    <color name="text_light_blue_color">#4203a9f4</color>
+
+    <color name="all_background_color">#ffffff</color>
+
+    <color name="red_error">#ffff4444</color>
+    <color name="blue_normal">#ff33b5e5</color>
+    <color name="thecontact_background">#F5F6F6</color>
+</resources>

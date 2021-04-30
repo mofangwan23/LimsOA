@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <cn.flyrise.feep.commonality.view.TouchableWebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/mdp_132"
+        android:visibility="visible">
+    </cn.flyrise.feep.commonality.view.TouchableWebView>
+    <ViewStub
+        android:id="@+id/viewStubContentSupplement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/view_stub_particular_common"/>
+    <ViewStub
+        android:id="@+id/viewStubContentModify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/view_stub_particular_common"/>
+</LinearLayout>

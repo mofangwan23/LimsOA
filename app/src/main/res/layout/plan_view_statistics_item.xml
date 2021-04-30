@@ -1,0 +1,100 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/planStatisticsItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/mdp_15"
+        android:paddingLeft="@dimen/mdp_15"
+        android:paddingRight="@dimen/mdp_15"
+        android:background="@color/bdp_white"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/mdp_4"
+            android:layout_height="@dimen/mdp_13"
+            android:layout_gravity="center"
+            android:background="#FF28B9FF"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/mdp_10"
+            android:layout_marginRight="@dimen/mdp_10"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:textColor="#FF04121A"
+            android:textSize="@dimen/msp_15"/>
+
+        <ImageView
+            android:layout_width="@dimen/mdp_11"
+            android:layout_height="@dimen/mdp_11"
+            android:layout_gravity="center"
+            android:src="@drawable/plan_right"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/mdp_15"
+        android:background="@color/bdp_white"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSubmitTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvSendUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_10"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
+
+    <View style="@style/detail_line"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_40"
+        android:paddingLeft="@dimen/mdp_15"
+        android:paddingRight="@dimen/mdp_15"
+        android:background="@color/bdp_white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvUnSubmitCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/btRemind"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/plan_remind_icon"
+            android:textColor="@drawable/plan_remind_text_bg"
+            android:textSize="@dimen/msp_13"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_10"
+        android:background="@color/standard_bg_g_30"/>
+
+
+</LinearLayout>

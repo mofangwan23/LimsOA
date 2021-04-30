@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/core_view_toolbar"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingBottom="15dp"
+                android:background="@drawable/stu_bg_white_circular_bead">
+                <TextView
+                    android:id="@+id/tvTitle"
+                    style="@style/stuTextTrainTitleStyle"/>
+                <TextView
+                    android:id="@+id/tvStartTime"
+                    style="@style/stuTextTrainTitleStyle"/>
+                <TextView
+                    android:id="@+id/tvEndTime"
+                    style="@style/stuTextTrainTitleStyle"/>
+                <TextView
+                    android:id="@+id/tvType"
+                    style="@style/stuTextTrainTitleStyle"/>
+                <TextView
+                    android:id="@+id/tvTeacher"
+                    style="@style/stuTextTrainTitleStyle"/>
+
+                <TextView
+                    android:id="@+id/tvPlace"
+                    style="@style/stuTextTrainTitleStyle"/>
+
+                <TextView
+                    android:id="@+id/tvTrainMethod"
+                    style="@style/stuTextTrainTitleStyle"/>
+
+                <TextView
+                    android:id="@+id/tvAssMethod"
+                    style="@style/stuTextTrainTitleStyle"/>
+
+                <FrameLayout
+                    android:id="@+id/stuLayoutAttachments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray">
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvFinish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:paddingTop="@dimen/mdp_10"
+                    android:paddingBottom="@dimen/mdp_10"
+                    android:paddingLeft="@dimen/mdp_30"
+                    android:paddingRight="@dimen/mdp_30"
+                    android:background="@drawable/btn_blue_round_bg"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:text="完成" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

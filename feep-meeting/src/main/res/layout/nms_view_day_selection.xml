@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/nmsTvForwardDay"
+        style="@style/NMSTimeSelectionTitleTextStyle"
+        android:text="@string/meeting7_room_forward_day"/>
+
+    <LinearLayout
+        android:id="@+id/nmsLayoutSelectedDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/nmsTvSelectedDay"
+            style="@style/NMSTimeSelectionTitleTextStyle"
+            android:paddingRight="@dimen/mdp_6"
+            android:textSize="@dimen/msp_15"
+            android:background="@null"/>
+
+        <ImageView
+            android:layout_width="@dimen/mdp_20"
+            android:layout_height="@dimen/mdp_20"
+            android:src="@mipmap/nms_icon_date_select"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/nmsTvNextDay"
+        style="@style/NMSTimeSelectionTitleTextStyle"
+        android:layout_alignParentRight="true"
+        android:text="@string/meeting7_room_next_day"/>
+
+
+</RelativeLayout>
+

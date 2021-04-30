@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingTop="@dimen/mdp_13"
+  android:gravity="center_horizontal"
+  android:orientation="vertical">
+
+  <TextView
+    android:id="@+id/timestamp"
+    style="@style/chat_text_date_style"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_chat_activity"
+    android:paddingBottom="@dimen/mdp_5">
+
+    <ImageView
+      android:id="@+id/iv_userhead"
+      style="@style/message_item_right_user_icon" />
+
+    <RelativeLayout
+      android:id="@+id/bubble"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/mdp_2"
+      android:layout_marginRight="@dimen/margin_chat_activity"
+      android:layout_toLeftOf="@id/iv_userhead"
+      android:background="@drawable/ease_chatto_bg">
+
+      <ImageView
+        android:id="@+id/iv_call_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mdp_4"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ease_chat_voice_call_self" />
+
+      <TextView
+        android:id="@+id/tv_chatcontent"
+        style="@style/chat_content_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_call_icon"
+        android:padding="@dimen/mdp_6"
+        android:background="@null"
+        android:minHeight="@dimen/mdp_40" />
+    </RelativeLayout>
+
+    <ImageView
+      android:id="@+id/msg_status"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_toLeftOf="@id/bubble"
+      android:clickable="true"
+      android:src="@drawable/ease_msg_state_failed_resend"
+      android:visibility="gone" />
+
+    <TextView
+      android:id="@+id/tv_ack"
+      style="@style/chat_text_name_style"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="@dimen/mdp_5"
+      android:layout_centerVertical="true"
+      android:layout_toLeftOf="@id/bubble"
+      android:text="@string/text_ack_msg"
+      android:textSize="@dimen/msp_12"
+      android:visibility="invisible" />
+  </RelativeLayout>
+
+  <TextView
+    android:id="@+id/tvState"
+    style="@style/chat_text_date_style"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+</LinearLayout>

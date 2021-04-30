@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/thecontact_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <View
+        style="@style/detail_line"
+        android:layout_marginTop="@dimen/mdp_16"/>
+    <RelativeLayout
+        android:id="@+id/go_to_work_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_52"
+        android:paddingLeft="@dimen/mdp_16"
+        android:paddingRight="@dimen/mdp_16"
+        android:background="@color/all_background_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="上班时间"
+            android:textColor="@color/text_sign_in_title"
+            android:textSize="@dimen/msp_16"/>
+
+        <TextView
+            android:id="@+id/go_to_work_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/go_to_work_icon"
+            android:text="09:00"
+            android:textColor="@color/text_sign_in_content"
+            android:textSize="@dimen/msp_14"/>
+
+        <ImageView
+            android:id="@+id/go_to_work_icon"
+            android:layout_width="@dimen/mdp_6"
+            android:layout_height="@dimen/mdp_12"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/user_info_right_icon"/>
+    </RelativeLayout>
+    <View
+        style="@style/detail_line"/>
+
+    <RelativeLayout
+        android:id="@+id/go_off_work_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_52"
+        android:paddingLeft="@dimen/mdp_16"
+        android:paddingRight="@dimen/mdp_16"
+        android:background="@color/all_background_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="下班时间"
+            android:textColor="@color/text_sign_in_title"
+            android:textSize="@dimen/msp_16"/>
+
+        <TextView
+            android:id="@+id/go_off_work_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/go_off_work_icon"
+            android:text="18:00"
+            android:textColor="@color/text_sign_in_content"
+            android:textSize="@dimen/msp_14"/>
+
+        <ImageView
+            android:id="@+id/go_off_work_icon"
+            android:layout_width="@dimen/mdp_6"
+            android:layout_height="@dimen/mdp_12"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/user_info_right_icon"/>
+    </RelativeLayout>
+
+    <View
+        style="@style/detail_line"/>
+
+    <View
+        style="@style/detail_line"
+        android:layout_marginTop="@dimen/mdp_16"/>
+
+    <RelativeLayout
+        android:id="@+id/sign_in_interval_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_52"
+        android:paddingLeft="@dimen/mdp_16"
+        android:paddingRight="@dimen/mdp_16"
+        android:background="@color/all_background_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="最早签到时间"
+            android:textColor="@color/text_sign_in_title"
+            android:textSize="@dimen/msp_16"/>
+
+        <TextView
+            android:id="@+id/sign_in_interval_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/sign_in_interval_icon"
+            android:text="提前30分钟"
+            android:textColor="@color/text_sign_in_content"
+            android:textSize="@dimen/msp_14"/>
+
+        <ImageView
+            android:id="@+id/sign_in_interval_icon"
+            android:layout_width="@dimen/mdp_6"
+            android:layout_height="@dimen/mdp_12"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/user_info_right_icon"/>
+    </RelativeLayout>
+
+    <View
+        style="@style/detail_line"/>
+
+    <RelativeLayout
+        android:id="@+id/go_off_work_interval_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_52"
+        android:paddingLeft="@dimen/mdp_16"
+        android:paddingRight="@dimen/mdp_16"
+        android:background="@color/all_background_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="最晚签到时间"
+            android:textColor="@color/text_sign_in_title"
+            android:textSize="@dimen/msp_16"/>
+
+        <TextView
+            android:id="@+id/go_off_work_interval_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/go_off_interval_icon"
+            android:text="延后45分钟"
+            android:textColor="@color/text_sign_in_content"
+            android:textSize="@dimen/msp_14"/>
+
+        <ImageView
+            android:id="@+id/go_off_interval_icon"
+            android:layout_width="@dimen/mdp_6"
+            android:layout_height="@dimen/mdp_12"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/user_info_right_icon"/>
+    </RelativeLayout>
+
+    <View
+        style="@style/detail_line"/>
+
+    <TextView
+        android:id="@+id/go_to_work_interval"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:paddingLeft="@dimen/mdp_16"
+        android:gravity="center_vertical"
+        android:text="上班最早签到时间：08:30，下班最晚签到时间：18:45"
+        android:textColor="@color/text_sign_in_content"
+        android:textSize="@dimen/msp_12"/>
+
+</LinearLayout>

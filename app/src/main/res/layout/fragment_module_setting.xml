@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6F6"
+    android:scrollbars="none">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/displayHind"
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:background="@color/all_background_color"
+            android:gravity="center"
+            android:text="@string/module_setting_modify_no_hide_un_hind"
+            android:textColor="@color/standard_text_g_70"
+            android:textSize="@dimen/msp_14"
+            android:visibility="gone"/>
+
+        <com.drag.framework.DragGridView
+            android:id="@+id/displayGridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/mdp_16"
+            android:background="@color/all_background_color"
+            android:cacheColorHint="@android:color/transparent"
+            android:gravity="center"
+            android:horizontalSpacing="@dimen/mdp_8"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/mdp_12"/>
+
+        <LinearLayout
+            android:id="@+id/layoutUnDisplayApplication"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_0"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/mdp_10"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/mdp_12"
+                android:background="@color/all_background_color"
+                android:drawableLeft="@drawable/ic_item_li_indicator"
+                android:drawablePadding="@dimen/mdp_8"
+                android:gravity="center_vertical"
+                android:text="@string/module_setting_modify_no_show"
+                android:textColor="#17191A"
+                android:textSize="@dimen/msp_15"/>
+
+            <View style="@style/CoreSplitLine"/>
+
+            <TextView
+                android:id="@+id/unDisplayHind"
+                android:layout_width="match_parent"
+                android:layout_height="103dp"
+                android:background="@color/all_background_color"
+                android:gravity="center"
+                android:text="@string/module_setting_modify_no_hide_hind"
+                android:textColor="#8B8C8C"
+                android:textSize="@dimen/msp_14"
+                android:visibility="gone"/>
+
+            <cn.flyrise.feep.main.modules.ModuleGridView
+                android:id="@+id/unDisplayGridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/mdp_4"
+                android:padding="@dimen/mdp_16"
+                android:background="@color/all_background_color"
+                android:cacheColorHint="@android:color/transparent"
+                android:gravity="center"
+                android:horizontalSpacing="@dimen/mdp_8"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/mdp_12"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

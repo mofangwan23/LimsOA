@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/fl_inner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/header_footer_top_bottom_padding"
+        android:paddingTop="@dimen/header_footer_top_bottom_padding">
+
+        <FrameLayout
+            android:id="@+id/ip_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/mdp_82">
+
+            <ImageView
+                android:id="@+id/pull_to_refresh_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/pull_to_refresh_progress"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="@dimen/mdp_25"
+                android:layout_height="@dimen/mdp_25"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:visibility="visible"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/tt_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pull_to_refresh_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Hello World"
+                android:textAppearance="?android:attr/textAppearance"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/msp_16"/>
+
+            <TextView
+                android:id="@+id/pull_to_refresh_sub_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/text_checked_color"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </FrameLayout>
+</merge>

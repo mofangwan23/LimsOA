@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/core_round_white_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/mdp_20">
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="@dimen/mdp_15"
+        android:paddingRight="@dimen/mdp_10"
+        android:layout_marginTop="@dimen/mdp_30"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_reply_edit_text_elc_sign"
+        android:text="用户名"
+        android:textColor="@color/black_text_main"
+        android:textSize="@dimen/msp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_0_5"
+        android:layout_marginTop="@dimen/mdp_10"
+        android:background="#00000000"/>
+
+    <EditText
+        android:id="@+id/edit_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="密码"
+        android:textSize="@dimen/msp_14"/>
+
+    <EditText
+        android:id="@+id/edit_beizhu"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingLeft="@dimen/mdp_15"
+        android:paddingRight="@dimen/mdp_10"
+        android:paddingTop="@dimen/mdp_8"
+        android:paddingBottom="@dimen/mdp_7"
+        android:layout_marginTop="@dimen/mdp_10"
+        android:gravity="top"
+        android:background="@drawable/bg_reply_edit_text_elc_sign"
+        android:hint="备注"
+        android:textSize="@dimen/msp_14"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_50"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/mdp_20"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="@dimen/mdp_70"
+            android:layout_height="@dimen/mdp_36"
+            android:background="@drawable/nms_bg_blue_btn_round_enable"
+            android:textColor="@color/white_pressed"
+            android:text="取消"/>
+
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="@dimen/mdp_70"
+            android:layout_height="@dimen/mdp_36"
+            android:background="@drawable/nms_bg_blue_btn_round_enable"
+            android:textColor="@color/white_pressed"
+            android:layout_marginLeft="@dimen/mdp_50"
+            android:text="确定"/>
+    </LinearLayout>
+
+</LinearLayout>

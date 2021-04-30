@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/mdp_20"
+    android:background="?attr/colorPrimary"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mdp_16"
+        android:text="电子签名"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_lb_size"/>
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="@dimen/mdp_15"
+        android:paddingRight="@dimen/mdp_10"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_reply_edit_text_elc_sign"
+        android:text="用户名"
+        android:textColor="#04121A"
+        android:textSize="@dimen/msp_14" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="请输入密码"
+        android:singleLine="true"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/edit_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="@dimen/mdp_15"
+        android:paddingRight="@dimen/mdp_10"
+        android:layout_marginTop="@dimen/mdp_10"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_reply_edit_text_elc_sign"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:textSize="@dimen/msp_14" />
+
+
+
+    <EditText
+        android:id="@+id/edit_beizhu"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingLeft="@dimen/mdp_15"
+        android:paddingRight="@dimen/mdp_10"
+        android:paddingTop="@dimen/mdp_8"
+        android:paddingBottom="@dimen/mdp_7"
+        android:layout_marginTop="@dimen/mdp_10"
+        android:gravity="top"
+        android:background="@drawable/bg_reply_edit_text_elc_sign"
+        android:text="N/A"
+        android:textSize="@dimen/msp_14" />
+
+    <RelativeLayout
+        android:id="@+id/llBottomOperateView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_16"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tvConfirm"
+            android:layout_marginRight="@dimen/mdp_30"
+            android:paddingTop="@dimen/mdp_4"
+            android:paddingBottom="@dimen/mdp_4"
+            android:paddingLeft="@dimen/mdp_8"
+            android:paddingRight="@dimen/mdp_8"
+            android:background="?attr/selectableItemBackground"
+            android:text="取消"
+            android:textColor="?attr/colorAccent"
+            android:textSize="@dimen/mdp_16" />
+
+        <TextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mdp_8"
+            android:layout_alignParentRight="true"
+            android:paddingTop="@dimen/mdp_4"
+            android:paddingBottom="@dimen/mdp_4"
+            android:paddingLeft="@dimen/mdp_8"
+            android:paddingRight="@dimen/mdp_8"
+            android:background="?attr/selectableItemBackground"
+            android:text="确定"
+            android:textColor="?attr/colorAccent"
+            android:textSize="@dimen/mdp_16" />
+    </RelativeLayout>
+
+</LinearLayout>

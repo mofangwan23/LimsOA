@@ -1,0 +1,30 @@
+<div data-role="page" id="pagecontact" style="background:#f1f2ed;" ng-cloak>
+<div data-role="header" data-position="fixed" data-tap-toggle="false">
+			<h3 id="titlebar">人员列表</h3>
+			  <a class="back_btn" href="#" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext">返回</a>
+		</div>
+	<div data-role="content">
+		<ul data-role="listview" data-autodividers="true" data-inset="true" data-filter="true" id="orgtreelistview" data-filter-placeholder="搜索" style="border-radius:0;">
+			<li orgtree-directive ng-repeat="x in orgtrees" data-icon="false" ng-show="_isShowUser(x.id);" divider="{{x.charType}}" data-filtertext="{{x.name}} {{x.pinyin}} {{x.tel}} {{x.phone}} {{x.email}}">
+			<a ng-click="_checkedbox(x.id)" href="#" id="chk{{x.id}}" userid="{{x.id}}" username="{{x.name}}" style="background:#fff;">
+				<img id="photo{{x.id}}" ng-src="{{feurl}}{{x.imageHref}}" style="width:46px; height:46px; -moz-border-radius:100em !important; -webkit-border-radius:100em !important; border-radius:100em !important; 
+		        margin:10px 0px 0px 10px; margin-left:20px; border:1px #eee solid;"/>
+					<h3 style="float:left; width:70px!important; vertical-align:middle; font-weight:100!important; color:#333; font-size:1em; padding:4px 0;">{{x.name}}</h3>
+					<p style="float:left; margin-left:10px; width:40% !important; text-overflow:ellipsis; overflow:hidden; padding:4px 0; color:#777; font-size:0.9em !important">{{x.position}}</p>
+			</a>
+			</li>
+		</ul>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false" id="orgfooter">
+			<table ng-hide="readonly" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td style="width:100%;" align="left">
+						<div id="users" style="float:left; width:auto; height:auto; overflow-x:auto; overflow-y:hidden; margin:5px;"></div>
+					</td>
+					<td style="width:80px;" align="right">
+						<a data-role="button" data-inline="true" href="#" ng-click="_ok()" data-icon="false" data-rel="back" style="background:#ff8000; width:50px; color:#fff; border:none;">确定</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

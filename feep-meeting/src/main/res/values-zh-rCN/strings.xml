@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">feep-meeting</string>
+    <string name="nms_data_load_failure">数据加载失败，请重试</string>
+    <string name="nms_select_start_time_first">请先选择开始时间</string>
+    <string name="meeting7_new_custom_title">临时会议</string>
+    <string name="meeting7_modify_title">修改会议</string>
+    <string name="meeting7_create_title">创建会议</string>
+    <string name="meeting7_create_confirm">确定</string>
+    <string name="meeting7_create_confirm_modify_hint">退出此次编辑</string>
+    <string name="meeting7_create_no_open_attachment">无法查看该附件</string>
+    <string name="meeting7_create_no_open_attachment_hint">无法打开，建议安装查看此类型文件的软件</string>
+    <string name="meeting7_create_error_reset">操作失败,请重试</string>
+    <string name="meeting7_create_success">发布成功</string>
+    <string name="meeting7_create_file">会议文件</string>
+    <string name="meeting7_create_attend_person">参会人员</string>
+
+    <string name="meeting7_create_location">会议地点</string>
+    <string name="meeting7_create_location_hint">请输入会议地点</string>
+    <string name="meeting7_create_style">会议类型</string>
+    <string name="meeting7_create_no_choice_style">没有可选的会议类型</string>
+    <string name="meeting7_create_selected_title">请选择</string>
+    <string name="meeting7_create_remind_time">会议提醒时间</string>
+    <string name="meeting7_create_remind_hint">无</string>
+    <string name="meeting7_create_input_title">请输入会议主题，最多不超过50个字</string>
+    <string name="meeting7_create_input_content">请输入会议内容</string>
+    <string name="meeting7_create_compere_person">主持人</string>
+    <string name="meeting7_create_recorder_person">记录人</string>
+    <string name="meeting7_create_clike_delete">点击头像删除</string>
+    <string name="meeting7_create_file_title">会议文件</string>
+
+    <string name="meeting7_create_time">会议时间</string>
+    <string name="meeting7_create_cur_date">当天</string>
+    <string name="meeting7_create_left_date">跨天</string>
+    <string name="meeting7_create_start_date">开始时间</string>
+    <string name="meeting7_create_end_date">结束时间</string>
+    <string name="meeting7_create_start_end_date">起止时间</string>
+
+    <string name="meeting7_room_forward_day">前一天</string>
+    <string name="meeting7_room_next_day">后一天</string>
+    <string name="meeting7_room_open_detail">查看详情</string>
+    <string name="meeting7_room_reserve">预定</string>
+    <string name="meeting7_room_reserve_full">已被订满</string>
+
+    <string name="meeting7_detail_title">会议详情</string>
+    <string name="meeting7_detail_not_handled">未办理</string>
+    <string name="meeting7_detail_no_attend">不参加</string>
+    <string name="meeting7_detail_attend">参加</string>
+    <string name="meeting7_detail_app_not_install">应用未安装</string>
+    <string name="meeting7_detail_id_no_exit">会议ID不存在</string>
+    <string name="meeting7_detail_zxing_title">二维码</string>
+    <string name="meeting7_detail_zxing_get_failed">二维码生成失败</string>
+    <string name="meeting7_detail_reply_title">他人回复</string>
+    <string name="meeting7_detail_reply_success">回复成功</string>
+    <string name="meeting7_detail_remind_success">提醒成功</string>
+    <string name="meeting7_detail_cancel_success">会议取消成功</string>
+    <string name="meeting7_detail_load_failed">会议加载失败，请重试</string>
+    <string name="meeting7_detail_reply">回复</string>
+    <string name="meeting7_detail_reply_attend_time">按时参加</string>
+    <string name="meeting7_detail_reply_attend">参加会议</string>
+    <string name="meeting7_detail_reply_no_attend_time">临时有事，无法参加</string>
+    <string name="meeting7_detail_reply_no_attend">不参加会议</string>
+    <string name="meeting7_detail_cancel_hint">临时变动，会议取消</string>
+    <string name="meeting7_detail_cancel">取消会议</string>
+    <string name="meeting7_detail_no">我再想想</string>
+    <string name="meeting7_detail_hint_text_error">删除内容本字数不能超过10个字</string>
+    <string name="meeting7_detail_input_reply_text">请您输入回复的内容</string>
+    <string name="meeting7_detail_brief_introduction">会议简介</string>
+    <string name="meeting7_detail_theme">会议主题</string>
+    <string name="meeting7_detail_send_person">发起人员</string>
+    <string name="meeting7_detail_time">会议时间</string>
+    <string name="meeting7_detail_location">会议地点</string>
+    <string name="meeting7_detail_address">会议地址</string>
+    <string name="meeting7_detail_style">会议类型</string>
+    <string name="meeting7_detail_compere_person">主持人员</string>
+    <string name="meeting7_detail_recorder_person">记录人员</string>
+    <string name="meeting7_detail_content">会议内容</string>
+    <string name="meeting7_detail_statistics">参会统计</string>
+    <string name="meeting7_detail_person_nums">人数为</string>
+    <string name="meeting7_detail_remind">提醒一下</string>
+    <string name="meeting7_detail_no_reply">暂无回复</string>
+    <string name="meeting7_detail_modify">修改会议</string>
+
+    <string name="meeting7_mine_all">全部</string>
+    <string name="meeting7_mine_cur_user">我参与</string>
+    <string name="meeting7_mine_cur_user_send">我发起</string>
+    <string name="meeting7_mine_list_load_error">数据加载失败，请重试</string>
+
+    <string name="meeting7_main_manager_title">会议管理</string>
+    <string name="meeting7_main_room">会议室</string>
+    <string name="meeting7_main_custom">临时会议室</string>
+    <string name="meeting7_main_my">我的</string>
+
+    <string name="fe_from_android_mobile"> (來自 Android)</string>
+
+</resources>

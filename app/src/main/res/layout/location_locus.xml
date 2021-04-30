@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/buttonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_40"
+        android:layout_below="@id/toolBar"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dateSelect"
+            android:layout_width="@dimen/mdp_0"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:background="@drawable/click_location_button"
+            android:gravity="center"
+            android:text="@string/location_date"
+            android:textSize="@dimen/msp_14"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="1.0px"
+            android:layout_height="match_parent"
+            android:background="@color/detail_line" />
+
+        <Button
+            android:id="@+id/personSelect"
+            android:layout_width="@dimen/mdp_0"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:background="@drawable/click_location_button"
+            android:gravity="center"
+            android:text="@string/location_person"
+            android:textSize="@dimen/msp_14"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/show_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/buttonlayout">
+
+        <fragment
+            android:id="@+id/aMap"
+            class="com.amap.api.maps.TextureMapFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/mLayoutSelect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/buttonlayout"
+        android:background="#70000000"
+       >
+
+        <View
+            android:id="@+id/top_line"
+            style="@style/detail_line" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerViewDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_line"
+            android:listSelector="@color/list_item_on_bg" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerViewPerson"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_line"
+            android:listSelector="@color/list_item_on_bg" />
+    </RelativeLayout>
+</RelativeLayout>

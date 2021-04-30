@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/core_round_white_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="答题卡"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/dj_foot_click"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingBottom="15dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已答题:" />
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/stu_shape_bg_red"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="未答题:" />
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/stu_shape_bg_white"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/answerCardRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="确定"
+        android:textColor="#ffffff"
+        android:background="@drawable/nms_bg_blue_btn_round_enable"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/ivCancel"
+        android:layout_width="@dimen/dim_30_dp"
+        android:layout_height="@dimen/dim_30_dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:src="@mipmap/core_icon_close"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+</LinearLayout>

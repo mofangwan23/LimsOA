@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:paddingRight="@dimen/mdp_16">
+
+    <RelativeLayout
+        android:id="@+id/msLayoutLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/mdp_12"
+        android:paddingBottom="@dimen/mdp_12"
+        android:paddingLeft="@dimen/mdp_15"
+        android:paddingRight="@dimen/mdp_15"
+        >
+
+        <FrameLayout
+            android:layout_width="@dimen/mdp_30"
+            android:layout_height="@dimen/mdp_30"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:id="@+id/msIvFileIcon"
+                android:layout_width="@dimen/mdp_30"
+                android:layout_height="@dimen/mdp_30"
+                android:src="@mipmap/ms_icon_thumbnail_img"/>
+            <ImageView
+                android:id="@+id/msIvDownloadSuccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:src="@mipmap/ms_icon_attachment_download_success"
+                android:visibility="visible"/>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/msIvDownloadState"
+            android:layout_width="@dimen/mdp_20"
+            android:layout_height="@dimen/mdp_20"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <cn.flyrise.feep.media.common.CircleProgressBar
+            android:id="@+id/msDownloadProgressBar"
+            android:layout_width="@dimen/mdp_30"
+            android:layout_height="@dimen/mdp_30"
+            android:layout_centerVertical="true"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/msCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:button="@null"
+        android:drawableRight="@drawable/ms_btn_delete_check"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/msCheckBox"
+        android:layout_toRightOf="@id/msLayoutLeft"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/msTvFileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:maxLength="34"
+            android:textColor="@color/standard_text_g_100"
+            android:textSize="@dimen/text_middle_size"/>
+
+        <TextView
+            android:id="@+id/msTvFileSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/standard_text_g_70"
+            android:textSize="10sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

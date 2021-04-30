@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/mdp_12"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:text="日期"/>
+
+        <Button
+            android:id="@+id/btnTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="时间"/>
+    </LinearLayout>
+
+
+    <cn.flyrise.feep.meeting7.ui.component.WheelSelectionView
+        android:id="@+id/nmsTimeWheelView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </cn.flyrise.feep.meeting7.ui.component.WheelSelectionView>
+
+
+</LinearLayout>

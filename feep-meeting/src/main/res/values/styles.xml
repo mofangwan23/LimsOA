@@ -1,0 +1,216 @@
+<resources>
+
+    <style name="NMSTransparentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="NMSSwipeBackTheme" parent="NMSTransparentTheme">
+        <item name="android:windowAnimationStyle">@style/NMSActivityTranslate</item>
+    </style>
+
+    <style name="NMSActivityTranslate" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/core_swipe_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/core_swipe_out_right</item>
+        <item name="android:activityCloseEnterAnimation">@anim/core_swipe_in_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/core_swipe_out_right</item>
+    </style>
+
+    <style name="NMSDefaultAppTheme" parent="NMSSwipeBackTheme">
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryDark">#484848</item>
+        <item name="colorAccent">@color/core_default_accent_color</item>
+        <item name="popupMenuStyle">@style/NMSMinePopupMenu</item>
+    </style>
+
+    <style name="NMSMinePopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:dropDownVerticalOffset">6dip</item>
+        <item name="android:dropDownHorizontalOffset">-2dip</item>
+        <item name="android:popupBackground">@android:color/white</item>
+        <item name="android:dropDownSelector">@android:color/white</item>
+    </style>
+
+    <style name="NMSAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#F9F9F9</item>
+        <item name="colorPrimaryDark">#484848</item>
+        <item name="colorAccent">@color/core_default_accent_color</item>
+    </style>
+
+    <style name="NMSWeekTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#9DA3A6</item>
+        <item name="android:textSize">@dimen/msp_12</item>
+    </style>
+
+    <style name="NMSTimeSelectionTitleTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/mdp_12</item>
+        <item name="android:paddingBottom">@dimen/mdp_12</item>
+        <item name="android:paddingLeft">@dimen/mdp_16</item>
+        <item name="android:paddingRight">@dimen/mdp_16</item>
+        <item name="android:textColor">#04121A</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="NMSSelectionDialogLeftRightStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/mdp_12</item>
+        <item name="android:paddingBottom">@dimen/mdp_12</item>
+        <item name="android:paddingLeft">@dimen/mdp_16</item>
+        <item name="android:paddingRight">@dimen/mdp_16</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">#28B9FF</item>
+        <item name="android:textSize">@dimen/msp_14</item>
+    </style>
+
+
+    <style name="NMSSelectionDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/nms_selecion_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/nms_selecion_dialog_exit</item>
+    </style>
+
+    <style name="NMSTabLayoutStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/msp_14</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="NMSMeetingRadioStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">@dimen/mdp_2</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/nms_ic_meeting_text_color</item>
+        <item name="android:textSize">@dimen/msp_12</item>
+    </style>
+
+    <style name="NMSMeetingItemLabelStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/mdp_8</item>
+        <item name="android:textColor">#9DA3A6</item>
+        <item name="android:textSize">@dimen/msp_14</item>
+    </style>
+
+    <style name="NMSMeetingItemTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/mdp_10</item>
+        <item name="android:textColor">#04121A</item>
+        <item name="android:textSize">@dimen/msp_14</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+
+    </style>
+
+    <style name="NMSDetailTitleLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/mdp_45</item>
+        <item name="android:layout_marginTop">@dimen/mdp_10</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="NMSDetailTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:paddingLeft">@dimen/mdp_12</item>
+        <item name="android:drawableLeft">@drawable/nms_ic_vertical_indicator</item>
+        <item name="android:drawablePadding">@dimen/mdp_10</item>
+        <item name="android:textColor">#04121A</item>
+        <item name="android:textSize">@dimen/msp_16</item>
+    </style>
+
+    <style name="NMSDetailIntroLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/mdp_10</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="NMSDetailIntroLabelStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#9DA3A6</item>
+        <item name="android:textSize">@dimen/msp_14</item>
+    </style>
+
+    <style name="NMSDetailIntroTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/mdp_10</item>
+        <item name="android:textColor">#04121A</item>
+        <item name=" android:textSize">@dimen/msp_14</item>
+    </style>
+
+    <style name="NMSNewMeetingContainerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/mdp_10</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="NMSNewMeetingLayoutBaseStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:paddingTop">@dimen/mdp_16</item>
+        <item name="android:paddingBottom">@dimen/mdp_16</item>
+        <item name="android:paddingLeft">@dimen/mdp_16</item>
+        <item name="android:paddingRight">@dimen/mdp_16</item>
+    </style>
+
+    <style name="NMSNewMeetingLabelTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">#04121A</item>
+        <item name="android:textSize">@dimen/msp_15</item>
+    </style>
+
+    <style name="NMSNewMeetingSelectableTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">@dimen/mdp_8</item>
+        <item name="android:drawableRight">@mipmap/nms_ic_little_arrow_down</item>
+        <item name="android:textColor">#9DA3A6</item>
+        <item name="android:textSize">@dimen/msp_14</item>
+    </style>
+
+    <style name="NMSNewMeetingTimeTypeStyle">
+        <item name="android:layout_width">@dimen/mdp_48</item>
+        <item name="android:layout_height">@dimen/mdp_30</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/nms_bg_meeting_time_type</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/nms_ic_meeting_time_type_text_color</item>
+        <item name="android:textSize">@dimen/msp_13</item>
+    </style>
+
+    <style name="NMSMeetingRoomDetailLabelStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/mdp_8</item>
+        <item name="android:textColor">#9DA3A6</item>
+        <item name="android:textSize">@dimen/msp_12</item>
+    </style>
+
+    <style name="NMSMeetingRoomDetailTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/mdp_12</item>
+        <item name="android:textColor">#272727</item>
+        <item name="android:textSize">@dimen/msp_14</item>
+    </style>
+
+</resources>

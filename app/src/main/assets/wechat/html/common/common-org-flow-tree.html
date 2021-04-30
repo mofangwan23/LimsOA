@@ -1,0 +1,47 @@
+<div data-role="page" id="pageFlowOrganizeSelector" style="background:#f1f2ed;" ng-cloak>
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<div data-role="navbar" data-iconpos="false" id="todonav" class="pubut-box">
+			<ul class="pubut-top">
+				<li id="organizeX" data-icon="false"> <a href="#" ng-click='_showFlowPersonTree()' data-theme="c" data-icon="false" class="ui-btn-active ui-state-persist pubut-left">人员</a> </li>
+				<li id="organizeY" data-icon="false"> <a ng-click='_showFlowPostTree()' href="#" data-theme="c" data-icon="false" class="pubut-right">岗位</a> </li>
+			</ul>
+		</div>
+	</div>
+	<div data-role="content" ng-show="FLOW_ORGANIZE_TYPE == FLOW_ORGANIZE_TYPE_PERSON">
+		<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="搜索" class="organize-tree" style="border-radius:0;">
+			<li org-flow-tree-directive ng-repeat="x in orgFlowPersonTrees" data-icon="false" data-filtertext="{{x.value}}">
+				<a ng-click="_checkedFlowOrgBox('X' + x.key)" href="#" id="chkX{{x.key}}" orgid="X{{x.key}}" orgname="{{x.value}}" style="background:#fff;">
+					<img id="photoX{{x.key}}" orgid="X{{x.key}}" orgname="{{x.value}}" src="{{x.imageHref}}" style="width:46px; height:46px; -moz-border-radius:100em !important; -webkit-border-radius:100em !important; border-radius:100em !important;
+		        margin:10px 0px 0px 10px; margin-left:20px; border:1px #eee solid;"/>
+					<h3 style="float:left; width:100px!important; vertical-align:middle; font-weight:100!important; color:#333; font-size:1em; padding:4px 0;">{{x.value}}</h3>
+					<p style="padding:5px 0; white-space:normal;color:#777; font-size:0.9em !important">{{x.position}}</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="content" ng-show="FLOW_ORGANIZE_TYPE == FLOW_ORGANIZE_TYPE_POST">
+		<ul data-role="listview" data-inset="true" data-inset="true" data-filter="true" data-filter-placeholder="搜索" class="organize-tree" style="border-radius:0;">
+			<li org-flow-tree-directive ng-repeat="x in orgFlowPostTrees" data-icon="false" data-filtertext="{{x.value}}">
+				<a ng-click="_checkedFlowOrgBox('Y' + x.key)" href="#" id="chkY{{x.key}}" orgid="Y{{x.key}}" orgname="{{x.value}}" style="background:#fff;">
+					<img id="photoY{{x.key}}" orgid="Y{{x.key}}" orgname="{{x.value}}" src="{{postImgHref}}" style="width:46px; height:46px; -moz-border-radius:100em !important; -webkit-border-radius:100em !important; border-radius:100em !important;
+		        margin:10px 0px 0px 10px; margin-left:20px; border:1px #eee solid;"/>
+					<h3 style="width:100px!important; vertical-align:middle; font-weight:100!important; color:#333; font-size:1em; padding:4px 0;">{{x.value}}</h3>
+					<p style="white-space:normal;color:#777; font-size:0.7em !important">{{x.description}}</p>
+				</a>
+			</li>
+			<li ng-show="orgFlowPostTrees.length == 0">该环节没有分配任何审批权限</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" id="orgfooter">
+		<table ng-hide="readonly" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="width:100%;" align="left">
+					<div id="organizeFlowChecked" style="float:left; width:auto; height:auto; overflow-x:auto; overflow-y:hidden; margin:5px;"></div>
+				</td>
+				<td style="width:80px;" align="right">
+					<a data-role="button" data-inline="true" href="#" ng-click="_finishFlowOrganizeSelect()" data-icon="false" data-rel="back" style="background:#ff8000; width:50px; color:#fff; border:none;">确定</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

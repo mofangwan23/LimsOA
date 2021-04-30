@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/standard_bg_g_30"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/standard_bg_g_30"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <cn.flyrise.feep.workplan7.view.PlanDetailHeadView
+                android:id="@+id/lyHeadView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bdp_white"/>
+
+            <View style="@style/detail_line"/>
+
+            <cn.flyrise.feep.particular.views.ParticularContentView
+                android:id="@+id/lyContentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/mdp_5"
+                android:paddingRight="@dimen/mdp_5"
+                android:background="@color/bdp_white"
+                android:minHeight="@dimen/mdp_132"/>
+
+            <ViewStub
+                android:id="@+id/viewStubAttachment"
+                style="@style/PlanPartItemLayout"
+                android:layout_marginTop="@dimen/mdp_10"
+                android:layout="@layout/plan_view_detail_attchment"/>
+
+            <cn.flyrise.feep.workplan7.view.PlanDetailReplyView
+                android:id="@+id/replyView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/mdp_10"
+                android:layout_marginBottom="@dimen/mdp_20"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/standard_bg_content_g_20"
+        android:orientation="vertical">
+        <View style="@style/detail_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_45"
+            android:layout_marginTop="@dimen/mdp_0_2">
+
+            <LinearLayout
+                android:id="@+id/lyToSchedule"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/mdp_20"
+                    android:layout_height="@dimen/mdp_20"
+                    android:src="@drawable/plan_to_schedule"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_5"
+                    android:text="@string/plan_to_schedule"
+                    android:textColor="#ff979797"
+                    android:textSize="@dimen/msp_14"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lyToCollaboration"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/mdp_20"
+                    android:layout_height="@dimen/mdp_20"
+                    android:src="@drawable/plan_to_collaboration"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_5"
+                    android:text="@string/plan_to_collaboration"
+                    android:textColor="#ff979797"
+                    android:textSize="@dimen/msp_14"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvReply"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="#FF28B9FF"
+                android:gravity="center"
+                android:text="@string/plan_reply"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/msp_16"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

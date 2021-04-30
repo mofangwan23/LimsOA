@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/location_dialog_bg"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/mImgIcon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_110"
+        android:layout_above="@+id/detail_line"
+        android:layout_below="@+id/mImgIcon"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#17191A"
+                android:textSize="@dimen/msp_17"/>
+
+            <View
+                android:id="@+id/v_line"
+                android:layout_width="@dimen/mdp_1"
+                android:layout_height="@dimen/mdp_15"
+                android:layout_marginLeft="@dimen/mdp_15"
+                android:layout_marginRight="@dimen/mdp_15"
+                android:background="#E3E5E6"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#17191A"
+                android:textSize="@dimen/msp_17"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/successHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_15"
+            android:layout_marginLeft="@dimen/mdp_20"
+            android:layout_marginRight="@dimen/mdp_20"
+            android:ellipsize="end"
+            android:text="@string/location_dialog_history_success"
+            android:textColor="#8B8C8C"
+            android:textSize="@dimen/msp_14"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/detail_line"
+        style="@style/detail_line"
+        android:layout_above="@+id/button_layout"/>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_40"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/leftBut"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/location_dialog_history_text"
+            android:textColor="#8B8C8C"
+            android:textSize="@dimen/msp_15"/>
+
+        <View style="@style/detail_line_h"/>
+
+        <TextView
+            android:id="@+id/rightBut"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/location_sign_dismiss"
+            android:textColor="#28B9FF"
+            android:textSize="@dimen/msp_15"/>
+    </LinearLayout>
+</RelativeLayout>

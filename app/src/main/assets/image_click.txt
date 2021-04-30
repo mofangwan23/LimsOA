@@ -1,0 +1,15 @@
+(function() {
+	var imgs = document.getElementsByTagName("img");
+	var array = [];
+	for (var j = 0; j < imgs.length; j++) {
+		if (imgs[j].src) {
+			array.push(imgs[j].src);
+		}
+	}
+	for (var i = 0; i < imgs.length; i++) {
+		imgs[i].onclick = function() {
+			androidJS.showBigImage(this.src, array);
+		}
+	}
+
+})()

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.flyrise.feep.media.images.ImageBrowserViewPager
+        android:id="@+id/msViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </cn.flyrise.feep.media.images.ImageBrowserViewPager>
+
+    <RelativeLayout
+        android:id="@+id/activity_image_browser_rl_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/bdp_white"
+        android:paddingTop="34dp">
+
+        <RelativeLayout
+            android:id="@+id/activity_image_browser_tv_back"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/core_icon_back" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/dim_30_dp"
+            android:layout_height="@dimen/dim_30_dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/mdp_15"
+            android:layout_marginRight="@dimen/mdp_5">
+
+            <cn.flyrise.feep.core.component.LargeTouchCheckBox
+                android:id="@+id/activity_image_browser_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@drawable/checkbox_blue_selected"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="8dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/msTvSummary"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingRight="16dp"
+        android:background="#272d32"
+        android:gravity="right|center_vertical"
+        android:text="11/109"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:visibility="gone"
+        />
+    
+    <RelativeLayout
+        android:id="@+id/activity_image_browser_rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/bdp_white"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/activity_image_browser_tv_Summary"
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:background="#26B7FF"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/bdp_white"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

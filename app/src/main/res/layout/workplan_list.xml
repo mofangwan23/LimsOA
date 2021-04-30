@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/list_item_bg">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <cn.flyrise.feep.core.base.views.PullAndLoadMoreRecyclerView
+            android:id="@+id/workplan_list_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolBar">
+        </cn.flyrise.feep.core.base.views.PullAndLoadMoreRecyclerView>
+
+        <include
+            android:id="@+id/fe_list_empty"
+            layout="@layout/core_view_empty_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

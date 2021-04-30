@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TransparentDialogStyle" parent="@android:style/Theme.Dialog">
+        <!-- 更换背景图片实现全透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 屏幕背景不变暗 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!--无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="CoreSplitLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/mdp_0_2</item>
+        <item name="android:background">#E5E5E5</item>
+    </style>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <style name="CoreHorizontalTranslucentLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/mdp_3</item>
+        <item name="android:background">@drawable/core_shadow_horizontal_down</item>
+    </style>
+
+    <style name="CoreHorizontalTranslucentLine10">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:background">@color/core_bg_color</item>
+    </style>
+
+    <style name="chat_text_date_style">
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:background">@drawable/ease_timestampe_bg</item>
+    </style>
+
+    <style name="PopWindowShowMoreMenuTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:background">@color/bdp_white</item>
+        <item name="android:textColor">#191919</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="detail_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/mdp_0_2</item>
+        <item name="android:background">@color/standard_line_g_50</item>
+    </style>
+
+    <style name="my_custom_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/mdp_12"
+    android:paddingRight="@dimen/mdp_12"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/NMSMeetingRoomDetailLabelStyle"
+        android:text="会议主题"/>
+
+    <TextView
+        android:id="@+id/nmsTvTitle"
+        style="@style/NMSMeetingRoomDetailTextStyle"/>
+
+    <TextView
+        style="@style/NMSMeetingRoomDetailLabelStyle"
+        android:text="会议室时间"/>
+
+    <TextView
+        android:id="@+id/nmsTvTime"
+        style="@style/NMSMeetingRoomDetailTextStyle"/>
+
+    <TextView
+        android:id="@+id/nmsTvTime2"
+        style="@style/NMSMeetingRoomDetailTextStyle"
+        android:visibility="gone"/>
+
+    <TextView
+        style="@style/NMSMeetingRoomDetailLabelStyle"
+        android:text="申请人"/>
+
+    <TextView
+        android:id="@+id/nmsTvCompere"
+        style="@style/NMSMeetingRoomDetailTextStyle"/>
+
+</LinearLayout>

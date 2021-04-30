@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <View style="@style/CoreHorizontalTranslucentLine"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:background="#FFFFFB"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/msLayoutFileOption"
+            style="@style/MSAttachmentContainer">
+            <ImageView
+                style="@style/MSAttachmentImage"
+                android:src="@mipmap/ms_icon_attachment_file"/>
+            <TextView
+                style="@style/MSAttachmentText"
+                android:text="文档"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/msLayoutCameraOption"
+            style="@style/MSAttachmentContainer">
+            <ImageView
+                style="@style/MSAttachmentImage"
+                android:src="@mipmap/ms_icon_attachment_camera"/>
+            <TextView
+                style="@style/MSAttachmentText"
+                android:text="拍照"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/msLayoutImageOption"
+            style="@style/MSAttachmentContainer">
+            <ImageView
+                style="@style/MSAttachmentImage"
+                android:src="@mipmap/ms_icon_attachment_image"/>
+            <TextView
+                style="@style/MSAttachmentText"
+                android:text="照片"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/msLayoutRecordOption"
+            style="@style/MSAttachmentContainer">
+            <ImageView
+                style="@style/MSAttachmentImage"
+                android:src="@mipmap/ms_icon_attachment_record"/>
+            <TextView
+                style="@style/MSAttachmentText"
+                android:text="录音"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/CoreSplitLine"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/msRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white">
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_48"
+        android:background="#272d32"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/msTvAttachmentSelectedCount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingLeft="@dimen/mdp_16"
+            android:paddingRight="@dimen/mdp_4"
+            android:gravity="center_vertical"
+            android:text="已选："
+            android:textColor="#EDEDED"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <CheckBox
+                android:id="@+id/msCbxAttachmentSelectAll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/mdp_10"
+                android:paddingRight="@dimen/mdp_16"
+                android:button="@null"
+                android:drawablePadding="@dimen/mdp_10"
+                android:drawableRight="@drawable/ms_btn_delete_check"
+                android:text="全选"
+                android:textColor="#EDEDED"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

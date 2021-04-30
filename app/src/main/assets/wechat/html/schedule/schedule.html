@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0, user-scalable=yes" />
+	<title>日程备忘</title>
+	<link rel="stylesheet" href="../../css/jmobile/global-j.css">
+	<link rel="stylesheet" href="../../css/jmobile/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="../../css/jw-jqm-cal.css" />
+	<link rel="stylesheet" href="../../css/vote.css" type="text/css"></link>
+	<link rel="stylesheet" href="../../css/location.css" type="text/css"></link>
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+	$(document).on("mobileinit", function() {
+		$.mobile.defaultPageTransition = "slide";
+		$.mobile.defaultDialogTransition = "slide";
+	});
+</script>
+	<script type="text/javascript" src="../../js/jquerymobile/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="../../js/angular/angularAJAX.js"></script>
+	<script type="text/javascript" src="../../js/angular/angular.js"></script>
+	<script type="text/javascript" src="../../js/jquerymobile/jw-jqm-cal.js"></script>
+	<script type="text/javascript" src="../../js/cn.flyrise.helper.js"></script>
+	<script type="text/javascript" src="../../js/cn.flyrise.datetime.header.js" ></script>
+	<script type="text/javascript" src="../../umeditor/umeditor.config.js"></script>
+	<script type="text/javascript" src="../../umeditor/umeditor.min.js"></script>
+	<script type="text/javascript" src="../../js/cordova.js"></script>
+	<script type="text/javascript" src="../../js/cn.flyrise.appinit.js"></script>
+
+	<style type="text/css">
+.selet-box>div>div {
+	border: none !important;
+}
+
+.selet-box>div>div>span {
+	text-align: left !important;
+}
+
+.txt-conebox {
+	resize: none;
+	min-height: 120px;
+	margin: 0;
+	border-bottom: 1px #e5e5e5 solid !important;
+	padding: 1em !important;
+}
+
+.ui-btn-up-a:hover {
+	background-color: #ecf0f1 !important;
+}
+#sharecontent table,#ScheduleContent table{margin-bottom:10px;border-collapse:collapse;display:table;}
+#sharecontent td,#sharecontent th,#ScheduleContent td,#ScheduleContent th{padding: 5px 10px;border: 1px solid #DDD;}
+#sharecontent caption,#ScheduleContent caption{border:1px dashed #DDD;border-bottom:0;padding:3px;text-align:center;}th{border-top:1px solid #BBB;background-color:#F7F7F7;}
+#sharecontent table tr.firstRow th,#ScheduleContent table tr.firstRow th{border-top-width:2px;}
+#sharecontent td p,#ScheduleContent td p{margin:0;padding:0;}
+</style>
+</head>
+<body ng-app="angularScheduleApp" ng-controller="listScheduleController">
+<div data-role="page" id="pageSchedule" class="minbox-bg" data-title="日程备忘" ng-cloak>
+	<div data-role="header" data-tap-toggle="false" data-position="fixed">
+		<a data-role="button" href="#addSchedulePage" ng-click="_addSchedule();" class="ui-btn-right" data-icon="plus" data-iconpos="notext"> </a>
+		<h3>日程备忘</h3>
+	</div>
+	<div data-role="content" style="padding-bottom: 10px;">
+		<div id="calendarLocation" date-directive dates="{{flagMap}}"></div>
+		<ul data-role="listview" data-inset="ture" id="eventlistview" style="margin-top: 0;" class="list-radi">
+			<li data-role="list-divider">我的备忘</li>
+			<li ng-hide="showone" class="list-kjli" style="border-bottom: 1px #dddddd solid; color: #999;">暂无备忘记录</li>
+			<li ng-repeat="x in eventlist" ng-show="eventlist.length>0" class="list-kjli" ng-if="x.share==0">
+				<a ng-click='_showdetail(x.id,1)' href="#editSchedulePage" style="background: #fff; color: #111;"> <img class="round_photo" src="{{feurl}}{{x.userphoto}}" />
+					<h3 class="addressname">{{x.title}}</h3>
+					<p class="addressdepartmentName">{{x.starttime | date:'HH:mm'}}</p>
+				</a>
+			</li>
+			<li class="list-botm"></li>
+			<li data-role="list-divider">Ta人分享</li>
+			<li ng-hide="showtwo" class="list-kjli" style="border-bottom: 1px #dddddd solid; color: #999;">暂无分享记录</li>
+			<li ng-repeat="x in eventlist" ng-show="eventlist.length>0" class="list-kjli" ng-if="x.share==1">
+				<a ng-click='_showdetail(x.id,2)' href="#pageother" style="background: #fff; color: #111;"> <img class="round_photo" ng-src="{{feurl}}{{x.userphoto}}" />
+					<h3 class="addressname">{{x.title}}</h3>
+					<p class="addressdepartmentName">{{x.starttime | date:'HH:mm'}}</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div data-role="page" id="pageother" data-title="日程备忘" class="minbox-bg" ng-cloak>
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<h3>共享日程</h3>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="ture" class="list-radi">
+			<li data-icon="false">
+				<img class="round_photo" style="width: 50px; height: 50px;" src="{{feurl}}{{detailother.userphoto}}" />
+				<h3 style="font-weight: 100;">{{detailother.starttime | date:'yyyy年MM月dd日 HH:mm'}}</h3>
+				<h3 style="font-weight: 100;">
+					{{detailother.userName}}
+					<div style="color: #999; font-size: .9em;">已分享给 {{detailother.shareCount}} 位同事</div>
+				</h3>
+			</li>
+			<li data-role="list-divider">内容</li>
+			<input type="hidden" load-editor value="{{detailother.content}}" id="_sharecontent_" />
+			<div id="sharecontent"></div>
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" style="background: #fafafa;">
+		<div data-role="navbar">
+			<table cellspacing="0" style="margin: 0 auto;">
+				<tr>
+					<td width="100%" align="center">
+						<a data-role="button" data-inline="false" id="join-btn" ng-click="_joinSchedule(detailother.id);" class="defi-green-button">加入我的日程</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div data-role="page" id="editSchedulePage" class="minbox-bg" data-title="修改备忘" ng-cloak>
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<a href="#pageSchedule" class="ui-btn-left" data-role="button" data-icon="back" data-iconpos="notext" data-direction="reverse" ng-show="BackShow();"></a>
+		<h3>修改备忘</h3>
+	</div>
+	<div data-role="content" class="subbox-bg">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+					<div class="div-bottom-line">
+						<textarea ng-disabled="_isDisabled(detail.url)"  ng-model="detail.title" id="scheduleEditContent" placeholder="请输入标题" style="resize: none; min-height: 100px;">{{detail.title}}</textarea>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div class="div-bottom-fenge"></div>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+					<div ng-if="detail.url.indexOf('035-408-000')==-1" class="div-bottom-line">
+						<input type="hidden"  load-editor value="{{detail.content}}" id="_ScheduleContent_" />
+						<div  id="ScheduleContent"></div>
+					</div>
+					<div ng-if="detail.url.indexOf('035-408-000')>-1" class="div-bottom-line">
+						<div  id="ScheduleContent2" ng-bind-html="detail.content | trustHtml"></div>
+					</div>
+				</td>
+			</tr>
+
+		</table>
+		<div class="div-bottom-fenge"></div>
+		<div class="div-bottom-line">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td >
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1.5em" height="1.5em" viewBox="0 0 595.28 595.28" enable-background="new 0 0 595.28 595.28" xml:space="preserve">
+                          <circle fill="#FFFFFF" stroke="#999999" stroke-width="60" stroke-miterlimit="10" cx="302.748" cy="304.849" r="211.765" />
+                          <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="302.641" y1="167" x2="302.641" y2="326.641" />
+                          <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="327" y1="304.849" x2="189" y2="304.849" />
+                          </svg> <span>开始日期</span>
+					</td>
+					<td width="90%">
+						<input ng-disabled="_isDisabled(detail.url)" ng-model="detail.starttimeStr" id="starttime" placeholder="请输入时间" type="text" />
+					</td>
+					<td align="right" style="padding-right: 1em;">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0.7em" height="1.0em" viewBox="0 0 8 12" style="enable-background: new 0 0 8 12;" xml:space="preserve">
+					        <polygon points="2,0 0,2 4,6 0,10 2,12 8,6 " path fill="#999999" />
+					        </svg>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="div-bottom-line">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1.5em" height="1.5em" viewBox="0 0 595.28 595.28" enable-background="new 0 0 595.28 595.28" xml:space="preserve">
+                          <circle fill="#FFFFFF" stroke="#999999" stroke-width="60" stroke-miterlimit="10" cx="302.748" cy="304.849" r="211.765" />
+                          <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="302.641" y1="167" x2="302.641" y2="326.641" />
+                          <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="327" y1="304.849" x2="189" y2="304.849" />
+                          </svg> <span>结束日期</span>
+					</td>
+					<td width="90%">
+						<input ng-disabled="_isDisabled(detail.url)" ng-model="detail.endtimeStr" id="endtime" placeholder="请输入时间" type="text" />
+					</td>
+					<td align="right" style="padding-right: 1em;">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0.7em" height="1.0em" viewBox="0 0 8 12" style="enable-background: new 0 0 8 12;" xml:space="preserve">
+					        <polygon points="2,0 0,2 4,6 0,10 2,12 8,6 " path fill="#999999" />
+					        </svg>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="div-bottom-fenge"></div>
+		<div class="div-bottom-line">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1.5em" height="1.5em" viewBox="0 0 595.28 595.28" enable-background="new 0 0 595.28 595.28" xml:space="preserve">
+                          <circle fill="#FFFFFF" stroke="#999999" stroke-width="60" stroke-miterlimit="10" cx="302.748" cy="304.849" r="211.765" />
+                          <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="302.641" y1="167" x2="302.641" y2="326.641" />
+                          <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="327" y1="304.849" x2="189" y2="304.849" />
+                          </svg> <span>提醒时间</span>
+					</td>
+					<td width="90%" class="selet-box">
+						<select ng-disabled="_isDisabled(detail.url)" id="remindTime" ng-model="detail.remindTime" name="remindTime" data-icon="false" data-mini="true">
+							<option ng-repeat="m in remindTimes" value="{{m.id}}" ng-selected="m.id == detail.remindTime">{{m.name}}</option>
+						</select>
+					</td>
+					<td align="right" style="padding-right: 1em;">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0.7em" height="1.0em" viewBox="0 0 8 12" style="enable-background: new 0 0 8 12;" xml:space="preserve">
+					        <polygon points="2,0 0,2 4,6 0,10 2,12 8,6 " path fill="#999999" />
+					        </svg>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="div-bottom-line">
+			<table width="100%" border="0" cellspacing="0">
+				<tr>
+					<td>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1.5em" height="1.5em" viewBox="0 0 595.28 595.28" enable-background="new 0 0 595.28 595.28" xml:space="preserve">
+                          <circle fill="#FFFFFF" stroke="#999999" stroke-width="60" stroke-miterlimit="10" cx="302.748" cy="304.849" r="211.765" />
+                          <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="302.641" y1="167" x2="302.641" y2="326.641" />
+                          <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="327" y1="304.849" x2="189" y2="304.849" />
+                          </svg> <span>重复周期</span>
+					</td>
+					<td width="90%" class="selet-box">
+						<select ng-disabled="_isDisabled(detail.url)" id="recycle" data-mini="true" ng-model="detail.recycle" style="border: none !important;" data-icon="false" ng-options="m.id as m.name for m in recycles">
+						</select>
+					</td>
+					<td align="right" style="padding-right: 1em;">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0.7em" height="1.0em" viewBox="0 0 8 12" style="enable-background: new 0 0 8 12;" xml:space="preserve">
+					        <polygon points="2,0 0,2 4,6 0,10 2,12 8,6 " path fill="#999999" />
+					        </svg>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="div-bottom-line">
+			<table width="100%" border="0" cellspacing="0">
+				<tr>
+					<td>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1.5em" height="1.5em" viewBox="0 0 595.28 595.28" enable-background="new 0 0 595.28 595.28" xml:space="preserve">
+                                          <ellipse fill="#999999" cx="301.437" cy="177.087" rx="119.254" ry="119.289" />
+                                          <path fill="#999999" d="M504.123,506.933c0,20.68-11.76,30.55-30.814,30.55H130.685c-20.59,0-31.935-10.432-31.935-30.55V380.706
+                            c0-72.07,71.784-99.002,102.611-99.002c29.799,0,30.547,32.542,100.288,32.542c70.677,0,70.489-32.542,99.862-32.542
+                            c31.254,0,102.611,28.054,102.611,99.002V506.933z" />
+                       </svg> <span>分享他人</span>
+					</td>
+					<td width="90%">
+						<input ng-disabled="_isDisabled(detail.url)" type="hidden" ng-model="orgtreehide"> <input ng-model="orgtreeshow" id="Schedulepersonal" data-shadow="false" ng-click="_showOrg(detail.url);" readonly="true" type="text" />
+					</td>
+					<td ng-disabled="_isDisabled(detail.url)" align="right" style="padding-right: 1em;" ng-click="_showOrg(detail.url);">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0.7em" height="1.0em" viewBox="0 0 8 12" style="enable-background: new 0 0 8 12;" xml:space="preserve">
+					        <polygon points="2,0 0,2 4,6 0,10 2,12 8,6 " path fill="#999999" />
+					        </svg>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div data-theme="a" data-role="footer" data-position="fixed" data-tap-toggle="false" style="border-top: 1px solid #e5e5e5 !important;">
+		<table cellspacing="0" style="margin: 0 auto;">
+			<tr>
+				<td width="50%" align="center" style="padding-right: 1em;">
+					<a data-role="button" id="publish-btn1" ng-click="_delSchedule(detail.sourceId,detail.url);" class="defi-red-button">删除备忘</a>
+				</td>
+				<td width="50%" align="center">
+					<a data-role="button" id="publish-btn" ng-click="_saveSchedule(detail.url);" class="defi-green-button">重新发布</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div data-role="page" id="addSchedulePage" class="minbox-bg" data-title="新建备忘" ng-cloak ng-controller="addScheduleController">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<a href="#pageSchedule" ng-hide="{{hide}}" class="ui-btn-left" data-role="button" data-icon="back" data-iconpos="notext" data-direction="reverse" ></a>
+		<h3>新增备忘</h3>
+	</div>
+	<div data-role="content" class="subbox-bg">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+					<div class="div-bottom-line">
+						<textarea ng-model="vo.title" placeholder="请输入标题" style="resize: none; min-height: 50px;"></textarea>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div class="div-bottom-fenge"></div>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+					<div class="div-bottom-line">
+						<textarea ng-model="vo.content" id="textarea3" placeholder="请输入内容" style="resize:none; min-height:100px;"></textarea>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div class="div-bottom-fenge"></div>
+		<div class="div-bottom-line">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1.5em" height="1.5em" viewBox="0 0 595.28 595.28" enable-background="new 0 0 595.28 595.28" xml:space="preserve">
+		                  <circle fill="#FFFFFF" stroke="#999999" stroke-width="60" stroke-miterlimit="10" cx="302.748" cy="304.849" r="211.765" />
+		                  <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="302.641" y1="167" x2="302.641" y2="326.641" />
+		                  <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="327" y1="304.849" x2="189" y2="304.849" />
+		                  </svg> <span>开始日期</span>
+					</td>
+					<td width="90%">
+						<input ng-model="vo.starttimeStr" id="starttime1" placeholder="请输入时间" type="text" />
+					</td>
+					<td align="right" style="padding-right: 1em;">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0.7em" height="1.0em" viewBox="0 0 8 12" style="enable-background: new 0 0 8 12;" xml:space="preserve">
+					        <polygon points="2,0 0,2 4,6 0,10 2,12 8,6 " path fill="#999999" />
+					        </svg>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="div-bottom-line">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1.5em" height="1.5em" viewBox="0 0 595.28 595.28" enable-background="new 0 0 595.28 595.28" xml:space="preserve">
+		                  <circle fill="#FFFFFF" stroke="#999999" stroke-width="60" stroke-miterlimit="10" cx="302.748" cy="304.849" r="211.765" />
+		                  <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="302.641" y1="167" x2="302.641" y2="326.641" />
+		                  <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="327" y1="304.849" x2="189" y2="304.849" />
+		                  </svg> <span>结束日期</span>
+					</td>
+					<td width="90%">
+						<input ng-model="vo.endtimeStr" id="endtime1" placeholder="请输入时间" type="text" />
+					</td>
+					<td align="right" style="padding-right: 1em;">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0.7em" height="1.0em" viewBox="0 0 8 12" style="enable-background: new 0 0 8 12;" xml:space="preserve">
+					        <polygon points="2,0 0,2 4,6 0,10 2,12 8,6 " path fill="#999999" />
+					        </svg>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="div-bottom-fenge"></div>
+		<div class="div-bottom-line">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1.5em" height="1.5em" viewBox="0 0 595.28 595.28" enable-background="new 0 0 595.28 595.28" xml:space="preserve">
+		                  <circle fill="#FFFFFF" stroke="#999999" stroke-width="60" stroke-miterlimit="10" cx="302.748" cy="304.849" r="211.765" />
+		                  <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="302.641" y1="167" x2="302.641" y2="326.641" />
+		                  <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="327" y1="304.849" x2="189" y2="304.849" />
+		                  </svg> <span>提醒时间</span>
+					</td>
+					<td width="90%" class="selet-box">
+						<select id="add_remindTime" data-mini="true" ng-model="vo.remindTime" data-native-menu="true" name="remindTime" data-icon="false" placeholder="提醒时间">
+							<option value="">-请选择-</option>
+							<option ng-repeat="m in remindTimes" value="{{m.id}}">{{m.name}}</option>
+						</select>
+					</td>
+					<td align="right" style="padding-right: 1em;">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0.7em" height="1.0em" viewBox="0 0 8 12" style="enable-background: new 0 0 8 12;" xml:space="preserve">
+					        <polygon points="2,0 0,2 4,6 0,10 2,12 8,6 " path fill="#999999" />
+					        </svg>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="div-bottom-line">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1.5em" height="1.5em" viewBox="0 0 595.28 595.28" enable-background="new 0 0 595.28 595.28" xml:space="preserve">
+                          <circle fill="#FFFFFF" stroke="#999999" stroke-width="60" stroke-miterlimit="10" cx="302.748" cy="304.849" r="211.765" />
+                          <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="302.641" y1="167" x2="302.641" y2="326.641" />
+                          <line fill="none" stroke="#999999" stroke-width="50" stroke-miterlimit="10" x1="327" y1="304.849" x2="189" y2="304.849" />
+                          </svg> <span>重复周期</span>
+					</td>
+					<td width="90%" class="selet-box">
+						<select id="add_recycle" data-mini="true" name="recycle" data-native-menu="true" ng-model="vo.recycle" data-icon="false" ng-options="m.id as m.name for m in recycles">
+							<option value>-请选择-</option>
+						</select>
+					</td>
+					<td align="right" style="padding-right: 1em;">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0.7em" height="1.0em" viewBox="0 0 8 12" style="enable-background: new 0 0 8 12;" xml:space="preserve">
+					        <polygon points="2,0 0,2 4,6 0,10 2,12 8,6 " path fill="#999999" />
+					        </svg>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="div-bottom-line">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1.5em" height="1.5em" viewBox="0 0 595.28 595.28" enable-background="new 0 0 595.28 595.28" xml:space="preserve">
+						                  <ellipse fill="#999999" cx="301.437" cy="177.087" rx="119.254" ry="119.289" />
+						                  <path fill="#999999" d="M504.123,506.933c0,20.68-11.76,30.55-30.814,30.55H130.685c-20.59,0-31.935-10.432-31.935-30.55V380.706
+						    c0-72.07,71.784-99.002,102.611-99.002c29.799,0,30.547,32.542,100.288,32.542c70.677,0,70.489-32.542,99.862-32.542
+						    c31.254,0,102.611,28.054,102.611,99.002V506.933z" />
+					   </svg> <span>分享他人</span>
+					</td>
+					<td width="90%">
+						<input type="hidden" ng-model="orgtreehide"> <input ng-model="orgtreeshow" placeholder="分享参与人" id="Schedulepersonal" ng-click="_showOrgAdd();" readonly="true" type="text" />
+					</td>
+					<td align="right" style="padding-right: 1em;" ng-click="_showOrgAdd();">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0.7em" height="1.0em" viewBox="0 0 8 12" style="enable-background: new 0 0 8 12;" xml:space="preserve">
+					        <polygon points="2,0 0,2 4,6 0,10 2,12 8,6 " path fill="#999999" />
+					        </svg>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div data-theme="a" data-role="footer" data-position="fixed" data-tap-toggle="false">
+		<table cellspacing="0" style="margin: 0 auto;">
+			<tr>
+				<td width="100%" align="center">
+					<a data-role="button" id="publish-btn" ng-click="_saveSchedule();" class="defi-green-button">立即发布</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<orgTree org-tree></orgTree>
+<script type="text/javascript" src="../../js/angular/angularOrgTreeApp.js"></script>
+<script type="text/javascript" src="../../js/angular/angular-touch.min.js"></script>
+<script type="text/javascript" src="../../js/angular/angularSchedulePhonegap.js"></script>
+<script type="text/javascript">
+		var now = new Date();
+		var currYear = now.getFullYear();
+		var opt = {};
+		opt.datetime = {
+			preset : 'datetime'
+		};
+		opt.defaults = {
+			theme : 'jquery mobile',
+			display : 'bottom',
+			mode : 'scroller',
+			lang : 'zh',
+			minDate : new Date(now.getFullYear(), now.getMonth(), (now.getDate())),
+			startYear : currYear,
+			endYear : currYear + 10,
+			setText : '确定',
+			cancelText : '取消'
+		};
+		var optDateTime = $.extend(opt['datetime'], opt['defaults']);
+		$("#editSchedulePage").on('pageinit', function(event, ui) {
+			$("#endtime").mobiscroll().datetime(optDateTime);
+			$("#starttime").mobiscroll().datetime(optDateTime);
+		});
+		$("#addSchedulePage").on('pageinit', function(event, ui) {
+			$("#endtime1").mobiscroll().datetime(optDateTime);
+			$("#starttime1").mobiscroll().datetime(optDateTime);
+		});
+		      $("option[value='?']").remove();    
+	</script>
+</body>
+</html>

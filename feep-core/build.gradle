@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.versionCompileSdk
+    buildToolsVersion rootProject.ext.versionBuildTools
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.versionMinSdk
+        targetSdkVersion rootProject.ext.versionTargetSdk
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+    }
+
+    compileOptions {
+        encoding "UTF-8"
+        sourceCompatibility rootProject.ext.versionJava
+        targetCompatibility rootProject.ext.versionJava
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    // support library
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api rootProject.ext.libSupportV7
+    api rootProject.ext.libSupportDesign
+    api rootProject.ext.libSupportRecyclerView
+    api rootProject.ext.libSupportCardView
+
+    // gson and event bus
+    api 'com.google.code.gson:gson:2.8.5'
+    api 'org.greenrobot:eventbus:3.0.0'
+
+    // image and network
+    api rootProject.ext.libImage
+    annotationProcessor rootProject.ext.libGlideCompiler
+    api rootProject.ext.libImageHttpsModule
+    api rootProject.ext.libOkHttp
+    api rootProject.ext.libStethoOkHttp
+
+    // rxjava and rxandroid
+    api rootProject.ext.libRxJava
+    api rootProject.ext.libRxAndroid
+    api 'com.jakewharton.rxbinding:rxbinding:1.0.0'
+
+    // custom view
+    api 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.45'
+
+}

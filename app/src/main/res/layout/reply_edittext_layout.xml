@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:orientation="vertical">
+                <View style="@style/detail_line" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/mdp_8"
+                    android:paddingLeft="@dimen/mdp_1"
+                    android:paddingRight="@dimen/mdp_5"
+                    android:paddingTop="@dimen/mdp_8">
+                    <!-- 协同详情中提交子回复时浮动界面 -->
+                    <RelativeLayout
+                        android:id="@+id/attachment_layout"
+                        android:layout_width="@dimen/mdp_40"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/mdp_4">
+                        <ImageButton
+                            android:id="@+id/replay_attachment"
+                            android:layout_width="@dimen/mdp_40"
+                            android:layout_height="@dimen/mdp_35"
+                            android:background="@drawable/work_plan_send_bg"
+                            android:src="@drawable/add_appendix_fe"
+                            android:textColor="#FFF" />
+                        <TextView
+                            android:id="@+id/attachment_num"
+                            android:layout_width="@dimen/mdp_15"
+                            android:layout_height="@dimen/mdp_15"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="@dimen/mdp_3"
+                            android:layout_x="@dimen/mdp_26"
+                            android:layout_y="@dimen/mdp_0"
+                            android:background="@drawable/pagerbar_title_item_nums_bg"
+                            android:gravity="center"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/msp_10"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/mdp_8"
+                        android:layout_weight="1">
+                        <EditText
+                            android:id="@+id/voice_input_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/login_editview_bg"
+                            android:gravity="center_vertical"
+                            android:maxHeight="@dimen/mdp_90"
+                            android:minHeight="@dimen/mdp_36"
+                            android:paddingBottom="@dimen/mdp_5"
+                            android:paddingLeft="@dimen/mdp_5"
+                            android:paddingRight="@dimen/mdp_26"
+                            android:paddingTop="@dimen/mdp_5"
+                            android:textSize="@dimen/msp_14" />
+                        <Button
+                            android:id="@+id/voice_input_mic_bnt"
+                            android:layout_width="@dimen/mdp_24"
+                            android:layout_height="@dimen/mdp_24"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/mdp_6"
+                            android:background="@drawable/recording_icon" />
+                    </RelativeLayout>
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/mdp_35"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/mdp_5"
+                        android:background="@drawable/work_plan_send_bg"
+                        android:paddingLeft="@dimen/mdp_8"
+                        android:paddingRight="@dimen/mdp_8"
+                        android:stateListAnimator="@null"
+                        android:text="@string/submit"
+                        android:textColor="#FFF" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

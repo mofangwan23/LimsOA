@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lv_directorytext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        />
+
+    <View
+        style="@style/detail_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lv_directory"
+            android:layout_width="@dimen/mdp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:background="@color/address_tree_department_list_item_normal"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+        <FrameLayout
+            android:id="@+id/fl_file"
+            android:layout_width="@dimen/mdp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="6.5">
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/mdp_8"
+        android:paddingLeft="@dimen/mdp_15"
+        android:paddingRight="@dimen/mdp_15"
+        android:paddingTop="@dimen/mdp_15">
+
+
+        <ImageView
+            android:id="@+id/iv_userhead"
+            android:layout_width="@dimen/mdp_40"
+            android:layout_height="@dimen/mdp_40"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutContentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/iv_userhead"
+            android:background="@drawable/message_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="@dimen/mdp_14">
+
+            <TextView
+                android:id="@+id/tv_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/standard_text_g_100"
+                android:textSize="16sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:text="发了放假啊"
+                />
+
+            <TextView
+                android:id="@+id/tv_chattitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/standard_text_g_70"
+                android:textSize="14sp"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:visibility="gone"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/standard_line_g_50"/>
+
+            <TextView
+                android:id="@+id/tv_read_all"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:drawableRight="@mipmap/core_right_icon"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:text="@string/core_read_detial"
+                android:textColor="@color/standard_text_g_70"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivMessageState"
+            android:layout_width="@dimen/mdp_38"
+            android:layout_height="@dimen/mdp_38"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

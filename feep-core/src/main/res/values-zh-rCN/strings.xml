@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">feep-core</string>
+    <string name="permission_title">权限申请</string>
+    <string name="permission_title_confirm">温馨提示</string>
+    <string name="permission_msg_base_info">食药协作平台需要获取【存储空间】和【设备信息】的使用权限，以保证应用程序的正常使用。</string>
+    <string name="permission_rationale_record">食药协作平台使用【录音】权限，仅用于正常使用语音、录音功能，如需正常使用录音功能，请授予应用使用【录音】的权限。</string>
+    <string name="permission_rationale_camera">食药协作平台使用【相机】权限，仅用于正常拍照和扫一扫等功能，如需正常使用相机功能，请授予应用使用【相机】的权限。</string>
+    <string name="permission_rationale_location">食药协作平台使用【位置】权限，仅用于签到和位置上报功能，如需正常使用签到功能，请授予应用使用【位置】的权限。</string>
+    <string name="permission_rationale_calendar">食药协作平台使用【日历】权限，仅用于日历的同步和添加，如需正常使用日程等功能，请授予应用使用【日历】的权限。</string>
+    <string name="permission_rationale_contact">食药协作平台使用【通讯录】权限，仅用于显示联系人和查找功能，我们保证不执行任何涉及用户隐私的操作，如需正常使用相关功能，请授予应用使用【通讯录】的权限。</string>
+
+    <string name="permission_msg_request_failed">所需权限申请失败，该功能无法正常使用，如需正常使用，请在【设置-应用-食药协作平台-权限】中开启相关权限。</string>
+    <string name="permission_msg_request_failed_base">请在【设置-应用-食药协作平台-权限】中开启存储空间和电话权限，以保证应用程序的正常使用。</string>
+    <string name="permission_msg_request_failed_storage">请在【设置-应用-食药协作平台-权限】中开启存储空间权限，以正常使用食药协作平台。</string>
+    <string name="permission_msg_request_failed_phone">在食药协作平台使用【电话】权限仅限于确定本机设备ID，以保证账号的安全性，并不会拨打其它号码或中止通话。请在【设置-应用-食药协作平台-权限】中开启电话权限，以正常登录应用程序。</string>
+    <string name="permission_msg_request_failed_camera">请在【设置-应用-食药协作平台-权限】中开启相机权限，以正常使用拍照、扫描二维码等功能。</string>
+    <string name="permission_msg_request_failed_record">请在【设置-应用-食药协作平台-权限】中开启录音权限，以正常使用语音、录音等功能。</string>
+    <string name="permission_msg_request_failed_location">请在【设置-应用-食药协作平台-权限】中开启位置权限，以正常使用签到、位置上报等功能。</string>
+    <string name="permission_msg_request_failed_contact">请在【设置-应用-食药协作平台-权限】中开启通讯录权限，以正常使用嘟嘟、CRM、显示联系人等功能。</string>
+    <string name="permission_msg_request_failed_sms">请在【设置-应用-食药协作平台-权限】中开启短信权限，以正常使用应用程序。</string>
+    <string name="permission_msg_request_failed_calendar">请在【设置-应用-食药协作平台-权限】中开启日历权限，以正常使用日程等相关功能。</string>
+    <string name="permission_text_i_know">知道了</string>
+    <string name="permission_text_confirm">确定</string>
+    <string name="permission_text_go_setting">去设置</string>
+
+    <string name="core_unknow_size">未知大小</string>
+    <string name="core_unknow_type">未知类型</string>
+    <string name="core_prompt_title">温馨提示</string>
+    <string name="core_btn_positive">确定</string>
+    <string name="core_btn_negative">取消</string>
+
+    <string name="core_http_success_exception">服务器返回的数据不正确</string>
+    <string name="core_network_error_retry">网络堵车，请重试</string>
+    <string name="core_http_failure">网络出错，请检查网络</string>
+    <string name="core_http_timeout">网络超时，请检查网络</string>
+    <string name="core_http_network_exception">网络异常</string>
+
+    <string name="core_attachment_handle_error">附件上传处理出错</string>
+    <string name="core_all_attachment_size">附件总大小：</string>
+    <string name="core_all_attachment_size_overflow">总附件大于%1$sM,暂不支持上传</string>
+    <string name="core_single_attachment_size_overflow">单个附件大于%1$sM,暂不支持上传</string>
+
+    <string name="core_loading">正在加载…</string>
+    <string name="core_loading_wait">请稍候…</string>
+    <string name="core_downloading">已完成</string>
+    <string name="contact_fetch_error">数据获取失败…</string>
+    <string name="core_activity_not_found">无法开启当前界面</string>
+    <string name="core_data_deleted">数据已删除</string>
+    <string name="core_read_all">阅读全部</string>
+    <string name="core_data_get_error">数据获取失败…</string>
+    <string name="exit_edit_tig">退出此次编辑?</string>
+    <string name="core_read_detial">查看详情</string>
+
+    <string name="message_please_login_again">会话失效，请重新登录!</string>
+    <string name="core_lbl_txt_search">搜索</string>
+
+    <string name="util_date_mm">MM月</string>
+    <string name="util_date_week">第%1$d周</string>
+    <string name="util_date_interval">MM月dd日</string>
+    <string name="util_date_yyyy_mm_dd">yyyy年MM月dd日</string>
+
+    <string name="util_time_right_now">刚刚</string>
+    <string name="util_time_minutes_ago">%1$s分钟前</string>
+    <string name="util_time_hour">%1$s小时前</string>
+    <string name="util_date_day">%1$s天前</string>
+
+    <string name="util_week_sun">周日</string>
+    <string name="util_week_mon">周一</string>
+    <string name="util_week_tues">周二</string>
+    <string name="util_week_wed">周三</string>
+    <string name="util_week_thur">周四</string>
+    <string name="util_week_fri">周五</string>
+    <string name="util_week_sat">周六</string>
+
+    <string name="location_history_day_time">yyyy年MM月</string>
+
+    <string name="time_format_Hm">HH:mm</string>
+    <string name="time_format_Hms">HH:mm:ss</string>
+    <string name="time_format_today">今天</string>
+    <string name="time_format_yesterday">昨天</string>
+    <string name="time_format_Md">MM月dd日</string>
+    <string name="time_format_yMd">yyyy年MM月dd日</string>
+    <string name="time_format_Mdhm">MM月dd日 HH:mm</string>
+    <string name="common_search_title">搜索</string>
+    <string name="common_empty_file_hint">该文件夹下没有内容</string>
+    <string name="common_empty_list_hint">这里什么都没有</string>
+</resources>

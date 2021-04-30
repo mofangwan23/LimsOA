@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pull_to_refresh_pull_label">drop-down refresh</string>
+    <string name="pull_to_refresh_release_label">release refresh</string>
+    <string name="pull_to_refresh_refreshing_label">is refreshing ...</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">Loading ...</string>
+</resources>

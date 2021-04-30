@@ -1,0 +1,89 @@
+@CHARSET "UTF-8";
+
+.round_photo {
+	width: 40px!important;;
+	height: 40px!important;;
+	-moz-border-radius: 20px!important;
+	-webkit-border-radius: 20px!important;
+	border-radius: 20px!important;
+	margin: 20px auto auto 10px!important;;
+}
+
+.round_photo_small {
+	width: 30px!important;;
+	height: 30px!important;;
+	-moz-border-radius: 20px!important;
+	-webkit-border-radius: 20px!important;
+	border-radius: 20px!important;
+	margin: 0px 3px 0 0px!important;;
+}
+
+.round_photo_big {
+	width: 160px;
+	height: 160px;
+	-moz-border-radius: 80px;
+	-webkit-border-radius: 80px;
+	border-radius: 80px;
+	margin: 20px auto auto 10px;
+}
+
+#orgtreelistview .ui-checkbox input,#orgtreelistview .ui-radio input {
+	width: 2px;
+	height: 2px;
+}
+
+.defi-orange-button1 { /*自定义橙按钮*/
+	width: 6em !important;
+	height: 2.5em !important;
+	padding-top: 0.6em !important;
+	background-color: #FF6000 !important;
+	-webkit-border-radius: 0.5em !important;
+	border-radius: 0.5em !important;
+	font-size: 1em !important;
+	font-family: Microsoft Yahei !important;
+	color: #FFF !important;
+	text-shadow: none !important;
+	text-align: center !important;
+	-webkit-box-sizing: none !important;
+	-moz-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+	margin: 10px auto 10px auto !important;
+	border: 0 !important;
+}
+
+.round_photo { /*修正头像上方间距*/
+	margin: 10px auto auto 10px;
+}
+
+.ui-li-divider { /*字母导航条增加下划线*/
+	margin: .5em 0;
+}
+.ui-li-aside { /*调整chkbox右边距*/
+	right: 1em !important;
+}
+
+.ui-input-search { /*搜索框增加外框*/
+	border-width: 1px !important;
+}
+
+.defi-gradFont { /*自定义岗位描述字体*/
+	font-size: 0.7em !important;
+	text-shadow: none !important;
+	color: #555;
+}
+
+.defi-gradTitleFont { /*自定义名字字体*/
+	font-size: .9em !important;
+	margin-top: 10px !important;
+}	
+/*知识管理*/
+.flodIcon{width:50px; height:50px; margin:10px 0 0 10px;} /*设置文件夹图标位置*/
+.unit-inftab{width:100%; margin-top:30px; border-collapse:collapse;}
+.unit-inftab td {padding:8px 10px!important; font-size:.9em!important; border:1px #f1f1f1 solid; text-align:left;}
+.unit-inftab th{color:#777; padding-right:10px; background:#f9f9f9; font-weight:100; font-size:.9em!important; border:1px #f1f1f1 solid; text-align:right;}
+
+
+
+
+
+

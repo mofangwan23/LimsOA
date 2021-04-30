@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mdp_45"
+    android:background="#FFF4EB">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="往下拉是已过期的会议"
+        android:textColor="#E68637"/>
+
+    <ImageView
+        android:id="@+id/nmsIvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/mdp_16"
+        android:background="?attr/selectableItemBackground"
+        android:src="@mipmap/nms_ic_x"/>
+
+</RelativeLayout>

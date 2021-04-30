@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <cn.flyrise.feep.core.base.views.FEToolbar
+            android:id="@id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/status_bar_height"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:minHeight="@dimen/action_bar_size"
+            app:layout_scrollFlags="scroll|enterAlways">
+        </cn.flyrise.feep.core.base.views.FEToolbar>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            style="@style/TabLayoutIndicatorStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_layout_size"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/defaultColorAccent"
+            app:tabTextAppearance="@style/MineCustomTabText"
+            app:tabTextColor="#878787"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <cn.flyrise.feep.knowledge.view.NoScrollViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </cn.flyrise.feep.knowledge.view.NoScrollViewPager>
+
+    <RelativeLayout
+        android:id="@+id/layoutAttachmentEdit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_48"
+        android:layout_alignParentBottom="true"
+        android:background="#272d32"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvDeleteSelectedCount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingLeft="@dimen/mdp_16"
+            android:paddingRight="@dimen/mdp_4"
+            android:gravity="center_vertical"
+            android:text="已选："
+            android:textColor="#f96262"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <CheckBox
+                android:id="@+id/cbSelectedAll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/mdp_10"
+                android:paddingRight="@dimen/mdp_16"
+                android:button="@null"
+                android:drawablePadding="@dimen/mdp_10"
+                android:drawableRight="@drawable/ms_btn_delete_check"
+                android:text="全选"
+                android:textColor="#EDEDED"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

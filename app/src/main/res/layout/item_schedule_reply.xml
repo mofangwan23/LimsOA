@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingRight="@dimen/row_minimum_height">
+
+    <ImageView
+      android:id="@+id/ivAvatar"
+      android:layout_width="@dimen/mdp_32"
+      android:layout_height="@dimen/mdp_32"
+      android:layout_marginTop="@dimen/row_minimum_height"
+      android:layout_marginLeft="@dimen/row_minimum_height"
+      android:layout_marginRight="@dimen/row_minimum_height"
+      android:layout_alignParentLeft="true"
+      android:layout_gravity="center"
+      android:contentDescription="@drawable/icon_header_new_fe" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="@dimen/row_minimum_height"
+      android:layout_marginBottom="@dimen/row_minimum_height"
+      android:layout_toRightOf="@id/ivAvatar"
+      android:orientation="vertical">
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvUserName"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:textColor="@color/text_dark_color"
+              android:textSize="@dimen/msp_16" />
+
+
+            <TextView
+              android:id="@+id/tvDelete"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="@dimen/mdp_20"
+              android:layout_toLeftOf="@+id/tvEdit"
+              android:text="删除"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:textColor="#A9B7B7"
+              android:drawablePadding="@dimen/mdp_5"
+              android:drawableLeft="@drawable/schedule_reply_delete"
+              android:textSize="@dimen/msp_16" />
+
+
+            <TextView
+              android:id="@+id/tvEdit"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="@dimen/mdp_20"
+              android:layout_alignParentRight="true"
+              android:drawableLeft="@drawable/schedule_reply_edit"
+              android:drawablePadding="@dimen/mdp_5"
+              android:text="编辑"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:textColor="#A9B7B7"
+              android:textSize="@dimen/msp_16" />
+
+        </RelativeLayout>
+
+
+        <TextView
+          android:id="@+id/tvReplyTime"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingTop="@dimen/mdp_3"
+          android:paddingBottom="@dimen/mdp_3"
+          android:textColor="#A9B7B7"
+          android:textSize="@dimen/text_min_size" />
+
+
+        <TextView
+          android:id="@+id/etReplyContent"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="@dimen/text_paading"
+          android:background="#00000000"
+          android:clickable="false"
+          android:cursorVisible="false"
+          android:editable="false"
+          android:focusable="true"
+          android:inputType="none"
+          android:textColor="@color/text_dark_color"
+          android:textSize="@dimen/text_little_size"
+          android:visibility="visible" />
+
+    </LinearLayout>
+</RelativeLayout>

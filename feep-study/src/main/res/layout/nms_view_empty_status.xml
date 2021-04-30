@@ -1,0 +1,37 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/nmsIvEmptyImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mdp_16"
+        android:src="@drawable/nms_ic_empty_data"/>
+
+    <TextView
+        android:id="@+id/nmsTvEmptyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mdp_16"
+        android:text="这里什么都没有"
+        android:textColor="#BEEAFF"
+        android:textSize="@dimen/msp_16"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/nmsBtnRetry"
+        android:layout_width="@dimen/mdp_130"
+        android:layout_height="@dimen/mdp_36"
+        android:layout_marginLeft="@dimen/mdp_20"
+        android:layout_marginRight="@dimen/mdp_20"
+        android:layout_centerInParent="true"
+        android:background="@drawable/nms_bg_blue_btn_round_enable"
+        android:stateListAnimator="@null"
+        android:text="重试"
+        android:textColor="@android:color/white"
+        android:visibility="gone"/>
+</LinearLayout>

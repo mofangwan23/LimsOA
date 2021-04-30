@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="login_bnt_text_color">#ffffff</color>
+    <color name="list_item_bg">#fFfFfF</color>
+    <color name="list_item_on_bg">#dbe7f1</color>
+    <color name="list_item_title_color">#333333</color>
+
+    <color name="list_item_name_color">#b0b0b0</color>
+    <color name="list_item_time_color">#cccccc</color>
+    <color name="all_background_color">#ffffff</color>
+    <color name="all_background_color_dwon">#90ffffff</color>
+    <color name="app_background_color">#ffffff</color>
+    <color name="all_background_color_one">#f2f2f2</color>
+    <color name="filemanager_folder_text_color">#135692</color>
+    <color name="attachment_control_download_progressbar_progress_color">#7ad46f</color>
+    <color name="attachment_control_download_progressbar_progress_bg_color">#e0e2e6</color>
+    <color name="attachment_control_download_progressbar_progress_text_color">#008800</color>
+    <color name="attachment_control_play_seekbar_progress_startcolor">#d6e4ee</color>
+    <color name="attachment_control_play_seekbar_progress_endcolor">#bad3e5</color>
+    <color name="attachment_control_play_number_color">#b9cad0</color>
+    <color name="text_checked_color">#3ca1fc</color>
+    <color name="workplan_textcolor_title">#666666</color>
+
+    <!-- zxing -->
+    <color name="result_view">#52000000</color>
+    <color name="viewfinder_mask">#52000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="scan_textcolor">#aaffffff</color>
+    <color name="routeback">#3f51b5</color>
+    <color name="home_title_color">#fafafa</color>
+    <color name="line_defult_color">#48C0EC</color>
+
+    <color name="address_tree_department_list_item_selected">#ffffff</color>
+    <color name="address_tree_department_list_item_normal">#eff0f4</color>
+    <color name="popwindow_list_item_selected">#ffffff</color>
+    <color name="popwindow_list_item_normal">#f2f2f2</color>
+    <color name="message_list_item_normal">#90ffffff</color>
+    <color name="gesture_background">#eff0f4</color>
+    <color name="color_hei_8">#00000000</color>
+    <color name="userinfo_detail_title">#969696</color>
+    <color name="userinfo_detail_content">#535353</color>
+    <color name="fe_listview_item_icon_a">#63c98c</color>
+    <color name="fe_listview_item_icon_b">#f9a277</color>
+    <color name="fe_listview_item_icon_c">#9a89b9</color>
+    <color name="fe_listview_item_icon_d">#94a3e2</color>
+    <color name="fe_listview_item_icon_e">#46c9fe</color>
+
+    <color name="titlebar_line">#b3b3b3</color>
+    <color name="detail_line">#E3E5E6</color>
+    <color name="detail_line_thecontact">#CCCCCC</color>
+    <color name="detail_text_color">#626262</color>
+    <color name="wrokplan_detail_head_btn_dwon">#d8d8d8</color>
+    <color name="wrokplan_detail_head_btn_defulit">#00b4ff</color>
+    <color name="about_bg">#eff0f4</color>
+    <color name="umeng_fb_line">#DCDCDC</color>
+    <color name="thecontact_background">#F5F6F6</color>
+    <color name="extend_module_top_bg">#3E454F</color>
+    <color name="login_edittext_line">#80acacac</color>
+    <color name="login_setting_text">#00a7e6</color>
+    <color name="login_edittext_highlight">#78c0fe</color>
+    <color name="workflow_textview">#00b4ff</color>
+    <color name="im_titlebar_bg">#2cc3ff</color>
+
+    <color name="dialog_btn_bg">#50ccfe</color>
+    <color name="login_btn_defulit">#12beff</color>
+    <color name="login_btn_selected">#00a7e6</color>
+    <color name="login_setting_selected_bg">#e0f2f9</color>
+    <color name="login_setting_defulit">#12beff</color>
+    <color name="form_send_detail_bg">#d9d9d9</color>
+    <color name="lock_pattern_password_title">#797979</color>
+    <color name="loading_icon_background">#F4AFAFA8</color>
+    <!--google规划清晰好看文字的颜色Material Design-->
+    <color name="text_dark_color">#dd000000</color>
+    <color name="text_bright_color">#89000000</color>
+    <color name="text_menu_text_color">#65000000</color>
+    <color name="text_light_color">#42000000</color>
+    <color name="text_sign_in_title">#191919</color>
+    <color name="text_sign_in_content">#9B9B9B</color>
+
+    <color name="text_dark_white_color">#ddffffff</color>
+    <color name="text_dark_blue_color">#dd03a9f4</color>
+    <color name="text_light_blue_color">#4203a9f4</color>
+    <color name="item_im_selected_user_color">#fffffb</color>
+    <color name="gray_forbit">#c4c4c4</color>
+
+    <!--弹出按钮-->
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="detail_attachment_bg">#70D8F2</color>
+    <color name="detail_attachment_bg_press">#69cae2</color>
+    <color name="detail_reply_bg">#80D397</color>
+    <color name="detail_reply_bg_press">#76c38c</color>
+    <color name="detail_content_bg">#A9B0F3</color>
+    <color name="detail_content_bg_press">#9ba2df</color>
+    <color name="detail_dudu_bg">#67EDCC</color>
+    <color name="detail_dudu_bg_press">#5ed8ba</color>
+    <color name="detail_menu_bg">#36B9FA</color>
+    <!--弹出按钮END-->
+
+    <!--登录按钮-->
+    <color name="blue_pressed">#ff0099cc</color>
+    <color name="blue_normal">#ff33b5e5</color>
+    <color name="green_complete">#ff99cc00</color>
+    <color name="purple_progress">#ffaa66cc</color>
+    <color name="red_error">#ffff4444</color>
+
+    <color name="holo_red_light">#ffff4444</color>
+    <!--登录按钮END-->
+
+    <!-- Material Design Theme Color: start by ZYP -->
+
+    <color name="defaultColorPrimaryDarkV7">#1673b8</color>
+<!--    <color name="defaultColorPrimary">#28B9FF</color>-->
+<!--    <color name="defaultColorPrimaryDark">#00a7e6</color>-->
+<!--    <color name="defaultColorAccent">#12beff</color>-->
+    <color name="bule_title_check">#15A4FE</color>
+
+    <!-- Material Design Theme Color: End by ZYP -->
+
+    <color name="vpn_bottom_line">#CCCCCC</color>
+    <color name="app_icon_bg">#2AB9FF</color>
+    <color name="toast_bg_color">#FF616161</color>
+    <color name="badge_num_bg">#FFF74D32</color>
+
+    <!-- Address Book -->
+    <color name="ab_pop_bottom_color">#FFFFFF</color>
+    <color name="ab_pop_sub_dept_bg">#F6F6F6</color>
+    <color name="ab_filter_text_color">#A6A6A6</color>
+    <color name="ab_filter_split_color">#EDEDED</color>
+
+    <color name="userinfo_item_background">#FFFFFFFF</color>
+    <color name="userinfo_item_title">#FF908F95</color>
+    <color name="userinfo_item_content">#FF908F95</color>
+
+    <color name="rxpicker_colorPrimary">#000000</color>
+    <color name="rxpicker_colorPrimaryDark">#ff212121</color>
+    <color name="rxpicker_colorAccent">#FF4081</color>
+    <color name="rxpicker_width">#FFF</color>
+
+    <color name="ucrop_color_default_crop_grid">#80ffffff</color>
+    <color name="ucrop_color_default_crop_frame">#ffffff</color>
+    <color name="ucrop_color_default_dimmed">#8c000000</color>
+    
+    <color name="gray_f5f5f5">#F5F5F5</color>
+    <color name="gray_9DA3A6">#9DA3A6</color>
+    <color name="knowledge_edt_text_color">#04121A</color>
+    <color name="knowlegde_title_solid_color">#15A4FE</color>
+    <color name="knowlegde_title_text_color">#28B9FF</color>
+    <color name="line_grey">#E4E6E7</color>
+    <color name="backgroud_grey">#F5F6F6</color>
+    <color name="black_text_main">#04121A</color>
+    <color name="gray_text_main">#9DA3A6</color>
+    <color name="gray_black_text">#676F73</color>
+
+    <!--党建-->
+    <color name="dj_foot">#f5f5f5</color>
+    <color name="dj_foot_line">#cccccc</color>
+    <color name="dj_foot_click">#cc1416</color>
+    <color name="dj_foot_unclick">#999999</color>
+    <color name="dj_mian_text_color">#222222</color>
+    <color name="dj_shouye_line">#f8f8f8</color>
+    <color name="dj_login_bt">#fff2f2</color>
+    <color name="green_blue">#00CDCD</color>
+
+
+
+</resources>

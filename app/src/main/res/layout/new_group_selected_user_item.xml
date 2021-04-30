@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:background="@color/item_im_selected_user_color"
+    android:layout_height="@dimen/mdp_56"
+    >
+    <ImageView
+        android:id="@+id/selected_user_icon"
+        android:layout_width="@dimen/mdp_36"
+        android:layout_height="@dimen/mdp_36"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/text_paading"
+        android:layout_marginBottom="@dimen/mdp_5"
+        android:layout_marginTop="@dimen/mdp_5"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/text_paading"
+        android:layout_toRightOf="@id/selected_user_icon"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_dark_color"
+            android:textSize="@dimen/text_middle_size" />
+        <TextView
+            android:id="@+id/department_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_3"
+            android:textColor="@color/text_light_color"
+            android:textSize="@dimen/text_min_size" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/selected_user_delete"
+        android:layout_width="@dimen/mdp_56"
+        android:layout_height="@dimen/mdp_56"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/mdp_16"
+        android:src="@mipmap/core_icon_delete" />
+    <View
+        style="@style/detail_line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/text_paading" />
+</RelativeLayout>

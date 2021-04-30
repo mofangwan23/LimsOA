@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/mdp_16">
+
+        <ImageView
+            android:id="@+id/ivMailIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvEmailBoxType"
+            android:layout_width="@dimen/mdp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mdp_10"
+            android:layout_weight="1"
+            android:textSize="@dimen/mdp_16"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tvEmailNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/mdp_10"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/msp_14"/>
+
+        <ImageView
+            android:layout_width="@dimen/mdp_8"
+            android:layout_height="@dimen/mdp_16"
+            android:src="@drawable/frequent_contects_iocn_right"/>
+    </LinearLayout>
+
+    <include layout="@layout/view_line"/>
+</LinearLayout>

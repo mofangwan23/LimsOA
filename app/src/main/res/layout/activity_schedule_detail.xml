@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_0"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!-- Head 部分 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/mdp_16"
+                        android:paddingLeft="@dimen/mdp_12"
+                        android:paddingRight="@dimen/mdp_12"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivHeadUserIcon"
+                            android:layout_width="@dimen/mdp_35"
+                            android:layout_height="@dimen/mdp_35"
+                            android:layout_marginRight="@dimen/mdp_8"/>
+
+                        <TextView
+                            android:id="@+id/tvHeadUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvHeadTitle"
+                            android:layout_toRightOf="@id/ivHeadUserIcon"
+                            android:padding="@dimen/mdp_6"
+                            android:singleLine="true"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/msp_14"/>
+
+                        <TextView
+                            android:id="@+id/tvHeadSendTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/mdp_8"
+                            android:layout_below="@+id/tvHeadTitle"
+                            android:layout_toRightOf="@id/tvHeadUser"
+                            android:padding="@dimen/mdp_6"
+                            android:gravity="center_vertical"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/msp_14"
+                            android:visibility="visible"/>
+
+                        <TextView
+                            android:id="@+id/tvDisplayDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/mdp_8"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tvHeadTitle"
+                            android:padding="@dimen/mdp_6"
+                            android:gravity="center_vertical"
+                            android:text="查看详情"
+                            android:textColor="@color/defaultColorAccent"
+                            android:textSize="@dimen/msp_14"
+                            android:visibility="visible"/>
+
+                        <TextView
+                            android:id="@+id/tvHeadTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@id/ivHeadUserIcon"
+                            android:paddingLeft="@dimen/mdp_8"
+                            android:paddingRight="@dimen/mdp_8"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/mdp_16"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <!-- 隐藏部分 -->
+                <LinearLayout
+                    android:id="@+id/layoutScheduleDetailInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/mdp_12"
+                    android:paddingLeft="@dimen/mdp_12"
+                    android:paddingRight="@dimen/mdp_12"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/rlTvTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="时间："
+                            android:textColor="#999999"/>
+
+                        <TextView
+                            android:id="@+id/tvScheduleStartTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/rlTvTime"
+                            android:drawableLeft="@drawable/ic_sd_start_time"
+                            android:drawablePadding="@dimen/mdp_6"
+                            android:textColor="#999999"/>
+
+                        <TextView
+                            android:id="@+id/tvScheduleEndTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/mdp_6"
+                            android:layout_below="@id/tvScheduleStartTime"
+                            android:layout_toRightOf="@id/rlTvTime"
+                            android:drawableLeft="@drawable/ic_sd_end_time"
+                            android:drawablePadding="@dimen/mdp_6"
+                            android:textColor="#999999"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvSchedulePromptTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/mdp_8"
+                        android:textColor="#999999"/>
+
+                    <TextView
+                        android:id="@+id/tvScheduleRepeatTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/mdp_8"
+                        android:textColor="#999999"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/mdp_8"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="分享人："
+                            android:textColor="#999999"/>
+
+                        <TextView
+                            android:id="@+id/tvScheduleSharePersons"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#999999"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <cn.flyrise.feep.commonality.view.TouchableWebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:id="@+id/layoutReply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvReplyCount"
+                        style="@style/ParticularLabelStyle"/>
+
+                    <cn.flyrise.feep.particular.views.RelativeElegantLayout
+                        android:id="@+id/layoutReplyContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View style="@style/detail_line"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rlReplyBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/all_background_color"
+            android:visibility="gone">
+
+            <View style="@style/detail_line"/>
+
+            <Button
+                android:id="@+id/btReply"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_36"
+                android:layout_marginTop="@dimen/mdp_8"
+                android:layout_marginBottom="@dimen/mdp_8"
+                android:layout_marginLeft="@dimen/mdp_16"
+                android:layout_marginRight="@dimen/mdp_16"
+                android:layout_centerInParent="true"
+                android:background="@drawable/nms_bg_blue_btn_round_enable"
+                android:stateListAnimator="@null"
+                android:text="@string/reply"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/msp_16"/>
+        </RelativeLayout>
+    </LinearLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mdp_52">
+
+    <RelativeLayout
+        android:id="@+id/menu_item_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_52"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/menu_item_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_4"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <cn.flyrise.android.library.view.ResizeTextView
+            android:id="@+id/menu_item_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menu_item_image"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/text_menu_text_color"
+            android:textSize="@dimen/msp_10"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/contenr_text"
+        android:layout_width="@dimen/mdp_0_5"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"/>
+
+    <com.drop.WaterDrop
+        android:id="@+id/badge_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_2"
+        android:layout_toRightOf="@+id/contenr_text"
+        android:minHeight="@dimen/mdp_26"
+        android:minWidth="@dimen/mdp_36"/>
+
+    <ImageView
+        android:id="@+id/num_icon_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_6"
+        android:layout_marginLeft="@dimen/mdp_6"
+        android:layout_toRightOf="@+id/contenr_text"
+        android:background="@drawable/core_badg_spot_background"
+        android:visibility="gone"/>
+</RelativeLayout>

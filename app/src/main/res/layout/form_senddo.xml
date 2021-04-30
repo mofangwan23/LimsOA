@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color_one"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/core_view_toolbar"
+            />
+
+        <LinearLayout
+            android:id="@+id/node_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolBar"
+            android:background="@color/all_background_color_one"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <View
+                style="@style/detail_line"
+                android:layout_marginTop="@dimen/mdp_10"/>
+
+            <LinearLayout
+                android:id="@+id/form_choice_spinner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/mdp_10"
+                android:paddingRight="@dimen/mdp_10"
+                android:background="@color/all_background_color"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_10"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="@string/form_senddo_next"
+                    android:textColor="@color/userinfo_detail_title"
+                    android:textSize="@dimen/msp_15"/>
+
+                <TextView
+                    android:id="@+id/node_dispose_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/mdp_5"
+                    android:paddingBottom="@dimen/mdp_5"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/mdp_35"
+                    android:textColor="@color/userinfo_detail_content"
+                    android:textSize="@dimen/msp_14"/>
+
+                <View
+                    android:layout_width="@dimen/mdp_12"
+                    android:layout_height="@dimen/mdp_16"
+                    android:layout_marginRight="@dimen/mdp_14"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/address_detail_department_right_iocn_attach"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/form_choice_morenode_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_10"
+                android:background="@color/all_background_color"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View style="@style/detail_line"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mdp_50"
+                    android:background="@color/all_background_color">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/mdp_8"
+                        android:layout_centerVertical="true"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/form_senddo_sendmore"
+                        android:textColor="@color/userinfo_detail_content"
+                        android:textSize="@dimen/msp_14"/>
+
+                    <cn.flyrise.feep.core.base.views.UISwitchButton
+                        xmlns:switch="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/form_choice_morenode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/mdp_6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        switch:bmHeight="@dimen/mdp_3000"
+                        switch:bmWidth="@dimen/mdp_50"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/detail_line"
+                android:layout_marginTop="@dimen/mdp_10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/all_background_color"
+                android:minHeight="@dimen/mdp_30"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_10"
+                    android:paddingTop="@dimen/mdp_8"
+                    android:paddingBottom="@dimen/mdp_6"
+                    android:text="@string/flow"
+                    android:textColor="@color/userinfo_detail_title"
+                    android:textSize="@dimen/msp_15"/>
+
+                <ListView
+                    android:id="@+id/form_node_choice_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/mdp_8"
+                    android:paddingLeft="@dimen/mdp_10"
+                    android:paddingRight="@dimen/mdp_10"
+                    android:cacheColorHint="@null"
+                    android:divider="@null"
+                    android:dividerHeight="@dimen/mdp_2"
+                    android:fadeScrollbars="false"
+                    android:listSelector="#00000000"
+                    android:overScrollMode="never"
+                    android:scrollbarFadeDuration="0"
+                    android:scrollbarSize="@dimen/mdp_3_2"
+                    android:scrollbarThumbVertical="@color/login_btn_selected"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/personandpost_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/node_layout"
+            android:orientation="vertical">
+
+            <View style="@style/detail_line"/>
+
+            <View
+                style="@style/detail_line"
+                android:layout_marginTop="@dimen/mdp_10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/all_background_color"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/form_dispose_radio_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mdp_30"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/form_dispose_radio_persion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/idea_read_bnt_background"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/flow_person"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/mdp_14"/>
+
+                    <RadioButton
+                        android:id="@+id/form_dispose_radio_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/idea_read_bnt_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/flow_position"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/mdp_14"/>
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:id="@+id/rlSearchFrameDelete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/mdp_10"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/etSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/mdp_40"
+                        android:paddingLeft="@dimen/mdp_8"
+                        android:background="@drawable/core_search_edittext"
+                        android:drawableLeft="@mipmap/core_icon_search"
+                        android:drawablePadding="@dimen/mdp_8"
+                        android:hint="请输入文字..."
+                        android:singleLine="true"
+                        android:textSize="@dimen/msp_13"/>
+
+                    <ImageView
+                        android:id="@+id/ivDeleteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:paddingRight="@dimen/mdp_15"
+                        android:src="@drawable/core_icon_delete"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/mdp_1"
+                    android:layout_marginLeft="@dimen/mdp_1"
+                    android:layout_marginRight="@dimen/mdp_1"
+                    android:background="@color/all_background_color">
+
+                    <ListView
+                        android:id="@+id/form_deliver_choice_person_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="@null"
+                        android:divider="@null"
+                        android:listSelector="#00000000"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/detail_line"
+                android:layout_marginBottom="@dimen/mdp_10"/>
+        </LinearLayout>
+        <!-- 详情加载失败后提示刷新 -->
+        <include
+            layout="@layout/requet_fail_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolBar"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

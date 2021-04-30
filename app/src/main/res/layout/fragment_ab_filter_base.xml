@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33000000"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_0_5"
+        android:layout_alignParentBottom="true"
+        android:background="#EDEDED"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F0FFFFFF"
+        android:divider="@null"
+        android:dividerHeight="@dimen/mdp_0"/>
+
+    <include layout="@layout/view_line"/>
+
+    <ImageView
+        android:id="@+id/ivFilterIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_18"
+        android:paddingTop="@dimen/mdp_6"
+        android:paddingBottom="@dimen/mdp_6"
+        android:background="@color/ab_pop_bottom_color"
+        android:src="@drawable/icon_ab_filter_end"/>
+
+
+</LinearLayout>

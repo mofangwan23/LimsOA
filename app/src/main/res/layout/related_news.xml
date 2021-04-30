@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/all_background_color_one"
+              android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/related_tips_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/detail_attachment_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="@dimen/mdp_6"
+            android:layout_height="@dimen/mdp_10"
+            android:layout_marginLeft="@dimen/mdp_8"
+            android:background="#56aaff"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="@dimen/mdp_3"
+            android:text="相关阅读"
+            android:textColor="@color/list_item_title_color"
+            android:textSize="@dimen/msp_18"/>
+    </LinearLayout>
+    <cn.flyrise.android.library.view.ListViewWithoutScroll
+        android:id="@+id/related_list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</LinearLayout>

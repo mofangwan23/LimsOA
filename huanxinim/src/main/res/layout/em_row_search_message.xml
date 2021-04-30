@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_itease_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mdp_59"
+    android:gravity="center_vertical" >
+
+ <RelativeLayout
+        android:id="@+id/avatar_container"
+        android:layout_width="@dimen/mdp_59"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true" >
+
+      <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/mdp_45"
+            android:layout_height="@dimen/mdp_45"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/mdp_10"
+            android:scaleType="fitXY"
+            android:src="@drawable/ease_default_avatar" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mdp_7"
+        android:layout_marginTop="@dimen/mdp_6"
+        android:layout_toRightOf="@id/avatar_container"
+        android:textColor="@color/list_itease_primary_color"
+        android:textSize="@dimen/msp_16" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/mdp_7"
+        android:layout_marginTop="@dimen/mdp_6"
+        android:textColor="@color/list_itease_secondary_color"
+        android:textSize="@dimen/msp_13" />
+
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/time"
+        android:layout_toRightOf="@id/avatar_container"
+        android:ellipsize="end"
+        android:padding="@dimen/mdp_7"
+        android:singleLine="true"
+        android:textColor="@color/list_itease_secondary_color"
+        android:textSize="@dimen/msp_14" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/em_ab_filter_split_color" />
+</RelativeLayout>

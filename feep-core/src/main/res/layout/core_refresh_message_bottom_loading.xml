@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/mdp_8"
+    android:background="#ffffff"
+    android:gravity="center">
+    <ProgressBar
+        android:id="@+id/ivLoading"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="@dimen/mdp_30"
+        android:layout_height="@dimen/mdp_30"/>
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mdp_10"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/ivLoading"
+        android:text=" 正在加载... "
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/msp_18"/>
+    <TextView
+        android:id="@+id/tvNoMore"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_30"
+        android:layout_marginLeft="@dimen/mdp_10"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/ivLoading"
+        android:gravity="center"
+        android:text="——没有更多——"
+        android:textColor="#8B8C8C"
+        android:textSize="@dimen/msp_12"/>
+</RelativeLayout>

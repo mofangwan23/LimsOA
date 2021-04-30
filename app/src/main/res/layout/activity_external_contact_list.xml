@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipeRefreshLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <cn.flyrise.feep.core.base.views.LoadMoreRecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </cn.flyrise.feep.core.base.views.LoadMoreRecyclerView>
+
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/mdp_20"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:paddingTop="@dimen/mdp_24"
+                    android:paddingBottom="@dimen/mdp_24"
+                    android:orientation="vertical">
+
+                    <cn.flyrise.feep.core.base.views.FELetterListView
+                        android:id="@+id/letterListView"
+                        android:layout_width="@dimen/mdp_20"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/msp_30"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <include
+                android:id="@+id/ivEmptyView"
+                layout="@layout/core_view_empty_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+    </LinearLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

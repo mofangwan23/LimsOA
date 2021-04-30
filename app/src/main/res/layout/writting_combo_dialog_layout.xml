@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/mdp_12"
+        android:text="手写签批"
+        android:textColor="@color/text_dark_color"
+        android:textSize="@dimen/msp_14"/>
+    <View
+        style="@style/detail_line"/>
+
+    <cn.flyrise.feep.form.widget.handWritting.FEWrittingCombo
+        android:id="@+id/feWritingCombo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_300"/>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_16"
+        android:layout_marginBottom="@dimen/mdp_16"
+        android:layout_marginRight="@dimen/mdp_16">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tvConfirm"
+            android:paddingTop="@dimen/mdp_4"
+            android:paddingBottom="@dimen/mdp_4"
+            android:paddingLeft="@dimen/mdp_8"
+            android:paddingRight="@dimen/mdp_8"
+            android:background="?attr/selectableItemBackground"
+            android:text="取消"
+            android:textSize="@dimen/msp_14"/>
+
+        <TextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mdp_8"
+            android:layout_alignParentRight="true"
+            android:paddingTop="@dimen/mdp_4"
+            android:paddingBottom="@dimen/mdp_4"
+            android:paddingLeft="@dimen/mdp_8"
+            android:paddingRight="@dimen/mdp_8"
+            android:background="?attr/selectableItemBackground"
+            android:text="确定"
+            android:textColor="?attr/colorAccent"
+            android:textSize="@dimen/msp_14"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/all_background_color_dwon" android:state_pressed="true"></item>
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="@color/detail_line"/>
+                </shape>
+            </item>
+            <item
+                android:bottom="@dimen/mdp_0_2"
+                android:top="@dimen/mdp_0_2">
+                <shape>
+                    <solid android:color="@color/all_background_color"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

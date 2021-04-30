@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/mdp_5">
+    <TextView
+        android:id="@+id/tvSendUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mdp_10"
+        android:layout_marginTop="@dimen/mdp_5"
+        android:textColor="@android:color/darker_gray">
+    </TextView>
+    <TextView
+        android:id="@+id/tvSendTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mdp_10"
+        android:layout_marginTop="@dimen/mdp_5"
+        android:layout_toRightOf="@id/tvSendUser"
+        android:textColor="@android:color/darker_gray">
+    </TextView>
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSendUser"
+        android:layout_marginLeft="@dimen/mdp_10"
+        android:layout_marginTop="@dimen/mdp_5"
+        android:paddingBottom="@dimen/mdp_10"
+        android:textColor="@color/userinfo_detail_content">
+    </TextView>
+    <!--<View-->
+        <!--android:id="@+id/detail_line"-->
+        <!--style="@style/detail_line"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginLeft="@dimen/mdp_10"/>-->
+</RelativeLayout>

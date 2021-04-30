@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layoutModule"
+        android:layout_width="@dimen/mdp_72"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="@dimen/mdp_8"
+            android:paddingBottom="@dimen/mdp_6">
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="@dimen/mdp_45"
+                android:layout_height="@dimen/mdp_45"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_schedule_v7"/>
+
+            <TextView
+                android:id="@+id/tvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_6"
+                android:layout_below="@+id/ivIcon"
+                android:layout_centerHorizontal="true"
+                android:singleLine="true"
+                android:maxLength="4"
+                android:textColor="#17191A"
+                android:textSize="@dimen/msp_12"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivOperator"
+            android:layout_width="@dimen/mdp_26"
+            android:layout_height="@dimen/mdp_26"
+            android:layout_marginRight="@dimen/mdp_6"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="@dimen/mdp_8"
+            android:paddingLeft="@dimen/mdp_8"
+            android:src="@drawable/icon_module_delete"
+            android:visibility="visible"/>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/thecontact_background"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar" />
+
+        <LinearLayout
+            android:id="@+id/text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/all_background_color"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/mdp_16"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/mdp_8"
+                android:background="@color/all_background_color"
+                android:minHeight="@dimen/mdp_42"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/mdp_8">
+
+                <EditText
+                    android:id="@+id/modify_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_16"
+                    android:layout_marginRight="@dimen/mdp_16"
+                    android:minHeight="@dimen/mdp_30"
+                    android:background="@color/all_background_color"
+                    android:textColor="@color/text_dark_color"
+                    android:textColorHint="@color/gray_forbit"
+                    android:textSize="@dimen/msp_16" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mdp_1"
+                    android:layout_marginLeft="@dimen/mdp_16"
+                    android:layout_marginRight="@dimen/mdp_16"
+                    android:layout_marginTop="@dimen/mdp_6"
+                    android:background="@color/btn_answer_normal" />
+
+                <TextView
+                    android:id="@+id/max_nums"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/mdp_8"
+                    android:layout_marginTop="@dimen/mdp_6"
+                    android:textColor="@color/text_light_color"
+                    android:textSize="@dimen/msp_12"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/mdp_16"
+                android:layout_marginRight="@dimen/mdp_16"
+                android:text="@string/password_modify_error"
+                android:textColor="@color/text_light_color"
+                android:textSize="@dimen/msp_10"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/mdp_16"
+                android:layout_marginRight="@dimen/mdp_16"
+                android:layout_marginTop="@dimen/mdp_8"
+                android:text="@string/password_modify_error"
+                android:textColor="@color/holo_red_light"
+                android:textSize="@dimen/msp_12"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_42"
+            android:layout_marginBottom="@dimen/mdp_16"
+            android:layout_marginLeft="@dimen/mdp_16"
+            android:layout_marginRight="@dimen/mdp_16"
+            android:layout_marginTop="@dimen/mdp_24"
+            android:background="@drawable/nms_bg_blue_btn_round_enable"
+            android:stateListAnimator="@null"
+            android:text="@string/collaboration_recorder_ok"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/msp_16" />
+
+    </LinearLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

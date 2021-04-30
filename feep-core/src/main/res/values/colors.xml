@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#28b9ff</color>
+    <color name="colorPrimaryDark">#00a7e6</color>
+    <color name="colorAccent">#12beff</color>
+
+    <color name="defaultColorPrimaryDark">#484848</color>
+    <color name="defaultColorAccent">#00a7e6</color>
+    <color name="defaultColorPrimary">#FFFFFF</color>
+
+    <color name="core_default_accent_color">#28B9FF</color>
+    <color name="login_btn_defulit">#12beff</color>
+    <color name="login_btn_selected">#00a7e6</color>
+
+    <color name="core_new_blue">#027BFF</color>
+
+    <color name="core_standard_second_text_color">#9B9B9B</color>
+    <color name="core_standard_title_color">#191919</color>
+    <color name="core_search_layout_background">#FCFCFC</color>
+
+    <!--正文-->
+    <color name="standard_text_g_100">#17191A</color>
+    <color name="standard_text_g_90">#303233</color>
+    <color name="standard_text_g_80">#5D5E5F</color>
+    <color name="standard_text_g_70">#8B8C8C</color>
+
+    <color name="standard_line_g_50">#E3E5E6</color><!--分割线-->
+    <color name="standard_bg_g_30">#F5F6F6</color><!--普通背景-->
+    <color name="standard_bg_content_g_20">#FFFFFF</color> <!--内容背景-->
+
+    <color name="standard_text_b_10">#EBF8FF</color>
+    <color name="standard_text_b_30">#BFEAFF</color>
+    <color name="standard_text_b_40">#80D4FF</color>
+    <color name="standard_text_b_50">#26B7FF</color>
+    <color name="standard_text_b_60">#22A4E6</color>
+    <color name="standard_text_b_70">#1F92CC</color>
+    <color name="standard_text_b_80">#1B80B3</color>
+
+
+
+
+
+    <color name="bdp_white">#FFFFFF</color>
+    <color name="core_bg_color">#F5F6F6</color>
+    <color name="core_divide_color">#E5E5E5</color>
+
+    <color name="core_grey_auxiliary_text_body_color">#9DA3A6</color>
+
+</resources>

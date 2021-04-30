@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Panel">
+        <!-- Defines panel animation duration in ms. -->
+        <attr format="integer" name="animationDuration"/>
+        <!-- Defines pacommonGroution on the screen. -->
+        <attr name="position">
+            <!-- Panel placed at top of the screen. -->
+            <enum name="top" value="0"/>
+            <!-- Panel placed at bottom of the screen. -->
+            <enum name="bottom" value="1"/>
+            <!-- Panel placed at left of the screen. -->
+            <enum name="left" value="2"/>
+            <!-- Panel placed at right of the screen. -->
+            <enum name="right" value="3"/>
+        </attr>
+        <!-- Identifier for the child that represents the panel's handle. -->
+        <attr format="reference" name="handle"/>
+        <!-- Identifier for the child that represents the panel's content. -->
+        <attr format="reference" name="content"/>
+        <!-- Defines if flying gesture forces linear interpolator in animation. -->
+        <attr format="boolean" name="linearFlying"/>
+        <!-- Defines size relative to parent (must be in form: nn%p). -->
+        <attr format="fraction" name="weight"/>
+        <!-- Defines opened handle (drawable/color). -->
+        <attr format="reference|color" name="openedHandle"/>
+        <!-- Defines closed handle (drawable/color). -->
+        <attr format="reference|color" name="closedHandle"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="ResizeTextView">
+        <attr format="boolean" name="lineCountResizeable"/>
+    </declare-styleable>
+    <declare-styleable name="LockPatternView">
+        <!-- Aspect to use when drawing LockPatternView. Choices are "square"(default), "lock_width"
+             or "lock_height" -->
+        <attr format="string" name="aspect"/>
+    </declare-styleable>
+
+    <declare-styleable name="TagEditText">
+        <attr format="string" name="addressHint"/>
+        <attr format="reference|color" name="rightIcon"/>
+        <attr format="string" name="previewLabel"/>
+    </declare-styleable>
+
+    <declare-styleable name="SchedulePreferenceView">
+        <attr format="reference" name="scheduleIcon"/>
+        <attr format="string" name="scheduleLabel"/>
+        <attr format="string" name="scheduleTitle"/>
+    </declare-styleable>
+
+    <declare-styleable name="NewMainMessageItemView">
+        <attr format="reference" name="ivIcon"/>
+        <attr format="string" name="tvTitle"/>
+    </declare-styleable>
+
+    <declare-styleable name="ucrop_UCropView">
+
+        <!--Crop image view-->
+        <attr format="float" name="ucrop_aspect_ratio_x"/>
+        <attr format="float" name="ucrop_aspect_ratio_y"/>
+
+        <!--Overlay view-->
+        <attr format="boolean" name="ucrop_show_oval_crop_frame"/>
+        <attr format="boolean" name="ucrop_oval_dimmed_layer"/>
+        <attr format="color" name="ucrop_dimmed_color"/>
+
+        <attr format="dimension" name="ucrop_grid_stroke_size"/>
+        <attr format="color" name="ucrop_grid_color"/>
+        <attr format="integer" name="ucrop_grid_row_count"/>
+        <attr format="integer" name="ucrop_grid_column_count"/>
+        <attr format="boolean" name="ucrop_show_grid"/>
+
+        <attr format="dimension" name="ucrop_frame_stroke_size"/>
+        <attr format="color" name="ucrop_frame_color"/>
+        <attr format="boolean" name="ucrop_show_frame"/>
+    </declare-styleable>
+
+    <declare-styleable name="planItemAttr">
+        <attr format="string" name="PlanItemAttrTitle"/>
+        <attr format="color" name="PlanItemAttrTitleColor"/>
+        <attr format="string" name="PlanItemAttrContentHint"/>
+        <attr format="string" name="PlanItemAttrContent"/>
+        <attr format="color" name="PlanItemAtrContentColor"/>
+        <attr format="reference" name="planItemRightIcon"/>
+        <attr format="reference" name="planItemRightVisibility"/>
+    </declare-styleable>
+
+    <declare-styleable name="SignInMenuView">
+        <attr format="string" name="menuText"/>
+        <attr format="reference" name="menuIcon"/>
+        <attr format="string" name="selectedColor"/>
+        <attr format="string" name="defaultColor"/>
+    </declare-styleable>
+
+
+
+</resources>

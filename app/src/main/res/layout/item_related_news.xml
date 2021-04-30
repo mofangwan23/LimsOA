@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="@dimen/mdp_5"
+        android:layout_height="@dimen/mdp_5"
+        android:layout_marginLeft="@dimen/mdp_12"
+        android:src="@drawable/news_point"/>
+    <TextView
+        android:id="@+id/related_item_title"
+        android:layout_width="@dimen/mdp_0"
+        android:paddingTop="@dimen/mdp_12"
+        android:paddingBottom="@dimen/mdp_12"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mdp_6"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxEms="12"
+        android:singleLine="true"
+        android:text="关于五一节放假的通知关于五一节放假的通知"
+        android:textColor="@color/list_item_title_color"
+        android:textSize="@dimen/msp_14"/>
+    <TextView
+        android:id="@+id/related_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mdp_6"
+        android:layout_marginRight="@dimen/mdp_12"
+        android:layout_toRightOf="@id/related_item_title"
+        android:text="2015-04-28"
+        android:textColor="@color/list_item_time_color"
+        android:textSize="@dimen/msp_12"/>
+</LinearLayout>

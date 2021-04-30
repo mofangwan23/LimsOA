@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_revocation"
+        android:icon="@drawable/icon_menu_revocation"
+        android:title="@string/action_revocation"/>
+
+    <item
+        android:id="@+id/action_transmit"
+        android:icon="@drawable/icon_menu_transmit"
+        android:title="@string/action_transmit"/>
+
+    <item
+        android:id="@+id/action_circulate"
+        android:icon="@drawable/icon_menu_circulate"
+        android:title="@string/action_circulate"/>
+
+
+    <item
+        android:id="@+id/action_supplement"
+        android:icon="@drawable/icon_menu_supplement"
+        android:title="@string/action_supplement"/>
+
+    <item
+        android:id="@+id/action_view_flow"
+        android:icon="@drawable/icon_menu_view_flow"
+        android:title="@string/action_view_flow"/>
+
+    <item
+        android:id="@+id/action_collection"
+        android:icon="@drawable/icon_menu_collections"
+        android:title="@string/action_collection"/>
+
+    <item
+        android:id="@+id/action_collection_cancel"
+        android:icon="@drawable/icon_menu_collections"
+        android:title="@string/action_collection_cancel"/>
+
+</menu>

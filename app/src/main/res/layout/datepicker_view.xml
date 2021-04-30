@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/picker_title_layout">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <com.kankan.wheel.widget.WheelView
+                android:id="@+id/picker_wheelview01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"/>
+
+            <com.kankan.wheel.widget.WheelView
+                android:id="@+id/picker_wheelview02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:visibility="gone"/>
+
+            <com.kankan.wheel.widget.WheelView
+                android:id="@+id/picker_wheelview03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"/>
+
+            <com.kankan.wheel.widget.WheelView
+                android:id="@+id/picker_wheelview04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"/>
+
+            <com.kankan.wheel.widget.WheelView
+                android:id="@+id/picker_wheelview05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mdp_40"
+            android:layout_centerInParent="true"
+            android:background="@drawable/date_choose_fe"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/picker_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mdp_50"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/defaultColorAccent">
+
+        <Button
+            android:id="@+id/picker_sure_bnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/mdp_10"
+            android:background="@null"
+            android:text="@string/datepicker_button_ok"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/msp_16"/>
+
+        <TextView
+            android:id="@+id/picker_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/msp_16"/>
+
+        <Button
+            android:id="@+id/picker_reset_bnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/mdp_10"
+            android:background="@null"
+            android:text="@string/datepicker_button_reset"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/msp_16"/>
+    </RelativeLayout>
+</RelativeLayout>

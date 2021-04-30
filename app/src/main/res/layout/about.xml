@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/about_bg">
+
+        <include layout="@layout/core_view_toolbar" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="@dimen/mdp_80"
+            android:layout_height="@dimen/mdp_80"
+            android:layout_below="@id/toolBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/mdp_35"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:id="@+id/about_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/mdp_12"
+            android:textColor="@color/userinfo_detail_title"
+            android:textSize="@dimen/msp_15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about_version"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/mdp_25"
+            android:background="@color/all_background_color"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/about_scoresuggested"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_min_height"
+                android:background="@color/all_background_color"
+                android:clickable="true"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mdp_6"
+                    android:padding="@dimen/mdp_10"
+                    android:text="@string/UMFeedbackConversationTitle"
+                    android:textColor="@color/text_dark_color"
+                    android:textSize="@dimen/text_middle_size" />
+
+                <ImageView
+                    android:id="@+id/feekback_rightIv"
+                    android:layout_width="@dimen/mdp_12"
+                    android:layout_height="@dimen/mdp_12"
+                    android:layout_marginRight="@dimen/text_paading"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/frequent_contects_iocn_right"
+                    android:visibility="visible"/>
+
+                <ImageView
+                    android:id="@+id/feedback_num_bg"
+                    android:layout_width="@dimen/mdp_6"
+                    android:layout_height="@dimen/mdp_6"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/mdp_8"
+                    android:layout_toLeftOf="@+id/feekback_rightIv"
+                    android:src="@drawable/num_icon_bgnew"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <View style="@style/detail_line" />
+
+            <RelativeLayout
+                android:id="@+id/about_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_min_height"
+                android:background="@color/all_background_color"
+                android:clickable="true"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mdp_6"
+                    android:padding="@dimen/mdp_10"
+                    android:text="@string/about_welcome_title"
+                    android:textColor="@color/text_dark_color"
+                    android:textSize="@dimen/text_middle_size" />
+
+                <ImageView
+                    android:layout_width="@dimen/mdp_12"
+                    android:layout_height="@dimen/mdp_12"
+                    android:layout_marginRight="@dimen/text_paading"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/frequent_contects_iocn_right"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+
+            <View style="@style/detail_line" />
+
+            <RelativeLayout
+                android:id="@+id/updata_app"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_min_height"
+                android:background="@color/all_background_color"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mdp_6"
+                    android:padding="@dimen/mdp_10"
+                    android:text="@string/settings_version_upgrade"
+                    android:textColor="@color/text_dark_color"
+                    android:textSize="@dimen/text_middle_size" />
+
+                <TextView
+                    android:id="@+id/app_updata_hind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/mdp_3"
+                    android:layout_toLeftOf="@+id/num_icon_bg"
+                    android:textColor="@color/text_light_color"
+                    android:textSize="@dimen/msp_12" />
+
+                <ImageView
+                    android:id="@+id/num_icon_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/mdp_2"
+                    android:layout_toLeftOf="@+id/right_icon"
+                    android:src="@drawable/core_badg_spot_background"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/right_icon"
+                    android:layout_width="@dimen/mdp_12"
+                    android:layout_height="@dimen/mdp_12"
+                    android:layout_marginRight="@dimen/text_paading"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/frequent_contects_iocn_right"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/about_new"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_52"
+                android:background="@color/all_background_color"
+                android:drawableRight="@drawable/address_detail_department_right_iocn_attach"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/mdp_12"
+                android:paddingRight="@dimen/mdp_23"
+                android:text="@string/about_new_title"
+                android:textColor="@color/userinfo_detail_content"
+                android:textSize="@dimen/msp_15"
+                android:visibility="gone" />
+
+            <View
+                style="@style/detail_line"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/about_copyright"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_52"
+                android:background="@color/all_background_color"
+                android:drawableRight="@drawable/address_detail_department_right_iocn_attach"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/mdp_12"
+                android:paddingRight="@dimen/mdp_23"
+                android:text="@string/about_copyright_title"
+                android:textColor="@color/userinfo_detail_content"
+                android:textSize="@dimen/msp_15"
+                android:visibility="gone" />
+
+            <View
+                style="@style/detail_line"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/checkedTextView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/mdp_16"
+            android:text="@string/voice_by_IFLYTEK"
+            android:textColor="#c9c9c9"
+            android:textSize="@dimen/msp_12" />
+
+        <CheckedTextView
+            android:id="@+id/checkedTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/mdp_20"
+            android:text=""
+            android:textColor="#c9c9c9"
+            android:textSize="@dimen/msp_12" />
+    </RelativeLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

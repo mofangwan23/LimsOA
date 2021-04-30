@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/listview_item_bg"
+  android:minHeight="@dimen/mdp_56">
+  <FrameLayout
+    android:id="@+id/the_content_item_icon_layout"
+    android:layout_width="@dimen/mdp_46"
+    android:layout_height="@dimen/mdp_46"
+    android:layout_marginLeft="@dimen/mdp_8"
+    android:layout_centerVertical="true"
+    android:padding="@dimen/mdp_5">
+    <ImageView
+      android:id="@+id/the_contact_search_item_icon"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_gravity="center" />
+    <TextView
+      android:id="@+id/the_contact_item_icon_tv"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_gravity="center"
+      android:gravity="center"
+      android:textColor="#FFFFFF"
+      android:textSize="@dimen/msp_13" />
+  </FrameLayout>
+  <ImageView
+    android:id="@+id/address_list_item_callbnt"
+    android:layout_width="@dimen/mdp_50"
+    android:layout_height="@dimen/mdp_50"
+    android:layout_marginRight="@dimen/mdp_8"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:padding="@dimen/mdp_12"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:src="@drawable/address_detail_import_system_phone_iocn" />
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_toLeftOf="@+id/address_list_item_callbnt"
+    android:layout_toRightOf="@+id/the_content_item_icon_layout"
+    android:orientation="vertical">
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_toLeftOf="@+id/address_list_item_callbnt"
+      android:layout_toRightOf="@+id/the_content_item_icon_layout"
+      android:orientation="vertical">
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mdp_10">
+        <TextView
+          android:id="@+id/address_list_item_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:minWidth="@dimen/mdp_100"
+          android:singleLine="true"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="@color/userinfo_detail_content"
+          android:textSize="@dimen/text_middle_size" />
+        <TextView
+          android:id="@+id/address_list_item_position"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/mdp_10"
+          android:singleLine="true"
+          android:textAppearance="?android:attr/textAppearanceSmall"
+          android:textSize="@dimen/text_little_size" />
+      </LinearLayout>
+      <TextView
+        android:id="@+id/address_list_item_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mdp_10"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:visibility="visible" />
+    </LinearLayout>
+  </LinearLayout>
+  <TextView
+    android:id="@+id/address_list_item_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="1px"
+    android:layout_marginTop="@dimen/mdp_7"
+    android:layout_marginLeft="@dimen/mdp_10"
+    android:layout_below="@+id/the_content_item_icon_layout"
+    android:layout_toRightOf="@+id/the_content_item_icon_layout"
+    android:background="#223c3c3c" />
+</RelativeLayout>

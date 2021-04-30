@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/thecontact_background">
+
+        <include layout="@layout/core_view_toolbar" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/user_detail_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolBar"
+            android:layout_marginTop="@dimen/mdp_16" />
+    </RelativeLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

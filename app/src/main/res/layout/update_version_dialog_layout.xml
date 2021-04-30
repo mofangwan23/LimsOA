@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/head_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/update_version_icon" />
+
+        <TextView
+            android:id="@+id/version_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/mdp_20"
+            android:layout_marginTop="@dimen/mdp_3"
+            android:background="@drawable/update_version_number"
+            android:paddingLeft="@dimen/mdp_3"
+            android:paddingRight="@dimen/mdp_3"
+            android:textColor="#48C0EC"
+            android:textSize="@dimen/msp_10" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/all_background_color"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/mdp_16">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/head_icon"
+            android:layout_marginBottom="@dimen/mdp_10"
+            android:layout_marginTop="@dimen/mdp_10"
+            android:text="@string/update_version_head"
+            android:textColor="#000000"
+            android:textSize="@dimen/msp_16" />
+
+        <EditText
+            android:id="@+id/update_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mdp_12"
+            android:background="@color/all_background_color"
+            android:gravity="top"
+            android:maxHeight="126dp"
+            android:minHeight="@dimen/mdp_32"
+            android:textColor="@color/text_bright_color"
+            android:textSize="@dimen/msp_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_62"
+        android:background="@drawable/fe_update_version_buttom"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/mdp_16"
+        android:paddingTop="@dimen/mdp_6">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/mdp_18"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:layout_weight="1"
+            android:background="@drawable/detail_btn_bg"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="@string/update_version_cancel"
+            android:textColor="@color/text_menu_text_color"
+            android:textSize="@dimen/msp_16" />
+
+        <TextView
+            android:id="@+id/start_update"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/mdp_12"
+            android:layout_marginRight="@dimen/mdp_18"
+            android:layout_weight="1"
+            android:background="@drawable/detail_dispose_btn_bg"
+            android:gravity="center"
+            android:text="@string/update_version_allow"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/msp_16" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_background_color">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/extend_module_top_bg"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/main_status_bar_height">
+
+            <GridView
+                android:id="@+id/extend_groud_top_bottem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/mdp_8"
+                android:layout_marginTop="@dimen/mdp_8"
+                android:cacheColorHint="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="3"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"/>
+        </LinearLayout>
+
+
+        <GridView
+            android:id="@+id/extend_module_drag_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F2F2F2"
+            android:cacheColorHint="@android:color/transparent"
+            android:columnWidth="@dimen/mdp_90"
+            android:gravity="center"
+            android:horizontalSpacing="@dimen/mdp_1"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/mdp_1"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_1"
+            android:background="#F2F2F2"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutGuideKnow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/app_guide"/>
+
+        <Button
+            android:id="@+id/btnGuideKnow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/mdp_56"
+            android:background="@drawable/icon_app_know"/>
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eff1f5">
+
+    <EditText
+        android:id="@+id/editContent"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:paddingTop="@dimen/mdp_8"
+        android:paddingBottom="@dimen/mdp_5"
+        android:paddingLeft="@dimen/mdp_8"
+        android:paddingRight="@dimen/mdp_5"
+        android:background="@drawable/core_bg_bottom_reply_edit_text"
+        android:gravity="top"
+        android:hint="请输入您的答案"
+        android:textSize="@dimen/msp_14"/>
+
+</LinearLayout>

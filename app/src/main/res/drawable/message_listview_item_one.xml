@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:state_selected="true" > 
+            <shape>  
+                <gradient android:angle="270" android:endColor="@color/message_list_item_normal"  
+                    android:startColor="@color/message_list_item_normal" />  
+                   <corners android:radius="@dimen/mdp_4"/>
+                   <stroke android:width="1px"
+                       android:color="@color/detail_line_thecontact"/>
+            </shape>  
+        </item>  
+        <item android:state_pressed="true">  
+            <shape>  
+                <gradient android:angle="270" android:endColor="@color/message_list_item_normal"  
+                    android:startColor="@color/message_list_item_normal"/>  
+                    <corners android:radius="@dimen/mdp_4"/>  
+                    <stroke android:width="1px"
+                       android:color="@color/detail_line_thecontact"/>
+            </shape>  
+        </item>  
+        <item>  
+            <shape> 
+                <gradient android:angle="270" android:endColor="@color/popwindow_list_item_selected"  
+                    android:startColor="@color/popwindow_list_item_selected"/>  
+                    <corners android:radius="@dimen/mdp_4"/> 
+                    <stroke android:width="1px"
+                       android:color="@color/detail_line_thecontact"/>
+            </shape>  
+        </item>  
+</selector>

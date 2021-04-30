@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+    android:background="@color/all_background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mdp_15"
+            android:layout_marginRight="@dimen/mdp_7"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_toLeftOf="@+id/radio_btn"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/location_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#04121A"
+                android:textSize="@dimen/msp_15"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/location_context_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#F28149"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/location_custom_default_hint"
+                    android:textSize="@dimen/msp_12"/>
+
+                <TextView
+                    android:id="@+id/location_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="#8B8C8C"
+                    android:textSize="@dimen/msp_12"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/radio_btn"
+            android:layout_width="@dimen/mdp_25"
+            android:layout_height="@dimen/mdp_25"
+            android:layout_marginRight="@dimen/mdp_15"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/location_custom_selected_icon"/>
+    </RelativeLayout>
+
+    <View style="@style/detail_line"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

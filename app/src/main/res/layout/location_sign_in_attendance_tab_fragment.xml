@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--考勤组tab，显示考勤区间-->
+    <RelativeLayout
+        android:id="@+id/head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_40"
+        android:animateLayoutChanges="true"
+        android:background="@color/about_bg">
+
+        <View
+            android:id="@+id/icon"
+            android:layout_width="4dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="@dimen/mdp_16"
+            android:layout_centerVertical="true"
+            android:background="#28B9FF"/>
+
+        <TextView
+            android:id="@+id/mTvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/icon"
+            android:paddingLeft="@dimen/mdp_9"
+            android:text="@string/location_sign_in_addendance"
+            android:textColor="#000000"
+            android:textSize="@dimen/msp_15"/>
+        <!-- 服务器时间与打卡时间 距离最近的考勤组签到时间区间 05-06 08:00-09:00（5月6号八点到九点）-->
+        <TextView
+            android:id="@+id/mTvAttendanceTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/mdp_14"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/text_sign_in_content"
+            android:textSize="@dimen/msp_14"/>
+
+    </RelativeLayout>
+
+    <!--考勤组打卡-->
+    <FrameLayout
+        android:id="@+id/fragment_layout_attendance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

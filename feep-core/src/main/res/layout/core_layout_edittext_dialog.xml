@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@drawable/core_dialog_fragment_round_background"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="新建文件夹"
+        android:textColor="@color/standard_text_g_100"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/txt_filename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="新建文件夹"
+            android:textColor="@color/standard_text_g_100"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/core_icon_close" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="226dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/core_divide_color" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_20"
+        android:focusable="false"
+        android:text="@string/app_name" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/core_divide_color" />
+
+    <LinearLayout
+        android:id="@+id/llBottomOperateView"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="9dp"
+            android:text="确定"
+            android:textColor="#28B9FF"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="9dp"
+            android:text="确定"
+            android:textColor="#28B9FF"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>
+
+

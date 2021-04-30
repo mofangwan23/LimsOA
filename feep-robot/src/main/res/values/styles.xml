@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design Theme Style: start By ZYP -->
+    <style name="TransparentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="SwipeBackTheme" parent="TransparentTheme">
+        <item name="android:windowAnimationStyle">@style/ActivityTranslate</item>
+    </style>
+
+    <style name="ActivityTranslate" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/swipe_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/swipe_out_right</item>
+        <item name="android:activityCloseEnterAnimation">@anim/swipe_in_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/swipe_out_right</item>
+    </style>
+
+    <style name="DefaultAppTheme" parent="SwipeBackTheme">
+        <item name="colorPrimary">@color/defaultColorPrimary</item>
+        <item name="colorPrimaryDark">@color/defaultColorPrimaryDark</item>
+        <item name="colorAccent">@color/defaultColorAccent</item>
+    </style>
+</resources>

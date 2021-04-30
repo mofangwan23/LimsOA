@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/error_tip_lyt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_background_color"
+    android:gravity="center"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/fe_load_fail_try"
+        android:textColor="#ff555555"
+        android:textSize="@dimen/msp_20" />
+</RelativeLayout>

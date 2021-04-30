@@ -1,0 +1,70 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/standard_bg_g_30"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/mdp_30"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/mdp_15"
+            android:paddingRight="@dimen/mdp_15"
+            android:gravity="center_vertical"
+            android:text="@string/plan_list_filter"
+            android:textColor="#ff9da3a6"
+            android:textSize="@dimen/msp_14"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/listRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/standard_bg_g_30">
+            <cn.flyrise.feep.core.base.views.LoadMoreRecyclerView
+                android:id="@+id/planList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/lyEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/mdp_150"
+                android:layout_height="@dimen/mdp_100"
+                android:src="@drawable/plan_empty"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_20"
+                android:layout_gravity="center"
+                android:text="@string/plan_list_empty_hint"
+                android:textColor="#7AD1FB"
+                android:textSize="@dimen/msp_15"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

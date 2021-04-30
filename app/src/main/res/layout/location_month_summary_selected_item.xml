@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mdp_50"
+    android:background="?attr/selectableItemBackground">
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/mdp_50"
+        android:layout_marginLeft="@dimen/mdp_15"
+        android:layout_gravity="left|center_vertical"
+        android:gravity="center_vertical"
+        android:textColor="#17191A"
+        android:textSize="@dimen/msp_14"/>
+
+    <ImageView
+        android:id="@+id/person_checked"
+        android:layout_width="@dimen/mdp_25"
+        android:layout_height="@dimen/mdp_25"
+        android:layout_marginRight="@dimen/mdp_15"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/sign_in_selected_choose"
+        android:visibility="gone"/>
+    <View
+        style="@style/detail_line"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

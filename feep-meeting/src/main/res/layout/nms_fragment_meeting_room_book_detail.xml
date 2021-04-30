@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/core_dialog_fragment_round_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_48">
+        <TextView
+            style="@style/NMSMeetingItemTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_centerInParent="true"
+            android:text="预定详情"/>
+
+        <ImageView
+            android:id="@+id/nmsIvX"
+            android:layout_width="@dimen/mdp_48"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/mdp_16"
+            android:src="@mipmap/nms_ic_x"/>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/nmsViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </android.support.v4.view.ViewPager>
+
+    <cn.flyrise.feep.meeting7.ui.component.RoomIndicator
+        android:id="@+id/nmsRoomIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mdp_16"/>
+
+</LinearLayout>

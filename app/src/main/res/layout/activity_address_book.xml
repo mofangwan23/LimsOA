@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<cn.flyrise.feep.core.base.views.SwipeBackLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:id="@id/swipeBackLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<include layout="@layout/core_view_transparent"/>-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <cn.flyrise.feep.addressbook.view.AddressBookFilterView
+        android:id="@+id/addressBookFilterView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_42"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            style="@style/ABFilterViewGroup"
+            android:background="@drawable/bg_address_book_filter">
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/ABFilterView"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/ABFilterViewGroup"
+            android:background="@drawable/bg_address_book_filter">
+
+            <TextView style="@style/ABFilterView"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/ABFilterViewGroup"
+            android:background="@drawable/bg_address_book_filter">
+
+            <TextView style="@style/ABFilterView"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/ABFilterViewGroup"
+            android:background="@drawable/bg_address_book_filter">
+
+            <TextView style="@style/ABFilterView"/>
+        </LinearLayout>
+    </cn.flyrise.feep.addressbook.view.AddressBookFilterView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/all_background_color">
+
+            <FrameLayout
+                android:id="@+id/layoutContactContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="@dimen/mdp_20"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:paddingTop="@dimen/mdp_24"
+                    android:paddingBottom="@dimen/mdp_24"
+                    android:orientation="vertical">
+
+                    <cn.flyrise.feep.core.base.views.FELetterListView
+                        android:id="@+id/letterListView"
+                        android:layout_width="@dimen/mdp_20"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/msp_30"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <View style="@style/CoreHorizontalTranslucentLine"/>
+
+            <include
+                android:id="@+id/ivEmptyView"
+                layout="@layout/core_view_empty_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+            <cn.flyrise.feep.addressbook.view.ContactsConfirmView
+                android:id="@+id/contactsConfirmView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_48"
+                android:layout_gravity="bottom"
+                android:visibility="gone">
+            </cn.flyrise.feep.addressbook.view.ContactsConfirmView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/layoutFilterContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>
+<!--</cn.flyrise.feep.core.base.views.SwipeBackLayout>-->

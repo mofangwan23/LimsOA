@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout
+    android:id="@id/swipeBackLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/core_view_transparent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color"
+        android:orientation="vertical">
+        <include layout="@layout/core_view_toolbar" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_copyright_content"
+            android:textColor="@color/userinfo_detail_content"
+            android:padding="@dimen/mdp_12"
+            android:textSize="@dimen/msp_16"/>
+    </LinearLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

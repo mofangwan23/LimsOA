@@ -1,0 +1,8 @@
+
+.slider{min-height:250px;display:block;position:relative;overflow:hidden;}
+.slider ul{list-style:none;}
+.slider-content{float:left;width:100%;display:block;overflow:auto;min-height:250px;}
+.slider .slider-nav{position:absolute;right:0;top:0;background:#666;min-height:250px;}
+.slider .slider-nav ul{padding:0px;}
+.slider .slider-nav li a{padding:0.3em 5px;line-height:13px;text-align:center;color:#fff;font-weight:bold;display:block;text-transform:uppercase;cursor:pointer;}
+.slider .slider-nav li a .selected{color:#000;}

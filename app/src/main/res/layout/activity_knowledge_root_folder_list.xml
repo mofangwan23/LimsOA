@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <cn.flyrise.feep.core.base.views.FEToolbar
+                android:id="@id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:fitsSystemWindows="true"
+                android:minHeight="@dimen/action_bar_size"
+                android:paddingTop="@dimen/status_bar_height"
+                app:layout_scrollFlags="scroll|enterAlways"></cn.flyrise.feep.core.base.views.FEToolbar>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tab_layout_size"
+                android:layout_centerHorizontal="true"
+                app:tabSelectedTextColor="@color/core_default_accent_color"
+                app:tabTextAppearance="@style/NMSTabLayoutStyle"
+                app:tabTextColor="#9B9B9B" />
+
+            <View style="@style/CoreSplitLine" />
+
+            <cn.flyrise.feep.knowledge.view.NoScrollViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></cn.flyrise.feep.knowledge.view.NoScrollViewPager>
+        </LinearLayout>
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/moreaction_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/mdp_62"
+            android:layout_marginRight="@dimen/mdp_8"
+            app:fab_addButtonColorNormal="@color/detail_menu_bg"
+            app:fab_addButtonColorPressed="@color/white_pressed"
+            app:fab_addButtonPlusIconColor="@color/all_background_color"
+            app:fab_labelStyle="@style/menu_labels_style">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/newfloder_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/detail_attachment_bg"
+                app:fab_colorPressed="@color/white_pressed"
+                app:fab_icon="@drawable/knowledge_new_folder" />
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    </RelativeLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

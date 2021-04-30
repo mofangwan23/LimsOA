@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_200"
+                android:scaleType="fitXY"
+                android:src="@drawable/personalbg"/>
+
+            <ImageView
+                android:id="@+id/help_head_btn"
+                android:layout_width="@dimen/mdp_80"
+                android:layout_height="@dimen/mdp_80"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/work_communication_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_60"
+            android:background="@drawable/help_item_bg">
+
+            <ImageView
+                android:id="@+id/work_communication_icon1"
+                android:layout_width="@dimen/mdp_45"
+                android:layout_height="@dimen/mdp_45"
+                android:layout_marginLeft="@dimen/mdp_17"
+                android:layout_marginRight="@dimen/mdp_18"
+                android:layout_centerVertical="true"
+                android:src="@drawable/work_communication"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/work_communication_icon1"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/work_communication"
+                    android:textColor="@color/userinfo_detail_content"
+                    android:textSize="@dimen/msp_16"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_2"
+                    android:text="Communication"
+                    android:textColor="@color/userinfo_detail_title"
+                    android:textSize="@dimen/msp_14"/>
+            </LinearLayout>
+
+            <ImageView style="@style/item_right_icon"/>
+
+            <View
+                style="@style/detail_line"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/collaboration_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_60"
+            android:background="@drawable/help_item_bg">
+
+            <ImageView
+                android:id="@+id/work_communication_icon2"
+                android:layout_width="@dimen/mdp_45"
+                android:layout_height="@dimen/mdp_45"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/mdp_17"
+                android:layout_marginRight="@dimen/mdp_18"
+                android:src="@drawable/collaboration"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/work_communication_icon2"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/collaboration_help"
+                    android:textColor="@color/userinfo_detail_content"
+                    android:textSize="@dimen/msp_16"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_2"
+                    android:text="Collaboration"
+                    android:textColor="@color/userinfo_detail_title"
+                    android:textSize="@dimen/msp_14"/>
+            </LinearLayout>
+
+            <ImageView style="@style/item_right_icon"/>
+
+            <View
+                style="@style/detail_line"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/corporate_culture_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_60"
+            android:background="@drawable/help_item_bg">
+
+            <ImageView
+                android:id="@+id/work_communication_icon3"
+                android:layout_width="@dimen/mdp_45"
+                android:layout_height="@dimen/mdp_45"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/mdp_17"
+                android:layout_marginRight="@dimen/mdp_18"
+                android:src="@drawable/corporate_culture"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/work_communication_icon3"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/corporate_culture_help"
+                    android:textColor="@color/userinfo_detail_content"
+                    android:textSize="@dimen/msp_16"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_2"
+                    android:text="Corporate Culture"
+                    android:textColor="@color/userinfo_detail_title"
+                    android:textSize="@dimen/msp_14"/>
+            </LinearLayout>
+
+            <ImageView style="@style/item_right_icon"/>
+
+            <View
+                style="@style/detail_line"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/knowledge_management_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_60"
+            android:background="@drawable/help_item_bg">
+
+            <ImageView
+                android:id="@+id/work_communication_icon"
+                android:layout_width="@dimen/mdp_45"
+                android:layout_height="@dimen/mdp_45"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/mdp_17"
+                android:layout_marginRight="@dimen/mdp_18"
+                android:src="@drawable/knowledge_management"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/work_communication_icon"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/knowledge_management"
+                    android:textColor="@color/userinfo_detail_content"
+                    android:textSize="@dimen/msp_16"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_2"
+                    android:text="Knowledge Management"
+                    android:textColor="@color/userinfo_detail_title"
+                    android:textSize="@dimen/msp_14"/>
+            </LinearLayout>
+
+            <ImageView style="@style/item_right_icon"/>
+
+            <View
+                style="@style/detail_line"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

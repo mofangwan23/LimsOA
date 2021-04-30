@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/core_view_transparent" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color"
+        android:scrollbars="horizontal|vertical">
+        <include layout="@layout/core_view_toolbar" />
+        <RelativeLayout
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_43"
+            android:layout_below="@id/toolBar"
+            android:layout_marginLeft="-5dip"
+            android:layout_toRightOf="@id/left"
+            android:background="#cccccc"
+            android:padding="@dimen/mdp_8">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/core_search_round_edittext" />
+            <TextView
+                android:id="@+id/search_et"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/mdp_2"
+                android:background="@drawable/core_search_round_edittext"
+                android:drawableLeft="@mipmap/core_icon_search"
+                android:gravity="center"
+                android:hint="@string/search"
+                android:paddingLeft="@dimen/mdp_8"
+                android:textSize="@dimen/msp_13" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/left"
+            android:layout_width="@dimen/mdp_110"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolBar"
+            android:background="@drawable/tabview_rigidity_bg"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/mdp_6">
+            <cn.flyrise.feep.collaboration.view.PersonPositionSwitcher
+                android:id="@+id/switcher"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_42" />
+            <cn.flyrise.android.library.view.ResizeTextView
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/switcher"
+                android:background="@drawable/workflow_backbutton_bg"
+                android:gravity="center"
+                android:paddingBottom="@dimen/mdp_3"
+                android:paddingLeft="@dimen/mdp_10"
+                android:paddingTop="@dimen/mdp_3"
+                android:scaleType="fitXY"
+                android:shadowColor="#55000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.5"
+                android:shadowRadius="1"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/msp_15" />
+            <cn.flyrise.android.library.view.addressbooklistview.AddressBookListView xmlns:feep="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/select"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/back"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:scrollbars="none"
+                feep:ptrLoadingViewSizeType="small" />
+        </RelativeLayout>
+        <ListView
+            android:id="@+id/added"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@id/searchBar"
+            android:layout_below="@id/searchBar"
+            android:background="#ffe9eff1"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:fadingEdge="none"></ListView>
+    </RelativeLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_background_color">
+
+    <TextView
+        android:id="@+id/prompTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_100"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="#04121A"
+        android:textSize="@dimen/msp_17"/>
+
+    <TextView
+        android:id="@+id/prompSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_15"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/prompTitle"
+        android:textColorHint="#676F73"
+        android:textSize="@dimen/msp_14"/>
+
+
+</RelativeLayout>

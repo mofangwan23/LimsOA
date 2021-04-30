@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/mLayoutCustom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/mLayoutHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_3"
+            android:layout_marginBottom="@dimen/mdp_3"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/mdp_50"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_3"
+                android:layout_marginBottom="@dimen/mdp_3"
+                android:layout_marginLeft="@dimen/mdp_8"
+                android:layout_marginRight="@dimen/mdp_10"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/mImgRightIcon"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mTvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/text_sign_in_title"
+                    android:textSize="@dimen/msp_16"/>
+
+                <TextView
+                    android:id="@+id/mTvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_2"
+                    android:layout_marginRight="@dimen/mdp_8"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/text_sign_in_content"
+                    android:textSize="@dimen/msp_13"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/mImgRightIcon"
+                android:layout_width="@dimen/mdp_15"
+                android:layout_height="@dimen/mdp_15"
+                android:layout_marginRight="@dimen/mdp_15"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_arrow_icon"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/detail_line"
+            style="@style/detail_line"
+            android:layout_below="@+id/mLayoutHead"/>
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/detail_line"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/mLayoutSignIn"
+                android:layout_width="113dp"
+                android:layout_height="113dp"
+                android:background="@drawable/location_sign_icon"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location_sign"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/mTvServiceTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mTvErrorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/sign_in_not_allow"/>
+
+                <TextView
+                    android:id="@+id/mTvError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_5"
+                    android:textColor="#FF929292"
+                    android:textSize="@dimen/msp_12"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mLayoutSetting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location_sign_in_custom_null"
+            android:textColor="#000000"
+            android:textSize="@dimen/mdp_15"/>
+
+        <TextView
+            android:id="@+id/mTvSetting"
+            android:layout_width="87dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/nms_bg_blue_btn_round_enable"
+            android:gravity="center"
+            android:text="@string/location_sign_in_custom_setting"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/mdp_15"/>
+
+    </LinearLayout>
+</RelativeLayout>

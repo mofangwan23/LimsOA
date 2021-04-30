@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:feep="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color_one"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_0"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    style="@style/detail_line"
+                    android:layout_marginTop="@dimen/mdp_12"/>
+
+                <EditText
+                    android:id="@+id/etScheduleTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:paddingTop="@dimen/mdp_12"
+                    android:paddingBottom="@dimen/mdp_12"
+                    android:paddingLeft="@dimen/text_paading"
+                    android:paddingRight="@dimen/mdp_42"
+                    android:background="@color/all_background_color"
+                    android:gravity="center_vertical"
+                    android:hint="@string/collaboration_title"
+                    android:maxLength="400"
+                    android:textColor="@color/text_dark_color"
+                    android:textSize="@dimen/text_little_size"/>
+
+                <include layout="@layout/view_line"/>
+
+                <View
+                    style="@style/detail_line"
+                    android:layout_marginTop="@dimen/mdp_12"/>
+
+                <FrameLayout
+                    android:id="@+id/layoutRichContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/all_background_color"
+                    android:minHeight="@dimen/mdp_136">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <WebView
+                            android:id="@+id/scheduleWebView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="@dimen/mdp_136"
+                            android:visibility="gone">
+                        </WebView>
+
+                        <EditText
+                            android:id="@+id/etScheduleContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:paddingTop="@dimen/mdp_12"
+                            android:paddingBottom="@dimen/mdp_24"
+                            android:paddingLeft="@dimen/text_paading"
+                            android:background="@color/all_background_color"
+                            android:gravity="top"
+                            android:hint="@string/collaboration_content"
+                            android:maxLength="8000"
+                            android:minHeight="@dimen/mdp_136"
+                            android:minLines="6"
+                            android:textColor="@color/text_dark_color"
+                            android:textSize="@dimen/text_little_size"
+                            android:visibility="visible"/>
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <include layout="@layout/view_line"/>
+
+                <cn.flyrise.feep.schedule.view.SchedulePreferenceView
+                    android:id="@+id/scheduleStartTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_16"
+                    feep:scheduleLabel="@string/schedule_lbl_startTime"/>
+
+                <include layout="@layout/view_line"/>
+
+                <cn.flyrise.feep.schedule.view.SchedulePreferenceView
+                    android:id="@+id/scheduleEndTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    feep:scheduleLabel="@string/schedule_lbl_endTime"/>
+
+                <cn.flyrise.feep.schedule.view.SchedulePreferenceView
+                    android:id="@+id/schedulePromptTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_16"
+                    feep:scheduleLabel="@string/schedule_lbl_promptTime"/>
+
+                <include layout="@layout/view_line"/>
+
+                <cn.flyrise.feep.schedule.view.SchedulePreferenceView
+                    android:id="@+id/scheduleRepeatTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    feep:scheduleLabel="@string/schedule_lbl_repeatTime"/>
+
+                <include layout="@layout/view_line"/>
+
+                <cn.flyrise.feep.schedule.view.SchedulePreferenceView
+                    android:id="@+id/scheduleSharePerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    feep:scheduleIcon="@drawable/item_username_icon"
+                    feep:scheduleLabel="@string/schedule_lbl_sharePerson"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_52"
+            android:background="@color/all_background_color">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_0_8"
+                android:background="@color/detail_line"/>
+
+            <Button
+                android:id="@+id/btnScheduleSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_36"
+                android:layout_marginLeft="@dimen/mdp_20"
+                android:layout_marginRight="@dimen/mdp_20"
+                android:layout_centerInParent="true"
+                android:background="@drawable/nms_bg_blue_btn_round_enable"
+                android:stateListAnimator="@null"
+                android:text="@string/submit"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/msp_18"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

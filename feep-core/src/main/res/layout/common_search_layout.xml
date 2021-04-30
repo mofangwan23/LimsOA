@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutContactSearch"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mdp_44">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_28"
+        android:layout_marginLeft="@dimen/mdp_15"
+        android:layout_marginRight="@dimen/mdp_15"
+        android:layout_centerInParent="true"
+        android:background="@drawable/core_search_edittext"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/mdp_15"
+            android:layout_height="@dimen/mdp_15"
+            android:layout_marginRight="@dimen/mdp_10"
+            android:background="@mipmap/core_icon_search"/>
+
+        <TextView
+            android:id="@+id/search_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/common_search_title"
+            android:textColor="@color/core_standard_second_text_color"
+            android:textSize="@dimen/msp_15"/>
+    </LinearLayout>
+    <View
+        style="@style/detail_line"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

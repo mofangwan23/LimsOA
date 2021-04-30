@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <cn.flyrise.feep.main.NewMainMessageItemView
+        android:id="@+id/taskMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/core_bg_color"
+        app:ivIcon="@drawable/icon_task_news"
+        app:tvTitle="@string/message_misson_title">
+    </cn.flyrise.feep.main.NewMainMessageItemView>
+
+
+    <cn.flyrise.feep.main.NewMainMessageItemView
+        android:id="@+id/unReadMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/core_bg_color"
+        app:ivIcon="@drawable/icon_pending_news"
+        app:tvTitle="@string/message_nofity_title">
+    </cn.flyrise.feep.main.NewMainMessageItemView>
+
+
+    <cn.flyrise.feep.main.NewMainMessageItemView
+        android:id="@+id/groupMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/core_bg_color"
+        android:visibility="gone"
+        app:ivIcon="@drawable/icon_circle_news"
+        app:tvTitle="@string/message_cyrcle_item">
+    </cn.flyrise.feep.main.NewMainMessageItemView>
+
+
+    <cn.flyrise.feep.main.NewMainMessageItemView
+        android:id="@+id/systemMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/core_bg_color"
+        app:ivIcon="@drawable/icon_system_news"
+        app:tvTitle="@string/message_system_title">
+    </cn.flyrise.feep.main.NewMainMessageItemView>
+
+
+</LinearLayout>

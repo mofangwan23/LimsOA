@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--底层使用蓝色填充色-->
+    <item>
+        <shape>
+            <solid android:color="@color/knowlegde_title_text_color"/>
+        </shape>
+    </item>
+
+    <!--上面一层距离底层的顶部1dp,距离底部1dp,类似marginTop,填充色为白色，这样就形成了一个带有蓝色顶部边线和底部边线的白色背景的图-->
+    <item android:bottom="@dimen/radiobutton_knownlege"
+        android:top="@dimen/radiobutton_knownlege">
+        <shape>
+            <solid android:color="#ffffff"/>
+        </shape>
+    </item>
+</layer-list>

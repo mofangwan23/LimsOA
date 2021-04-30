@@ -1,0 +1,108 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bdp_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <FrameLayout
+        android:id="@+id/flCenter"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <View
+        style="@style/detail_line"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/lyMain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivMain"
+                android:layout_width="@dimen/mdp_20"
+                android:layout_height="@dimen/mdp_20"
+                android:layout_marginTop="@dimen/mdp_7"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/plan_list_click"/>
+            <TextView
+                android:id="@+id/tvMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_4"
+                android:layout_marginBottom="@dimen/mdp_5"
+                android:layout_gravity="center_horizontal"
+                android:text="查看"
+                android:textColor="#28B9FF"
+                android:textSize="@dimen/msp_10"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyNew"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivNew"
+                android:layout_width="@dimen/mdp_20"
+                android:layout_height="@dimen/mdp_20"
+                android:layout_marginTop="@dimen/mdp_7"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/plan_create"/>
+            <TextView
+                android:id="@+id/tvNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_4"
+                android:layout_marginBottom="@dimen/mdp_5"
+                android:layout_gravity="center_horizontal"
+                android:text="新增"
+                android:textSize="@dimen/msp_10"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyStatistics"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivStatistics"
+                android:layout_width="@dimen/mdp_20"
+                android:layout_height="@dimen/mdp_20"
+                android:layout_marginTop="@dimen/mdp_7"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/plan_statistics"/>
+            <TextView
+                android:id="@+id/tvStatistics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_4"
+                android:layout_marginBottom="@dimen/mdp_5"
+                android:layout_gravity="center_horizontal"
+                android:text="统计"
+                android:textSize="@dimen/msp_10"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

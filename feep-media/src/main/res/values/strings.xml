@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">feep-media</string>
+    <string name="record_size_error">录音文件异常，请重新录制</string>
+</resources>

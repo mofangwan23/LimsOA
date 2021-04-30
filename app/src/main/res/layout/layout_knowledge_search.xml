@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@color/bdp_white">
+
+    <RelativeLayout
+        android:id="@+id/layout_knowledge_rl_Search"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/mdp_28"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/mdp_10"
+        android:background="@drawable/core_search_edittext">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/core_icon_search"
+            android:drawablePadding="@dimen/mdp_8"
+            android:text="搜索"
+            android:textColor="@color/core_standard_second_text_color"
+            android:textSize="@dimen/msp_14"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_knowledge_create_and_upload"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/layout_knowledge_search_iv_new_folder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mdp_15"
+            android:layout_weight="1"
+            android:src="@drawable/icon_new_folder" />
+
+        <ImageView
+            android:id="@+id/layout_knowledge_search_iv_upload_file"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mdp_15"
+            android:layout_marginRight="@dimen/mdp_15"
+            android:layout_weight="1"
+            android:src="@drawable/icon_upload_file"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

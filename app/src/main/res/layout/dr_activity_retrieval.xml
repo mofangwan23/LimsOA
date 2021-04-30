@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_44">
+
+        <TextView
+            android:id="@+id/drTvSearchCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/mdp_16"
+            android:layout_marginRight="@dimen/mdp_16"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/core_default_accent_color"
+            android:textSize="@dimen/msp_15"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/drTvSearchCancel">
+
+            <EditText
+                android:id="@+id/drEtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_28"
+                android:layout_marginLeft="@dimen/mdp_15"
+                android:background="@drawable/core_search_edittext"
+                android:drawableLeft="@mipmap/core_icon_search"
+                android:drawablePadding="@dimen/mdp_9"
+                android:hint="搜索你想要的内容"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingLeft="@dimen/mdp_10"
+                android:singleLine="true"
+                android:textColorHint="@color/core_standard_second_text_color"
+                android:textSize="@dimen/msp_15"/>
+
+            <ImageView
+                android:id="@+id/drIvDeleteIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:paddingRight="@dimen/mdp_15"
+                android:src="@mipmap/core_icon_delete"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/CoreSplitLine"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/core_search_layout_background">
+
+            <LinearLayout
+                android:id="@+id/drLayoutKeyWordArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_53"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <GridView
+                    android:id="@+id/drGVSearchType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/mdp_36"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:columnWidth="@dimen/mdp_72"
+                    android:gravity="center"
+                    android:horizontalSpacing="@dimen/mdp_1"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="3"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="@dimen/mdp_24">
+                </GridView>
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/drIvErrorView"
+                layout="@layout/core_view_empty_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/drRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/core_search_layout_background"
+            android:cacheColorHint="@android:color/transparent"
+            android:visibility="gone"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,maximum-scale=3.0, minimum-scale=1.0, user-scalable=yes">
+	<title>知识管理</title>
+
+	<link rel="stylesheet" href="../../css/jmobile/global-j.css">
+	<script type="text/javascript" src="../../js/header.js"></script>
+	<link rel="stylesheet" href="../../css/orgtree.css" type="text/css"></link>
+	<link rel="stylesheet" href="../../css/vote.css" type="text/css"></link>
+	<script type="text/javascript" src="../../js/cordova.js"></script>
+	<script type="text/javascript" src="../../js/cn.flyrise.appinit.js"></script>
+
+	<style>
+     .ui-mobile .ui-page-active
+     {
+     min-height:96%;
+     }
+</style>
+
+</head>
+
+<body ng-app="angularKnowledgeApp" ng-controller="knowledgeController">
+
+<div data-role="page" id="pageUserknowledge" class="minbox-bg" data-title="知识管理" ng-cloak>
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<a data-role="button" href="#" data-icon="back" data-iconpos="notext" ng-show="isshowUser();" ng-click="_gobackUser();"></a>
+		<a data-role="button" title="切换到单位文件夹" href="#pageCorpknowledge" ng-click="_showCorpKM();" class="ui-btn-right" data-icon="arrow-r" data-iconpos="notext">切换到单位文件夹</a>
+		<h3>{{userTitlebar}}</h3>
+
+	</div>
+
+	<div data-role="content" class="minbox-bg" style="margin-top:-6px;">
+		<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="搜索" id="kmlistviewuser" class="list-radi">
+			<li ng-repeat="x in userFolders | orderBy:['isFolder','filetype'] " data-icon="false" km-repeat-directive>
+				<a href="#" ng-click="_showmoreUser(x.folderid ? x.folderid : x.fileid,x.isFolder,x)" style="padding-left:5.25em!important;">
+					<img src="{{_replaceSrc(x.imgsrc)}}" class="flodIcon">
+					<h3 class="defi-gradTitleFont">{{x.foldername ? x.foldername : x.title+x.filetype}}</h3>
+					<p class="defi-gradFont">{{x.pubTimeLong=="0"?"":x.pubTimeLong | date:'yyyy年MM月dd日 HH:mm'}}</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<div data-role="page" id="pageCorpknowledge" class="minbox-bg" data-title="知识管理" ng-cloak>
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<a data-role="button" href="#" data-icon="back" data-iconpos="notext" ng-show="isshowCorp();" ng-click="_gobackCorp();"></a>
+		<a data-role="button" title="切换到个人文件夹" href="#pageUserknowledge" ng-show="isshowPublish();" ng-click="_showUserKM();" class="ui-btn-right" data-icon="arrow-r" data-iconpos="notext">切换到个人文件夹</a>
+		<h3>{{corpTitlebar}}</h3>
+	</div>
+
+	<div data-role="content" class="minbox-bg" style="margin-top:-6px;">
+		<ul data-role="listview"  data-inset="true" data-filter="true" data-filter-placeholder="搜索" id="kmlistviewcorp" class="list-radi">
+			<li ng-repeat="x in corpFolders | orderBy:['isFolder','filetype'] " data-icon="false" km-repeat-directive>
+				<a href="#" ng-click="_showmoreCorp(x.folderid ? x.folderid : x.fileid,x.isFolder,x)" style="padding-left:5.25em!important;">
+					<img src="{{_replaceSrc(x.imgsrc)}}" class="flodIcon">
+					<h3 class="defi-gradTitleFont">{{x.foldername ? x.foldername : x.title+x.filetype}}</h3>
+					<p class="defi-gradFont">{{x.pubTimeLong | date:'yyyy年MM月dd日 HH:mm'}}</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<div data-role="page" id="pageknowledgeshow" ng-cloak>
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<a data-role="button" href="{{_pagename}}" data-icon="back" data-iconpos="notext" ng-show="isDetail()"></a>
+		<h3>{{detailTitlebar}}</h3>
+	</div>
+	<div data-role="content" class="box-padding">
+		<div class="ui-grid-solo" style="width:100%";>
+			<div class="ui-block-a" style="text-align:center;">
+				<img style="{{imgstyle}}" src="{{imgsrc.replace('/wechat','../..')}}"/>
+			</div>
+			<div class="ui-block-a">
+				<h3 style="text-align:center;" class="defi-gradTitleFont">{{showfilename}}</h3>
+			</div>
+			<div calss="ui-block-a">
+				<table border="0" cellspacing="0" cellpadding="0" class="unit-inftab">
+					<tr>
+						<th>发布人员：</th>
+						<td>{{pubname}}</td>
+					</tr>
+					<tr>
+						<th>发布时间：</th>
+						<td>{{pubtime | date:"yyyy年MM月dd日 HH:mm"}}</td>
+					</tr>
+					<tr>
+						<th>文件大小：</th>
+						<td>{{filesize}}</td>
+					</tr>
+					<tr>
+						<th>有效时间：</th>
+						<td>{{expiredtime | date:'yyyy年MM月dd日 HH:mm'}}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div data-theme="a" data-role="footer" data-position="fixed" data-tap-toggle="false">
+		<div data-role="navbar" data-iconpos="top">
+			<div style="text-align:center;">
+				<a href="#" data-role="button" id="deletebtn" ng-click="_deletefile(fileid);" class="defi-orange-button" ng-show="_hasdel()" style="width:5.5em; background-color:#78909C!important;">删除  </a>
+				<a href="#pagecontact" data-role="button" id="sharebtn" ng-click="_sharefile(fileid);" class="defi-orange-button" ng-show="_haspublish()" style="width:5.5em;">分享  </a>
+				<a href="#" data-role="button" id="downloadbtn" class="defi-green-button" ng-click="_dodownload(fileid);" style="width:5.5em;">下载  </a>
+			</div>
+		</div>
+	</div>
+</div>
+<orgTree org-tree></orgTree>
+
+<script type="text/javascript" src="../../js/angular/angularOrgTreeApp.js"></script>
+<script type="text/javascript" src="../../js/angular/angularKnowledgePhonegap.js"></script>
+
+</body>
+</html>

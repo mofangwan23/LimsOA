@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mdp_300"
+    android:orientation="vertical">
+    <!--手写签批展示版-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_70"
+        android:background="@color/all_background_color">
+        <ImageView
+            android:id="@+id/writting_show"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_70"/>
+    </RelativeLayout>
+    <!--手写签批输入版-->
+
+    <cn.flyrise.feep.form.widget.handWritting.FESlate
+        android:id="@+id/writting_slate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_180"
+        android:background="@drawable/handwritting_slate_background"/>
+</LinearLayout>

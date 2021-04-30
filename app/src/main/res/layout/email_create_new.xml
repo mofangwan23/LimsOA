@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color">
+
+        <cn.flyrise.feep.core.base.views.FEToolbar
+            android:id="@id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="@dimen/action_bar_size">
+        </cn.flyrise.feep.core.base.views.FEToolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llBottomMenu"
+            android:layout_below="@id/toolBar"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <cn.flyrise.feep.email.views.EmailAddressLayout
+                    android:id="@+id/tagRecipients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/mdp_2"
+                    android:layout_marginTop="@dimen/mdp_8"
+                    app:addressHint="@string/email_addreceiver"
+                    app:previewLabel="@string/email_receiver"
+                    app:rightIcon="@drawable/icon_person_add">
+                </cn.flyrise.feep.email.views.EmailAddressLayout>
+
+                <View style="@style/CreateMailLineStyle"/>
+
+                <LinearLayout
+                    android:id="@+id/llCopyAndBlind"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <cn.flyrise.feep.email.views.EmailAddressLayout
+                        android:id="@+id/tagCopyTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/mdp_2"
+                        android:layout_marginTop="@dimen/mdp_4"
+                        app:addressHint="@string/email_add_copy"
+                        app:previewLabel="@string/email_copy"
+                        app:rightIcon="@drawable/icon_person_add">
+                    </cn.flyrise.feep.email.views.EmailAddressLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/mdp_0_5"
+                        android:layout_marginLeft="@dimen/mdp_10"
+                        android:layout_marginRight="@dimen/mdp_10"
+                        android:background="@android:color/darker_gray"/>
+
+                    <cn.flyrise.feep.email.views.EmailAddressLayout
+                        android:id="@+id/tagBlindCopy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/mdp_2"
+                        android:layout_marginTop="@dimen/mdp_4"
+                        app:addressHint="@string/email_add_bc"
+                        app:previewLabel="@string/email_bc"
+                        app:rightIcon="@drawable/icon_person_add">
+                    </cn.flyrise.feep.email.views.EmailAddressLayout>
+
+                    <View style="@style/CreateMailLineStyle"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvMailSender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/mdp_12"
+                    android:paddingLeft="@dimen/mdp_10"
+                    android:paddingRight="@dimen/mdp_10"
+                    android:paddingTop="@dimen/mdp_12"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/msp_16"/>
+
+                <View style="@style/CreateMailLineStyle"/>
+
+                <EditText
+                    android:id="@+id/etMailTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/email_theme"
+                    android:maxLength="100"
+                    android:paddingBottom="@dimen/mdp_12"
+                    android:paddingLeft="@dimen/mdp_10"
+                    android:paddingRight="@dimen/mdp_10"
+                    android:paddingTop="@dimen/mdp_12"
+                    android:singleLine="true"
+                    android:textSize="@dimen/msp_16"
+                    />
+
+                <View style="@style/CreateMailLineStyle"/>
+
+                <EditText
+                    android:id="@+id/etMailContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:gravity="top|left"
+                    android:hint="@string/email_body"
+                    android:minLines="12"
+                    android:paddingBottom="@dimen/mdp_12"
+                    android:paddingLeft="@dimen/mdp_10"
+                    android:paddingRight="@dimen/mdp_10"
+                    android:paddingTop="@dimen/mdp_12"
+                    android:textSize="@dimen/msp_16"
+                    />
+
+                <cn.flyrise.feep.email.views.TitleBarWebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:visibility="gone">
+                </cn.flyrise.feep.email.views.TitleBarWebView>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/llBottomMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="#F2F2F2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivMailIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/mdp_12"
+                android:src="@drawable/accessory_icon"/>
+
+            <TextView
+                android:id="@+id/tvAttachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mdp_6"
+                android:drawablePadding="@dimen/mdp_4"
+                android:gravity="center"
+                android:paddingBottom="@dimen/mdp_12"
+                android:paddingLeft="@dimen/mdp_10"
+                android:paddingRight="@dimen/mdp_10"
+                android:paddingTop="@dimen/mdp_12"
+                android:text="@string/collaboration_attachment"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <!---->
+</RelativeLayout>

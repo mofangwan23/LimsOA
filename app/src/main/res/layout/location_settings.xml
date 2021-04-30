@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:switch="http://schemas.android.com/apk/res-auto"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/thecontact_background"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <LinearLayout
+            android:id="@+id/mRlAutoLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_10"
+            android:orientation="vertical">
+
+            <View style="@style/detail_line"/>
+
+            <RelativeLayout
+                style="@style/LocationSettingLayout">
+
+                <TextView
+                    style="@style/LocationSettingTitle"
+                    android:text="@string/location_auto_report"/>
+                <FrameLayout
+                    style="@style/LocationSettingIcon">
+                    <cn.flyrise.feep.core.base.views.UISwitchButton
+                        android:id="@+id/mButAutoBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:checked="true"
+                        switch:bmHeight="@dimen/mdp_3000"
+                        switch:bmWidth="@dimen/mdp_50"/>
+                </FrameLayout>
+            </RelativeLayout>
+
+            <View style="@style/detail_line"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_8"
+                android:layout_marginLeft="@dimen/mdp_8"
+                android:layout_marginRight="@dimen/mdp_8"
+                android:text="@string/location_auto_report_des"
+                android:textColor="@color/text_bright_color"
+                android:textSize="@dimen/msp_10"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/customLayout"
+            style="@style/LocationSettingLayout"
+            android:layout_marginTop="@dimen/mdp_10">
+
+            <TextView
+                style="@style/LocationSettingTitle"
+                android:text="@string/location_custom_metting_title"/>
+
+            <ImageView
+                android:layout_width="@dimen/mdp_12"
+                android:layout_height="@dimen/mdp_12"
+                android:layout_marginRight="@dimen/mdp_15"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/sign_in_right_icon"/>
+
+            <View style="@style/detail_line"/>
+
+            <View
+                style="@style/detail_line"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/LocationSettingLayout"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/LocationSettingTitle"
+                android:text="急速签到"/>
+            <FrameLayout
+                style="@style/LocationSettingIcon">
+
+                <cn.flyrise.feep.core.base.views.UISwitchButton
+                    android:id="@+id/mButSignInRepidly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false"
+                    switch:bmHeight="@dimen/mdp_3000"
+                    switch:bmWidth="@dimen/mdp_50"/>
+            </FrameLayout>
+            <View
+                style="@style/detail_line"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

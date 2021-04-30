@@ -1,0 +1,192 @@
+.ui-input-search { /*搜索框增加外框去掉阴影效果*/
+	margin: .3em 0;
+	border-width: 1px;
+	background-color: #F9F9F9;
+}
+
+.defi-change-btn-l { /*定义切换按钮-左*/
+	border: 1px #5d9cec solid !important;
+	-webkit-border-top-left-radius: 5px !important;
+	border-top-left-radius: 5px !important;
+	-webkit-border-bottom-left-radius: 5px !important;
+	border-bottom-left-radius: 5px !important;
+	-webkit-border-top-right-radius: none !important;
+	border-top-right-radius: none !important;
+	-webkit-border-bottom-right-radius: none !important;
+	border-bottom-right-radius: none !important;
+	padding: .5em 1em !important;
+	font-size: .9em !important;
+	color: #000 !important;
+	background-color: #FFF !important;
+}
+
+.defi-change-btn-r { /*定义切换按钮-右*/
+	border: 1px #5d9cec solid !important;
+	-webkit-border-top-left-radius: none !important;
+	border-top-left-radius: none !important;
+	-webkit-border-bottom-left-radius: none !important;
+	border-bottom-left-radius: none !important;
+	-webkit-border-top-right-radius: .5em !important;
+	border-top-right-radius: 5px !important;
+	-webkit-border-bottom-right-radius: 5px !important;
+	border-bottom-right-radius: 5px !important;
+	margin-right: 0 !important;
+	padding: .5em 1em !important;
+	font-size: .9em !important;
+	color: #000 !important;
+	background-color: #FFF !important;
+}
+
+.defi-change-btn-block { /*定义切换按钮-未激活*/
+	font-size: .9em !important;
+	color: #000 !important;
+	background-color: #FFF !important;
+}
+
+.defi-change-btn-block-active { /*定义切换按钮-激活*/
+	font-size: .9em !important;
+	color: #FFF !important;
+	background-color: #5d9cec !important;
+}
+
+.defi-blue-button { /*自定义蓝色按钮*/
+	padding-top: 0.6em;
+	background-color: #5B8CC4 !important;
+	-webkit-border-radius: 0.5em;
+	border-radius: 0.5em;
+	font-size: 1em !important;
+	font-family: Microsoft Yahei;
+	color: #FFF !important;
+	text-align: center;
+	-webkit-box-sizing: none;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: none !important;
+	margin-top: .3em;
+	margin-bottom: .3em;
+}
+
+.defi-blue-button:hover {
+	background-color: #4e81bb !important;
+}
+
+.clearfix:after {
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
+.clearfix { display: inline-table; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+
+
+.activity_img{
+    margin: 20px 0 0 10px;
+}
+
+
+.button_content {
+    top: auto !important;
+    bottom: 3px !important;
+    right: 5px !important;
+}
+
+.joined_user {
+    height: 75px;
+}
+.foot_bar
+{
+position:fix;
+z-index:40;
+
+z-index:20;
+}
+.discuss_bar{
+	position:fixed;
+	  background-color: rgb(238, 238, 238);
+	bottom:0px;
+    transition: none 0.5s ease;
+    transition-property: all;
+    -webkit-transition: none 0.5s ease;
+    -webkit-transition-property: all;
+    z-index:10;
+}
+.silde_up{
+bottom:67px;
+}
+.status{
+  display: inline-block !important;
+    position: initial !important;
+    margin-top:0px;
+    padding-right:3px;
+  
+}
+.totalPerson{
+top:auto !important;
+bottom:22px !important;
+right:5% !important;
+line-height:0px !important;
+padding-bottom:5px !important;
+text-align: right;
+border-style:none !important;
+}
+.totalPerson:before{
+	content:"";
+	position:relative;
+    top:3px;
+	width:20px;
+	height:20px;
+	background:url(images/person.png) 0 6px no-repeat;
+	background-size: 15px 15px;
+	display:inline-block;
+
+	}
+.adress_name:before{
+    content:"";
+    position:relative;
+    top:3px;
+	width:15px;
+	height:15px;
+	background:url(images/adress.png) 2px 2px no-repeat;
+	background-size: 11px 14px;
+	display:inline-block;
+	}
+.time_name:before{
+    content:"";
+    position:relative;
+    top:3px;
+	width:15px;
+	height:15px;
+	background:url(images/time.png) 2px 2px no-repeat;
+	background-size: 11px 11px;
+	display:inline-block;
+	}
+.class_name:before{
+    content:"";
+    position:relative;
+    top:3px;
+	width:15px;
+	height:15px;
+	background:url(images/class.png) 2px 2px no-repeat;
+	background-size: 11px 11px;
+	display:inline-block;
+	}	
+.person_name:before{
+    content:"";
+    position:relative;
+    top:3px;
+	width:15px;
+	height:15px;
+	background:url(images/person.png) 2px 2px no-repeat;
+	background-size: 11px 11px;
+	display:inline-block;
+	}	
+.activity_margin{
+    margin: 0px 12px 0 13px;
+}	
+	

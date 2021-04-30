@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_60">
+
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="@dimen/mdp_42"
+            android:layout_height="@dimen/mdp_42"
+            android:layout_marginLeft="@dimen/mdp_15"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mdp_9"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/user_icon"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#191919"
+                android:textSize="@dimen/msp_16"/>
+            <TextView
+                android:id="@+id/user_department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_6"
+                android:textColor="#9B9B9B"
+                android:textSize="@dimen/msp_14"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/mdp_16"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#9B9B9B"
+            android:textSize="@dimen/msp_14"/>
+    </RelativeLayout>
+
+    <View
+        style="@style/detail_line"
+        android:layout_alignParentBottom="true"/>
+
+</LinearLayout>

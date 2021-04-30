@@ -1,0 +1,203 @@
+.ui-input-search { /*搜索框增加外框去掉阴影效果*/
+	margin: .3em 0;
+	border-width: 1px;
+	background-color: #F9F9F9;
+}
+
+.defi-change-btn-l { /*定义切换按钮-左*/
+	border: 1px #5d9cec solid !important;
+	-webkit-border-top-left-radius: 5px !important;
+	border-top-left-radius: 5px !important;
+	-webkit-border-bottom-left-radius: 5px !important;
+	border-bottom-left-radius: 5px !important;
+	-webkit-border-top-right-radius: none !important;
+	border-top-right-radius: none !important;
+	-webkit-border-bottom-right-radius: none !important;
+	border-bottom-right-radius: none !important;
+	padding: .5em 1em !important;
+	font-size: .9em !important;
+	color: #000 !important;
+	background-color: #FFF !important;
+}
+
+.defi-change-btn-r { /*定义切换按钮-右*/
+	border: 1px #5d9cec solid !important;
+	-webkit-border-top-left-radius: none !important;
+	border-top-left-radius: none !important;
+	-webkit-border-bottom-left-radius: none !important;
+	border-bottom-left-radius: none !important;
+	-webkit-border-top-right-radius: .5em !important;
+	border-top-right-radius: 5px !important;
+	-webkit-border-bottom-right-radius: 5px !important;
+	border-bottom-right-radius: 5px !important;
+	margin-right: 0 !important;
+	padding: .5em 1em !important;
+	font-size: .9em !important;
+	color: #000 !important;
+	background-color: #FFF !important;
+}
+
+.defi-change-btn-block { /*定义切换按钮-未激活*/
+	font-size: .9em !important;
+	color: #000 !important;
+	background-color: #FFF !important;
+}
+
+.defi-change-btn-block-active { /*定义切换按钮-激活*/
+	font-size: .9em !important;
+	color: #FFF !important;
+	background-color: #5d9cec !important;
+}
+
+.ui-btn-icon-notext,.ui-header button.ui-btn.ui-btn-icon-notext,.ui-footer button.ui-btn.ui-btn-icon-notext
+	{ /*将日历的按钮修正变小*/
+	padding: 0;
+	width: 1.5em;
+	height: 1.5em;
+	text-indent: -9999px;
+	white-space: nowrap !important;
+	/*margin-top: .3em !important;*/
+}
+
+.ui-collapsible-heading-toggle { /*选项自定义标题*/
+	font-size: .95em;
+	background-color: #555555 !important;
+	border: 0px;
+	color: #FFFFFF !important;
+	padding-top: .6em;
+	padding-bottom: .6em;
+}
+
+.ui-input-text { /*输入框去外框及掉阴影效果*/
+	background-color: #F9F9F9;
+	border: 1px #AAA solid;
+}
+
+.defi-blue-button { /*自定义蓝色按钮*/
+	padding-top: 0.6em;
+	background-color: #5B8CC4 !important;
+	-webkit-border-radius: 0.5em;
+	border-radius: 0.5em;
+	font-size: 1em !important;
+	font-family: Microsoft Yahei;
+	color: #FFF !important;
+	text-align: center;
+	-webkit-box-sizing: none;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: none !important;
+	margin-top: .3em;
+	margin-bottom: .3em;
+}
+
+.defi-blue-button:hover {
+	background-color: #4e81bb !important;
+}
+
+#calendarLocation a.ui-btn-active { /*设置激活当天的背景颜色*/
+	background-color:#ff8000 !important;
+    color: #fff!important;
+}
+
+.ui-page-theme-a .ui-btn,html .ui-bar-a .ui-btn,html .ui-body-a .ui-btn,html body .ui-group-theme-a .ui-btn,html head+body .ui-btn.ui-btn-a,.ui-page-theme-a .ui-btn:visited,html .ui-bar-a .ui-btn:visited,html .ui-body-a .ui-btn:visited,html body .ui-group-theme-a .ui-btn:visited,html head+body .ui-btn.ui-btn-a:visited
+	{ /*设置日历中每天的背景颜色*/
+	background-color: #ecf0f1;
+	border-color: #ddd;
+}
+
+li a.ng-binding { /*设置列表内容背景*/
+	background-color: #FFF !important;
+	color:#333!important;
+	font-weight:100!important;
+	padding-top:15px!important;
+	padding-bottom:15px!important;
+	border-top:1px #e5e5e5 solid!important;
+	border-bottom:1px #e5e5e5 solid!important;
+}
+
+.jbstyle { /*日期角标设置*/
+	color:#df0000;
+	font-size:.9em;
+    position:absolute; top:-1px; right:3px; z-index:500;
+}
+
+.defi-bgSylte { /*列表显示背景设置*/
+	background-color: #f1f2ed; /*transparent;*/
+	background-image: url(images/qiandaoBg.gif);
+	background-position: 30px 0;
+	background-attachment: scroll;
+	background-repeat: repeat-y;
+}
+.defi-content{
+	min-height:600px;
+}
+.defi-content ul.ui-listview li.ui-li-divider { /*列表显示-签到记录圆形日期设置*/
+	left: 14px !important;
+	top: 10px !important;
+	color: #fff !important;
+	font-size: 1em;
+	background-color: #6795C9;
+	width: 40px;
+	height: 40px;
+	padding: 0px;
+	vertical-align: middle !important;
+	text-align: center !important;
+	margin: 0;
+	-webkit-border-radius: 100px !important;
+	border-radius: 100px !important;
+	display: table-cell;
+	border:1px #6795C9 solid!important;
+}
+
+.defi-content ul.ui-listview li a.ui-btn { /*列表显示-签到记录列表*/
+	margin-left: 60px !important;
+	margin-top: 20px !important;
+	width: 65%;
+	padding: .2em 1em;
+	background-color: #FFF;
+	border: 1px #e5e5e5 solid!important;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.round_photo { /*修正头像上方间距*/
+	margin: 10px auto auto 10px;
+	width: 40px;
+	height: 40px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.round_photo5 { /*修正头像上方间距*/
+    margin: 10px auto auto 10px;
+    width: 40px;
+    height: 40px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.defi-gradFont { /*自定义位置描述字体*/
+	font-size: 0.7em !important;
+	color: #555;
+	margin-left: 45px !important;
+}
+
+.defi-gradTitleFont { /*自定义位置标题字体*/
+	font-size: .95em !important;
+	margin-top: .7em !important;
+	margin-left: 45px!important;
+	color: #111;
+	font-weight:100!important;
+}
+
+.moreBtn {
+	border: none !important;
+	background: #6895c9 !important;
+	color: #fff !important;
+	margin: .5em 1em !important;
+	font-weight: 100 !important;
+}
+
+.minbox-bg{background:#f1f2ed!important;}

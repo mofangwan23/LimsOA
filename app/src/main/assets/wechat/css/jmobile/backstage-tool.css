@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+
+.ui-page-header-fixed{padding-top:0!important;}
+/*左盒子控制组*/
+.left-box{position:fixed; left:0; width:120px; height:100%; border-right:1px #ccc solid;}
+.left-box > div > ul{width:100%!important; overflow:hidden!important;}
+.left-box > div > ul > li{width:100%!important; border-bottom:1px #ddd solid!important;}
+.left-box > div > ul > li a{padding-top:36px!important;}
+.ui-btn-icon-top:after{top:10px!important;}
+.ui-page-theme-a .ui-btn:hover{color:#5d9cec!important;}
+/*右盒子控制组*/
+.right-box{margin-left:121px!important; background:#f0f0f0; height:100%!important; border-right:1px #ddd solid;}
+.right-box > ul{width:90%!important; background:#fff!important;}
+.right-2ulbox,.right-3ulbox{margin: 2em auto 2em auto!important; width:90%!important; background:#fff!important;}
+.right-3ulbox li > span{font-size:14px!important;}
+/*底部按钮组*/
+.ui-footer{border:none!important; margin-bottom:20px;}
+.ui-footer > a.ui-link:nth-child(1){left:35%; margin-left:-50px; width:100px!important; background:#78909c!important; border:1px #546e7a solid; color:#fff;}
+.ui-footer > a.ui-link:nth-child(2){left:47%; margin-left:-50px; width:100px!important; background:#2baf2b!important; border:1px #0a8f08 solid; color:#fff;}
+.ui-footer > a.ui-link:nth-child(3){left:44%; margin-left:-50px; width:100px!important; background:#2baf2b!important; border:1px #0a8f08 solid; color:#fff;}
+.ui-footer a.ui-link:hover{color:#eee!important;}
+
+.ui-butk a{color:#fff!important; background:#519cea!important;}
+.ui-butk a.ui-link:hover{color:#fff!important;}
+
+/*列表组*/
+.ui-listview > .ui-li-divider{overflow:auto!important; white-space:normal!important;}
+.ui-li-divider{color:#111!important; padding:10px 10px!important; font-weight:100!important;}
+.ui-li-divider h3{font-size:17px!important; color:#666;}
+.ui-li-has-thumb{min-height:15em!important; padding:1em 10px!important;}
+.ui-li-has-thumb > img{margin-left:10%; max-width:600px!important; max-height:500px!important; position:static!important; border:1px #ccc solid;}
+.ui-li-has-thumb > p{font-size:12px!important; text-align:center; color:#666;}
+
+.mainf-bg{background:#f0f0f0!important; width:1000px!important;}
+
+/*表格组*/
+.list-tabbox{width:90%; border-radius:5px; padding:1em; background:#fff; border:1px #ddd solid!important; margin:0 auto; margin-bottom:20px;}
+.list-tab{width:100%; background:#fff; font-size:14px; border-collapse:collapse!important;}
+.list-tab thead tr th{word-break:keep-all; padding-bottom:10px;}
+.list-tab td{padding:10px 5px!important; vertical-align:middle!important;}
+.list-tab td a{font-weight:100!important; word-break:keep-all; white-space:nowrap;}
+.list-tab td img{width:50px; margin-right:10px; border-radius:50px; border:1px #eee solid; vertical-align:middle!important;}

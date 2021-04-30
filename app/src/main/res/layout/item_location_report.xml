@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.commonality.view.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/swipe_layout">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right">
+
+        <Button
+            android:id="@+id/id_location"
+            android:layout_width="@dimen/mdp_60"
+            android:layout_height="@dimen/mdp_60"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_sign"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_front"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffffff"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/mdp_10"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/mdp_60">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/right_layout"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/mdp_50"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/mdp_5"
+                android:paddingTop="@dimen/mdp_5">
+
+                <TextView
+                    android:id="@+id/myItemView_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/userinfo_detail_content"
+                    android:textSize="@dimen/msp_14"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/myItemView_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_3"
+                    android:textColor="#FF6F6F6F"
+                    android:textSize="@dimen/msp_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/right_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/mdp_60"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/mdp_6">
+
+                <ImageView
+                    android:id="@+id/myItemView_report"
+                    android:layout_width="@dimen/mdp_28"
+                    android:layout_height="@dimen/mdp_28"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_location" />
+
+                <TextView
+                    android:id="@+id/no_sign_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/location_no_range"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/myItemView_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_2"
+                    android:textColor="@color/userinfo_detail_title"
+                    android:textSize="@dimen/msp_12"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/delete_icon"
+                android:layout_width="@dimen/mdp_60"
+                android:layout_height="@dimen/mdp_60"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/mdp_18"
+                android:src="@drawable/action_delete_fe"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/detail_line"
+        android:layout_gravity="bottom" />
+</cn.flyrise.feep.commonality.view.SwipeLayout>

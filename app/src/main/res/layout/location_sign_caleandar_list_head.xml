@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_head_title"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mdp_48"
+    android:gravity="center_vertical"
+    tools:showIn="@layout/location_sign_caleandar_layout">
+    <View
+        android:id="@+id/icon"
+        android:layout_width="4dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="@dimen/mdp_15"
+        android:layout_centerVertical="true"
+        android:background="#28B9FF"/>
+
+    <TextView
+        android:id="@+id/location_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/icon"
+        android:paddingLeft="@dimen/mdp_10"
+        android:gravity="center_vertical"
+        android:text="@string/location_calendar_list_title"
+        android:textColor="#000000"
+        android:textSize="@dimen/msp_15"/>
+
+    <LinearLayout
+        android:id="@+id/show_track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/mdp_15"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/location_track"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/mdp_8"
+            android:text="@string/location_calendar_list_track"
+            android:textColor="#28B9FF"
+            android:textSize="@dimen/msp_14"/>
+
+        <ImageView
+            android:id="@+id/location_track_icon"
+            android:layout_width="@dimen/mdp_6"
+            android:layout_height="@dimen/mdp_12"
+            android:src="@drawable/user_info_right_icon"/>
+    </LinearLayout>
+    <View
+        style="@style/detail_line"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="@dimen/mdp_5"/>
+            <gradient
+                android:angle="0"
+                android:centerColor="#005a5d5a"
+                android:centerY="0.75"
+                android:endColor="#00747674"
+                android:startColor="#009d9e9d"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="@dimen/mdp_5"/>
+                <gradient
+                    android:angle="0"
+                    android:centerColor="@color/wrokplan_detail_head_btn_defulit"
+                    android:centerY="0.75"
+                    android:endColor="@color/dialog_btn_bg"
+                    android:startColor="@color/login_edittext_highlight"/>
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="@dimen/mdp_5"/>
+                <gradient
+                    android:angle="0"
+                    android:endColor="@color/wrokplan_detail_head_btn_defulit"
+                    android:startColor="@color/login_setting_text"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

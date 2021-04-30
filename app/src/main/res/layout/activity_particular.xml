@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <cn.flyrise.feep.core.base.views.FEToolbar
+            android:id="@id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="@dimen/action_bar_size"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+        </cn.flyrise.feep.core.base.views.FEToolbar>
+
+        <FrameLayout
+            android:id="@+id/layoutCollaborationDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolBar">
+            <cn.flyrise.feep.core.base.views.ListenableScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/action_bar_size"
+                    android:orientation="vertical">
+                    <!-- 头部 -->
+                    <cn.flyrise.feep.particular.views.ParticularHeadView
+                        android:id="@+id/particularHeadView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </cn.flyrise.feep.particular.views.ParticularHeadView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/mdp_0_5"
+                        android:background="#CCCCCC"/>
+                    <!-- 正文内容、正文补充、正文修改 -->
+                    <cn.flyrise.feep.particular.views.ParticularContentView
+                        android:id="@+id/particularContentView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/mdp_132"/>
+
+                    <!-- Particular AttachmentBean -->
+                    <ViewStub
+                        android:id="@+id/viewStubAttachment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout="@layout/view_stub_particular_attachments"/>
+                    <!-- Particular Reply -->
+                    <ViewStub
+                        android:id="@+id/viewStubOriginalReply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout="@layout/view_stub_particular_common"/>
+
+                    <ViewStub
+                        android:id="@+id/viewStubReply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout="@layout/view_stub_particular_common"/>
+                    <!-- Particular Related News -->
+                    <ViewStub
+                        android:id="@+id/viewStubRelatedNews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout="@layout/view_stub_particular_common"/>
+                </LinearLayout>
+            </cn.flyrise.feep.core.base.views.ListenableScrollView>
+        </FrameLayout>
+
+        <cn.flyrise.feep.particular.views.FEFloatingActionMenu
+            android:id="@+id/feFloatingActionMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/action_bar_size"
+            android:layout_marginEnd="@dimen/mdp_6"
+            android:layout_marginRight="@dimen/mdp_6"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom|end"
+            android:paddingBottom="@dimen/mdp_6"
+            android:visibility="gone">
+        </cn.flyrise.feep.particular.views.FEFloatingActionMenu>
+
+        <LinearLayout
+            android:id="@+id/layoutBottomMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@color/all_background_color"
+            android:orientation="vertical">
+
+            <View style="@style/detail_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/mdp_5"
+                android:paddingRight="@dimen/mdp_5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvButton1"
+                    style="@style/ParticularMenuButtonStyle"
+                    android:background="@drawable/detail_dispose_btn_bg"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tvButton2"
+                    style="@style/ParticularMenuButtonStyle"
+                    android:stateListAnimator="@null"
+                    android:textColor="@color/text_dark_color"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tvButton3"
+                    style="@style/ParticularMenuButtonStyle"
+                    android:textColor="@color/text_dark_color"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tvButton4"
+                    style="@style/ParticularMenuButtonStyle"
+                    android:textColor="@color/text_dark_color"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 错误提示信息 -->
+        <LinearLayout
+            android:id="@+id/layoutErrorPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolBar"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvErrorText"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/mdp_20"
+                android:gravity="center"
+                android:text="@string/fe_load_fail_try"
+                android:textColor="#ff555555"
+                android:textSize="@dimen/msp_20"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

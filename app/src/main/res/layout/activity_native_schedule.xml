@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/layoutScheduleWeekNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolBar"
+        android:background="@color/defaultColorPrimary"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/mdp_3"
+            android:paddingTop="@dimen/mdp_10">
+
+            <TextView
+                style="@style/NativeScheduleCalendarTextStyle"
+                android:text="@string/schedule_main_calendar_sun"/>
+
+            <TextView
+                style="@style/NativeScheduleCalendarTextStyle"
+                android:text="@string/schedule_main_calendar_mon"/>
+
+            <TextView
+                style="@style/NativeScheduleCalendarTextStyle"
+                android:text="@string/schedule_main_calendar_tue"/>
+
+            <TextView
+                style="@style/NativeScheduleCalendarTextStyle"
+                android:text="@string/schedule_main_calendar_wed"/>
+
+            <TextView
+                style="@style/NativeScheduleCalendarTextStyle"
+                android:text="@string/schedule_main_calendar_thu"/>
+
+            <TextView
+                style="@style/NativeScheduleCalendarTextStyle"
+                android:text="@string/schedule_main_calendar_fir"/>
+
+            <TextView
+                style="@style/NativeScheduleCalendarTextStyle"
+                android:text="@string/schedule_main_calendar_sta"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_1"
+            android:layout_marginTop="@dimen/mdp_8"
+            android:background="#EDEDED"/>
+    </LinearLayout>
+
+    <cn.flyrise.feep.schedule.view.NativeScheduleScrollView
+        android:id="@+id/nativeScheduleScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutScheduleWeekNav"
+        android:background="#F9F9F9"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/mdp_16">
+
+            <com.haibuzou.datepicker.calendar.views.MonthView
+                android:id="@+id/monthView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_8"
+                android:background="@drawable/shadow_hor_down"/>
+
+            <LinearLayout
+                android:id="@+id/layoutScheduleList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/mdp_8">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_10"
+                    android:layout_marginRight="@dimen/mdp_8"
+                    android:layout_marginTop="@dimen/mdp_12"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30"
+                        android:textColor="@color/defaultColorAccent"
+                        android:textSize="@dimen/msp_24"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/mdp_3"
+                        android:background="#6BCFFF"/>
+
+                    <TextView
+                        android:id="@+id/tvWeek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/mdp_1"
+                        android:paddingRight="@dimen/mdp_1"
+                        android:text="星期一"
+                        android:textColor="#4D4D4D"
+                        android:textSize="@dimen/msp_14"/>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_6">
+
+                    <TextView
+                        android:id="@+id/emptyView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/msp_16"
+                        android:layout_marginTop="@dimen/mdp_24"
+                        android:text="@string/schedule_lbl_no_agenda"
+                        android:textSize="@dimen/msp_16"/>
+
+                    <cn.flyrise.feep.schedule.view.NativeScheduleListView
+                        android:id="@+id/listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:divider="@null"
+                        android:dividerHeight="@dimen/mdp_0"
+                        android:listSelector="@android:color/transparent">
+                    </cn.flyrise.feep.schedule.view.NativeScheduleListView>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </cn.flyrise.feep.schedule.view.NativeScheduleScrollView>
+
+    <com.haibuzou.datepicker.calendar.views.WeekView
+        android:id="@+id/weekView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutScheduleWeekNav"
+        android:visibility="invisible"/>
+
+    <View
+        android:id="@+id/shadowView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_8"
+        android:layout_below="@id/weekView"
+        android:background="@drawable/shadow_hor_down"
+        android:visibility="gone"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/mdp_16"
+        android:layout_marginEnd="@dimen/mdp_15"
+        android:layout_marginRight="@dimen/mdp_16"
+        android:background="@drawable/native_schedule_add"
+        android:padding="@dimen/mdp_12"
+        android:src="@drawable/yzx_actionbar_add_icon"
+        app:borderWidth="@dimen/mdp_0"
+        app:elevation="@dimen/mdp_6"/>
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <View style="@style/CoreHorizontalTranslucentLine"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/msFileIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ededed"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/msRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

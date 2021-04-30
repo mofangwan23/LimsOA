@@ -1,0 +1,33 @@
+<div data-role="page" id="pageattach">
+	<div data-theme="a" data-role="header" data-tap-toggle="false"
+		data-position="fixed">
+		<h3 ng-show="isshowheader">附件列表</h3>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="false" id="attachlistview"
+			data-filter="true" data-filter-placeholder="搜索">
+			<li repeat-directive ng-repeat="x in attachList"><a
+				ng-click='_optAttach(x.master_key)' href="#pagechoose"
+				data-rel="popup"> <img src="/wechat/css/images/user.png" />
+					<h2>{{x.viewName}}</h2>
+					<p>{{x.time | date: 'yy-MM-dd' }} {{x.fsize}}</p> </a></li>
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false">
+	</div>
+	<div data-role="popup" id="pagechoose" data-theme="a"
+		data-overlay-theme="b" data-position-to="window">
+		<ul data-role="listview" data-inset="false" id="chooselistview">
+			<li data-icon="false"><a
+				href="/AttachmentServlet39?attachPK={{attachid}}&actionType=download"
+				target="_blank">
+					<h2>下载到手机</h2> </a>
+			</li>
+			<li data-icon="false"><a href="#" ng-click="_save2knowledge(attachid)">
+					<h2>转存至个人文件夹</h2> </a>
+			</li>
+			<li data-icon="false"><a href="#" ng-click="_closedialog();"><h2>取消</h2>
+			</a></li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    <include layout="@layout/core_view_transparent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <cn.flyrise.feep.core.base.views.FEToolbar
+                android:id="@id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:fitsSystemWindows="true"
+                android:minHeight="?attr/actionBarSize"
+                android:paddingTop="@dimen/status_bar_height"
+                app:layout_scrollFlags="scroll|enterAlways" />
+        </android.support.design.widget.AppBarLayout>
+        <include layout="@layout/view_line" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/path_textview"
+            android:textSize="@dimen/text_middle_size"
+            android:layout_margin="@dimen/mdp_5"
+            android:ellipsize="start"
+            android:textColor="@color/workflow_textview"
+            android:singleLine="true"/>
+        <cn.flyrise.feep.core.base.views.PullAndLoadMoreRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listview"
+            android:layout_weight="1" />
+        <include
+            layout="@layout/konwledge_footmenu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/moreaction_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/mdp_62"
+        android:layout_marginRight="@dimen/mdp_8"
+        app:fab_addButtonColorNormal="@color/detail_menu_bg"
+        app:fab_addButtonColorPressed="@color/white_pressed"
+        app:fab_addButtonPlusIconColor="@color/all_background_color"
+        app:fab_labelStyle="@style/menu_labels_style">
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/newfloder_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/detail_attachment_bg"
+            app:fab_colorPressed="@color/white_pressed"
+            app:fab_icon="@drawable/knowledge_new_folder"/>
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    <!--<ImageView-->
+        <!--android:id="@+id/error_layout"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:background="@drawable/notmove_icon"-->
+        <!--android:visibility="gone"/>-->
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mdp_5"
+        android:layout_marginRight="@dimen/mdp_3"
+        android:layout_marginTop="@dimen/mdp_3"
+        android:textSize="@dimen/msp_14"
+        android:textColor="@color/text_dark_color" />
+
+    <RelativeLayout
+        android:id="@+id/userPhotoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mdp_5"
+        android:layout_marginRight="@dimen/mdp_3"
+        android:layout_marginTop="@dimen/mdp_3"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/userphoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/msp_14"
+            android:textColor="@color/text_bright_color" />
+
+        <LinearLayout
+            android:id="@+id/photoimage"
+            android:layout_width="@dimen/mdp_30"
+            android:layout_height="@dimen/mdp_30"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/mdp_6"
+            android:layout_toRightOf="@+id/userphoto"
+            android:gravity="right|center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/mdp_24"
+                android:layout_height="@dimen/mdp_24"
+                android:background="@drawable/blue_tel_fe_mobile"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/useraddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mdp_5"
+        android:layout_marginRight="@dimen/mdp_3"
+        android:layout_marginTop="@dimen/mdp_3"
+        android:textSize="@dimen/msp_12"
+        android:textColor="@color/text_bright_color" />
+
+    <TextView
+        android:id="@+id/usertimes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mdp_2"
+        android:layout_marginLeft="@dimen/mdp_5"
+        android:layout_marginRight="@dimen/mdp_3"
+        android:layout_marginTop="@dimen/mdp_3"
+        android:textSize="@dimen/msp_12"
+        android:textColor="@color/text_bright_color" />
+</LinearLayout>

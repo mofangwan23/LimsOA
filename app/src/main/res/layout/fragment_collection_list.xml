@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_background_color_one"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_52"
+        android:layout_marginTop="@dimen/mdp_12"
+        android:layout_marginBottom="@dimen/mdp_12"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/layoutAddCollectionFolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="新建收藏夹"
+                android:textColor="@color/defaultColorAccent"
+                android:textSize="@dimen/msp_16"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@drawable/listview_divider_line"
+            android:dividerHeight="@dimen/mdp_0_2"
+            android:listSelector="@android:color/transparent">
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/layoutEmptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plan_empty"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_16"
+                android:text="这里什么都没有"
+                android:textColor="@color/defaultColorAccent"/>
+
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

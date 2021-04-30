@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvCopy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_1"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:padding="@dimen/mdp_16"
+        android:text="@string/copy"
+        android:textColor="@color/im_text_dark_color"
+        android:textSize="@dimen/msp_16"
+        android:visibility="gone" />
+
+    <View style="@style/detail_line" />
+
+    <TextView
+        android:id="@+id/tvSpeaker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:padding="@dimen/mdp_16"
+        android:text="@string/remind"
+        android:textColor="@color/im_text_dark_color"
+        android:textSize="@dimen/msp_16"
+        android:visibility="gone" />
+
+    <View style="@style/detail_line" />
+
+    <TextView
+        android:id="@+id/tvDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:padding="@dimen/mdp_16"
+        android:text="@string/delete"
+        android:textColor="@color/im_text_dark_color"
+        android:textSize="@dimen/msp_16"
+        android:visibility="gone" />
+
+    <View style="@style/detail_line" />
+
+    <TextView
+        android:id="@+id/tvForward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:padding="@dimen/mdp_16"
+        android:text="@string/forward"
+        android:textColor="@color/im_text_dark_color"
+        android:textSize="@dimen/msp_16"
+        android:visibility="gone" />
+
+    <View style="@style/detail_line" />
+
+    <TextView
+        android:id="@+id/tvReply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:padding="@dimen/mdp_16"
+        android:text="@string/reply"
+        android:textColor="@color/im_text_dark_color"
+        android:textSize="@dimen/msp_16"
+        android:visibility="gone" />
+
+    <View style="@style/detail_line" />
+
+    <TextView
+        android:id="@+id/tvRemind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:padding="@dimen/mdp_16"
+        android:text="@string/remind"
+        android:textColor="@color/im_text_dark_color"
+        android:textSize="@dimen/msp_16"
+        android:visibility="gone" />
+
+    <View style="@style/detail_line" />
+
+    <TextView
+        android:id="@+id/tvRecall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:padding="@dimen/mdp_16"
+        android:text="@string/recall"
+        android:textColor="@color/im_text_dark_color"
+        android:textSize="@dimen/msp_16"
+        android:visibility="gone" />
+
+</LinearLayout>

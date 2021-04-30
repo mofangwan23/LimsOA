@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/drTvSearchType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="联系人"
+        android:textColor="@color/core_default_accent_color"
+        android:textSize="@dimen/msp_14"/>
+
+    <View
+        android:id="@+id/drViewSplitLine"
+        android:layout_width="@dimen/mdp_1"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/mdp_4"
+        android:layout_marginBottom="@dimen/mdp_4"
+        android:background="#CCCCCC"/>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F2F2F2"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iBtnBold"
+        style="@style/RichTextToolMenu"
+        android:src="@drawable/icon_rich_bold"/>
+
+    <ImageView
+        android:id="@+id/iBtnFontSize"
+        style="@style/RichTextToolMenu"
+        android:src="@drawable/icon_rich_size"/>
+
+    <ImageView
+        android:id="@+id/iBtnUnderLine"
+        style="@style/RichTextToolMenu"
+        android:src="@drawable/icon_rich_under_line"/>
+
+    <ImageView
+        android:id="@+id/iBtnFontColor"
+        android:layout_width="@dimen/mdp_42"
+        android:layout_height="@dimen/mdp_42"
+        android:layout_marginLeft="@dimen/mdp_9"
+        android:layout_marginRight="@dimen/mdp_9"
+        android:background="#000000"
+        android:src="@drawable/icon_rich_font_color"/>
+
+
+    <ImageView
+        android:id="@+id/iBtnInsertImage"
+        style="@style/RichTextToolMenu"
+        android:src="@drawable/icon_rich_image"/>
+
+    <ImageView
+        android:id="@+id/iBtnVoiceInput"
+        style="@style/RichTextToolMenu"
+        android:src="@drawable/icon_rich_voice"/>
+</LinearLayout>

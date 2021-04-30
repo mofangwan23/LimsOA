@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_44"
+        android:background="@color/all_background_color">
+
+        <TextView
+            android:id="@+id/btnSearchCancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mdp_16"
+            android:layout_marginRight="@dimen/mdp_16"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/location_check_cancle"
+            android:textColor="#04121A"
+            android:textSize="@dimen/msp_15"/>
+
+        <TextView
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_28"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/btnSearchCancle"
+            android:layout_toRightOf="@+id/navigation"
+            android:paddingLeft="@dimen/mdp_10"
+            android:background="@drawable/core_search_edittext"
+            android:drawableLeft="@mipmap/core_icon_search"
+            android:drawablePadding="@dimen/mdp_9"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/standard_text_g_100"
+            android:textSize="@dimen/msp_15"/>
+
+        <ImageView
+            android:id="@+id/navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/mdp_15"
+            android:paddingRight="@dimen/mdp_10"/>
+
+        <View
+            android:id="@+id/search_line"
+            style="@style/CoreSplitLine"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

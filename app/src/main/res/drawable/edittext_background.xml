@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+    <item android:drawable="@drawable/txt_on_fe" android:state_focused="true"></item>
+    <item android:drawable="@drawable/txt_fe"></item>
+    -->
+    <item><shape>
+            <solid android:color="#FFFFFF"></solid>
+            <corners android:bottomLeftRadius="@dimen/mdp_0" android:bottomRightRadius="@dimen/mdp_0" android:topLeftRadius="@dimen/mdp_0" android:topRightRadius="@dimen/mdp_0" />
+            <stroke android:width="@dimen/mdp_1" android:color="@color/app_background_color" />
+        </shape></item>
+</selector>

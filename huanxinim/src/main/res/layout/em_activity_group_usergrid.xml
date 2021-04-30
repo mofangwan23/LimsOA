@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 android:id="@id/swipeBackLayout"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <include layout="@layout/core_view_search"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/all_background_color"
+            android:paddingBottom="@dimen/mdp_10"/>
+    </LinearLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

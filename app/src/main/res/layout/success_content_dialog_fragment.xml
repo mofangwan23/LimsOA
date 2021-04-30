@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="286dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivHead"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/metting_sign_bg" />
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivHead"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/mdp_26"
+        android:paddingLeft="@dimen/mdp_12"
+        android:paddingRight="@dimen/mdp_12"
+        android:paddingTop="@dimen/mdp_20">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mdp_10"
+            android:textColor="@color/text_bright_color"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mdp_10"
+            android:textColor="@color/text_bright_color"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mdp_10"
+            android:textColor="@color/text_bright_color"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/meeting_master"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_bright_color"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/meeting_sign_date_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@color/text_bright_color"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/detail_line"
+        style="@style/detail_line"
+        android:layout_below="@+id/content_layout" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/detail_line"
+        android:background="@drawable/fe_update_version_buttom"
+        android:gravity="center"
+        android:textColor="@color/login_setting_defulit"
+        android:textSize="@dimen/text_middle_size" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_alignBottom="@+id/ivHead"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-33dp"
+        android:layout_marginRight="@dimen/mdp_12"
+        android:background="@drawable/metting_sign_success_" />
+
+</RelativeLayout>

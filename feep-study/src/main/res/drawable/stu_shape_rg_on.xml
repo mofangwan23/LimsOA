@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!--矩形每个角的弧度半径都定义为8 -->
+    <corners android:radius="8dp" />
+
+    <padding
+        android:bottom="5dp"
+        android:left="15dp"
+        android:right="15dp"
+        android:top="5dp" />
+
+    <!--加一个普通的边线-->
+    <solid android:color="#F8F2EE" />
+
+    <!--控制内容与该shape的边距-->
+    <stroke
+        android:color="#ADA196"
+        android:width="0.5dp" />
+</shape>

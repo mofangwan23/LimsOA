@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingTop="@dimen/mdp_13"
+  android:gravity="center_horizontal"
+  android:orientation="vertical">
+
+  <TextView
+    android:id="@+id/timestamp"
+    style="@style/chat_text_date_style"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_chat_activity"
+    android:layout_marginBottom="@dimen/mdp_5"
+    android:gravity="right"
+    android:orientation="horizontal">
+
+    <ImageView
+      android:id="@+id/msg_status"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="@dimen/mdp_5"
+      android:layout_centerVertical="true"
+      android:layout_gravity="center"
+      android:layout_toLeftOf="@id/bubble"
+      android:src="@drawable/ease_msg_state_failed_resend"
+      android:visibility="gone" />
+
+    <TextView
+      android:id="@+id/tv_ack"
+      style="@style/chat_text_name_style"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="@dimen/mdp_5"
+      android:layout_centerVertical="true"
+      android:layout_gravity="center"
+      android:layout_toLeftOf="@id/bubble"
+      android:text="@string/text_ack_msg"
+      android:textSize="@dimen/msp_12"
+      android:visibility="gone" />
+
+    <TextView
+      android:id="@+id/tv_delivered"
+      style="@style/chat_text_name_style"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="@dimen/mdp_5"
+      android:layout_centerVertical="true"
+      android:layout_gravity="center"
+      android:layout_toLeftOf="@id/bubble"
+      android:text="@string/text_delivered_msg"
+      android:textSize="@dimen/msp_12"
+      android:visibility="gone" />
+
+    <ProgressBar
+      android:id="@+id/progress_bar"
+      android:layout_width="@dimen/mdp_25"
+      android:layout_height="@dimen/mdp_25"
+      android:layout_marginRight="@dimen/mdp_5"
+      android:layout_gravity="center"
+      android:visibility="gone" />
+
+    <LinearLayout
+      android:id="@+id/bubble"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="@dimen/mdp_5"
+      android:padding="@dimen/mdp_15"
+      android:background="@drawable/ease_chatto_bg"
+      android:minWidth="@dimen/mdp_200"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/tvUserTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/reply_sent"
+        android:maxWidth="@dimen/mdp_220"
+        android:textColor="#8bd2ff"
+        android:textSize="@dimen/msp_14" />
+
+      <TextView
+        android:id="@+id/tvOriginalContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:maxWidth="@dimen/mdp_220"
+        android:textColor="#8bd2ff"
+        android:textSize="@dimen/msp_14" />
+
+      <View
+        style="@style/CoreSplitLine"
+        android:layout_marginTop="@dimen/mdp_15"/>
+
+
+      <TextView
+        android:id="@+id/tv_chatcontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_15"
+        android:lineSpacingExtra="@dimen/mdp_2"
+        android:maxWidth="@dimen/mdp_220"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/msp_16" />
+    </LinearLayout>
+
+    <ImageView
+      android:id="@+id/iv_userhead"
+      style="@style/message_item_right_user_icon" />
+
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/tvState"
+    style="@style/chat_text_date_style"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+</LinearLayout>

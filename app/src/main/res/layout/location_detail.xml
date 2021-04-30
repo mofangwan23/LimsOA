@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_item_bg">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <FrameLayout
+        android:id="@+id/show_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBar"
+        android:layout_above="@+id/detail_layout"
+        android:background="@android:color/darker_gray">
+
+        <fragment
+            android:id="@+id/texture_map_fragment"
+            class="com.amap.api.maps.TextureMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/iv_my_location"
+            android:layout_width="@dimen/mdp_45"
+            android:layout_height="@dimen/mdp_45"
+            android:layout_marginBottom="@dimen/mdp_8"
+            android:layout_marginRight="@dimen/mdp_16"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/location_my_selector"/>
+        <View
+            style="@style/detail_line"
+            android:layout_gravity="bottom"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="@dimen/mdp_24"
+        android:paddingBottom="@dimen/mdp_16"
+        android:paddingLeft="@dimen/mdp_16"
+        android:paddingRight="@dimen/mdp_24"
+        android:background="@color/all_background_color"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/mdp_72"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/detail_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="@dimen/msp_18"/>
+
+        <TextView
+            android:id="@+id/detail_address"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_5"
+            android:textColor="@color/text_light_color"
+            android:textSize="@dimen/msp_12"/>
+    </LinearLayout>
+</RelativeLayout>

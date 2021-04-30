@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color_one"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/submit_layout"
+            android:layout_below="@id/toolBar"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/row_minimum_height">
+
+                <View
+                    style="@style/detail_line"
+                    android:layout_marginTop="@dimen/row_minimum_height"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/title_voice_input_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/all_background_color"
+                        android:gravity="center_vertical"
+                        android:hint="@string/collaboration_title"
+                        android:paddingBottom="@dimen/mdp_12"
+                        android:paddingLeft="@dimen/text_paading"
+                        android:paddingRight="@dimen/mdp_42"
+                        android:paddingTop="@dimen/mdp_12"
+                        android:textColor="@color/text_dark_color"
+                        android:textSize="@dimen/text_little_size"/>
+
+                    <Button
+                        android:id="@+id/title_voice_input_mic_bnt"
+                        android:layout_width="@dimen/mdp_24"
+                        android:layout_height="@dimen/mdp_24"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/text_paading"
+                        android:background="@drawable/recording_icon"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/detail_line"/>
+
+                <TextView
+                    android:id="@+id/title_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mdp_13"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/text_paading"
+                    android:textColor="@color/text_bright_color"
+                    android:textSize="@dimen/msp_8"/>
+
+                <View
+                    style="@style/detail_line"/>
+
+                <RelativeLayout
+                    android:id="@+id/layoutRichContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/all_background_color"
+                    android:minHeight="@dimen/mdp_136">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <WebView
+                            android:id="@+id/collaborationWebView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/all_background_color"
+                            android:minHeight="@dimen/mdp_136"
+                            android:visibility="gone">
+                        </WebView>
+
+                        <EditText
+                            android:id="@+id/content_voice_input_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/all_background_color"
+                            android:gravity="top"
+                            android:hint="@string/collaboration_content"
+                            android:minHeight="@dimen/mdp_136"
+                            android:paddingBottom="@dimen/mdp_24"
+                            android:paddingLeft="@dimen/text_paading"
+                            android:paddingTop="@dimen/mdp_12"
+                            android:textColor="@color/text_dark_color"
+                            android:textSize="@dimen/text_little_size"/>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <Button
+                            android:id="@+id/btnVoiceInput"
+                            android:layout_width="@dimen/mdp_24"
+                            android:layout_height="@dimen/mdp_24"
+                            android:layout_marginBottom="@dimen/mdp_8"
+                            android:layout_marginRight="@dimen/text_paading"
+                            android:background="@drawable/recording_icon"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View style="@style/detail_line"/>
+
+                <View
+                    style="@style/detail_line"
+                    android:layout_marginTop="@dimen/row_minimum_height"/>
+
+                <TextView
+                    android:id="@+id/imagetextbuton_flow"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_min_height"
+                    android:background="@color/text_dark_white_color"
+                    android:drawableRight="@drawable/add_icon"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/text_paading"
+                    android:paddingRight="@dimen/text_paading"
+                    android:text="@string/transactor"
+                    android:textColor="@color/text_dark_color"
+                    android:textSize="@dimen/text_middle_size"/>
+
+                <View style="@style/detail_line"/>
+
+                <View
+                    style="@style/detail_line"
+                    android:layout_marginTop="@dimen/row_minimum_height"/>
+
+                <TextView
+                    android:id="@+id/imagetextbuton_attac"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_min_height"
+                    android:background="@color/text_dark_white_color"
+                    android:drawableRight="@drawable/accessory_icon"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/text_paading"
+                    android:paddingRight="@dimen/text_paading"
+                    android:text="@string/collaboration_attachment"
+                    android:textColor="@color/text_dark_color"
+                    android:textSize="@dimen/text_middle_size"/>
+
+                <View
+                    style="@style/detail_line"/>
+
+                <View
+                    style="@style/detail_line"
+                    android:layout_marginTop="@dimen/mdp_8"/>
+
+                <LinearLayout
+                    android:id="@+id/lv_association"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_association"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/row_min_height"
+                        android:background="@color/text_dark_white_color"
+                        android:drawableRight="@drawable/association"
+                        android:gravity="center|left"
+                        android:paddingLeft="@dimen/text_paading"
+                        android:paddingRight="@dimen/text_paading"
+                        android:text="@string/matter"
+                        android:textColor="@color/text_dark_color"
+                        android:textSize="@dimen/text_middle_size"/>
+
+                    <View
+                        style="@style/detail_line"/>
+
+                    <View
+                        style="@style/detail_line"
+                        android:layout_marginTop="@dimen/mdp_8"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_min_height"
+                    android:background="@color/all_background_color"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/mdp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical|left"
+                        android:paddingLeft="@dimen/text_paading"
+                        android:text="@string/trace"
+                        android:textColor="@color/text_dark_color"
+                        android:textSize="@dimen/text_middle_size"/>
+
+                    <cn.flyrise.feep.core.base.views.UISwitchButton
+                        xmlns:switch="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/newcollaborarion_istrace_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="@dimen/text_paading"
+                        switch:bmHeight="@dimen/mdp_3000"
+                        switch:bmWidth="@dimen/row_min_height"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/detail_line"/>
+
+                <View
+                    style="@style/detail_line"
+                    android:layout_marginTop="@dimen/row_minimum_height"/>
+
+                <LinearLayout
+                    android:id="@+id/lv_oldImport"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_min_height"
+                    android:background="@color/all_background_color"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="@dimen/mdp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical|left"
+                        android:paddingLeft="@dimen/text_paading"
+                        android:text="急件"
+                        android:textColor="@color/text_dark_color"
+                        android:textSize="@dimen/text_middle_size"/>
+
+                    <cn.flyrise.feep.core.base.views.UISwitchButton
+                        xmlns:switch="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/newcollaboration_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="@dimen/text_paading"
+                        switch:bmHeight="@dimen/mdp_3000"
+                        switch:bmWidth="@dimen/row_min_height"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lv_newImport"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_min_height"
+                    android:background="@color/all_background_color"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="@dimen/mdp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical|left"
+                        android:paddingLeft="@dimen/text_paading"
+                        android:text="@string/emergency_level"
+                        android:textColor="@color/text_dark_color"
+                        android:textSize="@dimen/text_middle_size"/>
+
+
+                    <TextView
+                        android:id="@+id/tvImportant"
+                        android:layout_width="@dimen/mdp_0"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/text_paading"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical|right"
+                        android:paddingLeft="@dimen/text_paading"
+                        android:text="@string/schedule_detail_lbl_share_none"
+                        android:textColor="@color/text_dark_color"
+                        android:textSize="@dimen/text_middle_size"/>
+
+                </LinearLayout>
+
+                <View
+                    style="@style/detail_line"/>
+
+                <LinearLayout
+                    android:id="@+id/newcollaborarion_ismodify_textview_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        style="@style/detail_line"
+                        android:layout_marginTop="@dimen/row_minimum_height"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/row_min_height"
+                        android:background="@color/all_background_color"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/newcollaborarion_ismodify_textview"
+                            android:layout_width="@dimen/mdp_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical|left"
+                            android:paddingLeft="@dimen/text_paading"
+                            android:text="@string/modify_the_body"
+                            android:textColor="@color/text_dark_color"
+                            android:textSize="@dimen/text_middle_size"/>
+
+                        <cn.flyrise.feep.core.base.views.UISwitchButton
+                            xmlns:switch="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/newcollaborarion_ismodify_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginRight="@dimen/text_paading"
+                            switch:bmHeight="@dimen/mdp_3000"
+                            switch:bmWidth="@dimen/row_min_height"/>
+                    </LinearLayout>
+
+                    <View
+                        style="@style/detail_line"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 送办 -->
+        <RelativeLayout
+            android:id="@+id/submit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/all_background_color">
+
+            <View style="@style/detail_line"/>
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="@dimen/mdp_86"
+                android:layout_height="@dimen/mdp_36"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/mdp_8"
+                android:layout_marginLeft="@dimen/mdp_8"
+                android:layout_marginTop="@dimen/mdp_8"
+                android:background="@drawable/detail_btn_bg"
+                android:stateListAnimator="@null"
+                android:text="@string/save"
+                android:textColor="@color/black_deep"
+                android:textSize="@dimen/msp_16"/>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_36"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/mdp_8"
+                android:layout_marginLeft="@dimen/mdp_8"
+                android:layout_marginRight="@dimen/mdp_12"
+                android:layout_marginTop="@dimen/mdp_8"
+                android:layout_toRightOf="@+id/save"
+                android:background="@drawable/nms_bg_blue_btn_round_enable"
+                android:stateListAnimator="@null"
+                android:text="@string/submit"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/msp_16"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

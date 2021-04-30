@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/mdp_60"
+    android:background="?attr/selectableItemBackground"
+    android:minWidth="@dimen/mdp_132"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/nmsTvBookStartTime"
+        style="@style/NMSMeetingItemLabelStyle"
+        android:layout_marginTop="@dimen/mdp_4"
+        android:textSize="11sp"
+        android:text="10:30"/>
+
+    <TextView
+        android:id="@+id/nmsTvBookEndTime"
+        style="@style/NMSMeetingItemLabelStyle"
+        android:layout_marginTop="@dimen/mdp_4"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/mdp_12"
+        android:textSize="11sp"
+        android:text="10:30"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingTop="@dimen/mdp_10"
+        android:text="@string/meeting7_room_reserve"
+        android:textColor="@color/core_default_accent_color"
+        android:textSize="11sp"/>
+
+    <View
+        android:layout_width="@dimen/mdp_0_5"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="#E5E5E5"/>
+
+</RelativeLayout>

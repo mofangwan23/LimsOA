@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">feep-fingerprint</string>
+    <string name="unable_user_fingerprint">Unable to use fingerprint recognition </string>
+    <string name="unable_checked_fingerprint_title">Please verify the fingerprint</string>
+    <string name="unable_checked_fingerprint">Please verify the fingerprint </string>
+    <string name="unable_cancel_fingerprint">Cancel </string>
+    <string name="unable_password_check">Password Verification</string>
+    <string name="fp_txt_fingerprint_not_match">no match</string>
+    <string name="fp_txt_fingerprint_error">Operations are too frequent. Please try again later</string>
+</resources>

@@ -1,0 +1,43 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/mdp_10"
+    android:background="#F5F6F6"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#28B9FF"
+            android:textSize="@dimen/msp_13"/>
+
+        <TextView
+            android:id="@+id/tvReplyContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_5"
+            android:lineSpacingMultiplier="1.414"
+            android:textColor="@color/standard_text_g_70"
+            android:textSize="@dimen/msp_13"/>
+
+
+        <TextView
+            android:id="@+id/tvReplyTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_10"
+            android:textColor="@color/standard_text_g_70"
+            android:textSize="@dimen/msp_11"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

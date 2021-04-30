@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mdp_44">
+
+    <TextView
+        android:id="@+id/btnSearchCancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/mdp_16"
+        android:layout_marginRight="@dimen/mdp_16"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/core_default_accent_color"
+        android:textSize="@dimen/msp_15" />
+
+    <RelativeLayout
+        android:id="@+id/rlSearchFrameDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/btnSearchCancle">
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_28"
+            android:layout_marginLeft="@dimen/mdp_15"
+            android:background="@drawable/core_search_edittext"
+            android:drawableLeft="@mipmap/core_icon_search"
+            android:drawablePadding="@dimen/mdp_9"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="@dimen/mdp_10"
+            android:singleLine="true"
+            android:textColorHint="@color/core_standard_second_text_color"
+            android:textSize="@dimen/msp_15" />
+
+        <ImageView
+            android:id="@+id/ivDeleteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:paddingRight="@dimen/mdp_15"
+            android:src="@mipmap/core_icon_delete"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/search_line"
+        style="@style/CoreSplitLine"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

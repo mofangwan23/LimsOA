@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="@dimen/mdp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:padding="@dimen/mdp_12"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/text_middle_size"
+                android:textStyle="bold"/>
+
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/mdp_12"
+                    android:drawableLeft="@drawable/item_time_icon"
+                    android:drawablePadding="@dimen/mdp_10"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/text_light_color"
+                    android:textSize="@dimen/text_min_size"/>
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="@dimen/dim_20_dp"
+            android:layout_height="@dimen/dim_20_dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/mdp_20"
+            android:background="@drawable/em_checkbox_blue_selected"
+            android:button="@null"
+            android:clickable="false"
+            android:focusable="false"
+            />
+    </LinearLayout>
+
+
+    <View
+        style="@style/detail_line"
+        android:layout_below="@+id/content_layout"
+        android:layout_marginTop="@dimen/mdp_8"/>
+</RelativeLayout>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <cn.flyrise.feep.main.modules.ApplicationLayout
+        android:id="@+id/applicationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_232"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/view_header_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/mdp_44">
+
+                <ImageView
+                    android:id="@+id/iv_header_content_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_quick_background"/>
+
+                <LinearLayout
+                    android:id="@+id/view_header_content_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_24"
+                    android:layout_marginRight="@dimen/mdp_24"
+                    android:layout_centerInParent="true">
+
+                    <GridView
+                        android:id="@+id/quickGridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/mdp_80"
+                        android:layout_gravity="center_vertical"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="4"
+                        android:overScrollMode="never"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/headerBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_44"
+                android:fitsSystemWindows="true">
+
+                <FrameLayout
+                    android:id="@+id/view_header_bar_shrink"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_header_bar_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_quick_background_sm"/>
+
+                    <LinearLayout
+                        android:id="@+id/view_header_bar_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/mdp_12"
+                        android:paddingRight="@dimen/mdp_12"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivQuickSM1"
+                            android:layout_width="@dimen/dim_30_dp"
+                            android:layout_height="@dimen/dim_30_dp"
+                            android:layout_marginRight="@dimen/mdp_12"
+                            android:src="@drawable/ic_qck_sm_approval"/>
+
+                        <ImageView
+                            android:id="@+id/ivQuickSM2"
+                            android:layout_width="@dimen/dim_30_dp"
+                            android:layout_height="@dimen/dim_30_dp"
+                            android:layout_marginRight="@dimen/mdp_12"
+                            android:src="@drawable/ic_qck_sm_chat"/>
+
+                        <ImageView
+                            android:id="@+id/ivQuickSM3"
+                            android:layout_width="@dimen/dim_30_dp"
+                            android:layout_height="@dimen/dim_30_dp"
+                            android:layout_marginRight="@dimen/mdp_12"
+                            android:src="@drawable/ic_qck_sm_flow"/>
+
+                        <ImageView
+                            android:id="@+id/ivQuickSM4"
+                            android:layout_width="@dimen/dim_30_dp"
+                            android:layout_height="@dimen/dim_30_dp"
+                            android:layout_marginRight="@dimen/mdp_12"
+                            android:src="@drawable/ic_qck_sm_location"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:id="@+id/ivModuleSettingSM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_module_edit_shrink"/>
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_header_bar_expand"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/mdp_12"
+                    android:paddingRight="@dimen/mdp_12"
+                    android:background="@android:color/white"
+                    android:fitsSystemWindows="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/layoutModuleHeaderV6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="应用"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/msp_18"
+                            android:visibility="gone"/>
+
+                        <LinearLayout
+                            android:id="@+id/layoutModuleHeaderV7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ivCompanyIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_company_v7"/>
+
+                            <TextView
+                                android:id="@+id/tvCompany"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/mdp_4"
+                                android:paddingRight="@dimen/mdp_4"
+                                android:text="广东飞企互联科技有限公司"
+                                android:textSize="@dimen/msp_17"
+                                android:textColor="#191919"/>
+
+                            <ImageView
+                                android:id="@+id/ivCompanySelected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/mdp_2"
+                                android:src="@drawable/icon_arrow_down"
+                                android:visibility="gone"/>
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+                        </LinearLayout>
+                    </FrameLayout>
+                    <ImageView
+                        android:id="@+id/ivModuleSetting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_module_edit_expand"/>
+
+                </LinearLayout>
+            </FrameLayout>
+        </FrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </cn.flyrise.feep.main.modules.ApplicationLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/layoutEmptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_128"
+                android:src="@drawable/plan_empty"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_18"
+                android:layout_marginBottom="@dimen/mdp_12"
+                android:text="这里没有应用"
+                android:textColor="#FF7AD1FB"
+                android:textSize="@dimen/msp_14"/>
+
+
+            <TextView
+                android:id="@+id/tvModuleSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/mdp_8"
+                android:paddingBottom="@dimen/mdp_8"
+                android:paddingLeft="@dimen/mdp_24"
+                android:paddingRight="@dimen/mdp_24"
+                android:background="@drawable/nms_bg_blue_btn_round_enable"
+                android:text="立即设置"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/msp_14"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

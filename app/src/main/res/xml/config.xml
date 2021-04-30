@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="cn.flyrise.study" version="1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="LoadingDialog" value="玩命加载中..." />
+    <feature name="App">
+        <param name="android-package" value="org.apache.cordova.App" />
+    </feature>
+	<!-- url初始化 -->
+    <feature name="AppInit">  
+       <param name="android-package" value="cn.flyrise.feep.cordova.plugin.AppInit" /><!-- value:包名.类名 -->
+	</feature>
+	<!-- 闪屏 -->
+	<feature name="SplashScreen">
+       <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" /><!-- value:包名.类名 -->  
+	</feature>
+	<!-- 对话框 -->
+	<feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+	<!-- 文件下载 -->
+	<feature name="PluginDownLoad">  
+       <param name="android-package" value="cn.flyrise.feep.cordova.plugin.PluginDownLoad" /><!-- value:包名.类名 -->
+	</feature>
+	<!-- 关闭当前页面 -->
+	<feature name="PluginCloseActivity">  
+       <param name="android-package" value="cn.flyrise.feep.cordova.plugin.PluginCloseActivity" /><!-- value:包名.类名 -->
+	</feature>
+    <name>FEEP</name>
+    <access origin="*" />
+</widget>

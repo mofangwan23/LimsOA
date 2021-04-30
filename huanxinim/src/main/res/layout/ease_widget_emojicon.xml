@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.hyphenate.easeui.widget.emojicon.EaseEmojiconPagerView
+        android:id="@+id/pager_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/indicator_view"
+        android:background="#FAFAFA"/>
+
+    <com.hyphenate.easeui.widget.emojicon.EaseEmojiconIndicatorView
+        android:id="@+id/indicator_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/line"
+        android:paddingTop="@dimen/mdp_6"
+        android:paddingBottom="@dimen/mdp_6"
+        android:background="#FAFAFA"/>
+
+    <View
+        android:id="@+id/line"
+        style="@style/detail_line"
+        android:layout_above="@+id/tab_bar"/>
+
+    <com.hyphenate.easeui.widget.emojicon.EaseEmojiconScrollTabBar
+        android:id="@+id/tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_42"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

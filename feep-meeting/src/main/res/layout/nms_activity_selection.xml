@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <FrameLayout
+        android:id="@+id/nmsLayoutSelectionFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/nmsTvCreateMeeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/mdp_16"
+        android:paddingBottom="@dimen/mdp_16"
+        android:background="@color/core_default_accent_color"
+        android:gravity="center"
+        android:text="创建会议"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>

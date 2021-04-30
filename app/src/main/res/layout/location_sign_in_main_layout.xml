@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_item_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/the_contact_relative_search"
+        layout="@layout/common_search_layout"
+        android:visibility="gone"/>
+    <!--</LinearLayout>-->
+    <!--地图布局-->
+    <FrameLayout
+        android:id="@+id/show_map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <fragment
+            android:id="@+id/texture_map_fragment"
+            class="com.amap.api.maps.TextureMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="@dimen/mdp_50"
+            android:layout_height="@dimen/mdp_50"
+            android:layout_marginTop="@dimen/mdp_8"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:layout_gravity="top|right"
+            android:background="@drawable/location_search_selector"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/mImgLocation"
+            android:layout_width="@dimen/mdp_42"
+            android:layout_height="@dimen/mdp_42"
+            android:layout_marginBottom="@dimen/mdp_12"
+            android:layout_marginRight="@dimen/mdp_18"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/location_my_selector"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/mLayoutFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"/>
+</LinearLayout>

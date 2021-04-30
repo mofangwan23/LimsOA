@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/ms_icon_delete_checked" android:state_checked="true">
+        <shape android:shape="oval">
+            <size android:height="30dp"
+                android:width="30dp"/>
+        </shape>
+    </item>
+    <item android:drawable="@mipmap/ms_icon_normal_uncheck" android:state_checked="false">
+        <shape android:shape="oval">
+            <size android:height="30dp"
+                android:width="30dp"/>
+        </shape>
+    </item>
+    <item android:drawable="@mipmap/ms_icon_normal_uncheck">
+        <shape android:shape="oval">
+            <size android:height="30dp"
+                android:width="30dp"/>
+        </shape>
+    </item>
+</selector>

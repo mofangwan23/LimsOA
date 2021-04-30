@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/thecontact_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+
+    <LinearLayout
+        android:id="@+id/head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_16"
+        android:layout_below="@+id/toolBar"
+        android:background="@color/all_background_color"
+        android:orientation="vertical">
+
+        <View style="@style/detail_line"/>
+
+        <LinearLayout
+            android:id="@+id/mLayoutTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_4"
+            android:layout_marginBottom="@dimen/mdp_4"
+            android:layout_marginLeft="@dimen/mdp_12"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/mdp_42"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location_take_photo_time_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mdp_4"
+                android:text="时间："
+                android:textColor="@color/text_menu_text_color"
+                android:textSize="@dimen/msp_14"/>
+
+            <TextView
+                android:id="@+id/mTvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mdp_4"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/msp_14"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/mLineTime"
+            style="@style/detail_line"
+            android:layout_marginLeft="@dimen/mdp_12"/>
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_4"
+            android:layout_marginBottom="@dimen/mdp_4"
+            android:layout_marginLeft="@dimen/mdp_12"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/mdp_42"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_title_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location_photo_title_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mdp_4"
+                android:text="地点："
+                android:textColor="@color/text_menu_text_color"
+                android:textSize="@dimen/msp_14"/>
+
+            <EditText
+                android:id="@+id/mEtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mdp_4"
+                android:background="@color/all_background_color"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:hint="@string/onsite_hint_sign_title"
+                android:maxLines="2"
+                android:minHeight="@dimen/mdp_30"
+                android:textColor="@color/text_dark_color"
+                android:textColorHint="@color/text_light_color"
+                android:textSize="@dimen/msp_14"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/mLineAddress"
+            style="@style/detail_line"
+            android:layout_marginLeft="@dimen/mdp_12"/>
+
+        <LinearLayout
+            android:id="@+id/mLayoutAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_4"
+            android:layout_marginBottom="@dimen/mdp_4"
+            android:layout_marginLeft="@dimen/mdp_12"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/mdp_42"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_address_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location_photo_address_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mdp_4"
+                android:text="地址："
+                android:textColor="@color/text_menu_text_color"
+                android:textSize="@dimen/msp_14"/>
+
+            <TextView
+                android:id="@+id/mTvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mdp_4"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/msp_14"/>
+        </LinearLayout>
+
+        <View style="@style/detail_line"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mTvTitleNums"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_16"
+        android:layout_below="@+id/head_layout"
+        android:paddingRight="@dimen/mdp_12"
+        android:gravity="right"
+        android:text="0/100"
+        android:textColor="@color/text_menu_text_color"
+        android:textSize="@dimen/msp_8"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mTvTitleNums"
+        android:background="@color/all_background_color"
+        android:orientation="vertical">
+
+        <View style="@style/detail_line"/>
+
+        <EditText
+            android:id="@+id/mEtDescribe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp_8"
+            android:layout_marginBottom="@dimen/mdp_3"
+            android:layout_marginLeft="@dimen/mdp_12"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/edittext_background"
+            android:gravity="top"
+            android:hint="@string/onsite_edit_hint"
+            android:lines="5"
+            android:textColorHint="@color/text_light_color"
+            android:textSize="@dimen/msp_16"/>
+
+        <TextView
+            android:id="@+id/mTvDescribeNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/mdp_12"
+            android:gravity="right"
+            android:text="0/100"
+            android:textColor="@color/text_menu_text_color"
+            android:textSize="@dimen/msp_12"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/mdp_8"
+            android:paddingLeft="@dimen/mdp_12"
+            android:paddingRight="@dimen/mdp_12"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/mImgPhotoView"
+                android:layout_width="@dimen/mdp_80"
+                android:layout_height="@dimen/mdp_80"
+                android:layout_marginTop="@dimen/mdp_12"
+                android:src="@drawable/location_photo_add_piture"/>
+
+            <ImageView
+                android:id="@+id/mImgDeleteView"
+                android:layout_width="@dimen/mdp_30"
+                android:layout_height="@dimen/mdp_30"
+                android:layout_marginRight="-6dp"
+                android:layout_alignRight="@+id/mImgPhotoView"
+                android:padding="@dimen/mdp_5"
+                android:src="@drawable/location_photo_pictrue_delete"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <View style="@style/detail_line"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mTvSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_55"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/fe_b_selected_btn_bg"
+        android:gravity="center"
+        android:text="@string/location_sign_submit"
+        android:textColor="@color/all_background_color"
+        android:textSize="@dimen/msp_16"/>
+
+</RelativeLayout>

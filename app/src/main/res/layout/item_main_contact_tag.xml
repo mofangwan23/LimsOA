@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/viewSplitLine16"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_16"
+        android:layout_below="@+id/item_main_contact_ll_extent_part_time_department"
+        android:background="@color/backgroud_grey"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_0_2"
+        android:background="@color/thecontact_background"/>
+
+    <TextView
+        android:id="@+id/tvMainTagName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/row_minimum_height"
+        android:paddingBottom="@dimen/row_minimum_height"
+        android:paddingLeft="@dimen/text_paading"
+        android:text="@string/organizational_structure"
+        android:textColor="@color/black_text_main"
+        android:textSize="17sp"/>
+
+</LinearLayout>

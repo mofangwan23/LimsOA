@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--党建-->
+    <color name="dj_foot">#f5f5f5</color>
+    <color name="dj_foot_line">#cccccc</color>
+    <color name="dj_foot_click">#cc1416</color>
+    <color name="dj_foot_unclick">#999999</color>
+    <color name="dj_mian_text_color">#222222</color>
+    <color name="dj_shouye_line">#f8f8f8</color>
+    <color name="dj_login_bt">#fff2f2</color>
+    <color name="green_blue">#00CDCD</color>
+    <color name="gray_9DA3A6">#9DA3A6</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="green">#35E33E</color>
+    <color name="bg">#F0F0F0</color>
+    <color name="txt_color">#48495F</color>
+</resources>

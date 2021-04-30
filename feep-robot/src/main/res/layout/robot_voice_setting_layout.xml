@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:switch="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/thecontact_background"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar" />
+
+        <View
+            style="@style/detail_line"
+            android:layout_marginTop="@dimen/mdp_12" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_min_height"
+            android:background="@color/all_background_color"
+            android:paddingLeft="@dimen/mdp_16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="开启语音反馈"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/text_middle_size" />
+
+            <cn.flyrise.feep.core.base.views.UISwitchButton
+                android:id="@+id/mVoiceButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/text_paading"
+                switch:bmHeight="@dimen/mdp_3000"
+                switch:bmWidth="@dimen/row_min_height" />
+        </RelativeLayout>
+
+        <View style="@style/detail_line" />
+
+        <RelativeLayout
+            android:id="@+id/voice_person_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_min_height"
+            android:background="@color/all_background_color"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/mdp_16"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="发音人"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/text_middle_size" />
+
+            <TextView
+                android:id="@+id/send_voice_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/mdp_12"
+                android:layout_toLeftOf="@+id/right_icon"
+                android:text="成年女声"
+                android:textColor="@color/text_menu_text_color"
+                android:textSize="@dimen/msp_14" />
+
+            <ImageView
+                android:id="@+id/right_icon"
+                android:layout_width="@dimen/mdp_8"
+                android:layout_height="@dimen/mdp_16"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/text_paading"
+                android:src="@drawable/frequent_contects_iocn_right"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <View style="@style/detail_line"
+            android:visibility="gone"/>
+    </LinearLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

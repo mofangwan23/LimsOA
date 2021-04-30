@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.getbase.floatingactionbutton.FloatingActionsMenu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/floatingActionMenus"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:fab_addButtonColorNormal="@color/detail_menu_bg">
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/duduActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_colorNormal="@color/detail_dudu_bg"
+        app:fab_colorPressed="@color/detail_dudu_bg_press"
+        app:fab_icon="@drawable/menu_icon_dudu"/>
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/contentActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_colorNormal="@color/detail_content_bg"
+        app:fab_colorPressed="@color/detail_content_bg_press"
+        app:fab_icon="@drawable/menu_icon_content"/>
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/attachmentActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_colorNormal="@color/detail_attachment_bg"
+        app:fab_colorPressed="@color/detail_attachment_bg_press"
+        app:fab_icon="@drawable/menu_icon_attachment"/>
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/replyActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_colorNormal="@color/detail_reply_bg"
+        app:fab_colorPressed="@color/detail_reply_bg_press"
+        app:fab_icon="@drawable/menu_icon_reply"/>
+</com.getbase.floatingactionbutton.FloatingActionsMenu>

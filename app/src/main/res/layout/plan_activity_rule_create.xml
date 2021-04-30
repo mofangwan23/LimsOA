@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/standard_bg_g_30"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/mdp_20"
+            android:orientation="vertical">
+
+            <cn.flyrise.feep.workplan7.view.PlanItemLayout
+                android:id="@+id/lyType"
+                style="@style/PlanItemLayout"
+                android:layout_marginTop="@dimen/mdp_10"
+                app:PlanItemAttrTitle="@string/plan_create_type_title"
+                app:planItemRightIcon="@drawable/plan_down"
+                />
+
+            <View style="@style/detail_line"/>
+
+            <cn.flyrise.feep.workplan7.view.ParticularHEditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_50"/>
+
+            <cn.flyrise.feep.workplan7.view.PlanItemLayout
+                android:id="@+id/lyFrequency"
+                style="@style/PlanItemLayout"
+                android:layout_marginTop="@dimen/mdp_10"
+                app:PlanItemAttrTitle="@string/plan_rule_frequency"
+                app:planItemRightIcon="@drawable/plan_down"
+                />
+
+            <View style="@style/detail_line"/>
+
+            <cn.flyrise.feep.workplan7.view.PlanItemLayout
+                android:id="@+id/lyStartTime"
+                style="@style/PlanItemLayout"
+                app:PlanItemAttrTitle="@string/plan_create_start_time"
+                app:planItemRightIcon="@drawable/plan_down"
+                />
+
+            <View style="@style/detail_line"/>
+
+            <cn.flyrise.feep.workplan7.view.PlanItemLayout
+                android:id="@+id/lyEndTime"
+                style="@style/PlanItemLayout"
+                app:PlanItemAttrTitle="@string/plan_create_end_time"
+                app:planItemRightIcon="@drawable/plan_down"
+                />
+
+            <TextView
+                android:id="@+id/tvTimeHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_6"
+                android:layout_marginLeft="@dimen/mdp_15"
+                android:layout_marginRight="@dimen/mdp_15"
+                android:lineSpacingMultiplier="1.414"
+                android:textColor="#ff9da3a6"
+                android:textSize="@dimen/msp_11"
+                />
+
+            <cn.flyrise.feep.workplan7.view.PlanItemLayout
+                android:id="@+id/lyUserTitle"
+                style="@style/PlanItemLayout"
+                android:layout_marginTop="@dimen/mdp_20"
+                app:PlanItemAttrContentHint="@string/plan_rule_selected_hint"
+                app:PlanItemAttrTitle="@string/plan_rule_selected_user"
+                app:planItemRightIcon="@drawable/plan_down"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/userListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bdp_white"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_60"
+                android:layout_marginTop="@dimen/mdp_10"
+                android:paddingLeft="@dimen/mdp_15"
+                android:paddingRight="@dimen/mdp_15"
+                android:background="@color/standard_bg_content_g_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/plan_rule_redmind_title"
+                    android:textColor="#ff04121a"
+                    android:textSize="@dimen/msp_15"/>
+
+                <cn.flyrise.feep.core.base.views.UISwitchButton
+                    xmlns:switch="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/btRemind"
+                    android:layout_width="@dimen/mdp_50"
+                    android:layout_height="@dimen/mdp_50"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    switch:bmHeight="@dimen/mdp_50"
+                    switch:bmWidth="@dimen/mdp_50"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lyRemindContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_10"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <cn.flyrise.feep.workplan7.view.PlanItemLayout
+                    android:id="@+id/lyRemindTime"
+                    style="@style/PlanItemLayout"
+                    android:layout_marginTop="@dimen/mdp_1"
+                    android:layout_marginBottom="@dimen/mdp_1"
+                    app:PlanItemAttrTitle="@string/schedule_lbl_promptTime"
+                    app:planItemRightIcon="@drawable/plan_down"
+                    />
+
+                <cn.flyrise.feep.workplan7.view.ParticularEditText
+                    android:id="@+id/etRemindContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvRemindContentHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_9"
+                    android:layout_marginBottom="@dimen/mdp_29"
+                    android:layout_marginLeft="@dimen/mdp_15"
+                    android:layout_marginRight="@dimen/mdp_15"
+                    android:lineSpacingMultiplier="1.414"
+                    android:textColor="#ff9da3a6"
+                    android:textSize="@dimen/msp_12"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/delectRule"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_40"
+                android:layout_marginTop="@dimen/mdp_10"
+                android:layout_marginBottom="@dimen/mdp_20"
+                android:background="@color/all_background_color"
+                android:gravity="center"
+                android:text="@string/plan_rule_delect"
+                android:textColor="#E60026"
+                android:textSize="@dimen/msp_15"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

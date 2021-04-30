@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners
+        android:topLeftRadius="@dimen/mdp_6"
+        android:topRightRadius="@dimen/mdp_6" />
+    <gradient
+        android:endColor="@color/loading_icon_background"
+        android:startColor="@color/loading_icon_background" />
+</shape>

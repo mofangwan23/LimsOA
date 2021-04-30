@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color_one"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mdp_136">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/mdp_136"
+                        android:orientation="horizontal">
+
+                        <!-- 开始时间 -->
+                        <LinearLayout
+                            android:id="@+id/lyStatTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/mdp_12"
+                                android:background="@drawable/workplan_data_bg"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvStartTimeMd"
+                                    android:textStyle="bold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="11月26日"
+                                    android:textColor="#fc8c73"
+                                    android:textSize="@dimen/text_little_size"/>
+
+                                <TextView
+                                    android:id="@+id/tvStartTimeY"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/mdp_5"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="2015"
+                                    android:textColor="@color/text_bright_color"
+                                    android:textSize="@dimen/text_little_size"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/mdp_10"
+                                android:paddingTop="@dimen/mdp_5"
+                                android:paddingBottom="@dimen/mdp_5"
+                                android:paddingLeft="@dimen/mdp_15"
+                                android:paddingRight="@dimen/mdp_15"
+                                android:background="@drawable/workplan_time_btn"
+                                android:text="@string/workplan_start_date"
+                                android:textColor="@color/text_dark_color"
+                                android:textSize="@dimen/text_little_size"/>
+
+                        </LinearLayout>
+                        <!-- 结束时间 -->
+                        <LinearLayout
+                            android:id="@+id/lyEndTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/mdp_12"
+                                android:background="@drawable/workplan_data_bg"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvEndTimeMd"
+                                    android:textStyle="bold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="11月26日"
+                                    android:textColor="#fc8c73"
+                                    android:textSize="@dimen/text_little_size"/>
+
+                                <TextView
+                                    android:id="@+id/tvEndTimeY"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/mdp_5"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="2015"
+                                    android:textColor="@color/text_bright_color"
+                                    android:textSize="@dimen/text_little_size"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/mdp_10"
+                                android:paddingTop="@dimen/mdp_5"
+                                android:paddingBottom="@dimen/mdp_5"
+                                android:paddingLeft="@dimen/mdp_15"
+                                android:paddingRight="@dimen/mdp_15"
+                                android:background="@drawable/workplan_time_btn"
+                                android:text="@string/workplan_end_date"
+                                android:textColor="@color/text_dark_color"
+                                android:textSize="@dimen/text_little_size"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/mdp_0_2"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="#ebebeb"/>
+
+                    <TextView
+                        android:id="@+id/tvDayNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/mdp_25"
+                        android:layout_marginRight="@dimen/mdp_12"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/mdp_2"
+                        android:background="@drawable/workplan_date_icon"
+                        android:gravity="center"
+                        android:minWidth="@dimen/mdp_25"
+                        android:text="3"
+                        android:textColor="@color/text_dark_white_color"
+                        android:textSize="@dimen/text_little_size"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/detail_line"/>
+                <!-- 计划内容 -->
+                <View
+                    style="@style/detail_line"
+                    android:layout_marginTop="@dimen/row_minimum_height"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/etTile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:paddingTop="@dimen/mdp_12"
+                        android:paddingBottom="@dimen/mdp_12"
+                        android:paddingLeft="@dimen/text_paading"
+                        android:paddingRight="@dimen/mdp_42"
+                        android:background="@color/all_background_color"
+                        android:gravity="center_vertical"
+                        android:hint="@string/collaboration_title"
+                        android:textColor="@color/text_dark_color"
+                        android:textSize="@dimen/text_little_size"/>
+
+                    <Button
+                        android:id="@+id/btTitleMic"
+                        android:layout_width="@dimen/mdp_24"
+                        android:layout_height="@dimen/mdp_24"
+                        android:layout_marginRight="@dimen/text_paading"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/recording_icon"/>
+                </RelativeLayout>
+
+
+                <View
+                    style="@style/detail_line"/>
+                <!-- 计划内容 -->
+                <View
+                    style="@style/detail_line"
+                    android:layout_marginTop="@dimen/row_minimum_height"/>
+
+                <RelativeLayout
+                    android:id="@+id/lyRichContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/all_background_color"
+                    android:minHeight="@dimen/mdp_136">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <WebView
+                            android:id="@+id/planWebView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/all_background_color"
+                            android:minHeight="@dimen/mdp_136"
+                            android:visibility="gone">
+                        </WebView>
+
+                        <EditText
+                            android:id="@+id/content_voice_input_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/mdp_12"
+                            android:paddingBottom="@dimen/mdp_24"
+                            android:paddingLeft="@dimen/text_paading"
+                            android:background="@color/all_background_color"
+                            android:gravity="top"
+                            android:hint="@string/workplan_end_hint"
+                            android:minHeight="@dimen/mdp_136"
+                            android:textColor="@color/text_dark_color"
+                            android:textSize="@dimen/text_little_size"/>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true">
+
+                        <Button
+                            android:id="@+id/btContentMic"
+                            android:layout_width="@dimen/mdp_24"
+                            android:layout_height="@dimen/mdp_24"
+                            android:layout_marginBottom="@dimen/row_minimum_height"
+                            android:layout_marginRight="@dimen/text_paading"
+                            android:background="@drawable/recording_icon"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <!-- 附件 -->
+                <View
+                    style="@style/detail_line"/>
+
+                <View
+                    style="@style/detail_line"
+                    android:layout_marginTop="@dimen/row_minimum_height"/>
+
+                <TextView
+                    android:id="@+id/tvAttachment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_min_height"
+                    android:paddingLeft="@dimen/text_paading"
+                    android:paddingRight="@dimen/text_paading"
+                    android:background="@drawable/item_selector_background"
+                    android:drawableRight="@drawable/accessory_icon"
+                    android:gravity="center_vertical"
+                    android:text="附件"
+                    android:textColor="@color/workplan_textcolor_title"
+                    android:textSize="@dimen/text_middle_size"/>
+                <!-- 主送人 -->
+
+                <View
+                    style="@style/detail_line"/>
+
+                <View
+                    style="@style/detail_line"
+                    android:layout_marginTop="@dimen/row_minimum_height"/>
+
+                <TextView
+                    android:id="@+id/tvReceiver"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_min_height"
+                    android:paddingLeft="@dimen/text_paading"
+                    android:paddingRight="@dimen/text_paading"
+                    android:background="@drawable/item_selector_background"
+                    android:drawableRight="@drawable/add_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/workplan_receiveUsers"
+                    android:textColor="@color/workplan_textcolor_title"
+                    android:textSize="@dimen/text_middle_size"/>
+
+                <!-- 抄送人 -->
+                <View
+                    style="@style/detail_line"/>
+
+                <View
+                    style="@style/detail_line"
+                    android:layout_marginTop="@dimen/row_minimum_height"/>
+
+                <TextView
+                    android:id="@+id/tvCCUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_min_height"
+                    android:paddingLeft="@dimen/text_paading"
+                    android:paddingRight="@dimen/text_paading"
+                    android:background="@drawable/item_selector_background"
+                    android:drawableRight="@drawable/add_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/workplan_CCUsers"
+                    android:textColor="@color/workplan_textcolor_title"
+                    android:textSize="@dimen/text_middle_size"/>
+
+                <!-- 知会人 -->
+                <View style="@style/detail_line"/>
+
+                <View
+                    style="@style/detail_line"
+                    android:layout_marginTop="@dimen/row_minimum_height"/>
+
+                <TextView
+                    android:id="@+id/tvNunciator"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_min_height"
+                    android:paddingLeft="@dimen/text_paading"
+                    android:paddingRight="@dimen/text_paading"
+                    android:background="@drawable/item_selector_background"
+                    android:drawableRight="@drawable/add_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/workplan_noticeUsers"
+                    android:textColor="@color/workplan_textcolor_title"
+                    android:textSize="@dimen/text_middle_size"/>
+
+                <View
+                    style="@style/detail_line"
+                    android:layout_marginBottom="@dimen/row_minimum_height"/>
+            </LinearLayout>
+        </ScrollView>
+        <!-- 送办 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/all_background_color">
+
+            <View style="@style/detail_line"/>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="@dimen/mdp_86"
+                android:layout_height="@dimen/mdp_36"
+                android:layout_marginTop="@dimen/mdp_8"
+                android:layout_marginBottom="@dimen/mdp_8"
+                android:layout_marginLeft="@dimen/mdp_8"
+                android:layout_centerVertical="true"
+                android:background="@drawable/detail_btn_bg"
+                android:stateListAnimator="@null"
+                android:text="@string/save"
+                android:textColor="@color/black_deep"
+                android:textSize="@dimen/msp_16"/>
+
+            <Button
+                android:id="@+id/btSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_36"
+                android:layout_marginTop="@dimen/mdp_8"
+                android:layout_marginBottom="@dimen/mdp_8"
+                android:layout_marginLeft="@dimen/mdp_8"
+                android:layout_marginRight="@dimen/mdp_12"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/btnSave"
+                android:background="@drawable/nms_bg_blue_btn_round_enable"
+                android:stateListAnimator="@null"
+                android:text="@string/submit"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/msp_16"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

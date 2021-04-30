@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">feep-core</string>
+    <string name="permission_title">permission request</string>
+    <string name="permission_title_confirm">hint</string>
+    <string name="permission_msg_base_info">The enterprise cloud workstations need to have access to [storage space] and [device
+        information] to ensure the normal use of the application.
+    </string>
+    <string name="permission_rationale_record">The enterprise cloud work station uses the [recording] permission, only for the
+        normal use of voice, recording function, for normal use of recording function, please give the application to use
+        【recording】 permissions.
+    </string>
+    <string name="permission_rationale_camera">The enterprise cloud workbench uses the function of [camera], only for normal
+        camera and sweep. If you want to use the camera function normally, please give the application permission to use 【camera】.
+    </string>
+    <string name="permission_rationale_location">The Enterprise Cloud Workbench uses the [Location] permission, only for the
+        check-in and location reporting functions. For normal use of the check-in function, please give the application permission
+        to use [position].
+    </string>
+    <string name="permission_rationale_calendar">The Enterprise Cloud Workbench uses the [Calendar] permission, which is used only
+        for calendar synchronization and addition. For functions such as normal use of the calendar, please give the application
+        permission to use [calendar].
+    </string>
+    <string name="permission_rationale_contact">The Enterprise Cloud Workbench uses the "Contacts" permission, which is only used
+        to display contacts and search functions. We guarantee that we do not perform any operations involving user privacy. For
+        normal use of related functions, Use the permissions of [address book].
+    </string>
+    <string name="permission_msg_request_failed">If the required permission application fails, the function can not be used
+        normally. For normal use, please open the relevant permission in [Setup - Application - Enterprise Cloud Workbench -
+        Permissions].
+    </string>
+    <string name="permission_msg_request_failed_base">Please turn on storage space and phone permissions in [Setup - Application -
+        Enterprise Cloud Workbench - Permissions] to ensure the normal use of the application.
+    </string>
+    <string name="permission_msg_request_failed_storage">Please open the storage space permissions in [Setup - Application -
+        Enterprise Cloud Workbench - Permissions] to use the Enterprise Cloud Workbench normally.
+    </string>
+    <string name="permission_msg_request_failed_phone">Use the [Phone] permission on the Enterprise Cloud Workbench to determine
+        the local device ID to ensure the security of the account and do not dial other numbers or stop the call. Please open the
+        phone privilege in the [Settings - Application - Enterprise Cloud Workbench - Permissions] to log in to the application
+        normally.
+    </string>
+    <string name="permission_msg_request_failed_camera">Please turn on camera permissions in [Setup - Application - Enterprise
+        Cloud Workbench - Permissions] to take pictures, scan 2D code and other functions normally.
+    </string>
+    <string name="permission_msg_request_failed_record">Please turn on the recording right in [Setup - Application - Enterprise
+        Cloud Workbench - Permission] to use voice, recording and other functions normally.
+    </string>
+    <string name="permission_msg_request_failed_location">Please turn on location permissions in [Settings - Application -
+        Enterprise Cloud Workbench - Permissions] to use normal sign-in, location reporting, and so on.
+    </string>
+    <string name="permission_msg_request_failed_contact">Please open the address book permissions in [Setup - Application -
+        Enterprise Cloud Workbench - Permissions] to use functions such as toot, CRM, and display contacts.
+    </string>
+    <string name="permission_msg_request_failed_sms">Please open the SMS privilege in [Setup - Application - Enterprise Cloud
+        Workbench - Permissions] to use the application normally.
+    </string>
+    <string name="permission_msg_request_failed_calendar">Please set the calendar permissions in the [Settings - Application -
+        Enterprise Cloud Workbench - Permissions] to use the calendar and other related functions.
+    </string>
+    <string name="permission_text_i_know">know</string>
+    <string name="permission_text_confirm">OK</string>
+    <string name="permission_text_go_setting">to set</string>
+    <string name="core_unknow_size">unknown size</string>
+    <string name="core_unknow_type">unknown type</string>
+    <string name="core_prompt_title">Tips</string>
+    <string name="core_btn_positive">OK</string>
+    <string name="core_btn_negative">Cancel</string>
+    <string name="core_http_success_exception">The data returned by the server is incorrect</string>
+    <string name="core_network_error_retry">network traffic jams, please retry</string>
+    <string name="core_http_failure">Network error, please check the network</string>
+    <string name="core_http_timeout">network timeout, please check the network</string>
+    <string name="core_http_network_exception">network exception</string>
+    <string name="core_attachment_handle_error">attachment upload processing error</string>
+    <string name="core_all_attachment_size">Attachment total size:</string>
+    <string name="core_all_attachment_size_overflow">The total attachment is greater than %1$s M, no support</string>
+    <string name="core_single_attachment_size_overflow">A single attachment is greater than %1$s M, no support</string>
+    <string name="core_loading">loading ...</string>
+    <string name="core_loading_wait">Please wait ...</string>
+    <string name="core_downloading">completed</string>
+    <string name="contact_fetch_error">data fetch failed ...</string>
+    <string name="core_activity_not_found">​​can not open the current interface</string>
+    <string name="core_data_deleted">data has been deleted</string>
+    <string name="core_read_all">read all</string>
+    <string name="core_data_get_error">data acquisition failed ...</string>
+    <string name="exit_edit_tig">exit this edit?</string>
+    <string name="message_please_login_again">session failed! Please log back in!</string>
+    <string name="core_lbl_txt_search">Search</string>
+    <string name="core_read_detial">View details</string>
+
+    <string name="util_date_mm">MMMM</string>
+    <string name="util_date_week">&#160;%1$dweek</string>
+    <string name="util_date_interval">MMMM dd</string>
+    <string name="util_date_yyyy_mm_dd">yyyy-MM-dd</string>
+
+    <string name="util_time_right_now">just</string>
+    <string name="util_time_minutes_ago">%1$sMinutes ago</string>
+    <string name="util_time_hour">%1$sHours ago</string>
+    <string name="util_date_day">%1$sDays ago</string>
+
+    <string name="util_week_sun">Sunday</string>
+    <string name="util_week_mon">Monday</string>
+    <string name="util_week_tues">Tuesday</string>
+    <string name="util_week_wed">Wednesday</string>
+    <string name="util_week_thur">Thursday</string>
+    <string name="util_week_fri">Friday</string>
+    <string name="util_week_sat">Saturday</string>
+
+    <string name="location_history_day_time">MMM,yyyy</string>
+
+    <string name="time_format_Hm">HH:mm</string>
+    <string name="time_format_Hms">HH:mm:ss</string>
+    <string name="time_format_today">Today</string>
+    <string name="time_format_yesterday">Yesterday</string>
+    <string name="time_format_Md">MM-dd-</string>
+    <string name="time_format_yMd">yyyy-MM-dd</string>
+    <string name="time_format_Mdhm">MM月dd日 HH:mm</string>
+    <string name="common_search_title">search</string>
+
+    <string name="common_empty_file_hint">There is no content under this folder</string>
+    <string name="common_empty_list_hint">There is nothing here</string>
+</resources>

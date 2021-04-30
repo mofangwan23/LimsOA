@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp">
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/core_search_edittext"
+            android:drawableLeft="@mipmap/core_icon_search"
+            android:drawablePadding="8dp"
+            android:paddingLeft="8dp"
+            android:textCursorDrawable="@drawable/core_edit_text_drawable"
+            android:singleLine="true"
+            android:textSize="13sp"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_42"
+        android:background="@color/all_background_color">
+        <!--日期选择-->
+        <LinearLayout
+            android:id="@+id/mLayoutMonthPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/mdp_12"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/mTvMonthTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mdp_6"
+                android:textColor="#191919"
+                android:textSize="@dimen/msp_14"/>
+
+            <ImageView
+                android:id="@+id/head_right_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_address_filter_down"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mTvMonthStatisNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/mdp_12"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#9B9B9B"
+            android:textSize="@dimen/msp_12"/>
+    </RelativeLayout>
+
+    <View style="@style/detail_line"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color"/>
+</LinearLayout>

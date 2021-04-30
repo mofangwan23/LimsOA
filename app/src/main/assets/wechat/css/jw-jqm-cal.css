@@ -1,0 +1,226 @@
+﻿@charset "utf-8";
+
+.ng-animate-start {
+	clip: rect(0, auto, auto, 0);
+	-ms-zoom: 1.0001;
+}
+
+.ng-animate-active {
+	clip: rect(-1px, auto, auto, 0);
+	-ms-zoom: 1;
+}
+
+body,input,select,textarea,button,.ui-btn {
+	font-size: 1em;
+	line-height: normal;
+}
+
+.jq-calendar-wrapper {
+	background-color: #ecf0f1;
+	display: block;
+}
+
+.jq-calendar-wrapper table {
+	margin: 0;
+	width: 100%;
+	color: #3e9cdc;
+	background: #ecf0f1;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.jq-calendar-wrapper .ui-listview {
+	margin: 0;
+}
+
+.jq-calendar-wrapper th {
+	padding: .2em 0;
+	text-align: center;
+}
+
+.jq-calendar-wrapper th.header {
+	line-height: 33px;
+}
+
+.jq-calendar-wrapper .previous-btn {
+	float: left;
+	margin: .2em .5em;
+}
+
+.jq-calendar-wrapper .next-btn {
+	float: right;
+	margin: .2em .5em;
+}
+
+.jq-calendar-wrapper td {
+	text-align: center;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #333;
+	font-size: 1em;
+	position: relative;
+}
+
+/*所有日期td*/
+.jq-calendar-wrapper span.darker {
+	color: #3e9cdc;
+	font-weight: bold;
+	opacity: 1;
+}
+
+/*所有非本月日期*/
+.jq-calendar-wrapper td.darker a.ui-btn-up-a {
+	color: #AEC0C1;
+}
+
+.jq-calendar-wrapper td a {
+	padding: .5em 0;
+	margin: 0;
+	border: 0;
+	-moz-border-radius: 3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+
+.jq-calendar-wrapper td a .ui-btn-active {
+	background-color: red !important;
+	display: block;
+	color: #fff;
+	-moz-border-radius: inherit;
+	-webkit-border-radius: inherit;
+	border-radius: inherit;
+}
+
+.jq-calendar-wrapper td span {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.jq-calendar-wrapper thead th.header { /*设置日期中间的分割线*/
+	border-bottom: 1px #ddd solid;
+	color: #6895C9;
+	font-size: 1em;
+}
+
+.ui-bar-a {
+	border: 0;
+}
+
+.ui-overlay-a,.ui-page-theme-a,.ui-page-theme-a .ui-panel-wrapper {
+	background: #ffffff;
+	border-color: #bbb;
+}
+
+.ui-body-a,.ui-page-theme-a .ui-body-inherit,html .ui-bar-a .ui-body-inherit,html .ui-body-a .ui-body-inherit,html body .ui-group-theme-a .ui-body-inherit,html .ui-panel-page-container-a
+	{
+	background: #ffffff;
+}
+
+.ui-body-a {
+	border: 0;
+	background: #ecf0f1;
+}
+
+
+.ui-page-theme-a {
+	background: #ffffff;
+}
+
+.darker,.ui-btn-up-a {
+	font-color: #bfcdce;
+	font-size: .9em;
+	background-color: #ecf0f1;
+	font-weight: normal !important;
+}
+
+/*签到圆点*/
+a.qdyd {
+	width: .3em;
+	height: .3em;
+	display: block;
+	position: absolute;
+	background: #ff0000;
+	bottom: 0;
+	left: 48%;
+	-moz-border-radius: .3em;
+	-webkit-border-radius: .3em;
+	border-radius: .3em;
+}
+
+/*当天签到圆点*/
+a.tdqdd {
+	width: .3em;
+	height: .3em;
+	display: block;
+	position: absolute;
+	background: #ff0000;
+	bottom: -.35em;
+	left: 48%;
+	-moz-border-radius: .3em;
+	-webkit-border-radius: .3em;
+	border-radius: .3em;
+}
+
+a.today {
+	color: #F00;
+}  /*当天文字颜色*/
+
+.ui-page-theme-a {
+	background: #ffffff;
+}
+
+th.ui-bar-a {
+	background: #ecf0f1;
+}
+
+td.ui-body-a a.ui-btn {
+	background: #ecf0f1;
+}
+
+li.ng-scope a.ui-btn {
+	color: #a6a6a6;
+}
+
+/*公共头部切换按钮*/
+.pubut-box{padding:.5em 0!important;}
+.pubut-top{width:90%; margin:0 5%!important;}
+.pubut-left,.pubut-right{border:1px #5d9cec solid!important; font-size:.9em!important; padding: .5em 1em!important;}
+.pubut-left{border-radius:5px 0px 0px 5px;  border-right:none!important;}
+.pubut-right{border-radius:0px 5px 5px 0px; border-left:none!important;}
+
+.top-lrmune{width:100%; margin-top:10px; border-top:1px #dddddd solid; color:#6895C9; background:#ecf0f1;}
+
+.pucontent-box{padding-left:0!important; padding-right:0!important;}
+.box-bottom{padding-bottom:20px!important;}
+
+.list-radi{border-radius:0!important; margin:0!important; margin-top:-1px!important;}
+.list-radi li{border-left:none!important; borde-right:none!important; margin-bottom:-1px!important;}
+
+.list-kjli{font-size:14px!important;  background:#fff!important;}
+.list-botm{border-top:none!important; height:1px!important; padding:0!important;}
+
+.list-tilt{background-color:#fafafa!important; margin:0!important; font-weight:bold!important; color:#768696!important; font-size:.9em!important;}
+
+.addtxtbox{font-size:.9em!important; white-space:normal!important; word-break:break-all!important; word-wrap:break-word!important;}
+
+
+.minbox-bg{background:#f1f2ed!important;}
+
+/*考勤回复*/
+.ontime-box{width:100%; border-collapse:collapse;}
+.ontime-box th{padding:3px 2px; width:60px; font-size:.9em!important; font-weight:100!important; color:#999!important; vertical-align:top!important; white-space:nowrap!important;}
+.ontime-box td{padding:3px 2px; font-size:.9em!important; font-weight:100!important;
+word-break: break-all!important; white-space:normal!important; vertical-align:top!important;
+}
+.ontime-box td.time{width:40px; white-space:nowrap!important; text-align:right;}
+
+.round_photo_small {
+	width: 30px!important;
+	height: 30px!important;
+	-moz-border-radius: 20px!important;
+	-webkit-border-radius: 20px!important;
+	border-radius: 20px!important;
+	margin: 0px 3px 0 0px!important;
+}

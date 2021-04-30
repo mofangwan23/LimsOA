@@ -1,0 +1,36 @@
+.round_photo_chat { width: 40px; height: 40px; -moz-border-radius: 100em; -webkit-border-radius: 100em; border-radius: 100em; border: 2px #eee solid; }
+.ui-page { backface-visibility: hidden; -webkit-backface-visibility: hidden; /* Chrome and Safari */ -moz-backface-visibility: hidden; /* Firefox */ }
+.nonedisplay { display: none; height: 0; }
+.showmsgcount { background: rgb(198, 63, 41); border-radius: 18px; right: 15px; top: 40px; min-width: 16px; height: 16px; line-height: 16px; color: rgb(255, 255, 255); overflow: hidden; text-align: center; font-family: Tahoma; font-size: 12px; font-weight: bold; position: absolute; z-index: 99; display: none; }
+.showmsgallcount { background: rgb(198, 63, 41); border-radius: 16px; left: 50%; top: 1px; margin-left: 15px; width: 16px; height: 16px; color: rgb(255, 255, 255); line-height: 16px; text-align: center; overflow: hidden; font-family: Tahoma; font-size: 12px; position: absolute; z-index: 99; display: none; }
+#chatlistview { margin: 0px; }
+#chatlistview .ui-li-divider { border: none; text-align: center; background: #6895c9; color: #fff; margin: 0.5em 30%; font-weight: 100; float: clear; }
+textarea.ui-input-text { margin: 0px; padding: 0px; border: 1px solid; min-height:25px;}
+.face { margin-left: 5px; cursor: pointer; height: 35px; width: 35px; cursor: pointer; position: absolute; top: 3px; }
+.sendbutton { margin:0px; height:19px; line-height:19px;}
+.time { float: right; font-size: 12px; }
+div.speech {font-size:1em; margin: 10px 0; padding: 12px; table-layout: fixed; word-break: break-all; position: relative; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
+div.speech:before { content: ''; position: absolute; width: 0; height: 0; left: 15px; top: -20px; border: 10px solid; border-color: transparent transparent #989898 transparent; }
+div.speech:after { content: ''; position: absolute; width: 0; height: 0; left: 17px; top: -16px; border: 8px solid; border-color: transparent transparent #ffffff transparent; }
+div.speech.right { margin-left: 35px; margin-right: 55px; background: #bced50; }
+div.speech.right:before { content: ''; position: absolute; width: 0; height: 0; top: 9px; bottom: auto; left: auto; right: -10px; border-width: 9px 0 9px 10px; border-color: transparent #bced50; }
+div.speech.right:after { content: ''; position: absolute; width: 0; height: 0; top: 10px; bottom: auto; left: auto; right: -8px; border-width: 8px 0 8px 9px; border-color: transparent #bced50; }
+div.speech.left { margin-left: 55px; margin-right: 35px; background: #eae8e8; }
+div.speech.left:before { content: ''; position: absolute; width: 0; height: 0; top: 9px; bottom: auto; left: -10px; border-width: 9px 10px 9px 0; border-color: transparent #eae8e8; }
+div.speech.left:after { content: ''; position: absolute; width: 0; height: 0; top: 10px; bottom: auto; left: -8px; border-width: 8px 9px 8px 0; border-color: transparent #eae8e8; }
+.leftimg { float: left; margin-top: 10px; }
+.rightimg { float: right; margin-top: 10px; }
+.leftd { clear: both; float: left; margin-left:1em;}
+.rightd { clear: both; float: right; margin-right:1em;}
+.clear { clear: both; }
+.chatfloatwrap { width: 100%; float: left; text-align: center; }
+.chatfloatwrap .more { padding: 0 5px 0 5px; height: 25px; line-height: 25px; margin: 0 auto; background: #eae8e8; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; color: #9a9a9a; font-size: 14px; table-layout: fixed; word-break: break-all; }
+.chatfloatwrap .chattime { padding: 0 5px 0 5px; height: 20px; line-height: 20px; margin: 0 auto; background: #999; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; color: #fff; font-size: 12px; table-layout: fixed; word-break: break-all; }
+.emotion { width:100%;display: none; overflow: hidden; list-style: none; border-top: 1px #CCC solid; border-left: 1px #CCC solid; padding: 0px; padding-top: 2px; }
+.emotion li { float: left; height: 30px; width: 30px; padding: 2px; text-align: center; }
+.emotion li img { width: 26px; height: 26px; }
+span.del{z-index:5;position:absolute;top:0px;right:0px;background:#f00;color:#fff;height:100%;line-height:450%;text-align:center;font-weight:100;width:60px;display:none;}
+.scroller {	position:absolute;width:100%;padding:0;}
+.scroll-nofooter {position:absolute; top:40px; bottom:0px; left:0;width:100%;overflow:auto;}
+.scroll-has-footer {position:absolute;top:45px; bottom:55px; left:0;width:100%;overflow:auto;}
+table.chat {width:100%;border:none;padding:0px;margin-top:2px;}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_background_color"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/mdp_8"
+    android:paddingTop="@dimen/mdp_6">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:paddingLeft="@dimen/mdp_8"
+        android:text="选择导入记录的聊天群："
+        android:textColor="@color/text_dark_color"
+        android:textSize="@dimen/mdp_16" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_5"
+        android:paddingLeft="@dimen/mdp_10"
+        android:text="聊天群的创建时间，必须晚于群聊解散时间"
+        android:textColor="@color/holo_red_light"
+        android:textSize="@dimen/msp_10" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/group_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

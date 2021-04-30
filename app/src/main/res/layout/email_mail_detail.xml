@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout
+    android:id="@id/swipeBackLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/core_view_transparent"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/core_view_toolbar"/>
+        <cn.flyrise.feep.email.views.NiuBiaWebView
+            android:id="@+id/niuBiaWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llBottomMenu"
+            android:layout_below="@id/toolBar"
+            android:background="@color/all_background_color">
+        </cn.flyrise.feep.email.views.NiuBiaWebView>
+        <LinearLayout
+            android:id="@+id/llBottomMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+            <include layout="@layout/view_line"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_48"
+                android:layout_alignParentBottom="true"
+                android:background="@color/home_title_color"
+                android:orientation="horizontal"
+                android:visibility="visible">
+                <TextView
+                    android:id="@+id/tvMailBtn1"
+                    android:layout_width="@dimen/mdp_0"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/msp_16"/>
+                <TextView
+                    android:id="@+id/tvMailBtn2"
+                    android:layout_width="@dimen/mdp_0"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/msp_16"/>
+                <TextView
+                    android:id="@+id/tvMailBtn3"
+                    android:layout_width="@dimen/mdp_0"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:autoText="false"
+                    android:gravity="center"
+                    android:textSize="@dimen/msp_16"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

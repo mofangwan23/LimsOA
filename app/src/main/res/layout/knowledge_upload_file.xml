@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/standard_bg_g_30">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolBar"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <LinearLayout
+            android:id="@+id/knowledge_upload_file_ll_add"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_45"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/bdp_white">
+            <View
+                android:layout_width="5dp"
+                android:layout_height="@dimen/mdp_15"
+                android:background="@color/defaultColorAccent"
+                android:layout_marginLeft="@dimen/mdp_15" />
+            <TextView
+                android:id="@+id/knowledge_upload_file_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/knowledge_edt_text_color"
+                android:text="@string/file"
+                android:layout_marginLeft="@dimen/mdp_10"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/knowledge_upload_file_iv_add"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/icon_add_thin_thread"
+                android:layout_marginRight="15dp"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/standard_line_g_50"/>
+        <RelativeLayout
+            android:id="@+id/knowledge_upload_file_rl_add_file"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/bdp_white"
+            android:gravity="center"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/knowledge_upload_file_tv_add_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/icon_add_circle"
+                android:drawablePadding="10dp"
+                android:textSize="16sp"
+                android:textColor="#28B9FF"
+                android:text="添加文件"/>
+        </RelativeLayout>
+        <FrameLayout
+            android:id="@+id/layoutAttachments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bdp_white">
+        </FrameLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/standard_bg_g_30"/>
+        <!--有效期-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_45"
+            android:background="@color/bdp_white">
+            <View
+                android:layout_width="5dp"
+                android:layout_height="@dimen/mdp_15"
+                android:background="@color/defaultColorAccent"
+                android:layout_marginLeft="@dimen/mdp_15"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/standard_text_g_100"
+                android:text="@string/the_expiry_date"
+                android:layout_marginLeft="29dp"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:id="@+id/knowledge_upload_file_iv_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/wenhao"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/mdp_15"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <include layout="@layout/view_date_time_new"/>
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

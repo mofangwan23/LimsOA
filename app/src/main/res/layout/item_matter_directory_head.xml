@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/address_tree_department_list_item_normal"
+    android:minHeight="@dimen/mdp_40"
+    android:padding="@dimen/mdp_5"
+    android:orientation="horizontal"
+    >
+
+    <ImageView
+        android:id="@+id/ivDepartmentArrow"
+        android:layout_width="@dimen/mdp_20"
+        android:layout_height="@dimen/mdp_20"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/mdp_2"
+        android:layout_marginRight="@dimen/mdp_4"
+        android:layout_gravity="center"
+        android:src="@drawable/left_arrow"/>
+
+
+    <TextView
+        android:id="@+id/tvDepartmentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_folder"
+        android:layout_gravity="center"
+        android:text="返回上一层"
+        android:textColor="#575759"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/msp_16"/>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/the_contact_relative_search"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mdp_43"
+    android:background="#FFDDDDDD"
+    android:paddingBottom="@dimen/mdp_7"
+    android:paddingLeft="@dimen/mdp_9"
+    android:paddingRight="@dimen/mdp_9"
+    android:paddingTop="@dimen/mdp_7">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/core_search_round_edittext" />
+
+    <TextView
+        android:id="@+id/search_et"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/mdp_2"
+        android:background="@drawable/core_search_round_edittext"
+        android:drawableLeft="@mipmap/core_icon_search"
+        android:gravity="center"
+        android:paddingLeft="@dimen/mdp_8"
+        android:text="@string/search_empty_searchkey"
+        android:textSize="@dimen/msp_13" />
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<div data-role="page" id="pageFormOrganizeSelector" style="background:#f1f2ed;" ng-cloak>
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<div data-role="navbar" data-iconpos="false" id="todonav" class="pubut-box">
+			<ul class="pubut-top" id="organizeFormHeaderListview">
+				<li id="organizeX" data-icon="false"> <a href="#" ng-click='_showFromPersonTree()' data-theme="c" data-icon="false" class="ui-state-persist pubut-left">人员</a> </li>
+				<li id="organizeZ" data-icon="false"> <a ng-click='_showFormGroupTree()' href="#" data-theme="c" data-icon="false" class="pubut-mid">机构</a> </li>
+				<li id="organizeY" data-icon="false"> <a ng-click='_showFormPostTree()' href="#" data-theme="c" data-icon="false" class="pubut-right">岗位</a> </li>
+			</ul>
+		</div>
+	</div>
+	<div id="organizecontentX" data-role="content" ng-show="ORGANIZE_TYPE == 'X'">
+		<ul data-role="listview" data-autodividers="true" data-inset="true" data-filter="true" id="orgtreelistview" class="organize-tree" data-filter-placeholder="搜索" style="border-radius:0;">
+			<li org-form-tree-directive ng-repeat="x in organizeFormPersonTreeData" data-icon="false" ng-show="_isShowUser(x.id);" divider="{{x.charType}}" data-filtertext="{{x.name}} {{x.pinyin}} {{x.tel}} {{x.phone}} {{x.email}}">
+				<a ng-click="_checkedFormOrgBox(x.id)" href="#" id="chk{{x.id}}" orgid="{{x.id}}" orgname="{{x.name}}" style="background:#fff;">
+					<img id="photo{{x.id}}" orgid="{{x.id}}" orgname="{{x.name}}" ng-src="{{x.imageHref}}" style="width:46px; height:46px; -moz-border-radius:100em !important; -webkit-border-radius:100em !important; border-radius:100em !important;
+		        margin:10px 0px 0px 10px; margin-left:20px; border:1px #eee solid;"/>
+					<h3 style="float:left; width:70px!important; vertical-align:middle; font-weight:100!important; color:#333; font-size:1em; padding:4px 0;">{{x.name}}</h3>
+					<p style="float:left; margin-left:10px; width:40% !important; text-overflow:ellipsis; overflow:hidden; padding:4px 0; color:#777; font-size:0.7em !important">{{x.position}}</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div id="organizecontentZ" data-role="content" ng-show="ORGANIZE_TYPE == 'Z'">
+		<ul data-role="listview" data-inset="true" data-autodividers="true" data-inset="true" data-filter="true" class="organize-tree" id="grouporgtreelistview" data-filter-placeholder="搜索" style="border-radius:0;">
+			<li org-form-tree-directive ng-repeat="x in organizeFormGroupTreeData" divider="{{x.company}}"  data-icon="false">
+				<a ng-click="_checkedFormOrgBox('[' + x.id + ']')" href="#" id="chk{{'[' + x.id + ']'}}" orgid="{{'[' + x.id + ']'}}" orgname="{{x.name}}" style="background:#fff;">
+					<img id="photo{{'[' + x.id + ']'}}" src="{{GROUP_IMAGE}}" style="width:46px; height:46px; -moz-border-radius:100em !important; -webkit-border-radius:100em !important; border-radius:100em !important;
+		        margin:10px 0px 0px 10px; margin-left:20px; border:1px #eee solid;"/>
+					<h3 style="white-space:normal;vertical-align:middle; font-weight:100!important; color:#333; font-size:1em;">{{x.name}}</h3>
+					<p style="white-space:normal;color:#777; font-size:0.7em !important">{{x.position}}</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div id="organizecontentY" data-role="content" ng-show="ORGANIZE_TYPE == 'Y'">
+		<ul data-role="listview" data-inset="true" data-autodividers="true" data-inset="true" data-filter="true"  class="organize-tree" id="postorgtreelistview" data-filter-placeholder="搜索" style="border-radius:0;">
+			<li org-form-tree-directive ng-repeat="x in organizeFormPostTreeData" divider="{{x.company}}"  data-icon="false">
+				<a ng-click="_checkedFormOrgBox('{' + x.id + '}')" href="#" id="chk{{'{' + x.id + '}'}}" orgid="{{'{' + x.id + '}'}}" orgname="{{x.name}}" style="background:#fff;">
+					<img id="photo{{'{' + x.id + '}'}}" src="{{POST_IMAGE}}" style="width:46px; height:46px; -moz-border-radius:100em !important; -webkit-border-radius:100em !important; border-radius:100em !important;
+		        margin:10px 0px 0px 10px; margin-left:20px; border:1px #eee solid;"/>
+					<h3 style="white-space:normal;vertical-align:middle; font-weight:100!important; color:#333; font-size:1em;">{{x.name}}</h3>
+					<p style="white-space:normal;color:#777; font-size:0.7em !important">{{x.position}}</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" id="orgfooter">
+		<table ng-hide="readonly" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="width:100%;" align="left">
+					<div id="organizeFormChecked" style="float:left; width:auto; height:auto; overflow-x:auto; overflow-y:hidden; margin:5px;"></div>
+				</td>
+				<td style="width:80px;" align="right">
+					<a data-role="button" data-inline="true" href="#" ng-click="_finishFormOrganizeSelect()" data-icon="false" data-rel="back" style="background:#ff8000; width:50px; color:#fff; border:none;">确定</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

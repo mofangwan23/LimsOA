@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="status_bar_height">0dp</dimen>
+    <dimen name="main_status_bar_height">25dp</dimen>
+    <dimen name="main_v7_image_margin_top">60dp</dimen>
+    <dimen name="main_v7_image_margin_bottom">0dp</dimen>
+</resources>

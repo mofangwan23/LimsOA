@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/all_background_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_52"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/mdp_52"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_paading"
+            android:layout_marginRight="@dimen/text_paading"
+            android:layout_toLeftOf="@+id/notification_list_item_checkbox"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/setting_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消息推送设置"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/text_little_size"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/setting_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mdp_3"
+                android:text="是否启用消息推送"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/msp_16" />
+        </LinearLayout>
+
+        <cn.flyrise.feep.core.base.views.UISwitchButton xmlns:switch="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/notification_list_item_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/text_paading"
+            switch:bmHeight="@dimen/mdp_3000"
+            switch:bmWidth="@dimen/row_min_height" />
+
+        <View
+            style="@style/detail_line"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</RelativeLayout>

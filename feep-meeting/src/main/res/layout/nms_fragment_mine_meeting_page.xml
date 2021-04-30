@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <cn.flyrise.feep.meeting7.ui.component.XRecyclerView
+            android:id="@+id/nmsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </cn.flyrise.feep.meeting7.ui.component.XRecyclerView>
+
+        <cn.flyrise.feep.meeting7.ui.component.StatusView
+            android:id="@+id/nmsEmtpyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        </cn.flyrise.feep.meeting7.ui.component.StatusView>
+
+        <LinearLayout
+            android:id="@+id/nmsLayoutRecently"
+            android:layout_width="@dimen/mdp_76"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@mipmap/nms_ic_scroll_recently"
+            android:gravity="center_vertical|right"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/nmsTvRecently"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:paddingTop="@dimen/mdp_3"
+                android:paddingBottom="@dimen/mdp_3"
+                android:paddingLeft="@dimen/mdp_24"
+                android:paddingRight="@dimen/mdp_10"
+                android:text="最近"
+                android:textColor="#B2B2B2"
+                android:textSize="@dimen/msp_12"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nmsLayoutRecentlyUp"
+            android:layout_width="@dimen/mdp_76"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:background="@mipmap/nms_ic_scroll_recently_up"
+            android:gravity="center_vertical|right"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/nmsTvRecentlyUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:paddingTop="@dimen/mdp_3"
+                android:paddingBottom="@dimen/mdp_3"
+                android:paddingLeft="@dimen/mdp_24"
+                android:paddingRight="@dimen/mdp_10"
+                android:text="最近"
+                android:textColor="#B2B2B2"
+                android:textSize="@dimen/msp_12"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6F6"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <cn.flyrise.feep.meeting7.ui.component.XRecyclerView
+            android:id="@+id/nmsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </cn.flyrise.feep.meeting7.ui.component.XRecyclerView>
+
+        <cn.flyrise.feep.meeting7.ui.component.StatusView
+            android:id="@+id/nmsStatusView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </cn.flyrise.feep.meeting7.ui.component.StatusView>
+    </FrameLayout>
+
+</LinearLayout>

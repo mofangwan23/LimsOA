@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View style="@style/CoreSplitLine"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/mdp_8"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_40">
+            <TextView
+                style="@style/NMSMeetingItemTextStyle"
+                android:id="@+id/nmsTvTitle"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_centerInParent="true"
+                android:text="按时参加"/>
+
+            <ImageView
+                android:id="@+id/nmsIvX"
+                android:layout_width="@dimen/mdp_48"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/mdp_8"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/mdp_14"
+                android:src="@mipmap/nms_ic_x"/>
+        </RelativeLayout>
+
+        <View style="@style/CoreSplitLine"/>
+
+        <EditText
+            android:id="@+id/coreEtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="@dimen/mdp_12"
+            android:paddingBottom="@dimen/mdp_12"
+            android:paddingLeft="@dimen/mdp_16"
+            android:paddingRight="@dimen/mdp_16"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint=" 请输入回复意见"
+            android:maxLines="4"
+            android:textColorHint="#FF8B8C8C"
+            android:textSize="@dimen/msp_14"/>
+
+        <TextView
+            android:id="@+id/coreTvErrorPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/mdp_8"
+            android:paddingRight="@dimen/mdp_16"
+            android:gravity="right"
+            android:textColor="#FFF74D32"
+            android:textSize="@dimen/msp_12"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_30"
+            android:layout_marginTop="@dimen/mdp_6"
+            android:layout_marginLeft="@dimen/mdp_12"
+            android:layout_marginRight="@dimen/mdp_12">
+
+            <RelativeLayout
+                android:id="@+id/coreLayoutAttachments"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/coreBtnVoiceInput"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/coreIvAttachment"
+                    android:layout_width="@dimen/mdp_32"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/mdp_3"
+                    android:src="@mipmap/nms_ic_attachment_unable"/>
+
+                <TextView
+                    android:id="@+id/coreTvAttachmentSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/mdp_2"
+                    android:layout_marginLeft="-7dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/coreIvAttachment"
+                    android:text="2"
+                    android:textColor="#FF28B9FF"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/coreTvSubmit"
+                android:layout_width="@dimen/mdp_48"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/mdp_3"
+                android:paddingRight="@dimen/mdp_3"
+                android:background="@drawable/nms_bg_blue_btn_round_enable"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="发送"
+                android:textColor="#FFF"
+                android:textSize="@dimen/msp_13"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

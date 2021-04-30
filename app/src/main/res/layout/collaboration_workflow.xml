@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:panel="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:scrollbars="horizontal|vertical"
+        tools:context=".collaboration.activity.WorkFlowActivity">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <cn.flyrise.android.library.view.TransformLayout
+            android:id="@+id/flowViewTransformer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/searchBarTransformer"
+            android:layout_below="@+id/searchBarTransformer">
+
+            <cn.flyrise.feep.collaboration.view.workflow.WorkFlowView
+                android:id="@+id/workFlowView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </cn.flyrise.android.library.view.TransformLayout>
+
+        <cn.flyrise.android.library.view.Panel
+            android:id="@+id/panel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/toolBar"
+            panel:closedHandle="@drawable/left_switcher_collapsed_background"
+            panel:content="@+id/panelContent"
+            panel:handle="@+id/panelHandle"
+            panel:openedHandle="@drawable/left_switcher_expanded_background"
+            panel:position="left">
+
+            <Button
+                android:id="@+id/panelHandle"
+                android:layout_width="@dimen/mdp_20"
+                android:layout_height="fill_parent"
+                android:stateListAnimator="@null"/>
+
+            <RelativeLayout
+                android:id="@+id/panelContent"
+                android:layout_width="@dimen/mdp_110"
+                android:layout_height="match_parent">
+
+                <cn.flyrise.feep.collaboration.view.PersonPositionSwitcher
+                    android:id="@+id/switcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mdp_43"/>
+
+                <cn.flyrise.android.library.view.ResizeTextView
+                    android:id="@+id/back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/switcher"
+                    android:paddingTop="@dimen/mdp_3"
+                    android:paddingBottom="@dimen/mdp_3"
+                    android:paddingLeft="@dimen/mdp_6"
+                    android:background="@color/popwindow_list_item_normal"
+                    android:drawableLeft="@drawable/back_left_icon"
+                    android:gravity="center"
+                    android:minHeight="@dimen/mdp_36"
+                    android:textColor="@color/userinfo_detail_content"
+                    android:textSize="@dimen/msp_13"/>
+
+                <FrameLayout
+                    android:id="@+id/layoutContentView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/back">
+                    <cn.flyrise.android.library.view.addressbooklistview.AddressBookListView
+                        xmlns:feep="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/all_background_color"
+                        android:cacheColorHint="#00000000"
+                        android:divider="@drawable/listview_divider_line"
+                        android:dividerHeight="@dimen/mdp_2"
+                        android:listSelector="#0000"
+                        android:overScrollMode="never"
+                        android:scrollbars="none"
+                        feep:ptrLoadingViewSizeType="small"/>
+                </FrameLayout>
+            </RelativeLayout>
+        </cn.flyrise.android.library.view.Panel>
+
+        <cn.flyrise.android.library.view.TransformLayout
+            android:id="@+id/searchBarTransformer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolBar">
+
+            <RelativeLayout
+                android:id="@+id/search_icon"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_43"
+                android:padding="@dimen/mdp_8"
+                android:background="#cccccc">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/core_search_round_edittext"/>
+
+                <TextView
+                    android:id="@+id/search_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/mdp_2"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="@dimen/mdp_8"
+                    android:background="@drawable/core_search_round_edittext"
+                    android:drawableLeft="@mipmap/core_icon_search"
+                    android:gravity="center"
+                    android:hint="@string/search"
+                    android:textSize="@dimen/msp_13"/>
+            </RelativeLayout>
+
+            <cn.flyrise.android.library.view.SearchBar
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_43"
+                android:visibility="gone"/>
+        </cn.flyrise.android.library.view.TransformLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/collaboration_workflow_helper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/tips_flow_fe"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/mdp_180"
+            android:layout_marginRight="@dimen/mdp_30"
+            android:layout_alignParentBottom="true"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/collaboration_workflow_helper_button"
+                android:layout_width="@dimen/mdp_90"
+                android:layout_height="@dimen/mdp_40"
+                android:background="@drawable/action_words_botton"
+                android:text="@string/start_using"
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/msp_15"/>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

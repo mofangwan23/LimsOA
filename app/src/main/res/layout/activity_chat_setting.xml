@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:switch="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/core_view_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color_one"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View style="@style/SettingDivider" />
+
+            <RelativeLayout style="@style/SettingRelativeLayout">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/new_msg_alerts" />
+
+                <cn.flyrise.feep.core.base.views.UISwitchButton
+                    android:id="@+id/switchReceiveNewMsg"
+                    style="@style/SettingSwitchBtnStyle"
+                    switch:bmHeight="@dimen/mdp_3000"
+                    switch:bmWidth="@dimen/row_min_height" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutNotificationSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View style="@style/SettingLine" />
+
+                <RelativeLayout style="@style/SettingRelativeLayout">
+
+                    <TextView
+                        style="@style/SettingTextStyle"
+                        android:text="@string/notification_center" />
+
+                    <cn.flyrise.feep.core.base.views.UISwitchButton
+                        android:id="@+id/switchShowNotification"
+                        style="@style/SettingSwitchBtnStyle"
+                        switch:bmHeight="@dimen/mdp_3000"
+                        switch:bmWidth="@dimen/row_min_height" />
+                </RelativeLayout>
+
+                <View style="@style/SettingDivider" />
+
+                <RelativeLayout
+                    android:id="@+id/open_setting"
+                    style="@style/SettingRelativeLayout">
+
+                    <TextView
+                        style="@style/SettingTextStyle"
+                        android:text="设置消息推送" />
+
+                    <ImageView
+                        android:layout_width="@dimen/mdp_18"
+                        android:layout_height="@dimen/mdp_20"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/arrow" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    style="@style/SettingDivider" />
+
+                <RelativeLayout
+                    android:id="@+id/sound_layout"
+                    style="@style/SettingRelativeLayout">
+
+                    <TextView
+                        style="@style/SettingTextStyle"
+                        android:text="@string/sound" />
+
+                    <cn.flyrise.feep.core.base.views.UISwitchButton
+                        android:id="@+id/switchMsgSound"
+                        style="@style/SettingSwitchBtnStyle"
+                        switch:bmHeight="@dimen/mdp_3000"
+                        switch:bmWidth="@dimen/row_min_height" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line"
+                    style="@style/SettingLine" />
+
+                <RelativeLayout
+                    android:id="@+id/vibrate_layout"
+                    style="@style/SettingRelativeLayout">
+
+                    <TextView
+                        style="@style/SettingTextStyle"
+                        android:text="@string/vibrate" />
+
+                    <cn.flyrise.feep.core.base.views.UISwitchButton
+                        android:id="@+id/switchMsgVibrate"
+                        style="@style/SettingSwitchBtnStyle"
+                        switch:bmHeight="@dimen/mdp_3000"
+                        switch:bmWidth="@dimen/row_min_height" />
+
+                </RelativeLayout>
+
+                <View style="@style/SettingDivider" />
+
+                <RelativeLayout style="@style/SettingRelativeLayout">
+
+                    <TextView
+                        style="@style/SettingTextStyle"
+                        android:text="@string/do_not_disturb" />
+
+                    <cn.flyrise.feep.core.base.views.UISwitchButton
+                        android:id="@+id/switchSilenceMode"
+                        style="@style/SettingSwitchBtnStyle"
+                        switch:bmHeight="@dimen/mdp_3000"
+                        switch:bmWidth="@dimen/row_min_height" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutSilenceMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/all_background_color"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/SettingTextStyle"
+                        android:layout_marginLeft="@dimen/mdp_8"
+                        android:text="@string/do_not_disturb_hint"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/msp_14" />
+
+                    <View style="@style/SettingLine" />
+
+                    <RelativeLayout
+                        android:id="@+id/layoutSilenceStartTime"
+                        style="@style/SettingRelativeLayout">
+
+                        <TextView
+                            style="@style/SettingTextStyle"
+                            android:text="@string/do_not_disturb_start" />
+
+                        <TextView
+                            android:id="@+id/tvSilenceStartTime"
+                            style="@style/SettingSilenceTime"
+                            android:text="23:00" />
+
+                    </RelativeLayout>
+
+                    <View style="@style/SettingLine" />
+
+                    <RelativeLayout
+                        android:id="@+id/layoutSilenceEndTime"
+                        style="@style/SettingRelativeLayout">
+
+                        <TextView
+                            style="@style/SettingTextStyle"
+                            android:text="@string/do_not_disturb_end" />
+
+                        <TextView
+                            android:id="@+id/tvSilenceEndTime"
+                            style="@style/SettingSilenceTime"
+                            android:text="08:00" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/SettingDivider" />
+
+            <RelativeLayout
+                android:id="@+id/layoutBlackList"
+                style="@style/SettingRelativeLayout">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/book_black" />
+            </RelativeLayout>
+
+            <View style="@style/SettingDivider" />
+
+            <RelativeLayout style="@style/SettingRelativeLayout">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/delete_msg_when_exit_group" />
+
+                <cn.flyrise.feep.core.base.views.UISwitchButton
+                    android:id="@+id/switchDeleteMsgWhenExist"
+                    style="@style/SettingSwitchBtnStyle"
+                    switch:bmHeight="@dimen/mdp_3000"
+                    switch:bmWidth="@dimen/row_min_height" />
+
+            </RelativeLayout>
+
+            <View style="@style/SettingDivider" />
+
+
+            <RelativeLayout style="@style/SettingRelativeLayout">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/turn_on_speaker" />
+
+                <cn.flyrise.feep.core.base.views.UISwitchButton
+                    android:id="@+id/switchSpeakerOn"
+                    style="@style/SettingSwitchBtnStyle"
+                    switch:bmHeight="@dimen/mdp_3000"
+                    switch:bmWidth="@dimen/row_min_height" />
+
+            </RelativeLayout>
+
+            <View style="@style/SettingDivider" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.flyrise.feep.core.base.views.SwipeBackLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/core_view_transparent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_background_color"
+        android:orientation="vertical">
+
+        <include layout="@layout/core_view_toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <FrameLayout
+                android:id="@+id/layoutDepartment"
+                android:layout_width="@dimen/mdp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ListView
+                    android:id="@+id/listViewDepartment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/address_tree_department_list_item_normal"
+                    android:divider="@null"
+                    android:dividerHeight="@dimen/mdp_0"
+                    android:scrollbars="none">
+                </ListView>
+            </FrameLayout>
+
+            <cn.flyrise.feep.core.base.views.LoadMoreRecyclerView
+                android:id="@+id/listViewPersons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </cn.flyrise.feep.core.base.views.LoadMoreRecyclerView>
+
+        </LinearLayout>
+    </LinearLayout>
+</cn.flyrise.feep.core.base.views.SwipeBackLayout>

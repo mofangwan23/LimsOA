@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/mdp_20"
+            android:background="@color/standard_bg_g_30"
+            android:orientation="vertical">
+
+            <!--日统计详情-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="318dp"
+                android:paddingBottom="@dimen/mdp_30"
+                android:background="@color/all_background_color"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <!--日期选择-->
+                <LinearLayout
+                    android:id="@+id/mLayoutDayPicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/mdp_14"
+                    android:paddingBottom="@dimen/mdp_14"
+                    android:paddingLeft="@dimen/mdp_12"
+                    android:paddingRight="@dimen/mdp_12"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/mTvDayTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/mdp_6"
+                        android:textColor="@color/text_sign_in_title"
+                        android:textSize="@dimen/msp_14"/>
+
+                    <ImageView
+                        android:id="@+id/head_right_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_address_filter_down"/>
+                </LinearLayout>
+
+                <cn.flyrise.feep.location.widget.SignInLeaderDayProgressView
+                    android:id="@+id/mProgressDayView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_53"
+                    android:layout_centerHorizontal="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/mTvDayLate"
+                            style="@style/locationSignSummaryDaySum"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/lateTitle"
+                            style="@style/locationSignSummaryDayTitle"
+                            android:text="@string/location_leader_month_late"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/mTvDayEarly"
+                            style="@style/locationSignSummaryDaySum"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/earlyTitle"
+                            style="@style/locationSignSummaryDayTitle"
+                            android:text="@string/location_leader_month_early"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/mTvDayaBsenceDuty"
+                            style="@style/locationSignSummaryDaySum"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/absenceTitle"
+                            style="@style/locationSignSummaryDayTitle"
+                            android:text="@string/location_leader_month_absence_duty"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/mTvDayAbsenteeism"
+                            style="@style/locationSignSummaryDaySum"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/absenteeismTitle"
+                            style="@style/locationSignSummaryDayTitle"
+                            android:text="@string/location_leader_month_absenteeism"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+            <View style="@style/detail_line"/>
+
+            <View
+                style="@style/detail_line"
+                android:layout_marginTop="@dimen/mdp_16"/>
+
+            <!--外勤人员-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mdp_42"
+                android:paddingLeft="@dimen/mdp_12"
+                android:paddingRight="@dimen/mdp_16"
+                android:background="@color/all_background_color"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <View
+                    android:id="@+id/icon"
+                    android:layout_width="4dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:background="#28B9FF"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mdp_8"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/icon"
+                    android:text="@string/location_leader_field_personnel"
+                    android:textColor="@color/text_sign_in_title"
+                    android:textSize="@dimen/msp_15"/>
+            </LinearLayout>
+
+            <View style="@style/detail_line"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/all_background_color"
+                android:overScrollMode="never"
+                android:visibility="gone"/>
+
+            <cn.flyrise.feep.location.widget.SignInRequestError
+                android:id="@+id/mLayoutListError"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/all_background_color"
+                android:gravity="center"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

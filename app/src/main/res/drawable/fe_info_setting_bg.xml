@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 外围有点阴影效果 -->
+    <item>
+        <shape
+            android:shape="rectangle">
+             <solid
+                android:color="#D5D5D5" />
+            <!-- <corners
+                android:radius="@dimen/mdp_1" /> -->
+        </shape>
+    </item>
+    <item
+        android:top="1px"
+        android:right="1px"
+        android:bottom="1px"
+        android:left="1px">
+        <shape
+            android:shape="rectangle">
+            <gradient
+                android:startColor="#FFF"
+                android:endColor="#FFF"
+                android:angle="45" />
+            <padding
+                android:left="@dimen/mdp_2"
+                android:right="@dimen/mdp_2"
+                android:top="@dimen/mdp_2"
+                android:bottom="@dimen/mdp_2" />  
+            <!-- <corners
+                android:radius="@dimen/mdp_10" /> -->
+            <!-- 设置外边框的画笔粗细和颜色 -->
+            <stroke
+                android:width="1px"
+                android:color="#C6C6C6" />
+        </shape>
+    </item>
+</layer-list>

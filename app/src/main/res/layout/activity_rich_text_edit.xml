@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutContentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.flyrise.feep.core.base.views.FEToolbar
+        android:id="@id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="@dimen/action_bar_size">
+    </cn.flyrise.feep.core.base.views.FEToolbar>
+
+    <cn.flyrise.feep.collaboration.view.RichTextToolBar
+        android:id="@+id/richTextToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F2F2F2">
+    </cn.flyrise.feep.collaboration.view.RichTextToolBar>
+
+    <View
+        android:id="@+id/richLine"
+        style="@style/detail_line"
+        android:layout_above="@id/richTextToolBar"/>
+
+    <jp.wasabeef.richeditor.RichEditor
+        android:id="@+id/richEditor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/richLine"
+        android:layout_below="@id/toolBar">
+    </jp.wasabeef.richeditor.RichEditor>
+
+
+</RelativeLayout>

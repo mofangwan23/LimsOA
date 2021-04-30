@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mdp_48"
+    android:background="#F94D4D4D"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tvSelectResult"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/mdp_16"
+        android:text="已选：10人"
+        android:textColor="@color/ab_filter_split_color"
+        android:textSize="@dimen/msp_14"/>
+
+    <ImageView
+        android:layout_width="@dimen/mdp_6"
+        android:layout_height="@dimen/mdp_6"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/mdp_17"
+        android:layout_marginLeft="@dimen/mdp_4"
+        android:layout_toRightOf="@+id/tvSelectResult"
+        android:src="@drawable/text_indicator"/>
+
+    <View
+        android:layout_width="@dimen/mdp_0_2"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/mdp_12"
+        android:layout_marginLeft="@dimen/mdp_20"
+        android:layout_marginRight="@dimen/mdp_12"
+        android:layout_marginTop="@dimen/mdp_12"
+        android:layout_toRightOf="@id/tvSelectResult"
+        android:background="@color/text_light_color"/>
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="@dimen/mdp_72"
+        android:layout_height="@dimen/mdp_32"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/mdp_12"
+        android:background="@drawable/bg_preview_s"
+        android:text="@string/ok"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/msp_14"/>
+</RelativeLayout>

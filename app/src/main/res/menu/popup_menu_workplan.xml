@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:id="@+id/action_transmit"
+        android:icon="@drawable/icon_menu_transmit"
+        android:title="@string/action_transmit"/>
+
+    <item
+        android:id="@+id/action_2collaboration"
+        android:icon="@drawable/alertdialog_listview_item_collabortion"
+        android:title="转协同"/>
+
+    <item
+        android:id="@+id/action_2schedule"
+        android:icon="@drawable/alertdialog_listview_item_schedule"
+        android:title="转日程"/>
+
+</menu>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/thecontact_background">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mLayoutRemindUn"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/ivEmptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <cn.flyrise.feep.location.widget.SignInRequestError
+            android:id="@+id/ivEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-54dp"/>
+
+        <LinearLayout
+            android:id="@+id/mTvRemind"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:background="@drawable/plan_pressed_button"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/remind_submission"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mdp_3"
+                android:text="@string/plan_classify_remind_hint"
+                android:textColor="@color/all_background_color"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/mLayoutRemindUn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp_45"
+        android:layout_alignParentBottom="true"
+        android:background="@color/all_background_color"
+        android:visibility="gone">
+
+        <View style="@style/detail_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp_45"
+            android:layout_centerInParent="true"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/remind_unsubmission"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mdp_3"
+                android:text="@string/plan_classify_remind_hint"
+                android:textColor="#28B9FF"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.ext.versionCompileSdk
+    buildToolsVersion rootProject.ext.versionBuildTools
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.versionMinSdk
+        targetSdkVersion rootProject.ext.versionTargetSdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':feep-core')
+
+    implementation 'com.huawei.android.hms:base:2.6.3.301'
+    implementation 'com.huawei.android.hms:push:2.6.3.301'//华为推送基础SDK
+
+//    implementation 'cn.jiguang.sdk.plugin:xiaomi:3.2.0'//此版本插件仅支持JPushSDK3.1.5   及以上版本
+//    implementation'cn.jiguang.sdk.plugin:huawei:3.2.0'//此版本插件仅支持JPushSDK3.1.5   及以上版本
+//    implementation'cn.jiguang.sdk.plugin:meizu:3.1.8'//此版本插件仅支持JPushSDK3.1.5   及以上版本
+}

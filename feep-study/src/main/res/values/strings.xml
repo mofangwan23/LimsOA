@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">feep-study</string>
+    <string name="study_on_line">在线学习</string>
+    <string name="exam_on_line">在线考试</string>
+</resources>
