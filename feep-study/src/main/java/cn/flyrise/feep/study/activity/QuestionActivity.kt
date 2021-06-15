@@ -5,6 +5,7 @@ import android.os.CountDownTimer
 import android.text.*
 import android.text.style.AbsoluteSizeSpan
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.util.SparseBooleanArray
 import android.view.View
 import android.view.ViewGroup
@@ -49,6 +50,7 @@ interface QuestionView {
 
 class QuestionActivity : NotTranslucentBarActivity(), QuestionView {
     override fun submitAnswerSuccess() {
+        isTimeFinish = false
         CustomDialog.Builder(this@QuestionActivity)
                 .setMessage("提交成功! 可以到【考试记录】查看成绩哦～")
                 .setPositiveButtonText("确定") { _, _ ->
@@ -68,7 +70,15 @@ class QuestionActivity : NotTranslucentBarActivity(), QuestionView {
         if (CommonUtil.nonEmptyList(response.info)) {
             info = response.info!![0]
             toolbar.title = info?.paper_name
-            timeDown(Integer.valueOf(response.info!![0].paper_minute))
+            val minute = Integer.valueOf(response.info!![0].paper_minute)
+            if (minute>0){
+                timeDown(Integer.valueOf(response.info!![0].paper_minute))
+            }else {
+                queSubmit.visibility = View.GONE
+                llSubmit.visibility = View.GONE
+                llQue.visibility = View.GONE
+            }
+            isTimeFinish = false
         }
         questionList = response.datalist
         if (CommonUtil.nonEmptyList(questionList)) {
@@ -117,6 +127,7 @@ class QuestionActivity : NotTranslucentBarActivity(), QuestionView {
     private var type = 0
     private var examItem: TrainingSignResponse.QueryBean? = null
     private var mLoadingDialog: FELoadingDialog? = null
+    private var isTimeFinish = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -351,6 +362,7 @@ class QuestionActivity : NotTranslucentBarActivity(), QuestionView {
             override fun onFinish() {
                 queLimitTime.text = "剩余时间: 00:00"
                 FEToast.showMessage("时间到，提交答卷！")
+                isTimeFinish = true
                 submit()
             }
         }
@@ -359,15 +371,27 @@ class QuestionActivity : NotTranslucentBarActivity(), QuestionView {
 
     private fun submit() {
         questionList?.let {
-            for (i in 0 until it.size) {
-                if (TextUtils.isEmpty(it[i].userAnswer)) {
-                    FEToast.showMessage("您有题目未答完！")
+            Log.d("TAG", "哈哈哈哈444： $isTimeFinish")
+            if (isTimeFinish){
+                for (i in 0 until it.size) {
+                    if (it[i].userAnswer == null) {
+                        it[i].userAnswer = ""
+                    }
+                }
+                if (getUserAnswerList().size != it.size) {
+                    FEToast.showMessage("您有题目未答完")
+                }
+            }else {
+                for (i in 0 until it.size) {
+                    if (TextUtils.isEmpty(it[i].userAnswer)) {
+                        FEToast.showMessage("您有题目未答完！")
+                        return
+                    }
+                }
+                if (getUserAnswerList().size != it.size) {
+                    FEToast.showMessage("您有题目未答完")
                     return
                 }
-            }
-            if (getUserAnswerList().size != it.size) {
-                FEToast.showMessage("您有题目未答完")
-                return
             }
             endTime = DateUtil.formatTimeForHms(System.currentTimeMillis())
             var recordId = examItem?.id
@@ -405,16 +429,20 @@ class QuestionActivity : NotTranslucentBarActivity(), QuestionView {
             verifyManager.setServerId(info?.serverId)
             verifyManager.setMaster_key(info?.master_key)
             verifyManager.setTableName(info?.tableName)
-            verifyManager.startVerify(object : ElcSignVerifyManager.ElcVerifyCallback {
-                override fun onSuccess() {
-                    presenter.submitExam(recordId, startTime, endTime, trainTaskId, getUserMark(), isPass, qIds, statusIds, qTypes, userAnswers,
-                            scores)
-                }
-                override fun onFail(msg: String?) {
-                    FEToast.showMessage(msg)
-                }
-            })
-
+            if (isTimeFinish){
+                presenter.submitExam(recordId, startTime, endTime, trainTaskId, getUserMark(), isPass, qIds, statusIds, qTypes, userAnswers,
+                        scores)
+            }else {
+                verifyManager.startVerify(object : ElcSignVerifyManager.ElcVerifyCallback {
+                    override fun onSuccess() {
+                        presenter.submitExam(recordId, startTime, endTime, trainTaskId, getUserMark(), isPass, qIds, statusIds, qTypes, userAnswers,
+                                scores)
+                    }
+                    override fun onFail(msg: String?) {
+                        FEToast.showMessage(msg)
+                    }
+                })
+            }
         }
     }
 
