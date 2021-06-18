@@ -29,8 +29,8 @@ android {
         applicationId "cn.flyrise.study"
         minSdkVersion rootProject.ext.versionMinSdk
         targetSdkVersion rootProject.ext.versionTargetSdk
-        versionCode 10005
-        versionName "1.5"
+        versionCode 10006
+        versionName "1.6"
         multiDexEnabled true
 
 //        javaCompileOptions {

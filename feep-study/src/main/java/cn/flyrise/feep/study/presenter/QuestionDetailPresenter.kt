@@ -19,7 +19,7 @@ import rx.schedulers.Schedulers
 class QuestionDetailPresenter(val view: QuestionView,val respository: ExamDataRepository) {
 
     fun getQuestionDetail(id: String?,trainTaskId: String?,infoId:String?){
-        view.showLoading()
+//        view.showLoading()
         var request = TrainingSignRequest()
         request.setRecordId(id)
         request.setRequestType("1")
@@ -28,7 +28,7 @@ class QuestionDetailPresenter(val view: QuestionView,val respository: ExamDataRe
         request.setTrainTaskId(trainTaskId)
         FEHttpClient.getInstance().post(request, object : ResponseCallback<GetQuestionResponse>() {
             override fun onCompleted(response: GetQuestionResponse?) {
-                view.hideLoading()
+//                view.hideLoading()
                 if (TextUtils.equals("0",response?.errorCode)){
                     view.showQuestionInfo(response!!)
                 }else {
@@ -38,14 +38,14 @@ class QuestionDetailPresenter(val view: QuestionView,val respository: ExamDataRe
 
             override fun onFailure(repositoryException: RepositoryException) {
                 view.showQuestionsError()
-                view.hideLoading()
+//                view.hideLoading()
             }
         })
     }
 
     fun submitExam(id: String?,sDate: String?, eDate:String?, trainTaskId:String?, score:String?, ispass: String?, qIds:MutableList<String>?,
     statusIds:MutableList<String>?,qTypes:MutableList<String>?,userAnswers: MutableList<String>?,scores:MutableList<String>?){
-        view.showLoading()
+//        view.showLoading()
         var request = QuestionSubmitRequest()
         request.setRecordId(id)
         request.setRequestType("1")
@@ -69,11 +69,11 @@ class QuestionDetailPresenter(val view: QuestionView,val respository: ExamDataRe
                 .doOnNext {  }
                 .subscribe({
                     view.submitAnswerSuccess()
-                    view.hideLoading()
+//                    view.hideLoading()
                 }, {
                     it.printStackTrace()
                     view.submitAnswerFaile()
-                    view.hideLoading()
+//                    view.hideLoading()
                 })
     }
 

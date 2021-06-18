@@ -72,7 +72,7 @@ class QuestionActivity : NotTranslucentBarActivity(), QuestionView {
             toolbar.title = info?.paper_name
             val minute = Integer.valueOf(response.info!![0].paper_minute)
             if (minute>0){
-                timeDown(Integer.valueOf(response.info!![0].paper_minute))
+                timeDown(minute)
             }else {
                 queSubmit.visibility = View.GONE
                 llSubmit.visibility = View.GONE
@@ -352,6 +352,7 @@ class QuestionActivity : NotTranslucentBarActivity(), QuestionView {
      * @param time 倒计时多少秒
      */
     private fun timeDown(time: Int) {
+        FELog.d("TAG","time: " + time)
         timer = object : CountDownTimer((time * 60 * 1000).toLong(), 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 val minute = (millisUntilFinished / (1000 * 60)).toInt()
@@ -364,6 +365,7 @@ class QuestionActivity : NotTranslucentBarActivity(), QuestionView {
                 FEToast.showMessage("时间到，提交答卷！")
                 isTimeFinish = true
                 submit()
+                cancel()
             }
         }
         timer?.start()
@@ -371,7 +373,6 @@ class QuestionActivity : NotTranslucentBarActivity(), QuestionView {
 
     private fun submit() {
         questionList?.let {
-            Log.d("TAG", "哈哈哈哈444： $isTimeFinish")
             if (isTimeFinish){
                 for (i in 0 until it.size) {
                     if (it[i].userAnswer == null) {
@@ -511,4 +512,15 @@ class QuestionActivity : NotTranslucentBarActivity(), QuestionView {
         }
         return length
     }
+
+    override fun onDestroy() {
+        if (timer!=null){
+            timer?.cancel()
+        }
+        super.onDestroy()
+    }
+
+
+
+
 }
